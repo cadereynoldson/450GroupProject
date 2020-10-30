@@ -7,16 +7,28 @@
 
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.example.groupproject_g3.SignInFragment"
+        android:name="com.example.groupproject_g3.authorization.fragments.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" >
         <action
             android:id="@+id/action_signInFragment_to_mainActivity"
             app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/action_signInFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
     </fragment>
     <activity
         android:id="@+id/mainActivity"
         android:name="com.example.groupproject_g3.activities.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.groupproject_g3.authorization.fragments.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
 </navigation>
