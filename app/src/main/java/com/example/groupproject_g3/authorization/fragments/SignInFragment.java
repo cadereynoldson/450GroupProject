@@ -23,10 +23,6 @@ public class SignInFragment extends Fragment {
     /** Binding for the fragment. Allows for direct reference of fragment components. */
     private FragmentSignInBinding binding;
 
-    public SignInFragment() {
-        // Required empty public constructor
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -56,5 +52,12 @@ public class SignInFragment extends Fragment {
     private void attemptSignIn(final View button) {
 
         //TODO: Attempt to sign in to the application.
+        //For now, just navigate to the main activity of the application.
+        //TEMP CODE:
+        Navigation.findNavController(getView()).navigate(
+                SignInFragmentDirections.actionSignInFragmentToMainActivity()
+        );
+        getActivity().finish();
+        //END TEMP CODE
     }
 }
