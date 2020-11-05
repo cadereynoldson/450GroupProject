@@ -72,12 +72,20 @@
         "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\logo_cloud_chat.png"
     },
     {
+        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_profile_blue_24dp.xml.flat",
+        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_profile_blue_24dp.xml"
+    },
+    {
         "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_page_weather.xml.flat",
         "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_weather.xml"
     },
     {
         "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_contact_blueish_300dp.xml.flat",
+        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_contact_blueish_300dp.xml"
     },
     {
         "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",

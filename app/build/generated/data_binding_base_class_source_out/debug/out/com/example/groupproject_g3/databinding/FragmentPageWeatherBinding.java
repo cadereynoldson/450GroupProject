@@ -20,20 +20,20 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ImageView weatherImageviewPlaceholder;
+  public final ImageView imageWeather;
 
   @NonNull
-  public final TextView weatherPlaceholder;
+  public final TextView textView;
 
   @NonNull
   public final ConstraintLayout weatherRoot;
 
   private FragmentPageWeatherBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageView weatherImageviewPlaceholder, @NonNull TextView weatherPlaceholder,
+      @NonNull ImageView imageWeather, @NonNull TextView textView,
       @NonNull ConstraintLayout weatherRoot) {
     this.rootView = rootView;
-    this.weatherImageviewPlaceholder = weatherImageviewPlaceholder;
-    this.weatherPlaceholder = weatherPlaceholder;
+    this.imageWeather = imageWeather;
+    this.textView = textView;
     this.weatherRoot = weatherRoot;
   }
 
@@ -64,22 +64,22 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.weather_imageview_placeholder;
-      ImageView weatherImageviewPlaceholder = rootView.findViewById(id);
-      if (weatherImageviewPlaceholder == null) {
+      id = R.id.image_weather;
+      ImageView imageWeather = rootView.findViewById(id);
+      if (imageWeather == null) {
         break missingId;
       }
 
-      id = R.id.weatherPlaceholder;
-      TextView weatherPlaceholder = rootView.findViewById(id);
-      if (weatherPlaceholder == null) {
+      id = R.id.textView;
+      TextView textView = rootView.findViewById(id);
+      if (textView == null) {
         break missingId;
       }
 
       ConstraintLayout weatherRoot = (ConstraintLayout) rootView;
 
-      return new FragmentPageWeatherBinding((ConstraintLayout) rootView,
-          weatherImageviewPlaceholder, weatherPlaceholder, weatherRoot);
+      return new FragmentPageWeatherBinding((ConstraintLayout) rootView, imageWeather, textView,
+          weatherRoot);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

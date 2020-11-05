@@ -4,6 +4,7 @@ package com.example.groupproject_g3.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,11 +25,16 @@ public final class FragmentPageContactBinding implements ViewBinding {
   @NonNull
   public final ConstraintLayout contactsRoot;
 
+  @NonNull
+  public final ImageView imageView3;
+
   private FragmentPageContactBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView contactsPlaceholder, @NonNull ConstraintLayout contactsRoot) {
+      @NonNull TextView contactsPlaceholder, @NonNull ConstraintLayout contactsRoot,
+      @NonNull ImageView imageView3) {
     this.rootView = rootView;
     this.contactsPlaceholder = contactsPlaceholder;
     this.contactsRoot = contactsRoot;
+    this.imageView3 = imageView3;
   }
 
   @Override
@@ -66,8 +72,14 @@ public final class FragmentPageContactBinding implements ViewBinding {
 
       ConstraintLayout contactsRoot = (ConstraintLayout) rootView;
 
+      id = R.id.imageView3;
+      ImageView imageView3 = rootView.findViewById(id);
+      if (imageView3 == null) {
+        break missingId;
+      }
+
       return new FragmentPageContactBinding((ConstraintLayout) rootView, contactsPlaceholder,
-          contactsRoot);
+          contactsRoot, imageView3);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1397,6 +1397,7 @@ drawable design_snackbar_background
 drawable google_rcs
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
+drawable ic_contact_blueish_300dp
 drawable ic_contacts_black_24x24dp
 drawable ic_edit_black_24dp
 drawable ic_home_black_24x24dp
@@ -1412,6 +1413,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_profile_black_24x24dp
+drawable ic_profile_blue_24dp
 drawable ic_weather_black_24x24dp
 drawable image0
 drawable logo_cloud_chat
@@ -1597,7 +1599,9 @@ id icon_group
 id ifRoom
 id image
 id imageView
+id imageView3
 id imageView4
+id image_weather
 id info
 id invisible
 id italic
@@ -1615,7 +1619,7 @@ id main_nav
 id masked
 id media_actions
 id message
-id messages_imageview_placeholder
+id messages_imageView_placeholder
 id messages_root
 id middle
 id mini
@@ -1747,6 +1751,7 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id text_input_end_icon
 id text_input_start_icon
 id text_register_email
@@ -1779,8 +1784,6 @@ id useLogo
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
-id weatherPlaceholder
-id weather_imageview_placeholder
 id weather_root
 id withText
 id wrap

@@ -77,6 +77,7 @@ public class RegisterFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentRegisterBinding.inflate(inflater, container, false);
         return binding.getRoot();
+
     }
 
     @Override
