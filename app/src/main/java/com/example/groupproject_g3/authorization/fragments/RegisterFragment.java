@@ -87,6 +87,7 @@ public class RegisterFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentRegisterBinding.inflate(inflater, container, false);
         return binding.getRoot();
+
     }
 
     /**
@@ -103,6 +104,8 @@ public class RegisterFragment extends Fragment {
                     RegisterFragmentDirections.actionRegisterFragmentToSignInFragment());
         });
         binding.buttonRegister.setOnClickListener(this::attemptRegister);
+        mRegisterModel.addResponseObserver(getViewLifecycleOwner(),
+                this::observeResponse);
     }
 
     /**

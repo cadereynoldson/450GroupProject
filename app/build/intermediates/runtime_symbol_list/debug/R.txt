@@ -1598,9 +1598,9 @@ int id icon_group 0x7f080099
 int id ifRoom 0x7f08009a
 int id image 0x7f08009b
 int id imageView 0x7f08009c
-int id imageView2 0x7f08009d
-int id imageView3 0x7f08009e
-int id imageView4 0x7f08009f
+int id imageView3 0x7f08009d
+int id imageView4 0x7f08009e
+int id image_weather 0x7f08009f
 int id info 0x7f0800a0
 int id invisible 0x7f0800a1
 int id italic 0x7f0800a2
