@@ -60,6 +60,7 @@ public class RegisterFragment extends Fragment {
                     .and(checkPwdLowerCase().or(checkPwdUpperCase()));
 
     /** Require empty public constructor for the Fragment. */
+
     public RegisterFragment() {
         // Required empty constructor
     }
@@ -103,6 +104,8 @@ public class RegisterFragment extends Fragment {
                     RegisterFragmentDirections.actionRegisterFragmentToSignInFragment());
         });
         binding.buttonRegister.setOnClickListener(this::attemptRegister);
+        mRegisterModel.addResponseObserver(getViewLifecycleOwner(),
+                this::observeResponse);
     }
 
     /**
