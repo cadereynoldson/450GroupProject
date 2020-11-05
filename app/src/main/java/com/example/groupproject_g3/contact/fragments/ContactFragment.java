@@ -1,3 +1,6 @@
+/**
+ * Fragment landing for Contacts.
+ */
 package com.example.groupproject_g3.contact.fragments;
 
 import android.os.Bundle;

@@ -1,3 +1,6 @@
+/**
+ * Main Activity.
+ */
 package com.example.groupproject_g3.activities;
 
 import android.os.Bundle;

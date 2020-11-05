@@ -1,3 +1,6 @@
+/**
+ * Landing page for Weather App.
+ */
 package com.example.groupproject_g3.weather.fragments;
 
 import android.os.Bundle;

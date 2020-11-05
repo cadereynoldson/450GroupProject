@@ -1,3 +1,6 @@
+/**
+ * View Model for Registration to maintain information even during fragment destruction and transference.
+ */
 package com.example.groupproject_g3.authorization.fragments;
 
 import android.app.Application;
@@ -26,17 +29,34 @@ public class RegisterViewModel extends AndroidViewModel {
 
     private MutableLiveData<JSONObject> mResponse;
 
+    /**
+     * Parameterized Constructor.
+     *
+     * @param application application
+     */
     public RegisterViewModel(@NonNull Application application) {
         super(application);
         mResponse = new MutableLiveData<>();
         mResponse.setValue(new JSONObject());
     }
 
+    /**
+     * Adds a response observer.
+     *
+     * @param owner owner
+     * @param observer observer
+     */
     public void addResponseObserver(@NonNull LifecycleOwner owner,
                                     @NonNull Observer<? super JSONObject> observer) {
         mResponse.observe(owner, observer);
     }
 
+
+    /**
+     * Method for error handling in response from the webservice.
+     *
+     * @param error error.
+     */
     private void handleError(final VolleyError error) {
         if (Objects.isNull(error.networkResponse)) {
             try {
@@ -61,6 +81,14 @@ public class RegisterViewModel extends AndroidViewModel {
         }
     }
 
+    /**
+     * Connecting to the webservice to validate the registration attempt.
+     *
+     * @param first first name.
+     * @param last last name.
+     * @param email email.
+     * @param password password.
+     */
     public void connect(final String first,
                         final String last,
                         final String email,

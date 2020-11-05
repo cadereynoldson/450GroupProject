@@ -1,3 +1,6 @@
+/**
+ * Register fragment.
+ */
 package com.example.groupproject_g3.authorization.fragments;
 
 import android.os.Bundle;

@@ -1,3 +1,6 @@
+/**
+ * Landing fragment for Sign-In.
+ */
 package com.example.groupproject_g3.authorization.fragments;
 
 import android.os.Bundle;
@@ -24,9 +27,7 @@ import static com.example.groupproject_g3.utils.PasswordValidator.checkExcludeWh
 import static com.example.groupproject_g3.utils.PasswordValidator.checkPwdLength;
 import static com.example.groupproject_g3.utils.PasswordValidator.checkPwdSpecialChar;
 
-/**
- * A fragment for signing into the application.
- */
+
 public class SignInFragment extends Fragment {
 
     /** Binding for the fragment. Allows for direct reference of fragment components. */
@@ -92,7 +93,7 @@ public class SignInFragment extends Fragment {
     }
 
     /**
-     *
+     *Email validation.
      */
     private void validateEmail() {
         mEmailValidator.processResult(
@@ -102,7 +103,7 @@ public class SignInFragment extends Fragment {
     }
 
     /**
-     *
+     *Password validator.
      */
     private void validatePassword() {
         mPassWordValidator.processResult(
@@ -112,7 +113,7 @@ public class SignInFragment extends Fragment {
     }
 
     /**
-     *
+     *Checks authentication with backend server.
      */
     private void verifyAuthWithServer() {
         mSignInModel.connect(

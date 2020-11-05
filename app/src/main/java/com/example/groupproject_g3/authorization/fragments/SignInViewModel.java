@@ -1,3 +1,6 @@
+/**
+ * View Model for Sign-in.
+ */
 package com.example.groupproject_g3.authorization.fragments;
 
 import android.app.Application;
@@ -27,20 +30,38 @@ import com.example.groupproject_g3.io.RequestQueueSingleton;
 
 public class SignInViewModel extends AndroidViewModel {
 
+    /**Mutable object for response data tracking*/
     private MutableLiveData<JSONObject> mResponse;
 
+    /**
+     * Parameterized Constructor.
+     *
+     * @param application
+     */
     public SignInViewModel(@NonNull Application application) {
         super(application);
         mResponse = new MutableLiveData<>();
         mResponse.setValue(new JSONObject());
     }
 
+    /**
+     * Response Observer. Observes the response from the webservice.
+     *
+     * @param owner owner.
+     * @param observer observer.
+     */
     public void addResponseObserver(@NonNull LifecycleOwner owner,
                                     @NonNull Observer<? super JSONObject> observer) {
         mResponse.observe(owner, observer);
     }
 
 
+    /**
+     * Connecting to the webservice to validate the registration attempt.
+     *
+     * @param email email.
+     * @param password password.
+     */
     public void connect(final String email, final String password) {
         String url = "https://cloud-chat-450.herokuapp.com/auth";
         Request request = new JsonObjectRequest(
@@ -70,7 +91,11 @@ public class SignInViewModel extends AndroidViewModel {
                 .addToRequestQueue(request);
     }
 
-
+    /**
+     * Method for error handling in response from the webservice.
+     *
+     * @param error error.
+     */
     private void handleError(final VolleyError error) {
         if (Objects.isNull(error.networkResponse)) {
             try {
