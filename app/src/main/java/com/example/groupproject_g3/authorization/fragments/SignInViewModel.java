@@ -42,7 +42,7 @@ public class SignInViewModel extends AndroidViewModel {
 
 
     public void connect(final String email, final String password) {
-        String url = "https://cloud-chat-450.herokuapp.com/";
+        String url = "https://cfb3-lab4-backend-2020sp.herokuapp.com/auth";
         Request request = new JsonObjectRequest(
                 Request.Method.GET,
                 url,
