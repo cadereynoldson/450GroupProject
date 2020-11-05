@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
@@ -13,15 +14,43 @@ import android.view.ViewGroup;
 
 import com.example.groupproject_g3.R;
 import com.example.groupproject_g3.databinding.FragmentSignInBinding;
+import com.example.groupproject_g3.utils.PasswordValidator;
+
+import static com.example.groupproject_g3.utils.PasswordValidator.checkExcludeWhiteSpace;
+import static com.example.groupproject_g3.utils.PasswordValidator.checkPwdLength;
+import static com.example.groupproject_g3.utils.PasswordValidator.checkPwdSpecialChar;
 
 /**
  * A fragment for signing into the application.
- *
  */
 public class SignInFragment extends Fragment {
 
     /** Binding for the fragment. Allows for direct reference of fragment components. */
     private FragmentSignInBinding binding;
+
+    /** */
+    private SignInViewModel mSignInModel;
+
+    /** */
+    private PasswordValidator mEmailValidator = checkPwdLength(2)
+            .and(checkExcludeWhiteSpace())
+            .and(checkPwdSpecialChar("@"));
+
+    /** */
+    private PasswordValidator mPassWordValidator = checkPwdLength(1)
+            .and(checkExcludeWhiteSpace());
+
+    /** Require empty public constructor for SignInFragment. */
+    public SignInFragment() {
+        // Required empty public constructor
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mSignInModel = new ViewModelProvider(getActivity())
+                .get(SignInViewModel.class);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
