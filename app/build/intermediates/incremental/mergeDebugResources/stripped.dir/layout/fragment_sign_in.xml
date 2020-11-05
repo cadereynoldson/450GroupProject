@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".authorization.fragments.SignInFragment">
+
+    <EditText
+        android:id="@+id/text_signin_password"
+        android:layout_width="@dimen/auth_textEdit_width"
+        android:layout_height="@dimen/auth_textEdit_height"
+        android:layout_marginTop="20dp"
+        android:autoText="false"
+        android:autofillHints="@string/auth_password"
+        android:ems="10"
+        android:hint="@string/auth_password"
+        android:inputType="textPassword"
+        android:text="@string/auth_dummy_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_signin_email" />
+
+    <EditText
+        android:id="@+id/text_signin_email"
+        android:layout_width="@dimen/auth_textEdit_width"
+        android:layout_height="@dimen/auth_textEdit_height"
+        android:layout_marginTop="340dp"
+        android:autoText="false"
+        android:autofillHints="@string/auth_email"
+        android:ems="10"
+        android:hint="@string/auth_email"
+        android:inputType="textEmailAddress"
+        android:text="@string/auth_dummy_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_signin_register"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="@dimen/auth_button_width"
+        android:layout_height="@dimen/auth_button_height"
+        android:layout_marginTop="15dp"
+        android:text="@string/auth_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/text_signin_password"
+        app:layout_constraintTop_toBottomOf="@+id/text_signin_password"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button_signin"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="@dimen/auth_button_width"
+        android:layout_height="@dimen/auth_button_height"
+        android:layout_marginTop="15dp"
+        android:text="@string/auth_sign_in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/text_signin_password"
+        app:layout_constraintTop_toBottomOf="@+id/text_signin_password"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_cloud_chat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
