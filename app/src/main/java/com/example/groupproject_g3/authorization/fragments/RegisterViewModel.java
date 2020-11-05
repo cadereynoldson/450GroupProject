@@ -65,7 +65,7 @@ public class RegisterViewModel extends AndroidViewModel {
                         final String last,
                         final String email,
                         final String password) {
-        String url = "https://cloud-chat-450.herokuapp.com/";
+        String url = "https://cloud-chat-450.herokuapp.com/auth";
         JSONObject body = new JSONObject();
         try {
             body.put("first", first);
