@@ -20,6 +20,9 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ImageView imageView5;
+
+  @NonNull
   public final ImageView imageWeather;
 
   @NonNull
@@ -29,9 +32,10 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
   public final ConstraintLayout weatherRoot;
 
   private FragmentPageWeatherBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageView imageWeather, @NonNull TextView textView,
+      @NonNull ImageView imageView5, @NonNull ImageView imageWeather, @NonNull TextView textView,
       @NonNull ConstraintLayout weatherRoot) {
     this.rootView = rootView;
+    this.imageView5 = imageView5;
     this.imageWeather = imageWeather;
     this.textView = textView;
     this.weatherRoot = weatherRoot;
@@ -64,6 +68,12 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.imageView5;
+      ImageView imageView5 = rootView.findViewById(id);
+      if (imageView5 == null) {
+        break missingId;
+      }
+
       id = R.id.image_weather;
       ImageView imageWeather = rootView.findViewById(id);
       if (imageWeather == null) {
@@ -78,8 +88,8 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
 
       ConstraintLayout weatherRoot = (ConstraintLayout) rootView;
 
-      return new FragmentPageWeatherBinding((ConstraintLayout) rootView, imageWeather, textView,
-          weatherRoot);
+      return new FragmentPageWeatherBinding((ConstraintLayout) rootView, imageView5, imageWeather,
+          textView, weatherRoot);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

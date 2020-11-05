@@ -1601,6 +1601,7 @@ id image
 id imageView
 id imageView3
 id imageView4
+id imageView5
 id image_weather
 id info
 id invisible
@@ -1619,7 +1620,7 @@ id main_nav
 id masked
 id media_actions
 id message
-id messages_imageView_placeholder
+id messages_imageview_placeholder
 id messages_root
 id middle
 id mini

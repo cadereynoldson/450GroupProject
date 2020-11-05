@@ -19,15 +19,15 @@ public final class FragmentPageMessagesBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ImageView messagesImageViewPlaceholder;
+  public final ImageView messagesImageviewPlaceholder;
 
   @NonNull
   public final ConstraintLayout messagesRoot;
 
   private FragmentPageMessagesBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageView messagesImageViewPlaceholder, @NonNull ConstraintLayout messagesRoot) {
+      @NonNull ImageView messagesImageviewPlaceholder, @NonNull ConstraintLayout messagesRoot) {
     this.rootView = rootView;
-    this.messagesImageViewPlaceholder = messagesImageViewPlaceholder;
+    this.messagesImageviewPlaceholder = messagesImageviewPlaceholder;
     this.messagesRoot = messagesRoot;
   }
 
@@ -58,16 +58,16 @@ public final class FragmentPageMessagesBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.messages_imageView_placeholder;
-      ImageView messagesImageViewPlaceholder = rootView.findViewById(id);
-      if (messagesImageViewPlaceholder == null) {
+      id = R.id.messages_imageview_placeholder;
+      ImageView messagesImageviewPlaceholder = rootView.findViewById(id);
+      if (messagesImageviewPlaceholder == null) {
         break missingId;
       }
 
       ConstraintLayout messagesRoot = (ConstraintLayout) rootView;
 
       return new FragmentPageMessagesBinding((ConstraintLayout) rootView,
-          messagesImageViewPlaceholder, messagesRoot);
+          messagesImageviewPlaceholder, messagesRoot);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -30,45 +30,46 @@
 20-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:11:9-54
 21        android:supportsRtl="true"
 21-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:12:9-35
-22        android:theme="@style/Theme.GroupProjectG3" >
-22-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:13:9-52
-23
-24        <!--
-25               Set to true if your app is Standalone, that is, it does not require the handheld
-26               app to run.
-27        -->
-28
-29        <activity
-29-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:20:9-28:20
-30            android:name="com.example.groupproject_g3.activities.AuthorizationActivity"
-30-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:21:13-61
-31            android:label="@string/title_activity_main" >
-31-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:22:13-56
-32            <intent-filter>
-32-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:23:13-27:29
-33                <action android:name="android.intent.action.MAIN" />
-33-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:24:17-69
-33-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:24:25-66
-34
-35                <category android:name="android.intent.category.LAUNCHER" />
-35-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:26:17-77
-35-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:26:27-74
-36            </intent-filter>
-37        </activity>
-38        <activity android:name="com.example.groupproject_g3.activities.MainActivity" >
-38-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:30:9-36:20
-38-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:30:19-58
-39            <intent-filter>
-39-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:23:13-27:29
-40                <action android:name="android.intent.action.MAIN" />
-40-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:24:17-69
-40-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:24:25-66
-41
-42                <category android:name="android.intent.category.LAUNCHER" />
-42-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:26:17-77
-42-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:26:27-74
-43            </intent-filter>
-44        </activity>
-45    </application>
-46
-47</manifest>
+22        android:testOnly="true"
+23        android:theme="@style/Theme.GroupProjectG3" >
+23-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:13:9-52
+24
+25        <!--
+26               Set to true if your app is Standalone, that is, it does not require the handheld
+27               app to run.
+28        -->
+29
+30        <activity
+30-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:20:9-28:20
+31            android:name="com.example.groupproject_g3.activities.AuthorizationActivity"
+31-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:21:13-61
+32            android:label="@string/title_activity_main" >
+32-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:22:13-56
+33            <intent-filter>
+33-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:23:13-27:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:24:17-69
+34-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:24:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:26:17-77
+36-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:26:27-74
+37            </intent-filter>
+38        </activity>
+39        <activity android:name="com.example.groupproject_g3.activities.MainActivity" >
+39-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:30:9-36:20
+39-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:30:19-58
+40            <intent-filter>
+40-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:23:13-27:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:24:17-69
+41-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:24:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:26:17-77
+43-->C:\Users\tphip\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:26:27-74
+44            </intent-filter>
+45        </activity>
+46    </application>
+47
+48</manifest>
