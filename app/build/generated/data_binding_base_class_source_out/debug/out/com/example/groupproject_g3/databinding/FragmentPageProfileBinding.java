@@ -20,7 +20,7 @@ public final class FragmentPageProfileBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ImageView imageView2;
+  public final ImageView imageView4;
 
   @NonNull
   public final TextView profilePlaceholder;
@@ -29,10 +29,10 @@ public final class FragmentPageProfileBinding implements ViewBinding {
   public final ConstraintLayout profileRoot;
 
   private FragmentPageProfileBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageView imageView2, @NonNull TextView profilePlaceholder,
+      @NonNull ImageView imageView4, @NonNull TextView profilePlaceholder,
       @NonNull ConstraintLayout profileRoot) {
     this.rootView = rootView;
-    this.imageView2 = imageView2;
+    this.imageView4 = imageView4;
     this.profilePlaceholder = profilePlaceholder;
     this.profileRoot = profileRoot;
   }
@@ -64,9 +64,9 @@ public final class FragmentPageProfileBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.imageView2;
-      ImageView imageView2 = rootView.findViewById(id);
-      if (imageView2 == null) {
+      id = R.id.imageView4;
+      ImageView imageView4 = rootView.findViewById(id);
+      if (imageView4 == null) {
         break missingId;
       }
 
@@ -78,7 +78,7 @@ public final class FragmentPageProfileBinding implements ViewBinding {
 
       ConstraintLayout profileRoot = (ConstraintLayout) rootView;
 
-      return new FragmentPageProfileBinding((ConstraintLayout) rootView, imageView2,
+      return new FragmentPageProfileBinding((ConstraintLayout) rootView, imageView4,
           profilePlaceholder, profileRoot);
     }
     String missingId = rootView.getResources().getResourceName(id);

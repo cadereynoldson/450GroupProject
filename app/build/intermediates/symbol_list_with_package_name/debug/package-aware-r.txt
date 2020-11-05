@@ -1601,6 +1601,7 @@ id image
 id imageView
 id imageView2
 id imageView3
+id imageView4
 id info
 id invisible
 id italic
@@ -1750,6 +1751,7 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id text_input_end_icon
 id text_input_start_icon
 id text_register_email
@@ -1782,8 +1784,6 @@ id useLogo
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
-id weatherPlaceholder
-id weather_image_placeholder
 id weather_root
 id withText
 id wrap
