@@ -1,3 +1,6 @@
+/**
+ * Landing page for Messages.
+ */
 package com.example.groupproject_g3.message.fragments;
 
 import android.os.Bundle;
