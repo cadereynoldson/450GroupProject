@@ -65,10 +65,6 @@ public class RegisterFragment extends Fragment {
         // Required empty constructor
     }
 
-    /**
-     *
-     * @param savedInstanceState
-     */
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,13 +72,6 @@ public class RegisterFragment extends Fragment {
                 .get(RegisterViewModel.class);
     }
 
-    /**
-     *
-     *
-     * @param inflater
-     * @param container
-     * @param savedInstanceState
-     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -90,12 +79,6 @@ public class RegisterFragment extends Fragment {
         return binding.getRoot();
     }
 
-    /**
-     *
-     *
-     * @param view
-     * @param savedInstanceState
-     */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

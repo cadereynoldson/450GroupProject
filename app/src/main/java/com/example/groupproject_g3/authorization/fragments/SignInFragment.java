@@ -49,11 +49,6 @@ public class SignInFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     *
-     *
-     * @param savedInstanceState
-     */
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,13 +56,6 @@ public class SignInFragment extends Fragment {
                 .get(SignInViewModel.class);
     }
 
-    /**
-     *
-     *
-     * @param container
-     * @param inflater
-     * @param savedInstanceState
-     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -75,9 +63,6 @@ public class SignInFragment extends Fragment {
         return binding.getRoot();
     }
 
-    /**
-     *
-     */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
