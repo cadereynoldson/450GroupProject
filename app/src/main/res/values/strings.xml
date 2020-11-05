@@ -22,6 +22,8 @@
     <string name="auth_dummy_email">fakeEmail@email.com</string>
     <string name="auth_dummy_password">12345</string>
 
+    <string name="weather_image_placeholderstring">Your local weather forecase</string>
+
     <!--
     This string is used for square devices and overridden by hello_world in
     values-round/strings.xml for round devices.
