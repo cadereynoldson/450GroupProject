@@ -7,11 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".home.fragments.HomeFragment">
 
-    <TextView
-        android:id="@+id/homePlaceholder"
+    <ImageView
+        android:id="@+id/cloudChatLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_home"
+        android:contentDescription="@string/image_logo"
+        android:src="@drawable/logo_cloud_chat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
