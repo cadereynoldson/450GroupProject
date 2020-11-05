@@ -17,7 +17,7 @@ Mobile application programming group project.
 https://drive.google.com/drive/folders/1kjMYcrst8tk-WVSqlbfr45HJRd6EOhab?usp=sharing
 
 # Heroku
-https://dashboard.heroku.com/apps/cloud-chat
+https://dashboard.heroku.com/apps/cloud-chat-450
 
 # Heroku Repository
-https://github.com/TPhip92/cloud-chat
+https://github.com/cadereynoldson/450GroupProjectWebServer
