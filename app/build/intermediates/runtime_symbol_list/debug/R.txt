@@ -1993,7 +1993,7 @@ int string hello_world 0x7f100032
 int string hide_bottom_view_on_scroll_behavior 0x7f100033
 int string icon_content_description 0x7f100034
 int string image_logo 0x7f100035
-int string message_image_placeholderString 0x7f100036
+int string message_image_placeholderstring 0x7f100036
 int string mtrl_badge_numberless_content_description 0x7f100037
 int string mtrl_chip_close_icon_content_description 0x7f100038
 int string mtrl_exceed_max_badge_number_suffix 0x7f100039

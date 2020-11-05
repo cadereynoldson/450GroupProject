@@ -1994,7 +1994,7 @@ string hello_world
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string image_logo
-string message_image_placeholderString
+string message_image_placeholderstring
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_suffix
