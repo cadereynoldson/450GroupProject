@@ -1414,8 +1414,8 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_profile_black_24x24dp
 drawable ic_profile_blue_24dp
 drawable ic_weather_black_24x24dp
-drawable image0
 drawable logo_cloud_chat
+drawable messages_imageview_placeholderimage
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1441,6 +1441,7 @@ drawable notify_panel_notification_icon_bg
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable weather_imageview_placeholderimage
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -1617,7 +1618,7 @@ id main_nav
 id masked
 id media_actions
 id message
-id messagesPlaceholder
+id messages_imageView_placeholder
 id messages_root
 id middle
 id mini
@@ -1992,6 +1993,7 @@ string hello_world
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string image_logo
+string message_image_placeholderString
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_suffix

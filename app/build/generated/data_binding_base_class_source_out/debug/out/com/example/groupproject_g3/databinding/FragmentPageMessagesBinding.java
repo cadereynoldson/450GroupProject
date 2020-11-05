@@ -4,7 +4,7 @@ package com.example.groupproject_g3.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -19,15 +19,15 @@ public final class FragmentPageMessagesBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView messagesPlaceholder;
+  public final ImageView messagesImageViewPlaceholder;
 
   @NonNull
   public final ConstraintLayout messagesRoot;
 
   private FragmentPageMessagesBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView messagesPlaceholder, @NonNull ConstraintLayout messagesRoot) {
+      @NonNull ImageView messagesImageViewPlaceholder, @NonNull ConstraintLayout messagesRoot) {
     this.rootView = rootView;
-    this.messagesPlaceholder = messagesPlaceholder;
+    this.messagesImageViewPlaceholder = messagesImageViewPlaceholder;
     this.messagesRoot = messagesRoot;
   }
 
@@ -58,16 +58,16 @@ public final class FragmentPageMessagesBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.messagesPlaceholder;
-      TextView messagesPlaceholder = rootView.findViewById(id);
-      if (messagesPlaceholder == null) {
+      id = R.id.messages_imageView_placeholder;
+      ImageView messagesImageViewPlaceholder = rootView.findViewById(id);
+      if (messagesImageViewPlaceholder == null) {
         break missingId;
       }
 
       ConstraintLayout messagesRoot = (ConstraintLayout) rootView;
 
-      return new FragmentPageMessagesBinding((ConstraintLayout) rootView, messagesPlaceholder,
-          messagesRoot);
+      return new FragmentPageMessagesBinding((ConstraintLayout) rootView,
+          messagesImageViewPlaceholder, messagesRoot);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

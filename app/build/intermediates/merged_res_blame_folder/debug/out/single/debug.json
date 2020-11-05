@@ -24,6 +24,10 @@
         "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_register.xml"
     },
     {
+        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_messages_imageview_placeholderimage.png.flat",
+        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\messages_imageview_placeholderimage.png"
+    },
+    {
         "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_sign_in.xml.flat",
         "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_sign_in.xml"
     },
@@ -60,6 +64,10 @@
         "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
+        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_weather_imageview_placeholderimage.jpg.flat",
+        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\weather_imageview_placeholderimage.jpg"
+    },
+    {
         "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_weather_black_24x24dp.xml.flat",
         "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_weather_black_24x24dp.xml"
     },
@@ -90,10 +98,6 @@
     {
         "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_image0.jpg.flat",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\image0.jpg"
     },
     {
         "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",

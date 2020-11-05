@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/message_image_placeholderString"
-        android:src="@drawable/messages_imageView_placeholderImage"
+        android:src="@drawable/messages_imageview_placeholderimage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -7,11 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".message.fragments.MessageFragment" >
 
-    <TextView
-        android:id="@+id/messagesPlaceholder"
+    <ImageView
+        android:id="@+id/messages_imageView_placeholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_messages"
+        android:contentDescription="@string/message_image_placeholderString"
+        android:src="@drawable/messages_imageview_placeholderimage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
