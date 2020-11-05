@@ -8,11 +8,11 @@
     tools:context=".message.fragments.MessageFragment" >
 
     <ImageView
-        android:id="@+id/messages_imageView_placeholder"
+        android:id="@+id/messages_imageview_placeholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/message_image_placeholderString"
-        android:src="@drawable/messages_imageView_placeholderImage"
+        android:src="@drawable/google_rcs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
