@@ -36,18 +36,21 @@ public class RegisterFragment extends Fragment {
     /** Binding for the fragment. Allows for direct reference of fragment components. */
     private FragmentRegisterBinding binding;
 
-    /** */
+    /** View Model for the fragment. */
     private RegisterViewModel mRegisterModel;
 
-    /** */
+    /** A Name validator that checks for the length. */
     private PasswordValidator mNameValidator = checkPwdLength(1);
 
-    /** */
+    /** An Email validator that checks for the length, white spaces, and special char '@'. */
     private PasswordValidator mEmailValidator = checkPwdLength(2)
             .and(checkExcludeWhiteSpace())
             .and(checkPwdSpecialChar("@"));
 
-    /** */
+    /**
+     * A Password validator that checks for the matching, length,
+     * special char, white spaces, digits, and lower/uppercase.
+     */
     private PasswordValidator mPassWordValidator =
             checkClientPredicate(pwd -> pwd.equals(binding.textRegisterPassword2.getText().toString()))
                     .and(checkPwdLength(7))
@@ -56,7 +59,7 @@ public class RegisterFragment extends Fragment {
                     .and(checkPwdDigit())
                     .and(checkPwdLowerCase().or(checkPwdUpperCase()));
 
-    /** Require empty public constructor for RegisterFragment. */
+    /** Require empty public constructor for the Fragment. */
     public RegisterFragment() {
         // Required empty constructor
     }
@@ -112,7 +115,8 @@ public class RegisterFragment extends Fragment {
     }
 
     /**
-     *
+     * Validate first name when registering into the application. Will set invalid warnings
+     * accordingly if the name is invalid.
      */
     private void validateFirst() {
         mNameValidator.processResult(
@@ -122,7 +126,8 @@ public class RegisterFragment extends Fragment {
     }
 
     /**
-     *
+     * Validate last name when registering into the application. Will set invalid warnings
+     * accordingly if the name is invalid.
      */
     private void validateLast() {
         mNameValidator.processResult(
@@ -132,7 +137,8 @@ public class RegisterFragment extends Fragment {
     }
 
     /**
-     *
+     * Validate email when registering into the application. Will set invalid warnings
+     * accordingly if the email is invalid.
      */
     private void validateEmail() {
         mEmailValidator.processResult(
@@ -142,7 +148,8 @@ public class RegisterFragment extends Fragment {
     }
 
     /**
-     *
+     * Validate that password matches when registering into the application. Will set invalid warnings
+     * accordingly if password does not match.
      */
     private void validatePasswordsMatch() {
         PasswordValidator matchValidator =
@@ -156,7 +163,8 @@ public class RegisterFragment extends Fragment {
     }
 
     /**
-     *
+     * Validate password when registering into the application. Will set invalid warnings
+     * accordingly if password is invalid.
      */
     private void validatePassword() {
         mPassWordValidator.processResult(
@@ -166,7 +174,7 @@ public class RegisterFragment extends Fragment {
     }
 
     /**
-     *
+     * Verify all information with server.
      */
     private void verifyAuthWithServer() {
         mRegisterModel.connect(
@@ -179,7 +187,7 @@ public class RegisterFragment extends Fragment {
     }
 
     /**
-     *
+     * Once register is successful, navigate to login using email and password.
      */
     private void navigateToLogin() {
         RegisterFragmentDirections.ActionRegisterFragmentToSignInFragment directions =

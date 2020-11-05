@@ -32,19 +32,19 @@ public class SignInFragment extends Fragment {
     /** Binding for the fragment. Allows for direct reference of fragment components. */
     private FragmentSignInBinding binding;
 
-    /** */
+    /** View Model for the fragment. */
     private SignInViewModel mSignInModel;
 
-    /** */
+    /** An Email validator that checks for the length, white spaces, and special char '@'. */
     private PasswordValidator mEmailValidator = checkPwdLength(2)
             .and(checkExcludeWhiteSpace())
             .and(checkPwdSpecialChar("@"));
 
-    /** */
+    /** A Password validator that checks for the length and white spaces. */
     private PasswordValidator mPassWordValidator = checkPwdLength(1)
             .and(checkExcludeWhiteSpace());
 
-    /** Require empty public constructor for SignInFragment. */
+    /** Require empty public constructor for the Fragment. */
     public SignInFragment() {
         // Required empty public constructor
     }
