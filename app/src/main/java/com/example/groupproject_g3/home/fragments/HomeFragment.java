@@ -1,3 +1,6 @@
+/**
+ * Fragment for home page landing.
+ */
 package com.example.groupproject_g3.home.fragments;
 
 import android.os.Bundle;

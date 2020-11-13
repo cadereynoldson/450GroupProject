@@ -1,3 +1,6 @@
+/**
+ * Class which creates the Authorization Activity.
+ */
 package com.example.groupproject_g3.activities;
 
 import androidx.appcompat.app.AppCompatActivity;

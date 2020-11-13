@@ -1,14 +1,19 @@
+/**
+ * Main Activity.
+ */
 package com.example.groupproject_g3.activities;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.groupproject_g3.R;
+import com.example.groupproject_g3.model.UserInfoViewModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,7 +24,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //TODO: Fetch arguments to this activity and place accordingly.
+        MainActivityArgs args = MainActivityArgs.fromBundle(getIntent().getExtras());
+
+        //take note that we are not using the constructor explicitly, the no-arg
+        //constructor is called implicitly
+        new ViewModelProvider(
+                this,
+                new UserInfoViewModel.UserInfoViewModelFactory(args.getEmail(), args.getJwt()))
+                .get(UserInfoViewModel.class);
         buildMenu();
     }
 

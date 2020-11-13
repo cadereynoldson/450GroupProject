@@ -1,0 +1,75 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.groupproject_g3"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <application
+13-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:7:5-37:19
+14        android:allowBackup="true"
+14-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:8:9-35
+15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+15-->[androidx.core:core:1.3.0] C:\Users\Cade\.gradle\caches\transforms-2\files-2.1\b25a5312b8656f6b232a07d3773531a9\core-1.3.0\AndroidManifest.xml:24:18-86
+16        android:debuggable="true"
+17        android:extractNativeLibs="false"
+18        android:icon="@mipmap/ic_launcher"
+18-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:9:9-43
+19        android:label="@string/app_name"
+19-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:10:9-41
+20        android:roundIcon="@mipmap/ic_launcher_round"
+20-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:11:9-54
+21        android:supportsRtl="true"
+21-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:12:9-35
+22        android:testOnly="true"
+23        android:theme="@style/Theme.GroupProjectG3" >
+23-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:13:9-52
+24
+25        <!--
+26               Set to true if your app is Standalone, that is, it does not require the handheld
+27               app to run.
+28        -->
+29
+30        <activity
+30-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:20:9-28:20
+31            android:name="com.example.groupproject_g3.activities.AuthorizationActivity"
+31-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:21:13-61
+32            android:label="@string/title_activity_main" >
+32-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:22:13-56
+33            <intent-filter>
+33-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:23:13-27:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:24:17-69
+34-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:24:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:26:17-77
+36-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:26:27-74
+37            </intent-filter>
+38        </activity>
+39        <activity android:name="com.example.groupproject_g3.activities.MainActivity" >
+39-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:30:9-36:20
+39-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:30:19-58
+40            <intent-filter>
+40-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:23:13-27:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:24:17-69
+41-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:24:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:26:17-77
+43-->C:\Users\Cade\AndroidStudioProjects\450GroupProject-2\app\src\main\AndroidManifest.xml:26:27-74
+44            </intent-filter>
+45        </activity>
+46    </application>
+47
+48</manifest>

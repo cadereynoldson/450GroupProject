@@ -1,3 +1,6 @@
+/**
+ * Landing page for Profile.
+ */
 package com.example.groupproject_g3.profile.fragments;
 
 import android.os.Bundle;

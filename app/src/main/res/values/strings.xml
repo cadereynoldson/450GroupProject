@@ -22,9 +22,13 @@
     <string name="auth_dummy_email">fakeEmail@email.com</string>
     <string name="auth_dummy_password">12345</string>
 
+    <string name="weather_image_placeholderstring">Your local weather forecase</string>
+    <string name="message_image_placeholderstring">Non-interactive placeholder image</string>
+
     <!--
     This string is used for square devices and overridden by hello_world in
     values-round/strings.xml for round devices.
     -->
     <string name="hello_world">Hello Square World!</string>
+    <string name="image_logo">CloudChat</string>
 </resources>
