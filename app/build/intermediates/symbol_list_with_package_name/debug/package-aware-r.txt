@@ -793,6 +793,7 @@ color background_material_dark
 color background_material_light
 color black
 color blue_300
+color blue_300_transparent
 color blue_500
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
@@ -1433,6 +1434,7 @@ drawable design_snackbar_background
 drawable google_rcs
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_action_add
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
 drawable ic_contact_blueish_300dp
@@ -1541,6 +1543,7 @@ id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id action_registerFragment_to_signInFragment
+id action_search
 id action_signInFragment_to_mainActivity
 id action_signInFragment_to_registerFragment
 id action_text
@@ -1562,12 +1565,13 @@ id bottom
 id bottom_nav_menu
 id boxInsetLayout
 id buttonPanel
+id button_contact_add
 id button_register
-id button_register_back
 id button_signin
 id button_signin_register
 id cancel_action
 id cancel_button
+id card_root
 id center
 id center_horizontal
 id center_vertical
@@ -1583,8 +1587,6 @@ id clip_vertical
 id cloudChatLogo
 id collapseActionView
 id confirm_button
-id contactsPlaceholder
-id contacts_root
 id container
 id content
 id contentPanel
@@ -1641,7 +1643,6 @@ id icon_only
 id ifRoom
 id image
 id imageView
-id imageView3
 id imageView4
 id imageView5
 id image_weather
@@ -1651,6 +1652,8 @@ id italic
 id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
+id layout_inner
+id layout_root
 id left
 id light
 id line1
@@ -1727,6 +1730,7 @@ id profile_root
 id progress_circular
 id progress_horizontal
 id radio
+id recycler_messages
 id registerFragment
 id right
 id right_icon
@@ -1778,6 +1782,7 @@ id status_bar_latest_event_content
 id stretch
 id submenuarrow
 id submit_area
+id swipe_container
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -1796,15 +1801,19 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
+id text_email
 id text_input_end_icon
 id text_input_start_icon
+id text_name
 id text_register_email
 id text_register_first_name
 id text_register_last_name
 id text_register_password
 id text_register_password2
+id text_register_username
 id text_signin_email
 id text_signin_password
+id text_username
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -1913,6 +1922,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_contact_item
 layout fragment_page_contact
 layout fragment_page_home
 layout fragment_page_messages
@@ -1980,6 +1990,7 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu bottom_nav
+menu contacts_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation auth_nav
@@ -2012,6 +2023,8 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string action_add_contact
+string action_remove_contact
 string app_name
 string appbar_scrolling_view_behavior
 string auth_back
@@ -2024,6 +2037,7 @@ string auth_last_name
 string auth_password
 string auth_register
 string auth_sign_in
+string auth_username
 string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_overflowed_content_description
@@ -2048,6 +2062,9 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string contact_email
+string contact_name
+string contact_username
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
