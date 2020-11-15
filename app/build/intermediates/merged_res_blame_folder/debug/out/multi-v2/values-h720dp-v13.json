@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
+            "outputFile": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Cade\\.gradle\\caches\\transforms-2\\files-2.1\\c9eb0e217012e58191df0f35547bf0c9\\appcompat-1.2.0\\res\\values-h720dp-v13\\values-h720dp-v13.xml",

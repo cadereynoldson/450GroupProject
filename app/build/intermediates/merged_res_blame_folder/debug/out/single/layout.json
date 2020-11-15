@@ -1,38 +1,42 @@
 [
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_authorization.xml",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\src\\main\\res\\layout\\activity_authorization.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_contact_item.xml",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_contact_item.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_messages.xml",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\src\\main\\res\\layout\\fragment_page_messages.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_weather.xml",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_weather.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_contact.xml",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_contact.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_profile.xml",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\src\\main\\res\\layout\\fragment_page_profile.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_register.xml",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_register.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_contact.xml",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\src\\main\\res\\layout\\fragment_page_contact.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_home.xml",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_home.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_register.xml",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\src\\main\\res\\layout\\fragment_register.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_profile.xml",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_profile.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_weather.xml",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\src\\main\\res\\layout\\fragment_page_weather.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_messages.xml",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_messages.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_sign_in.xml",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\src\\main\\res\\layout\\fragment_sign_in.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_home.xml",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject-2\\app\\src\\main\\res\\layout\\fragment_page_home.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_authorization.xml",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\activity_authorization.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_sign_in.xml",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_sign_in.xml"
     }
 ]
