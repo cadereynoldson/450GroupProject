@@ -4,11 +4,12 @@ package com.example.groupproject_g3.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewbinding.ViewBinding;
 import com.example.groupproject_g3.R;
 import java.lang.NullPointerException;
@@ -20,21 +21,25 @@ public final class FragmentPageContactBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView contactsPlaceholder;
+  public final Button buttonContactAdd;
 
   @NonNull
-  public final ConstraintLayout contactsRoot;
+  public final ConstraintLayout layoutRoot;
 
   @NonNull
-  public final ImageView imageView3;
+  public final RecyclerView recyclerMessages;
+
+  @NonNull
+  public final SwipeRefreshLayout swipeContainer;
 
   private FragmentPageContactBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView contactsPlaceholder, @NonNull ConstraintLayout contactsRoot,
-      @NonNull ImageView imageView3) {
+      @NonNull Button buttonContactAdd, @NonNull ConstraintLayout layoutRoot,
+      @NonNull RecyclerView recyclerMessages, @NonNull SwipeRefreshLayout swipeContainer) {
     this.rootView = rootView;
-    this.contactsPlaceholder = contactsPlaceholder;
-    this.contactsRoot = contactsRoot;
-    this.imageView3 = imageView3;
+    this.buttonContactAdd = buttonContactAdd;
+    this.layoutRoot = layoutRoot;
+    this.recyclerMessages = recyclerMessages;
+    this.swipeContainer = swipeContainer;
   }
 
   @Override
@@ -64,22 +69,28 @@ public final class FragmentPageContactBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.contactsPlaceholder;
-      TextView contactsPlaceholder = rootView.findViewById(id);
-      if (contactsPlaceholder == null) {
+      id = R.id.button_contact_add;
+      Button buttonContactAdd = rootView.findViewById(id);
+      if (buttonContactAdd == null) {
         break missingId;
       }
 
-      ConstraintLayout contactsRoot = (ConstraintLayout) rootView;
+      ConstraintLayout layoutRoot = (ConstraintLayout) rootView;
 
-      id = R.id.imageView3;
-      ImageView imageView3 = rootView.findViewById(id);
-      if (imageView3 == null) {
+      id = R.id.recycler_messages;
+      RecyclerView recyclerMessages = rootView.findViewById(id);
+      if (recyclerMessages == null) {
         break missingId;
       }
 
-      return new FragmentPageContactBinding((ConstraintLayout) rootView, contactsPlaceholder,
-          contactsRoot, imageView3);
+      id = R.id.swipe_container;
+      SwipeRefreshLayout swipeContainer = rootView.findViewById(id);
+      if (swipeContainer == null) {
+        break missingId;
+      }
+
+      return new FragmentPageContactBinding((ConstraintLayout) rootView, buttonContactAdd,
+          layoutRoot, recyclerMessages, swipeContainer);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

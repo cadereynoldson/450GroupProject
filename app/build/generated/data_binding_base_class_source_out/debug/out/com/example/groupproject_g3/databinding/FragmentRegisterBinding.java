@@ -24,9 +24,6 @@ public final class FragmentRegisterBinding implements ViewBinding {
   public final Button buttonRegister;
 
   @NonNull
-  public final Button buttonRegisterBack;
-
-  @NonNull
   public final ConstraintLayout frameLayout2;
 
   @NonNull
@@ -47,15 +44,17 @@ public final class FragmentRegisterBinding implements ViewBinding {
   @NonNull
   public final EditText textRegisterPassword2;
 
+  @NonNull
+  public final EditText textRegisterUsername;
+
   private FragmentRegisterBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button buttonRegister, @NonNull Button buttonRegisterBack,
-      @NonNull ConstraintLayout frameLayout2, @NonNull ImageView logoRegisterCloudChat,
-      @NonNull EditText textRegisterEmail, @NonNull EditText textRegisterFirstName,
-      @NonNull EditText textRegisterLastName, @NonNull EditText textRegisterPassword,
-      @NonNull EditText textRegisterPassword2) {
+      @NonNull Button buttonRegister, @NonNull ConstraintLayout frameLayout2,
+      @NonNull ImageView logoRegisterCloudChat, @NonNull EditText textRegisterEmail,
+      @NonNull EditText textRegisterFirstName, @NonNull EditText textRegisterLastName,
+      @NonNull EditText textRegisterPassword, @NonNull EditText textRegisterPassword2,
+      @NonNull EditText textRegisterUsername) {
     this.rootView = rootView;
     this.buttonRegister = buttonRegister;
-    this.buttonRegisterBack = buttonRegisterBack;
     this.frameLayout2 = frameLayout2;
     this.logoRegisterCloudChat = logoRegisterCloudChat;
     this.textRegisterEmail = textRegisterEmail;
@@ -63,6 +62,7 @@ public final class FragmentRegisterBinding implements ViewBinding {
     this.textRegisterLastName = textRegisterLastName;
     this.textRegisterPassword = textRegisterPassword;
     this.textRegisterPassword2 = textRegisterPassword2;
+    this.textRegisterUsername = textRegisterUsername;
   }
 
   @Override
@@ -95,12 +95,6 @@ public final class FragmentRegisterBinding implements ViewBinding {
       id = R.id.button_register;
       Button buttonRegister = rootView.findViewById(id);
       if (buttonRegister == null) {
-        break missingId;
-      }
-
-      id = R.id.button_register_back;
-      Button buttonRegisterBack = rootView.findViewById(id);
-      if (buttonRegisterBack == null) {
         break missingId;
       }
 
@@ -142,9 +136,15 @@ public final class FragmentRegisterBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentRegisterBinding((ConstraintLayout) rootView, buttonRegister,
-          buttonRegisterBack, frameLayout2, logoRegisterCloudChat, textRegisterEmail,
-          textRegisterFirstName, textRegisterLastName, textRegisterPassword, textRegisterPassword2);
+      id = R.id.text_register_username;
+      EditText textRegisterUsername = rootView.findViewById(id);
+      if (textRegisterUsername == null) {
+        break missingId;
+      }
+
+      return new FragmentRegisterBinding((ConstraintLayout) rootView, buttonRegister, frameLayout2,
+          logoRegisterCloudChat, textRegisterEmail, textRegisterFirstName, textRegisterLastName,
+          textRegisterPassword, textRegisterPassword2, textRegisterUsername);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

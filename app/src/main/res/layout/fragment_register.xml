@@ -11,7 +11,7 @@
         android:id="@+id/text_register_first_name"
         android:layout_width="@dimen/auth_textEdit_width"
         android:layout_height="@dimen/auth_textEdit_height"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="160dp"
         android:ems="10"
         android:hint="@string/auth_first_name"
         android:inputType="textPersonName"
@@ -47,6 +47,19 @@
         app:layout_constraintTop_toBottomOf="@+id/text_register_last_name" />
 
     <EditText
+        android:id="@+id/text_register_username"
+        android:layout_width="@dimen/auth_textEdit_width"
+        android:layout_height="@dimen/auth_textEdit_height"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/auth_username"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_register_email" />
+
+    <EditText
         android:id="@+id/text_register_password"
         android:layout_width="@dimen/auth_textEdit_width"
         android:layout_height="@dimen/auth_textEdit_height"
@@ -57,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_register_email" />
+        app:layout_constraintTop_toBottomOf="@+id/text_register_username" />
 
     <EditText
         android:id="@+id/text_register_password2"
@@ -76,29 +89,20 @@
         android:id="@+id/button_register"
         android:layout_width="@dimen/auth_button_width"
         android:layout_height="@dimen/auth_button_height"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:text="@string/auth_register"
         app:layout_constraintEnd_toEndOf="@+id/text_register_password2"
         app:layout_constraintTop_toBottomOf="@+id/text_register_password2" />
 
-    <Button
-        android:id="@+id/button_register_back"
-        android:layout_width="@dimen/auth_button_width"
-        android:layout_height="@dimen/auth_button_height"
-        android:layout_marginTop="28dp"
-        android:text="@string/auth_back"
-        app:layout_constraintStart_toStartOf="@+id/text_register_password2"
-        app:layout_constraintTop_toBottomOf="@+id/text_register_password2" />
-
     <ImageView
         android:id="@+id/logo_register_cloudChat"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_marginTop="16dp"
         android:scaleType="fitCenter"
         android:src="@drawable/logo_cloud_chat"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
