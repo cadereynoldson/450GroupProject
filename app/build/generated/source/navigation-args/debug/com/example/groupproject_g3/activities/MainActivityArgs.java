@@ -45,6 +45,13 @@ public class MainActivityArgs implements NavArgs {
     } else {
       throw new IllegalArgumentException("Required argument \"jwt\" is missing and does not have an android:defaultValue");
     }
+    if (bundle.containsKey("userId")) {
+      int userId;
+      userId = bundle.getInt("userId");
+      __result.arguments.put("userId", userId);
+    } else {
+      throw new IllegalArgumentException("Required argument \"userId\" is missing and does not have an android:defaultValue");
+    }
     return __result;
   }
 
@@ -61,6 +68,11 @@ public class MainActivityArgs implements NavArgs {
   }
 
   @SuppressWarnings("unchecked")
+  public int getUserId() {
+    return (int) arguments.get("userId");
+  }
+
+  @SuppressWarnings("unchecked")
   @NonNull
   public Bundle toBundle() {
     Bundle __result = new Bundle();
@@ -71,6 +83,10 @@ public class MainActivityArgs implements NavArgs {
     if (arguments.containsKey("jwt")) {
       String jwt = (String) arguments.get("jwt");
       __result.putString("jwt", jwt);
+    }
+    if (arguments.containsKey("userId")) {
+      int userId = (int) arguments.get("userId");
+      __result.putInt("userId", userId);
     }
     return __result;
   }
@@ -96,6 +112,12 @@ public class MainActivityArgs implements NavArgs {
     if (getJwt() != null ? !getJwt().equals(that.getJwt()) : that.getJwt() != null) {
       return false;
     }
+    if (arguments.containsKey("userId") != that.arguments.containsKey("userId")) {
+      return false;
+    }
+    if (getUserId() != that.getUserId()) {
+      return false;
+    }
     return true;
   }
 
@@ -104,6 +126,7 @@ public class MainActivityArgs implements NavArgs {
     int result = 1;
     result = 31 * result + (getEmail() != null ? getEmail().hashCode() : 0);
     result = 31 * result + (getJwt() != null ? getJwt().hashCode() : 0);
+    result = 31 * result + getUserId();
     return result;
   }
 
@@ -112,6 +135,7 @@ public class MainActivityArgs implements NavArgs {
     return "MainActivityArgs{"
         + "email=" + getEmail()
         + ", jwt=" + getJwt()
+        + ", userId=" + getUserId()
         + "}";
   }
 
@@ -122,7 +146,7 @@ public class MainActivityArgs implements NavArgs {
       this.arguments.putAll(original.arguments);
     }
 
-    public Builder(@NonNull String email, @NonNull String jwt) {
+    public Builder(@NonNull String email, @NonNull String jwt, int userId) {
       if (email == null) {
         throw new IllegalArgumentException("Argument \"email\" is marked as non-null but was passed a null value.");
       }
@@ -131,6 +155,7 @@ public class MainActivityArgs implements NavArgs {
         throw new IllegalArgumentException("Argument \"jwt\" is marked as non-null but was passed a null value.");
       }
       this.arguments.put("jwt", jwt);
+      this.arguments.put("userId", userId);
     }
 
     @NonNull
@@ -157,6 +182,12 @@ public class MainActivityArgs implements NavArgs {
       return this;
     }
 
+    @NonNull
+    public Builder setUserId(int userId) {
+      this.arguments.put("userId", userId);
+      return this;
+    }
+
     @SuppressWarnings("unchecked")
     @NonNull
     public String getEmail() {
@@ -167,6 +198,11 @@ public class MainActivityArgs implements NavArgs {
     @NonNull
     public String getJwt() {
       return (String) arguments.get("jwt");
+    }
+
+    @SuppressWarnings("unchecked")
+    public int getUserId() {
+      return (int) arguments.get("userId");
     }
   }
 }

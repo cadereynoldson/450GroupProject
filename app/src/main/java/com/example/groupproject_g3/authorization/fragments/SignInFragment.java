@@ -119,8 +119,6 @@ public class SignInFragment extends Fragment {
         mSignInModel.connect(
                 binding.textSigninEmail.getText().toString(),
                 binding.textSigninPassword.getText().toString());
-        //This is an Asynchronous call. No statements after should rely on the
-        //result of connect().
     }
 
     /**
@@ -128,10 +126,10 @@ public class SignInFragment extends Fragment {
      * @param email users email
      * @param jwt the JSON Web Token supplied by the server
      */
-    private void navigateToSuccess(final String email, final String jwt) {
+    private void navigateToSuccess(final String email, final String jwt, final int userId) {
         Navigation.findNavController(getView())
                 .navigate(SignInFragmentDirections
-                        .actionSignInFragmentToMainActivity(email, jwt));
+                        .actionSignInFragmentToMainActivity(email, jwt, userId));
         getActivity().finish();
     }
 
@@ -155,7 +153,8 @@ public class SignInFragment extends Fragment {
                 try {
                     navigateToSuccess(
                             binding.textSigninEmail.getText().toString(),
-                            response.getString("token")
+                            response.getString("token"),
+                            response.getInt("memberId")
                     );
                 } catch (JSONException e) {
                     Log.e("JSON Parse Error", e.getMessage());

@@ -2118,6 +2118,11 @@ string hello_world
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string image_logo
+string key_contacts_email
+string key_contacts_first_name
+string key_contacts_last_name
+string key_contacts_list
+string key_contacts_username
 string message_image_placeholderstring
 string more
 string mtrl_badge_numberless_content_description

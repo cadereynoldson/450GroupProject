@@ -18,8 +18,8 @@ public class SignInFragmentDirections {
 
   @NonNull
   public static ActionSignInFragmentToMainActivity actionSignInFragmentToMainActivity(
-      @NonNull String email, @NonNull String jwt) {
-    return new ActionSignInFragmentToMainActivity(email, jwt);
+      @NonNull String email, @NonNull String jwt, int userId) {
+    return new ActionSignInFragmentToMainActivity(email, jwt, userId);
   }
 
   @NonNull
@@ -30,7 +30,8 @@ public class SignInFragmentDirections {
   public static class ActionSignInFragmentToMainActivity implements NavDirections {
     private final HashMap arguments = new HashMap();
 
-    private ActionSignInFragmentToMainActivity(@NonNull String email, @NonNull String jwt) {
+    private ActionSignInFragmentToMainActivity(@NonNull String email, @NonNull String jwt,
+        int userId) {
       if (email == null) {
         throw new IllegalArgumentException("Argument \"email\" is marked as non-null but was passed a null value.");
       }
@@ -39,6 +40,7 @@ public class SignInFragmentDirections {
         throw new IllegalArgumentException("Argument \"jwt\" is marked as non-null but was passed a null value.");
       }
       this.arguments.put("jwt", jwt);
+      this.arguments.put("userId", userId);
     }
 
     @NonNull
@@ -59,6 +61,12 @@ public class SignInFragmentDirections {
       return this;
     }
 
+    @NonNull
+    public ActionSignInFragmentToMainActivity setUserId(int userId) {
+      this.arguments.put("userId", userId);
+      return this;
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     @NonNull
@@ -71,6 +79,10 @@ public class SignInFragmentDirections {
       if (arguments.containsKey("jwt")) {
         String jwt = (String) arguments.get("jwt");
         __result.putString("jwt", jwt);
+      }
+      if (arguments.containsKey("userId")) {
+        int userId = (int) arguments.get("userId");
+        __result.putInt("userId", userId);
       }
       return __result;
     }
@@ -90,6 +102,11 @@ public class SignInFragmentDirections {
     @NonNull
     public String getJwt() {
       return (String) arguments.get("jwt");
+    }
+
+    @SuppressWarnings("unchecked")
+    public int getUserId() {
+      return (int) arguments.get("userId");
     }
 
     @Override
@@ -113,6 +130,12 @@ public class SignInFragmentDirections {
       if (getJwt() != null ? !getJwt().equals(that.getJwt()) : that.getJwt() != null) {
         return false;
       }
+      if (arguments.containsKey("userId") != that.arguments.containsKey("userId")) {
+        return false;
+      }
+      if (getUserId() != that.getUserId()) {
+        return false;
+      }
       if (getActionId() != that.getActionId()) {
         return false;
       }
@@ -124,6 +147,7 @@ public class SignInFragmentDirections {
       int result = 1;
       result = 31 * result + (getEmail() != null ? getEmail().hashCode() : 0);
       result = 31 * result + (getJwt() != null ? getJwt().hashCode() : 0);
+      result = 31 * result + getUserId();
       result = 31 * result + getActionId();
       return result;
     }
@@ -133,6 +157,7 @@ public class SignInFragmentDirections {
       return "ActionSignInFragmentToMainActivity(actionId=" + getActionId() + "){"
           + "email=" + getEmail()
           + ", jwt=" + getJwt()
+          + ", userId=" + getUserId()
           + "}";
     }
   }
