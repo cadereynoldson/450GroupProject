@@ -16,10 +16,10 @@
         android:label="@string/title_weather"
         tools:layout="@layout/fragment_page_weather" />
     <fragment
-        android:id="@+id/navigation_messages"
-        android:name="com.example.groupproject_g3.message.fragments.MessageFragment"
-        android:label="@string/title_messages"
-        tools:layout="@layout/fragment_page_messages" />
+        android:id="@+id/navigation_chats"
+        android:name="com.example.groupproject_g3.chat.fragments.ChatFragment"
+        android:label="@string/title_chats"
+        tools:layout="@layout/fragment_page_chat" />
     <fragment
         android:id="@+id/navigation_contacts"
         android:name="com.example.groupproject_g3.contact.fragments.ContactFragment"
