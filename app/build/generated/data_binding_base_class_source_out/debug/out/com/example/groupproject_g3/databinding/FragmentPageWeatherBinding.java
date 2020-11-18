@@ -5,45 +5,67 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.example.groupproject_g3.R;
+import com.google.android.material.chip.Chip;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class FragmentPageWeatherBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
-  public final ImageView imageView5;
+  public final RecyclerView RecycleViewDays;
 
   @NonNull
-  public final ImageView imageWeather;
+  public final RecyclerView RecycleViewHours;
 
   @NonNull
-  public final TextView textView;
+  public final CardView cardWeather24hours;
 
   @NonNull
-  public final ConstraintLayout weatherRoot;
+  public final Chip chipWeatherLocation;
 
-  private FragmentPageWeatherBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageView imageView5, @NonNull ImageView imageWeather, @NonNull TextView textView,
-      @NonNull ConstraintLayout weatherRoot) {
+  @NonNull
+  public final LayoutWeatherForecastBinding containerWeatherForecast;
+
+  @NonNull
+  public final ImageView imageWeatherCurrent;
+
+  @NonNull
+  public final ProgressBar progressBar;
+
+  @NonNull
+  public final RelativeLayout weatherRoot;
+
+  private FragmentPageWeatherBinding(@NonNull RelativeLayout rootView,
+      @NonNull RecyclerView RecycleViewDays, @NonNull RecyclerView RecycleViewHours,
+      @NonNull CardView cardWeather24hours, @NonNull Chip chipWeatherLocation,
+      @NonNull LayoutWeatherForecastBinding containerWeatherForecast,
+      @NonNull ImageView imageWeatherCurrent, @NonNull ProgressBar progressBar,
+      @NonNull RelativeLayout weatherRoot) {
     this.rootView = rootView;
-    this.imageView5 = imageView5;
-    this.imageWeather = imageWeather;
-    this.textView = textView;
+    this.RecycleViewDays = RecycleViewDays;
+    this.RecycleViewHours = RecycleViewHours;
+    this.cardWeather24hours = cardWeather24hours;
+    this.chipWeatherLocation = chipWeatherLocation;
+    this.containerWeatherForecast = containerWeatherForecast;
+    this.imageWeatherCurrent = imageWeatherCurrent;
+    this.progressBar = progressBar;
     this.weatherRoot = weatherRoot;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -68,28 +90,54 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.imageView5;
-      ImageView imageView5 = rootView.findViewById(id);
-      if (imageView5 == null) {
+      id = R.id.RecycleView_days;
+      RecyclerView RecycleViewDays = rootView.findViewById(id);
+      if (RecycleViewDays == null) {
         break missingId;
       }
 
-      id = R.id.image_weather;
-      ImageView imageWeather = rootView.findViewById(id);
-      if (imageWeather == null) {
+      id = R.id.RecycleView_hours;
+      RecyclerView RecycleViewHours = rootView.findViewById(id);
+      if (RecycleViewHours == null) {
         break missingId;
       }
 
-      id = R.id.textView;
-      TextView textView = rootView.findViewById(id);
-      if (textView == null) {
+      id = R.id.card_weather_24hours;
+      CardView cardWeather24hours = rootView.findViewById(id);
+      if (cardWeather24hours == null) {
         break missingId;
       }
 
-      ConstraintLayout weatherRoot = (ConstraintLayout) rootView;
+      id = R.id.chip_weather_location;
+      Chip chipWeatherLocation = rootView.findViewById(id);
+      if (chipWeatherLocation == null) {
+        break missingId;
+      }
 
-      return new FragmentPageWeatherBinding((ConstraintLayout) rootView, imageView5, imageWeather,
-          textView, weatherRoot);
+      id = R.id.container_weather_forecast;
+      View containerWeatherForecast = rootView.findViewById(id);
+      if (containerWeatherForecast == null) {
+        break missingId;
+      }
+      LayoutWeatherForecastBinding binding_containerWeatherForecast = LayoutWeatherForecastBinding.bind(containerWeatherForecast);
+
+      id = R.id.image_weather_current;
+      ImageView imageWeatherCurrent = rootView.findViewById(id);
+      if (imageWeatherCurrent == null) {
+        break missingId;
+      }
+
+      id = R.id.progressBar;
+      ProgressBar progressBar = rootView.findViewById(id);
+      if (progressBar == null) {
+        break missingId;
+      }
+
+      RelativeLayout weatherRoot = (RelativeLayout) rootView;
+
+      return new FragmentPageWeatherBinding((RelativeLayout) rootView, RecycleViewDays,
+          RecycleViewHours, cardWeather24hours, chipWeatherLocation,
+          binding_containerWeatherForecast, imageWeatherCurrent, progressBar, weatherRoot);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

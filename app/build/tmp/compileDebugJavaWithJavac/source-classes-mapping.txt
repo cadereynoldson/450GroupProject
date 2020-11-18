@@ -1,3 +1,5 @@
+com/example/groupproject_g3/databinding/ItemWeatherDaysBinding.java
+ com.example.groupproject_g3.databinding.ItemWeatherDaysBinding
 com/example/groupproject_g3/activities/MainActivity.java
  com.example.groupproject_g3.activities.MainActivity
 com/example/groupproject_g3/databinding/FragmentPageContactBinding.java
@@ -12,12 +14,18 @@ com/example/groupproject_g3/contact/fragments/ContactItem.java
  com.example.groupproject_g3.contact.fragments.ContactItem
 com/example/groupproject_g3/message/fragments/MessageFragment.java
  com.example.groupproject_g3.message.fragments.MessageFragment
+com/example/groupproject_g3/weather/fragments/WeatherHoursItem.java
+ com.example.groupproject_g3.weather.fragments.WeatherHoursItem
+com/example/groupproject_g3/databinding/ItemWeatherHourBinding.java
+ com.example.groupproject_g3.databinding.ItemWeatherHourBinding
 com/example/groupproject_g3/databinding/FragmentSignInBinding.java
  com.example.groupproject_g3.databinding.FragmentSignInBinding
 com/example/groupproject_g3/authorization/fragments/RegisterFragment.java
  com.example.groupproject_g3.authorization.fragments.RegisterFragment
 com/example/groupproject_g3/databinding/FragmentPageProfileBinding.java
  com.example.groupproject_g3.databinding.FragmentPageProfileBinding
+com/example/groupproject_g3/databinding/FragmentWeatherForecastBinding.java
+ com.example.groupproject_g3.databinding.FragmentWeatherForecastBinding
 com/example/groupproject_g3/utils/PasswordValidator.java
  com.example.groupproject_g3.utils.PasswordValidator
  com.example.groupproject_g3.utils.PasswordValidator$ValidationResult
@@ -42,8 +50,12 @@ com/example/groupproject_g3/authorization/fragments/SignInFragmentArgs.java
  com.example.groupproject_g3.authorization.fragments.SignInFragmentArgs
  com.example.groupproject_g3.authorization.fragments.SignInFragmentArgs$1
  com.example.groupproject_g3.authorization.fragments.SignInFragmentArgs$Builder
+com/example/groupproject_g3/databinding/LayoutWeatherForecastBinding.java
+ com.example.groupproject_g3.databinding.LayoutWeatherForecastBinding
 com/example/groupproject_g3/activities/AuthorizationActivity.java
  com.example.groupproject_g3.activities.AuthorizationActivity
+com/example/groupproject_g3/weather/fragments/WeatherSearchFragment.java
+ com.example.groupproject_g3.weather.fragments.WeatherSearchFragment
 com/example/groupproject_g3/databinding/FragmentPageWeatherBinding.java
  com.example.groupproject_g3.databinding.FragmentPageWeatherBinding
 com/example/groupproject_g3/activities/MainActivityArgs.java
@@ -56,6 +68,10 @@ com/example/groupproject_g3/contact/fragments/ContactRecyclerViewAdapter.java
 com/example/groupproject_g3/authorization/fragments/SignInViewModel.java
  com.example.groupproject_g3.authorization.fragments.SignInViewModel
  com.example.groupproject_g3.authorization.fragments.SignInViewModel$1
+com/example/groupproject_g3/databinding/FragmentWeatherSearchBinding.java
+ com.example.groupproject_g3.databinding.FragmentWeatherSearchBinding
+com/example/groupproject_g3/weather/fragments/WeatherViewModel.java
+ com.example.groupproject_g3.weather.fragments.WeatherViewModel
 com/example/groupproject_g3/authorization/fragments/RegisterFragmentDirections.java
  com.example.groupproject_g3.authorization.fragments.RegisterFragmentDirections
  com.example.groupproject_g3.authorization.fragments.RegisterFragmentDirections$1
@@ -68,6 +84,11 @@ com/example/groupproject_g3/BuildConfig.java
  com.example.groupproject_g3.BuildConfig
 com/example/groupproject_g3/databinding/FragmentRegisterBinding.java
  com.example.groupproject_g3.databinding.FragmentRegisterBinding
+com/example/groupproject_g3/weather/fragments/WeatherForecastFragment.java
+ com.example.groupproject_g3.weather.fragments.WeatherForecastFragment
+com/example/groupproject_g3/weather/fragments/WeatherRecyclerViewAdapter.java
+ com.example.groupproject_g3.weather.fragments.WeatherRecyclerViewAdapter
+ com.example.groupproject_g3.weather.fragments.WeatherRecyclerViewAdapter$WeatherViewHolder
 com/example/groupproject_g3/authorization/fragments/RegisterViewModel.java
  com.example.groupproject_g3.authorization.fragments.RegisterViewModel
 com/example/groupproject_g3/authorization/fragments/SignInFragmentDirections.java

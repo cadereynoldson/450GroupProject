@@ -1,158 +1,186 @@
 [
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_page_messages.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_messages.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_profile_black_24x24dp.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_profile_black_24x24dp.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_action_add.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\drawable\\ic_action_add.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_contact_blueish_300dp.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\drawable\\ic_contact_blueish_300dp.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_home_black_24x24dp.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_home_black_24x24dp.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_page_contact.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\fragment_page_contact.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_page_profile.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_profile.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_weather_forecast.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\fragment_weather_forecast.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_action_add.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_action_add.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_page_weather.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\fragment_page_weather.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_message_black_24x24dp.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_message_black_24x24dp.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_weather_days.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\item_weather_days.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_contact_blueish_300dp.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_contact_blueish_300dp.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_weather_black_24x24dp.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\drawable\\ic_weather_black_24x24dp.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_image0.jpg.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\image0.jpg"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_contacts_black_24x24dp.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\drawable\\ic_contacts_black_24x24dp.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\navigation_main_nav.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\navigation\\main_nav.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_weather_yellow_24.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\drawable\\ic_weather_yellow_24.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_page_profile.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\fragment_page_profile.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_weather_search.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\fragment_weather_search.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_google_rcs.png.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\google_rcs.png"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_message_black_24x24dp.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\drawable\\ic_message_black_24x24dp.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_page_contact.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_contact.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_contact_item.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\fragment_contact_item.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\menu_contacts_menu.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\menu\\contacts_menu.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_page_messages.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\fragment_page_messages.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_contacts_black_24x24dp.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_contacts_black_24x24dp.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_cloud_chat.png.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\drawable\\logo_cloud_chat.png"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_profile_blue_24dp.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\drawable\\ic_profile_blue_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\menu\\bottom_nav.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_register.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\fragment_register.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_register.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_register.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_profile_black_24x24dp.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\drawable\\ic_profile_black_24x24dp.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_authorization.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\activity_authorization.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\menu_contacts_menu.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\menu\\contacts_menu.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\navigation_auth_nav.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\navigation\\auth_nav.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_page_home.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_home.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_contact_item.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_contact_item.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_weather_forecast.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\layout_weather_forecast.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_page_weather.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_weather.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_weather_black_24x24dp.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_weather_black_24x24dp.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_sign_in.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_sign_in.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_google_rcs.png.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\drawable\\google_rcs.png"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_cloud_chat.png.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\logo_cloud_chat.png"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_weather_hour.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\item_weather_hour.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_home_black_24x24dp.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\drawable\\ic_home_black_24x24dp.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_sign_in.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\fragment_sign_in.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\menu\\bottom_nav.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_profile_blue_24dp.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_profile_blue_24dp.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_authorization.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\activity_authorization.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\menu_drawer_menu.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\menu\\drawer_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\navigation_main_nav.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\navigation\\main_nav.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_page_home.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\fragment_page_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_weather_background.png.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\drawable\\weather_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\res\\merged\\debug\\navigation_auth_nav.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\navigation\\auth_nav.xml"
     }
 ]
