@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="key_contacts_list">rows</string>
+    <string name="key_contacts_first_name">firstname</string>
+    <string name="key_contacts_last_name">lastname</string>
+    <string name="key_contacts_username">username</string>
+    <string name="key_contacts_email">email</string>
+</resources>

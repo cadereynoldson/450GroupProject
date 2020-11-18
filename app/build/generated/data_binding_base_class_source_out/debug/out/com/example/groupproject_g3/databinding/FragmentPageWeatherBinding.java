@@ -4,7 +4,6 @@ package com.example.groupproject_g3.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
@@ -32,13 +31,13 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
   public final CardView cardWeather24hours;
 
   @NonNull
+  public final CardView cardWeatherDays;
+
+  @NonNull
   public final Chip chipWeatherLocation;
 
   @NonNull
   public final LayoutWeatherForecastBinding containerWeatherForecast;
-
-  @NonNull
-  public final ImageView imageWeatherCurrent;
 
   @NonNull
   public final ProgressBar progressBar;
@@ -48,17 +47,17 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
 
   private FragmentPageWeatherBinding(@NonNull RelativeLayout rootView,
       @NonNull RecyclerView RecycleViewDays, @NonNull RecyclerView RecycleViewHours,
-      @NonNull CardView cardWeather24hours, @NonNull Chip chipWeatherLocation,
+      @NonNull CardView cardWeather24hours, @NonNull CardView cardWeatherDays,
+      @NonNull Chip chipWeatherLocation,
       @NonNull LayoutWeatherForecastBinding containerWeatherForecast,
-      @NonNull ImageView imageWeatherCurrent, @NonNull ProgressBar progressBar,
-      @NonNull RelativeLayout weatherRoot) {
+      @NonNull ProgressBar progressBar, @NonNull RelativeLayout weatherRoot) {
     this.rootView = rootView;
     this.RecycleViewDays = RecycleViewDays;
     this.RecycleViewHours = RecycleViewHours;
     this.cardWeather24hours = cardWeather24hours;
+    this.cardWeatherDays = cardWeatherDays;
     this.chipWeatherLocation = chipWeatherLocation;
     this.containerWeatherForecast = containerWeatherForecast;
-    this.imageWeatherCurrent = imageWeatherCurrent;
     this.progressBar = progressBar;
     this.weatherRoot = weatherRoot;
   }
@@ -108,6 +107,12 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.card_weather_days;
+      CardView cardWeatherDays = rootView.findViewById(id);
+      if (cardWeatherDays == null) {
+        break missingId;
+      }
+
       id = R.id.chip_weather_location;
       Chip chipWeatherLocation = rootView.findViewById(id);
       if (chipWeatherLocation == null) {
@@ -121,12 +126,6 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
       }
       LayoutWeatherForecastBinding binding_containerWeatherForecast = LayoutWeatherForecastBinding.bind(containerWeatherForecast);
 
-      id = R.id.image_weather_current;
-      ImageView imageWeatherCurrent = rootView.findViewById(id);
-      if (imageWeatherCurrent == null) {
-        break missingId;
-      }
-
       id = R.id.progressBar;
       ProgressBar progressBar = rootView.findViewById(id);
       if (progressBar == null) {
@@ -136,8 +135,8 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
       RelativeLayout weatherRoot = (RelativeLayout) rootView;
 
       return new FragmentPageWeatherBinding((RelativeLayout) rootView, RecycleViewDays,
-          RecycleViewHours, cardWeather24hours, chipWeatherLocation,
-          binding_containerWeatherForecast, imageWeatherCurrent, progressBar, weatherRoot);
+          RecycleViewHours, cardWeather24hours, cardWeatherDays, chipWeatherLocation,
+          binding_containerWeatherForecast, progressBar, weatherRoot);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -6,10 +6,10 @@ com/example/groupproject_g3/activities/MainActivity.java
  com.example.groupproject_g3.activities.MainActivity
 com/example/groupproject_g3/databinding/FragmentPageContactBinding.java
  com.example.groupproject_g3.databinding.FragmentPageContactBinding
-com/example/groupproject_g3/databinding/ActivityAuthorizationBinding.java
- com.example.groupproject_g3.databinding.ActivityAuthorizationBinding
 com/example/groupproject_g3/databinding/FragmentContactItemBinding.java
  com.example.groupproject_g3.databinding.FragmentContactItemBinding
+com/example/groupproject_g3/databinding/ActivityAuthorizationBinding.java
+ com.example.groupproject_g3.databinding.ActivityAuthorizationBinding
 com/example/groupproject_g3/home/fragments/HomeFragment.java
  com.example.groupproject_g3.home.fragments.HomeFragment
 com/example/groupproject_g3/contact/fragments/ContactItem.java
@@ -33,6 +33,7 @@ com/example/groupproject_g3/utils/PasswordValidator.java
  com.example.groupproject_g3.utils.PasswordValidator$ValidationResult
 com/example/groupproject_g3/contact/fragments/ContactsViewModel.java
  com.example.groupproject_g3.contact.fragments.ContactsViewModel
+ com.example.groupproject_g3.contact.fragments.ContactsViewModel$1
 com/example/groupproject_g3/io/RequestQueueSingleton.java
  com.example.groupproject_g3.io.RequestQueueSingleton
  com.example.groupproject_g3.io.RequestQueueSingleton$1
