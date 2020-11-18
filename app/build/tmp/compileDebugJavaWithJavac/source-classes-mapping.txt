@@ -1,3 +1,5 @@
+com/example/groupproject_g3/contact/fragments/AddContactFragmentDirections.java
+ com.example.groupproject_g3.contact.fragments.AddContactFragmentDirections
 com/example/groupproject_g3/activities/MainActivity.java
  com.example.groupproject_g3.activities.MainActivity
 com/example/groupproject_g3/databinding/FragmentPageContactBinding.java
@@ -44,8 +46,13 @@ com/example/groupproject_g3/authorization/fragments/SignInFragmentArgs.java
  com.example.groupproject_g3.authorization.fragments.SignInFragmentArgs$Builder
 com/example/groupproject_g3/activities/AuthorizationActivity.java
  com.example.groupproject_g3.activities.AuthorizationActivity
+com/example/groupproject_g3/contact/fragments/ContactFragmentDirections.java
+ com.example.groupproject_g3.contact.fragments.ContactFragmentDirections
 com/example/groupproject_g3/databinding/FragmentPageWeatherBinding.java
  com.example.groupproject_g3.databinding.FragmentPageWeatherBinding
+com/example/groupproject_g3/contact/fragments/AddContactFragment.java
+ com.example.groupproject_g3.contact.fragments.AddContactFragment
+ com.example.groupproject_g3.contact.fragments.AddContactFragment$SpinnerActivity
 com/example/groupproject_g3/activities/MainActivityArgs.java
  com.example.groupproject_g3.activities.MainActivityArgs
  com.example.groupproject_g3.activities.MainActivityArgs$1
@@ -60,6 +67,8 @@ com/example/groupproject_g3/authorization/fragments/RegisterFragmentDirections.j
  com.example.groupproject_g3.authorization.fragments.RegisterFragmentDirections
  com.example.groupproject_g3.authorization.fragments.RegisterFragmentDirections$1
  com.example.groupproject_g3.authorization.fragments.RegisterFragmentDirections$ActionRegisterFragmentToSignInFragment
+com/example/groupproject_g3/databinding/FragmentAddContactBinding.java
+ com.example.groupproject_g3.databinding.FragmentAddContactBinding
 com/example/groupproject_g3/databinding/FragmentPageHomeBinding.java
  com.example.groupproject_g3.databinding.FragmentPageHomeBinding
 com/example/groupproject_g3/databinding/FragmentPageMessagesBinding.java
@@ -68,8 +77,12 @@ com/example/groupproject_g3/BuildConfig.java
  com.example.groupproject_g3.BuildConfig
 com/example/groupproject_g3/databinding/FragmentRegisterBinding.java
  com.example.groupproject_g3.databinding.FragmentRegisterBinding
+com/example/groupproject_g3/databinding/SpinnerItemBinding.java
+ com.example.groupproject_g3.databinding.SpinnerItemBinding
 com/example/groupproject_g3/authorization/fragments/RegisterViewModel.java
  com.example.groupproject_g3.authorization.fragments.RegisterViewModel
+com/example/groupproject_g3/databinding/DropdownMenuPopupItemBinding.java
+ com.example.groupproject_g3.databinding.DropdownMenuPopupItemBinding
 com/example/groupproject_g3/authorization/fragments/SignInFragmentDirections.java
  com.example.groupproject_g3.authorization.fragments.SignInFragmentDirections
  com.example.groupproject_g3.authorization.fragments.SignInFragmentDirections$1

@@ -72,6 +72,10 @@
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_contact.xml"
     },
     {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_spinner_dropdown_24.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_spinner_dropdown_24.xml"
+    },
+    {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\menu_contacts_menu.xml.flat",
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\menu\\contacts_menu.xml"
     },
@@ -88,16 +92,24 @@
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\menu\\bottom_nav.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_register.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_register.xml"
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_dropdown_menu_popup_item.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\dropdown_menu_popup_item.xml"
     },
     {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_register.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_register.xml"
+    },
+    {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_authorization.xml.flat",
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\activity_authorization.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_spinner_item.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\spinner_item.xml"
     },
     {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
@@ -106,6 +118,10 @@
     {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\navigation_auth_nav.xml.flat",
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\navigation\\auth_nav.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_spinner_border.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\spinner_border.xml"
     },
     {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_page_home.xml.flat",
@@ -154,5 +170,9 @@
     {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_add_contact.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_add_contact.xml"
     }
 ]

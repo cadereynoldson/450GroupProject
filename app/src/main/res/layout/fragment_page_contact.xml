@@ -14,9 +14,10 @@
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toTopOf="@+id/button_contact_add"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_messages"
@@ -26,8 +27,8 @@
             android:layout_marginEnd="8dp"
             android:orientation="vertical"
             app:layoutManager="LinearLayoutManager"
-            tools:context="edu.uw.tcss450.uiandnavigationlab.ui.blog.BlogListFragment"
             tools:listitem="@layout/fragment_contact_item" />
+
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <Button
@@ -39,5 +40,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_no_contacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact_no_contacts"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/swipe_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
