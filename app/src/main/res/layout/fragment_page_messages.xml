@@ -6,15 +6,4 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:contentDescription="@string/message_image_placeholderstring"
-    tools:context=".message.fragments.MessageFragment">
-
-    <ImageView
-        android:id="@+id/messages_imageview_placeholder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/google_rcs"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    tools:context=".message.fragments.MessageFragment"/>

@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Cloud Chat</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="base_url">https://cloud-chat-450.herokuapp.com//</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main">Cloud Chat</string>
     <string name="title_home">Home</string>
@@ -23,9 +25,6 @@
     <string name="auth_dummy_email">fakeEmail@email.com</string>
     <string name="auth_dummy_password">12345</string>
 
-    <string name="weather_image_placeholderstring">Your local weather forecase</string>
-    <string name="message_image_placeholderstring">Non-interactive placeholder image</string>
-
     <string name="contact_email">Contact Email</string>
     <string name="contact_username">Contact Username</string>
     <string name="contact_name">Contact Name</string>
@@ -38,10 +37,12 @@
         <item>Username</item>
     </string-array>
 
-    <string name="dashboard">Dashboard</string>
-    <string name="more">More</string>
-    <string name="about_app">About app</string>
-    <string name="saved">Saved</string>
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_more">More</string>
+    <string name="menu_about_app">About app</string>
+    <string name="menu_saved">Saved</string>
+
+    <string name="weather_search">Search for Location</string>
     <!--
     This string is used for square devices and overridden by hello_world in
     values-round/strings.xml for round devices.
