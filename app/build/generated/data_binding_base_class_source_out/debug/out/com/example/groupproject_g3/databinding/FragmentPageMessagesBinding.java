@@ -4,7 +4,6 @@ package com.example.groupproject_g3.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -12,22 +11,17 @@ import androidx.viewbinding.ViewBinding;
 import com.example.groupproject_g3.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
-import java.lang.String;
 
 public final class FragmentPageMessagesBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ImageView messagesImageviewPlaceholder;
-
-  @NonNull
   public final ConstraintLayout messagesRoot;
 
   private FragmentPageMessagesBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageView messagesImageviewPlaceholder, @NonNull ConstraintLayout messagesRoot) {
+      @NonNull ConstraintLayout messagesRoot) {
     this.rootView = rootView;
-    this.messagesImageviewPlaceholder = messagesImageviewPlaceholder;
     this.messagesRoot = messagesRoot;
   }
 
@@ -54,22 +48,12 @@ public final class FragmentPageMessagesBinding implements ViewBinding {
 
   @NonNull
   public static FragmentPageMessagesBinding bind(@NonNull View rootView) {
-    // The body of this method is generated in a way you would not otherwise write.
-    // This is done to optimize the compiled bytecode for size and performance.
-    int id;
-    missingId: {
-      id = R.id.messages_imageview_placeholder;
-      ImageView messagesImageviewPlaceholder = rootView.findViewById(id);
-      if (messagesImageviewPlaceholder == null) {
-        break missingId;
-      }
-
-      ConstraintLayout messagesRoot = (ConstraintLayout) rootView;
-
-      return new FragmentPageMessagesBinding((ConstraintLayout) rootView,
-          messagesImageviewPlaceholder, messagesRoot);
+    if (rootView == null) {
+      throw new NullPointerException("rootView");
     }
-    String missingId = rootView.getResources().getResourceName(id);
-    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
+
+    ConstraintLayout messagesRoot = (ConstraintLayout) rootView;
+
+    return new FragmentPageMessagesBinding((ConstraintLayout) rootView, messagesRoot);
   }
 }

@@ -944,6 +944,7 @@ color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
+color primaryLightColor
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -957,6 +958,8 @@ color purple_500
 color purple_700
 color ripple_material_dark
 color ripple_material_light
+color secondaryLightColor
+color secondaryTextColorFade
 color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
@@ -1138,6 +1141,8 @@ dimen material_emphasis_high_type
 dimen material_emphasis_medium
 dimen material_text_view_test_line_height
 dimen material_text_view_test_line_height_override
+dimen message_margin
+dimen message_margin_sided
 dimen mtrl_alert_dialog_background_inset_bottom
 dimen mtrl_alert_dialog_background_inset_end
 dimen mtrl_alert_dialog_background_inset_start
@@ -1449,6 +1454,8 @@ drawable ic_launcher_foreground
 drawable ic_menu_arrow_down_black_24dp
 drawable ic_menu_arrow_up_black_24dp
 drawable ic_message_black_24x24dp
+drawable ic_message_send
+drawable ic_message_send_black
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -1583,6 +1590,7 @@ id cancel_action
 id cancel_button
 id card_root
 id card_weather_24hours
+id card_weather_days
 id center
 id center_horizontal
 id center_vertical
@@ -1658,7 +1666,6 @@ id image
 id imageView
 id imageView4
 id image_days_forecast
-id image_weather_current
 id image_weather_forecast
 id image_weather_hour_forecast
 id info
@@ -1683,7 +1690,6 @@ id media_actions
 id menu_aboutApp
 id menu_weather_dashboard
 id message
-id messages_imageview_placeholder
 id messages_root
 id middle
 id mini
@@ -2063,7 +2069,6 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
-string about_app
 string action_add_contact
 string action_remove_contact
 string app_name
@@ -2079,6 +2084,7 @@ string auth_password
 string auth_register
 string auth_sign_in
 string auth_username
+string base_url
 string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_overflowed_content_description
@@ -2108,7 +2114,6 @@ string contact_name
 string contact_no_contacts
 string contact_search_by
 string contact_username
-string dashboard
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
@@ -2123,8 +2128,10 @@ string key_contacts_first_name
 string key_contacts_last_name
 string key_contacts_list
 string key_contacts_username
-string message_image_placeholderstring
-string more
+string menu_about_app
+string menu_dashboard
+string menu_more
+string menu_saved
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_suffix
@@ -2166,7 +2173,6 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
-string saved
 string search_menu_title
 string status_bar_notification_info_overflow
 string title_activity_main
@@ -2175,7 +2181,7 @@ string title_home
 string title_messages
 string title_profile
 string title_weather
-string weather_image_placeholderstring
+string weather_search
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
