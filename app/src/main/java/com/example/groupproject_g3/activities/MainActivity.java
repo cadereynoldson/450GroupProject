@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home,
                 R.id.navigation_weather,
-                R.id.navigation_messages,
+                R.id.navigation_chats,
                 R.id.navigation_contacts,
                 R.id.navigation_profile
         ).build();
