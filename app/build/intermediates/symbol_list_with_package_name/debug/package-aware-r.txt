@@ -56,6 +56,10 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+animator nav_default_enter_anim
+animator nav_default_exit_anim
+animator nav_default_pop_enter_anim
+animator nav_default_pop_exit_anim
 array contact_search_by_options
 attr action
 attr actionBarDivider
@@ -1065,6 +1069,8 @@ dimen box_inset_layout_padding
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
+dimen chat_margin
+dimen chat_margin_sided
 dimen compat_button_inset_horizontal_material
 dimen compat_button_inset_vertical_material
 dimen compat_button_padding_horizontal_material
@@ -1442,6 +1448,8 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_action_add
 drawable ic_calendar_black_24dp
+drawable ic_chat_black_24dp
+drawable ic_chat_notification
 drawable ic_clear_black_24dp
 drawable ic_contact_blueish_300dp
 drawable ic_contacts_black_24x24dp
@@ -1584,6 +1592,7 @@ id buttonPanel
 id button_add_contact
 id button_contact_add
 id button_register
+id button_send
 id button_signin
 id button_signin_register
 id cancel_action
@@ -1629,6 +1638,7 @@ id dimensions
 id direct
 id disableHome
 id dropdown_menu
+id edit_message
 id edit_query
 id end
 id end_padder
@@ -1690,7 +1700,6 @@ id media_actions
 id menu_aboutApp
 id menu_weather_dashboard
 id message
-id messages_root
 id middle
 id mini
 id month_grid
@@ -1724,10 +1733,10 @@ id nav_controller_view_tag
 id nav_host_fragment
 id nav_host_fragment_container
 id navigation_add_contact
+id navigation_chats
 id navigation_contacts
 id navigation_header_container
 id navigation_home
-id navigation_messages
 id navigation_profile
 id navigation_weather
 id never
@@ -1833,6 +1842,7 @@ id text_days_tempurature
 id text_email
 id text_input_end_icon
 id text_input_start_icon
+id text_message
 id text_name
 id text_no_contacts
 id text_register_email
@@ -1845,6 +1855,7 @@ id text_search
 id text_search_by
 id text_signin_email
 id text_signin_password
+id text_title
 id text_username
 id text_weather_date
 id text_weather_forecast
@@ -1962,9 +1973,10 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_add_contact
 layout fragment_contact_item
+layout fragment_page_chat
+layout fragment_page_chat_message
 layout fragment_page_contact
 layout fragment_page_home
-layout fragment_page_messages
 layout fragment_page_profile
 layout fragment_page_weather
 layout fragment_register
@@ -2176,9 +2188,9 @@ string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
 string title_activity_main
+string title_chats
 string title_contacts
 string title_home
-string title_messages
 string title_profile
 string title_weather
 string weather_search
@@ -2681,6 +2693,7 @@ style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox
 style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense
 style ThemeOverlay_MaterialComponents_Toolbar_Primary
 style ThemeOverlay_MaterialComponents_Toolbar_Surface
+style Widget_App_Button_OutlinedButton_IconOnly
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid
 style Widget_AppCompat_ActionBar_TabBar

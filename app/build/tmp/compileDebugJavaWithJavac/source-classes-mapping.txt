@@ -1,75 +1,40 @@
-com/example/groupproject_g3/contact/fragments/AddContactFragmentDirections.java
- com.example.groupproject_g3.contact.fragments.AddContactFragmentDirections
 com/example/groupproject_g3/databinding/ItemWeatherDaysBinding.java
  com.example.groupproject_g3.databinding.ItemWeatherDaysBinding
 com/example/groupproject_g3/activities/MainActivity.java
  com.example.groupproject_g3.activities.MainActivity
 com/example/groupproject_g3/databinding/FragmentPageContactBinding.java
  com.example.groupproject_g3.databinding.FragmentPageContactBinding
-com/example/groupproject_g3/databinding/FragmentContactItemBinding.java
- com.example.groupproject_g3.databinding.FragmentContactItemBinding
 com/example/groupproject_g3/databinding/ActivityAuthorizationBinding.java
  com.example.groupproject_g3.databinding.ActivityAuthorizationBinding
 com/example/groupproject_g3/home/fragments/HomeFragment.java
  com.example.groupproject_g3.home.fragments.HomeFragment
-com/example/groupproject_g3/contact/fragments/ContactItem.java
- com.example.groupproject_g3.contact.fragments.ContactItem
-com/example/groupproject_g3/message/fragments/MessageFragment.java
- com.example.groupproject_g3.message.fragments.MessageFragment
-com/example/groupproject_g3/weather/fragments/WeatherHoursItem.java
- com.example.groupproject_g3.weather.fragments.WeatherHoursItem
-com/example/groupproject_g3/databinding/ItemWeatherHourBinding.java
- com.example.groupproject_g3.databinding.ItemWeatherHourBinding
 com/example/groupproject_g3/databinding/FragmentSignInBinding.java
  com.example.groupproject_g3.databinding.FragmentSignInBinding
 com/example/groupproject_g3/authorization/fragments/RegisterFragment.java
  com.example.groupproject_g3.authorization.fragments.RegisterFragment
 com/example/groupproject_g3/databinding/FragmentPageProfileBinding.java
  com.example.groupproject_g3.databinding.FragmentPageProfileBinding
-com/example/groupproject_g3/databinding/FragmentWeatherForecastBinding.java
- com.example.groupproject_g3.databinding.FragmentWeatherForecastBinding
-com/example/groupproject_g3/utils/PasswordValidator.java
- com.example.groupproject_g3.utils.PasswordValidator
- com.example.groupproject_g3.utils.PasswordValidator$ValidationResult
-com/example/groupproject_g3/contact/fragments/ContactsViewModel.java
- com.example.groupproject_g3.contact.fragments.ContactsViewModel
- com.example.groupproject_g3.contact.fragments.ContactsViewModel$1
-com/example/groupproject_g3/io/RequestQueueSingleton.java
- com.example.groupproject_g3.io.RequestQueueSingleton
- com.example.groupproject_g3.io.RequestQueueSingleton$1
-com/example/groupproject_g3/model/UserInfoViewModel.java
- com.example.groupproject_g3.model.UserInfoViewModel
- com.example.groupproject_g3.model.UserInfoViewModel$1
- com.example.groupproject_g3.model.UserInfoViewModel$UserInfoViewModelFactory
+com/example/groupproject_g3/databinding/FragmentPageChatMessageBinding.java
+ com.example.groupproject_g3.databinding.FragmentPageChatMessageBinding
 com/example/groupproject_g3/contact/fragments/ContactFragment.java
  com.example.groupproject_g3.contact.fragments.ContactFragment
 com/example/groupproject_g3/authorization/fragments/SignInFragment.java
  com.example.groupproject_g3.authorization.fragments.SignInFragment
-com/example/groupproject_g3/profile/fragments/ProfileFragment.java
- com.example.groupproject_g3.profile.fragments.ProfileFragment
 com/example/groupproject_g3/weather/fragments/WeatherFragment.java
  com.example.groupproject_g3.weather.fragments.WeatherFragment
 com/example/groupproject_g3/authorization/fragments/SignInFragmentArgs.java
  com.example.groupproject_g3.authorization.fragments.SignInFragmentArgs
  com.example.groupproject_g3.authorization.fragments.SignInFragmentArgs$1
  com.example.groupproject_g3.authorization.fragments.SignInFragmentArgs$Builder
-com/example/groupproject_g3/databinding/LayoutWeatherForecastBinding.java
- com.example.groupproject_g3.databinding.LayoutWeatherForecastBinding
-com/example/groupproject_g3/activities/AuthorizationActivity.java
- com.example.groupproject_g3.activities.AuthorizationActivity
-com/example/groupproject_g3/contact/fragments/ContactFragmentDirections.java
- com.example.groupproject_g3.contact.fragments.ContactFragmentDirections
 com/example/groupproject_g3/weather/fragments/WeatherSearchFragment.java
  com.example.groupproject_g3.weather.fragments.WeatherSearchFragment
+com/example/groupproject_g3/databinding/FragmentPageChatBinding.java
+ com.example.groupproject_g3.databinding.FragmentPageChatBinding
 com/example/groupproject_g3/databinding/FragmentPageWeatherBinding.java
  com.example.groupproject_g3.databinding.FragmentPageWeatherBinding
 com/example/groupproject_g3/contact/fragments/AddContactFragment.java
  com.example.groupproject_g3.contact.fragments.AddContactFragment
  com.example.groupproject_g3.contact.fragments.AddContactFragment$SpinnerActivity
-com/example/groupproject_g3/activities/MainActivityArgs.java
- com.example.groupproject_g3.activities.MainActivityArgs
- com.example.groupproject_g3.activities.MainActivityArgs$1
- com.example.groupproject_g3.activities.MainActivityArgs$Builder
 com/example/groupproject_g3/contact/fragments/ContactRecyclerViewAdapter.java
  com.example.groupproject_g3.contact.fragments.ContactRecyclerViewAdapter
  com.example.groupproject_g3.contact.fragments.ContactRecyclerViewAdapter$ContactViewHolder
@@ -88,24 +53,82 @@ com/example/groupproject_g3/databinding/FragmentAddContactBinding.java
  com.example.groupproject_g3.databinding.FragmentAddContactBinding
 com/example/groupproject_g3/databinding/FragmentPageHomeBinding.java
  com.example.groupproject_g3.databinding.FragmentPageHomeBinding
-com/example/groupproject_g3/databinding/FragmentPageMessagesBinding.java
- com.example.groupproject_g3.databinding.FragmentPageMessagesBinding
+com/example/groupproject_g3/model/PushyTokenViewModel.java
+ com.example.groupproject_g3.model.PushyTokenViewModel
+ com.example.groupproject_g3.model.PushyTokenViewModel$1
+ com.example.groupproject_g3.model.PushyTokenViewModel$2
+ com.example.groupproject_g3.model.PushyTokenViewModel$RegisterForPushNotificationsAsync
+com/example/groupproject_g3/databinding/SpinnerItemBinding.java
+ com.example.groupproject_g3.databinding.SpinnerItemBinding
+com/example/groupproject_g3/chat/fragments/ChatFragment.java
+ com.example.groupproject_g3.chat.fragments.ChatFragment
+com/example/groupproject_g3/weather/fragments/WeatherRecyclerViewAdapter.java
+ com.example.groupproject_g3.weather.fragments.WeatherRecyclerViewAdapter
+ com.example.groupproject_g3.weather.fragments.WeatherRecyclerViewAdapter$WeatherViewHolder
+com/example/groupproject_g3/chat/fragments/ChatRecyclerViewAdapter.java
+ com.example.groupproject_g3.chat.fragments.ChatRecyclerViewAdapter
+ com.example.groupproject_g3.chat.fragments.ChatRecyclerViewAdapter$MessageViewHolder
+com/example/groupproject_g3/chat/fragments/ChatSendViewModel.java
+ com.example.groupproject_g3.chat.fragments.ChatSendViewModel
+ com.example.groupproject_g3.chat.fragments.ChatSendViewModel$1
+com/example/groupproject_g3/contact/fragments/AddContactFragmentDirections.java
+ com.example.groupproject_g3.contact.fragments.AddContactFragmentDirections
+com/example/groupproject_g3/databinding/FragmentContactItemBinding.java
+ com.example.groupproject_g3.databinding.FragmentContactItemBinding
+com/example/groupproject_g3/contact/fragments/ContactItem.java
+ com.example.groupproject_g3.contact.fragments.ContactItem
+com/example/groupproject_g3/services/PushReceiver.java
+ com.example.groupproject_g3.services.PushReceiver
+com/example/groupproject_g3/weather/fragments/WeatherHoursItem.java
+ com.example.groupproject_g3.weather.fragments.WeatherHoursItem
+com/example/groupproject_g3/chat/fragments/ChatViewModel.java
+ com.example.groupproject_g3.chat.fragments.ChatViewModel
+ com.example.groupproject_g3.chat.fragments.ChatViewModel$1
+ com.example.groupproject_g3.chat.fragments.ChatViewModel$2
+com/example/groupproject_g3/databinding/ItemWeatherHourBinding.java
+ com.example.groupproject_g3.databinding.ItemWeatherHourBinding
+com/example/groupproject_g3/model/NewMessageCountViewModel.java
+ com.example.groupproject_g3.model.NewMessageCountViewModel
+com/example/groupproject_g3/databinding/FragmentWeatherForecastBinding.java
+ com.example.groupproject_g3.databinding.FragmentWeatherForecastBinding
+com/example/groupproject_g3/utils/PasswordValidator.java
+ com.example.groupproject_g3.utils.PasswordValidator
+ com.example.groupproject_g3.utils.PasswordValidator$ValidationResult
+com/example/groupproject_g3/model/UserInfoViewModel.java
+ com.example.groupproject_g3.model.UserInfoViewModel
+ com.example.groupproject_g3.model.UserInfoViewModel$1
+ com.example.groupproject_g3.model.UserInfoViewModel$UserInfoViewModelFactory
+com/example/groupproject_g3/contact/fragments/ContactsViewModel.java
+ com.example.groupproject_g3.contact.fragments.ContactsViewModel
+ com.example.groupproject_g3.contact.fragments.ContactsViewModel$1
+com/example/groupproject_g3/io/RequestQueueSingleton.java
+ com.example.groupproject_g3.io.RequestQueueSingleton
+ com.example.groupproject_g3.io.RequestQueueSingleton$1
+com/example/groupproject_g3/profile/fragments/ProfileFragment.java
+ com.example.groupproject_g3.profile.fragments.ProfileFragment
+com/example/groupproject_g3/databinding/LayoutWeatherForecastBinding.java
+ com.example.groupproject_g3.databinding.LayoutWeatherForecastBinding
+com/example/groupproject_g3/activities/AuthorizationActivity.java
+ com.example.groupproject_g3.activities.AuthorizationActivity
+com/example/groupproject_g3/contact/fragments/ContactFragmentDirections.java
+ com.example.groupproject_g3.contact.fragments.ContactFragmentDirections
+com/example/groupproject_g3/activities/MainActivityArgs.java
+ com.example.groupproject_g3.activities.MainActivityArgs
+ com.example.groupproject_g3.activities.MainActivityArgs$1
+ com.example.groupproject_g3.activities.MainActivityArgs$Builder
 com/example/groupproject_g3/BuildConfig.java
  com.example.groupproject_g3.BuildConfig
 com/example/groupproject_g3/databinding/FragmentRegisterBinding.java
  com.example.groupproject_g3.databinding.FragmentRegisterBinding
 com/example/groupproject_g3/weather/fragments/WeatherForecastFragment.java
  com.example.groupproject_g3.weather.fragments.WeatherForecastFragment
-com/example/groupproject_g3/databinding/SpinnerItemBinding.java
- com.example.groupproject_g3.databinding.SpinnerItemBinding
-com/example/groupproject_g3/weather/fragments/WeatherRecyclerViewAdapter.java
- com.example.groupproject_g3.weather.fragments.WeatherRecyclerViewAdapter
- com.example.groupproject_g3.weather.fragments.WeatherRecyclerViewAdapter$WeatherViewHolder
 com/example/groupproject_g3/authorization/fragments/RegisterViewModel.java
  com.example.groupproject_g3.authorization.fragments.RegisterViewModel
 com/example/groupproject_g3/authorization/fragments/SignInFragmentDirections.java
  com.example.groupproject_g3.authorization.fragments.SignInFragmentDirections
  com.example.groupproject_g3.authorization.fragments.SignInFragmentDirections$1
  com.example.groupproject_g3.authorization.fragments.SignInFragmentDirections$ActionSignInFragmentToMainActivity
+com/example/groupproject_g3/chat/fragments/ChatMessage.java
+ com.example.groupproject_g3.chat.fragments.ChatMessage
 com/example/groupproject_g3/databinding/ActivityMainBinding.java
  com.example.groupproject_g3.databinding.ActivityMainBinding

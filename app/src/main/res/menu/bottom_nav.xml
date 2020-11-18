@@ -9,9 +9,9 @@
         android:icon="@drawable/ic_weather_black_24x24dp"
         android:title="@string/title_weather" />
     <item
-        android:id="@+id/navigation_messages"
+        android:id="@+id/navigation_chats"
         android:icon="@drawable/ic_message_black_24x24dp"
-        android:title="@string/title_messages" />
+        android:title="@string/title_chats" />
 
     <item
         android:id="@+id/navigation_contacts"
