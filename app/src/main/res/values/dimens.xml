@@ -20,4 +20,7 @@
     <dimen name="auth_textEdit_height">50dp</dimen>
     <dimen name="auth_button_width">145dp</dimen>
     <dimen name="auth_button_height">50dp</dimen>
+
+    <dimen name="message_margin">5dp</dimen>
+    <dimen name="message_margin_sided">50dp</dimen>
 </resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:elevation="0dp"
+        app:cardBackgroundColor="#00FFFFFF"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_weather_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="4dp"
+                android:text="0:00"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/image_weather_hour_forecast"
+                android:layout_width="39dp"
+                android:layout_height="36dp"
+                android:layout_below="@id/text_weather_hour"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="0dp"
+                app:srcCompat="@drawable/ic_weather_yellow_24" />
+
+            <TextView
+                android:id="@+id/text_weather_hour_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_weather_hour_forecast"
+                android:layout_centerHorizontal="true"
+                android:text="25°"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

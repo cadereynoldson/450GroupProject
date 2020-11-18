@@ -36,6 +36,9 @@
         <argument
             android:name="jwt"
             app:argType="string" />
+        <argument
+            android:name="userId"
+            app:argType="integer" />
     </activity>
     <fragment
         android:id="@+id/registerFragment"

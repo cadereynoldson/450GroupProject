@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         //constructor is called implicitly
         new ViewModelProvider(
                 this,
-                new UserInfoViewModel.UserInfoViewModelFactory(args.getEmail(), args.getJwt()))
+                new UserInfoViewModel.UserInfoViewModelFactory(args.getEmail(), args.getJwt(), args.getUserId()))
                 .get(UserInfoViewModel.class);
         buildMenu();
     }
