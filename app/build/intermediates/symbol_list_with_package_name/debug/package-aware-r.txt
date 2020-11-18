@@ -56,6 +56,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array contact_search_by_options
 attr action
 attr actionBarDivider
 attr actionBarItemBackground
@@ -1454,8 +1455,9 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_profile_black_24x24dp
 drawable ic_profile_blue_24dp
+drawable ic_spinner_dropdown_24
 drawable ic_weather_black_24x24dp
-drawable image0
+drawable ic_weather_yellow_24
 drawable logo_cloud_chat
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
@@ -1479,15 +1481,19 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable spinner_border
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable weather_background
 id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
 id META
+id RecycleView_days
+id RecycleView_hours
 id SHIFT
 id SYM
 id TOP_END
@@ -1526,6 +1532,7 @@ id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
 id action0
+id action_addContactFragment_to_navigation_contacts
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1542,6 +1549,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_navigation_contacts_to_addContactFragment
 id action_registerFragment_to_signInFragment
 id action_search
 id action_signInFragment_to_mainActivity
@@ -1550,6 +1558,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_contact_root
 id adjust_height
 id adjust_width
 id alertTitle
@@ -1565,6 +1574,7 @@ id bottom
 id bottom_nav_menu
 id boxInsetLayout
 id buttonPanel
+id button_add_contact
 id button_contact_add
 id button_register
 id button_signin
@@ -1572,6 +1582,7 @@ id button_signin_register
 id cancel_action
 id cancel_button
 id card_root
+id card_weather_24hours
 id center
 id center_horizontal
 id center_vertical
@@ -1580,6 +1591,7 @@ id checkbox
 id checked
 id chip
 id chip_group
+id chip_weather_location
 id chronometer
 id clear_text
 id clip_horizontal
@@ -1588,6 +1600,7 @@ id cloudChatLogo
 id collapseActionView
 id confirm_button
 id container
+id container_weather_forecast
 id content
 id contentPanel
 id coordinator
@@ -1644,8 +1657,10 @@ id ifRoom
 id image
 id imageView
 id imageView4
-id imageView5
-id image_weather
+id image_days_forecast
+id image_weather_current
+id image_weather_forecast
+id image_weather_hour_forecast
 id info
 id invisible
 id italic
@@ -1665,6 +1680,8 @@ id mainActivity
 id main_nav
 id masked
 id media_actions
+id menu_aboutApp
+id menu_weather_dashboard
 id message
 id messages_imageview_placeholder
 id messages_root
@@ -1700,6 +1717,7 @@ id multiply
 id nav_controller_view_tag
 id nav_host_fragment
 id nav_host_fragment_container
+id navigation_add_contact
 id navigation_contacts
 id navigation_header_container
 id navigation_home
@@ -1727,6 +1745,7 @@ id percent
 id pin
 id profilePlaceholder
 id profile_root
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
@@ -1770,6 +1789,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id spinner_search_by
 id split_action_bar
 id spread
 id spread_inside
@@ -1800,20 +1820,32 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id textView
+id text_day
+id text_day_date
+id text_days_outside
+id text_days_tempurature
 id text_email
 id text_input_end_icon
 id text_input_start_icon
 id text_name
+id text_no_contacts
 id text_register_email
 id text_register_first_name
 id text_register_last_name
 id text_register_password
 id text_register_password2
 id text_register_username
+id text_search
+id text_search_by
 id text_signin_email
 id text_signin_password
 id text_username
+id text_weather_date
+id text_weather_forecast
+id text_weather_hour
+id text_weather_hour_temp
+id text_weather_temperature
+id text_weather_time
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -1922,6 +1954,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_add_contact
 layout fragment_contact_item
 layout fragment_page_contact
 layout fragment_page_home
@@ -1930,6 +1963,11 @@ layout fragment_page_profile
 layout fragment_page_weather
 layout fragment_register
 layout fragment_sign_in
+layout fragment_weather_forecast
+layout fragment_weather_search
+layout item_weather_days
+layout item_weather_hour
+layout layout_weather_forecast
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -1976,6 +2014,7 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout spinner_item
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_design_checkbox
@@ -1991,6 +2030,7 @@ layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu bottom_nav
 menu contacts_menu
+menu drawer_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation auth_nav
@@ -2023,6 +2063,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string about_app
 string action_add_contact
 string action_remove_contact
 string app_name
@@ -2064,7 +2105,10 @@ string common_signin_button_text
 string common_signin_button_text_long
 string contact_email
 string contact_name
+string contact_no_contacts
+string contact_search_by
 string contact_username
+string dashboard
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
@@ -2075,6 +2119,7 @@ string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string image_logo
 string message_image_placeholderstring
+string more
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_suffix
@@ -2116,6 +2161,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string saved
 string search_menu_title
 string status_bar_notification_info_overflow
 string title_activity_main
