@@ -10,4 +10,8 @@
     <color name="blue_500">#1BA5DF</color>
     <color name="blue_300">#5CCAFE</color>
     <color name="blue_300_transparent">#AA5CCAFE</color>
+
+    <color name="primaryLightColor">#7953d2</color>
+    <color name="secondaryTextColorFade">#222222</color>
+    <color name="secondaryLightColor">#ead6a9</color>
 </resources>

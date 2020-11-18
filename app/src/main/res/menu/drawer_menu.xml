@@ -5,13 +5,13 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/menu_weather_dashboard"
-            android:title="@string/dashboard" />
+            android:title="@string/menu_dashboard" />
     </group>
-    <item android:title="@string/more">
+    <item android:title="@string/menu_more">
         <menu>
             <item
                 android:id="@+id/menu_aboutApp"
-                android:title="@string/about_app" />
+                android:title="@string/menu_about_app" />
         </menu>
     </item>
 </menu>
