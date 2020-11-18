@@ -1,78 +1,74 @@
 [
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_authorization.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\activity_authorization.xml"
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_chat_message.xml",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_chat_message.xml"
     },
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_chat_message.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_chat_message.xml"
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_contact.xml",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_contact.xml"
     },
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_weather_hour.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\item_weather_hour.xml"
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_weather.xml",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_weather.xml"
     },
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_profile.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_profile.xml"
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_weather_forecast.xml",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\layout_weather_forecast.xml"
     },
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_chat.xml",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_chat.xml"
     },
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_contact.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_contact.xml"
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_sign_in.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_sign_in.xml"
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_contact.xml",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_add_contact.xml"
     },
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_chat.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_add_chat.xml"
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_register.xml",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_register.xml"
     },
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_weather_days.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\item_weather_days.xml"
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_profile.xml",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_profile.xml"
     },
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_chat.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_chat.xml"
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_weather_search.xml",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_weather_search.xml"
     },
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_weather_search.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_weather_search.xml"
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_weather_hour.xml",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\item_weather_hour.xml"
     },
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_register.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_register.xml"
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_weather_days.xml",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\item_weather_days.xml"
     },
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_contact_item.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_contact_item.xml"
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_home.xml",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_home.xml"
     },
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_contact.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_add_contact.xml"
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\spinner_item.xml",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\spinner_item.xml"
     },
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_weather_forecast.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_weather_forecast.xml"
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_sign_in.xml",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_sign_in.xml"
     },
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\spinner_item.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\spinner_item.xml"
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_weather_forecast.xml",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_weather_forecast.xml"
     },
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_home.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_home.xml"
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_contact_item.xml",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_contact_item.xml"
     },
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_weather_forecast.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\layout_weather_forecast.xml"
-    },
-    {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_weather.xml",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_weather.xml"
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_authorization.xml",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\activity_authorization.xml"
     }
 ]

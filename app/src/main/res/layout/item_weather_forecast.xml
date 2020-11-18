@@ -52,7 +52,7 @@
                 android:textStyle="italic" />
 
             <ImageView
-                android:id="@+id/image_weather_forecast"
+                android:id="@+id/image_weather_icon"
                 android:layout_width="85dp"
                 android:layout_height="84dp"
                 android:layout_alignParentEnd="true"
@@ -61,10 +61,10 @@
                 app:srcCompat="@drawable/ic_weather_yellow_24" />
 
             <TextView
-                android:id="@+id/text_weather_forecast"
+                android:id="@+id/text_weather_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/image_weather_forecast"
+                android:layout_below="@id/image_weather_icon"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="34dp"
                 android:text="Sunny"

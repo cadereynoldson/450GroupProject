@@ -35,7 +35,7 @@
 
             <include
                 android:id="@+id/container_weather_forecast"
-                layout="@layout/layout_weather_forecast"
+                layout="@layout/item_weather_forecast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/chip_weather_location"

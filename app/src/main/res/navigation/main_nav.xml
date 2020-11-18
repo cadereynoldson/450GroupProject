@@ -14,16 +14,19 @@
         android:id="@+id/navigation_weather"
         android:name="com.example.groupproject_g3.weather.fragments.WeatherFragment"
         android:label="@string/title_weather"
-        tools:layout="@layout/fragment_page_weather" />
+        tools:layout="@layout/fragment_page_weather" >
+        <action
+            android:id="@+id/action_navigation_weather_to_navigation_weather_forecast"
+            app:destination="@id/navigation_weather_forecast" />
+        <action
+            android:id="@+id/action_navigation_weather_to_navigation_weather_search"
+            app:destination="@id/navigation_weather_search" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_chats"
         android:name="com.example.groupproject_g3.chat.fragments.ChatFragment"
         android:label="@string/title_chats"
-        tools:layout="@layout/fragment_page_chat" >
-        <action
-            android:id="@+id/action_navigation_chats_to_navaigation_add_chat"
-            app:destination="@id/navaigation_add_chat" />
-    </fragment>
+        tools:layout="@layout/fragment_page_chat" />
     <fragment
         android:id="@+id/navigation_contacts"
         android:name="com.example.groupproject_g3.contact.fragments.ContactFragment"
@@ -48,12 +51,27 @@
             app:destination="@id/navigation_contacts" />
     </fragment>
     <fragment
-        android:id="@+id/navaigation_add_chat"
-        android:name="com.example.groupproject_g3.chat.fragments.AddChatFragment"
-        android:label="fragment_add_chat"
-        tools:layout="@layout/fragment_add_chat" >
+        android:id="@+id/navigation_weather_forecast"
+        android:name="com.example.groupproject_g3.weather.fragments.WeatherForecastFragment"
+        android:label="fragment_weather_forecast"
+        tools:layout="@layout/fragment_weather_forecast" >
         <action
-            android:id="@+id/action_addChatFragment_to_navigation_chats"
-            app:destination="@id/navigation_chats" />
+            android:id="@+id/action_navigation_weather_forecast_to_navigation_weather_search"
+            app:destination="@id/navigation_weather_search" />
+        <action
+            android:id="@+id/action_navigation_weather_forecast_to_navigation_weather"
+            app:destination="@id/navigation_weather" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_weather_search"
+        android:name="com.example.groupproject_g3.weather.fragments.WeatherSearchFragment"
+        android:label="fragment_weather_search"
+        tools:layout="@layout/fragment_weather_search" >
+        <action
+            android:id="@+id/action_navigation_weather_search_to_navigation_weather_forecast"
+            app:destination="@id/navigation_weather_forecast" />
+        <action
+            android:id="@+id/action_navigation_weather_search_to_navigation_weather"
+            app:destination="@id/navigation_weather" />
     </fragment>
 </navigation>
