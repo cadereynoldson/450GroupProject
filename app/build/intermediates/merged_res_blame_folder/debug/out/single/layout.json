@@ -20,6 +20,10 @@
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\fragment_page_messages.xml"
     },
     {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\spinner_item.xml",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\spinner_item.xml"
+    },
+    {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_weather_search.xml",
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\fragment_weather_search.xml"
     },
@@ -42,6 +46,10 @@
     {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_home.xml",
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\fragment_page_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_contact.xml",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\src\\main\\res\\layout\\fragment_add_contact.xml"
     },
     {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject_Sprint2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_weather_hour.xml",

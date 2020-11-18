@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -32,14 +33,19 @@ public final class FragmentPageContactBinding implements ViewBinding {
   @NonNull
   public final SwipeRefreshLayout swipeContainer;
 
+  @NonNull
+  public final TextView textNoContacts;
+
   private FragmentPageContactBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button buttonContactAdd, @NonNull ConstraintLayout layoutRoot,
-      @NonNull RecyclerView recyclerMessages, @NonNull SwipeRefreshLayout swipeContainer) {
+      @NonNull RecyclerView recyclerMessages, @NonNull SwipeRefreshLayout swipeContainer,
+      @NonNull TextView textNoContacts) {
     this.rootView = rootView;
     this.buttonContactAdd = buttonContactAdd;
     this.layoutRoot = layoutRoot;
     this.recyclerMessages = recyclerMessages;
     this.swipeContainer = swipeContainer;
+    this.textNoContacts = textNoContacts;
   }
 
   @Override
@@ -89,8 +95,14 @@ public final class FragmentPageContactBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.text_no_contacts;
+      TextView textNoContacts = rootView.findViewById(id);
+      if (textNoContacts == null) {
+        break missingId;
+      }
+
       return new FragmentPageContactBinding((ConstraintLayout) rootView, buttonContactAdd,
-          layoutRoot, recyclerMessages, swipeContainer);
+          layoutRoot, recyclerMessages, swipeContainer, textNoContacts);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
