@@ -14,8 +14,10 @@ import android.view.ViewGroup;
 import com.example.groupproject_g3.R;
 
 /**
- * A simple {@link Fragment} subclass.
- * create an instance of this fragment.
+ * A fragment of the profile page.
+ *
+ * @author
+ * @version September 2020
  */
 public class ProfileFragment extends Fragment {
 

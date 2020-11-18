@@ -18,31 +18,32 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/text_weather_hour"
+                android:id="@+id/text_hour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginEnd="4dp"
                 android:text="0:00"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
             <ImageView
-                android:id="@+id/image_weather_hour_forecast"
+                android:id="@+id/image_hour_forecast"
                 android:layout_width="39dp"
                 android:layout_height="36dp"
-                android:layout_below="@id/text_weather_hour"
+                android:layout_below="@id/text_hour"
                 android:layout_centerInParent="true"
                 android:layout_marginTop="0dp"
                 app:srcCompat="@drawable/ic_weather_yellow_24" />
 
             <TextView
-                android:id="@+id/text_weather_hour_temp"
+                android:id="@+id/text_hour_temp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/image_weather_hour_forecast"
+                android:layout_below="@id/image_hour_forecast"
                 android:layout_centerHorizontal="true"
+                android:layout_marginBottom="2dp"
                 android:text="25°"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />

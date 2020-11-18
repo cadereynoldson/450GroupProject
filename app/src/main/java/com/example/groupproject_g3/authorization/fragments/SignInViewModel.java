@@ -28,6 +28,12 @@ import java.util.Objects;
 
 import com.example.groupproject_g3.io.RequestQueueSingleton;
 
+/**
+ * A view model of the sign in fragment.
+ *
+ * @author
+ * @version September 2020
+ */
 public class SignInViewModel extends AndroidViewModel {
 
     /**Mutable object for response data tracking*/

@@ -12,6 +12,9 @@ import com.example.groupproject_g3.R;
 
 /**
  * Represents a contact between two users.
+ *
+ * @author
+ * @version November 2020
  */
 public class ContactItem {
 

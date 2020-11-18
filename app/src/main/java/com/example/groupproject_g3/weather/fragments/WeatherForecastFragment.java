@@ -9,11 +9,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.groupproject_g3.R;
+import com.example.groupproject_g3.databinding.FragmentWeatherForecastBinding;
 
 /**
- * A simple {@link Fragment} subclass.
+ * A fragment to display the weather forecast.
+ *
+ * @author
+ * @version November 2020
  */
 public class WeatherForecastFragment extends Fragment {
+
+    private FragmentWeatherForecastBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

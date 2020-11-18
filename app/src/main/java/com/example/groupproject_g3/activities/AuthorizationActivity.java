@@ -9,6 +9,12 @@ import android.os.Bundle;
 
 import com.example.groupproject_g3.R;
 
+/**
+ * Activity for authorization.
+ *
+ * @author
+ * @version September 2020
+ */
 public class AuthorizationActivity extends AppCompatActivity {
 
     @Override

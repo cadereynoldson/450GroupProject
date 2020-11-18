@@ -13,6 +13,12 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
 
+/**
+ * Request queue singleton.
+ *
+ * @author Charles Bryan
+ * @version April 2020
+ */
 public class RequestQueueSingleton {
 
     /**Private instnace field*/

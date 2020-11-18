@@ -9,6 +9,12 @@ import androidx.lifecycle.MutableLiveData;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A view model of the contact page.
+ *
+ * @author
+ * @version November 2020
+ */
 public class ContactsViewModel extends AndroidViewModel {
 
     private MutableLiveData<List<ContactItem>> mContacts;

@@ -7,6 +7,12 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
+/**
+ * A view model of the user's information.
+ *
+ * @author Charles Bryan
+ * @version April 2020
+ */
 public class UserInfoViewModel extends ViewModel {
 
     /**My email instance field.*/

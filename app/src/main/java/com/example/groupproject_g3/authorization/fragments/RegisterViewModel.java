@@ -24,7 +24,12 @@ import org.json.JSONObject;
 import java.nio.charset.Charset;
 import java.util.Objects;
 
-
+/**
+ * A view model of the register fragment.
+ *
+ * @author
+ * @version September 2020
+ */
 public class RegisterViewModel extends AndroidViewModel {
 
     private MutableLiveData<JSONObject> mResponse;

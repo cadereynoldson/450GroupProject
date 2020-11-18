@@ -22,22 +22,24 @@
                 android:id="@+id/text_weather_temperature"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="80dp"
-                android:fontFamily="sans-serif-thin"
+                android:layout_centerHorizontal="false"
+                android:layout_marginStart="82dp"
+                android:layout_marginTop="88dp"
+                android:fontFamily="sans-serif-light"
                 android:text="25°F"
                 android:textColor="#FFFFFF"
-                android:textSize="100sp" />
+                android:textSize="92sp" />
 
             <TextView
                 android:id="@+id/text_weather_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="20dp"
                 android:text="Mon Nov 16, 2020"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/text_weather_time"
@@ -66,10 +68,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/image_weather_forecast"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="34dp"
+                android:layout_marginEnd="28dp"
                 android:text="Sunny"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="24sp" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

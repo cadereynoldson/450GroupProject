@@ -6,17 +6,21 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.groupproject_g3.contact.fragments.ContactRecyclerViewAdapter;
-
-public class WeatherRecyclerViewAdapter extends RecyclerView.Adapter<ContactRecyclerViewAdapter.ContactViewHolder> {
+/**
+ * Recycle view adapter for hours and days item.
+ *
+ * @author Charles Bryan
+ * @version April 2020
+ */
+public class WeatherRecyclerViewAdapter extends RecyclerView.Adapter<WeatherRecyclerViewAdapter.WeatherViewHolder> {
     @NonNull
     @Override
-    public ContactRecyclerViewAdapter.ContactViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public WeatherRecyclerViewAdapter.WeatherViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return null;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ContactRecyclerViewAdapter.ContactViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull WeatherRecyclerViewAdapter.WeatherViewHolder holder, int position) {
 
     }
 

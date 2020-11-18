@@ -16,6 +16,12 @@ import com.example.groupproject_g3.R;
 import com.example.groupproject_g3.model.UserInfoViewModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+/**
+ * Main activity for this application.
+ *
+ * @author
+ * @version September 2020
+ */
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;

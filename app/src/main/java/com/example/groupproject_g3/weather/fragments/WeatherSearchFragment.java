@@ -11,7 +11,10 @@ import android.view.ViewGroup;
 import com.example.groupproject_g3.R;
 
 /**
- * A simple {@link Fragment} subclass.
+ * A fragment for the search in weather page.
+ *
+ * @author
+ * @version November 2020
  */
 public class WeatherSearchFragment extends Fragment {
 

@@ -33,6 +33,9 @@ import static com.example.groupproject_g3.utils.PasswordValidator.checkPwdUpperC
 
 /**
  * A fragment for registering into the application.
+ *
+ * @author
+ * @version September 2020
  */
 public class RegisterFragment extends Fragment {
 

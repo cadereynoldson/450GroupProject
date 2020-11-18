@@ -27,7 +27,12 @@ import static com.example.groupproject_g3.utils.PasswordValidator.checkExcludeWh
 import static com.example.groupproject_g3.utils.PasswordValidator.checkPwdLength;
 import static com.example.groupproject_g3.utils.PasswordValidator.checkPwdSpecialChar;
 
-
+/**
+ * A fragment for signing into the application.
+ *
+ * @author
+ * @version September 2020
+ */
 public class SignInFragment extends Fragment {
 
     /** Binding for the fragment. Allows for direct reference of fragment components. */
