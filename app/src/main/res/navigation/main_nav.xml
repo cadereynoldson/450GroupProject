@@ -14,7 +14,7 @@
         android:id="@+id/navigation_weather"
         android:name="com.example.groupproject_g3.weather.fragments.WeatherFragment"
         android:label="@string/title_weather"
-        tools:layout="@layout/fragment_page_weather" >
+        tools:layout="@layout/fragment_page_weather_search" >
         <action
             android:id="@+id/action_navigation_weather_to_navigation_weather_forecast"
             app:destination="@id/navigation_weather_forecast" />
@@ -54,7 +54,7 @@
         android:id="@+id/navigation_weather_forecast"
         android:name="com.example.groupproject_g3.weather.fragments.WeatherForecastFragment"
         android:label="fragment_weather_forecast"
-        tools:layout="@layout/fragment_weather_forecast" >
+        tools:layout="@layout/fragment_page_weather_forecast" >
         <action
             android:id="@+id/action_navigation_weather_forecast_to_navigation_weather_search"
             app:destination="@id/navigation_weather_search" />
@@ -66,7 +66,7 @@
         android:id="@+id/navigation_weather_search"
         android:name="com.example.groupproject_g3.weather.fragments.WeatherSearchFragment"
         android:label="fragment_weather_search"
-        tools:layout="@layout/fragment_weather_search" >
+        tools:layout="@layout/fragment_page_weather" >
         <action
             android:id="@+id/action_navigation_weather_search_to_navigation_weather_forecast"
             app:destination="@id/navigation_weather_forecast" />

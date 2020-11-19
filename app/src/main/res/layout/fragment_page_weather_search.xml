@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".weather.fragments.WeatherSearchFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="20dp">
+
+        <SearchView
+            android:id="@+id/search_weather"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultQueryHint="@string/weather_search" />
+        />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
