@@ -1,5 +1,7 @@
-com/example/groupproject_g3/databinding/ActivityMainBinding.java
- com.example.groupproject_g3.databinding.ActivityMainBinding
+com/example/groupproject_g3/activities/MainActivity.java
+ com.example.groupproject_g3.activities.MainActivity
+ com.example.groupproject_g3.activities.MainActivity$1
+ com.example.groupproject_g3.activities.MainActivity$MainPushMessageReceiver
 com/example/groupproject_g3/databinding/FragmentWeatherDayItemBinding.java
  com.example.groupproject_g3.databinding.FragmentWeatherDayItemBinding
 com/example/groupproject_g3/databinding/FragmentPageContactBinding.java
@@ -20,6 +22,8 @@ com/example/groupproject_g3/authorization/fragments/RegisterFragment.java
  com.example.groupproject_g3.authorization.fragments.RegisterFragment
 com/example/groupproject_g3/databinding/FragmentPageProfileBinding.java
  com.example.groupproject_g3.databinding.FragmentPageProfileBinding
+com/example/groupproject_g3/chat/fragments/AddChatFragment.java
+ com.example.groupproject_g3.chat.fragments.AddChatFragment
 com/example/groupproject_g3/databinding/FragmentWeatherHourItemBinding.java
  com.example.groupproject_g3.databinding.FragmentWeatherHourItemBinding
 com/example/groupproject_g3/databinding/FragmentPageChatMessageBinding.java
@@ -28,16 +32,14 @@ com/example/groupproject_g3/contact/fragments/ContactFragment.java
  com.example.groupproject_g3.contact.fragments.ContactFragment
 com/example/groupproject_g3/authorization/fragments/SignInFragment.java
  com.example.groupproject_g3.authorization.fragments.SignInFragment
-com/example/groupproject_g3/authorization/fragments/SignInFragmentDirections.java
- com.example.groupproject_g3.authorization.fragments.SignInFragmentDirections
- com.example.groupproject_g3.authorization.fragments.SignInFragmentDirections$1
- com.example.groupproject_g3.authorization.fragments.SignInFragmentDirections$ActionSignInFragmentToMainActivity
+com/example/groupproject_g3/weather/fragments/WeatherFragment.java
+ com.example.groupproject_g3.weather.fragments.WeatherFragment
 com/example/groupproject_g3/authorization/fragments/SignInFragmentArgs.java
  com.example.groupproject_g3.authorization.fragments.SignInFragmentArgs
  com.example.groupproject_g3.authorization.fragments.SignInFragmentArgs$1
  com.example.groupproject_g3.authorization.fragments.SignInFragmentArgs$Builder
-com/example/groupproject_g3/chat/fragments/ChatMessage.java
- com.example.groupproject_g3.chat.fragments.ChatMessage
+com/example/groupproject_g3/weather/fragments/WeatherSearchFragment.java
+ com.example.groupproject_g3.weather.fragments.WeatherSearchFragment
 com/example/groupproject_g3/databinding/FragmentPageWeatherBinding.java
  com.example.groupproject_g3.databinding.FragmentPageWeatherBinding
 com/example/groupproject_g3/databinding/FragmentPageChatBinding.java
@@ -95,6 +97,8 @@ com/example/groupproject_g3/chat/fragments/ChatViewModel.java
  com.example.groupproject_g3.chat.fragments.ChatViewModel
  com.example.groupproject_g3.chat.fragments.ChatViewModel$1
  com.example.groupproject_g3.chat.fragments.ChatViewModel$2
+com/example/groupproject_g3/chat/fragments/AddChatFragmentDirections.java
+ com.example.groupproject_g3.chat.fragments.AddChatFragmentDirections
 com/example/groupproject_g3/databinding/FragmentPageWeatherSearchBinding.java
  com.example.groupproject_g3.databinding.FragmentPageWeatherSearchBinding
 com/example/groupproject_g3/databinding/FragmentWeatherCurrentBinding.java
@@ -122,6 +126,8 @@ com/example/groupproject_g3/weather/fragments/WeatherDayItem.java
  com.example.groupproject_g3.weather.fragments.WeatherDayItem
 com/example/groupproject_g3/contact/fragments/ContactFragmentDirections.java
  com.example.groupproject_g3.contact.fragments.ContactFragmentDirections
+com/example/groupproject_g3/databinding/FragmentAddChatBinding.java
+ com.example.groupproject_g3.databinding.FragmentAddChatBinding
 com/example/groupproject_g3/activities/MainActivityArgs.java
  com.example.groupproject_g3.activities.MainActivityArgs
  com.example.groupproject_g3.activities.MainActivityArgs$1
@@ -132,11 +138,15 @@ com/example/groupproject_g3/databinding/FragmentRegisterBinding.java
  com.example.groupproject_g3.databinding.FragmentRegisterBinding
 com/example/groupproject_g3/weather/fragments/WeatherForecastFragment.java
  com.example.groupproject_g3.weather.fragments.WeatherForecastFragment
+com/example/groupproject_g3/chat/fragments/ChatFragmentDirections.java
+ com.example.groupproject_g3.chat.fragments.ChatFragmentDirections
 com/example/groupproject_g3/authorization/fragments/RegisterViewModel.java
  com.example.groupproject_g3.authorization.fragments.RegisterViewModel
-com/example/groupproject_g3/activities/MainActivity.java
- com.example.groupproject_g3.activities.MainActivity
-com/example/groupproject_g3/weather/fragments/WeatherSearchFragment.java
- com.example.groupproject_g3.weather.fragments.WeatherSearchFragment
-com/example/groupproject_g3/weather/fragments/WeatherFragment.java
- com.example.groupproject_g3.weather.fragments.WeatherFragment
+com/example/groupproject_g3/authorization/fragments/SignInFragmentDirections.java
+ com.example.groupproject_g3.authorization.fragments.SignInFragmentDirections
+ com.example.groupproject_g3.authorization.fragments.SignInFragmentDirections$1
+ com.example.groupproject_g3.authorization.fragments.SignInFragmentDirections$ActionSignInFragmentToMainActivity
+com/example/groupproject_g3/databinding/ActivityMainBinding.java
+ com.example.groupproject_g3.databinding.ActivityMainBinding
+com/example/groupproject_g3/chat/fragments/ChatMessage.java
+ com.example.groupproject_g3.chat.fragments.ChatMessage

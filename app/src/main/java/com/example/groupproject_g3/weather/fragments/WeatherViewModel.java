@@ -19,4 +19,7 @@ public class WeatherViewModel extends AndroidViewModel {
     public WeatherViewModel(@NonNull Application application) {
         super(application);
     }
+
+
+
 }
