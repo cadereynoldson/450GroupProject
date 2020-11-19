@@ -32,10 +32,14 @@
     <string name="contact_no_contacts">You have no contacts!</string>
     <string name="contact_search_by">Search By</string>
     <string name="action_remove_contact">Remove Contact</string>
+
     <string-array name="contact_search_by_options">
         <item>Email</item>
         <item>Username</item>
     </string-array>
+
+    <string name="action_add_chat">Add Chat</string>
+
 
     <string name="menu_dashboard">Dashboard</string>
     <string name="menu_more">More</string>

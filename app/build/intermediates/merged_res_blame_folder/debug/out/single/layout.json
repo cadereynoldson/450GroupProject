@@ -28,6 +28,10 @@
         "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_sign_in.xml"
     },
     {
+        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_chat.xml",
+        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_add_chat.xml"
+    },
+    {
         "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_weather_days.xml",
         "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\item_weather_days.xml"
     },

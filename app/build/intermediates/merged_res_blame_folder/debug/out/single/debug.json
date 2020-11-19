@@ -124,6 +124,10 @@
         "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_add_chat.xml.flat",
+        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_add_chat.xml"
+    },
+    {
         "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_chat_notification.xml.flat",
         "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_chat_notification.xml"
     },
@@ -196,12 +200,12 @@
         "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_chat_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_cloud_chat.png.flat",
-        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\logo_cloud_chat.png"
-    },
-    {
         "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_page_weather.xml.flat",
         "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_weather.xml"
+    },
+    {
+        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_cloud_chat.png.flat",
+        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\logo_cloud_chat.png"
     },
     {
         "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
@@ -238,6 +242,10 @@
     {
         "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\navigation_auth_nav.xml.flat",
         "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\navigation\\auth_nav.xml"
+    },
+    {
+        "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_chat_blue_300dp.xml.flat",
+        "source": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_chat_blue_300dp.xml"
     },
     {
         "merged": "C:\\Users\\tphip\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_message_send.png.flat",

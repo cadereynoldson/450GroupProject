@@ -19,7 +19,11 @@
         android:id="@+id/navigation_chats"
         android:name="com.example.groupproject_g3.chat.fragments.ChatFragment"
         android:label="@string/title_chats"
-        tools:layout="@layout/fragment_page_chat" />
+        tools:layout="@layout/fragment_page_chat" >
+        <action
+            android:id="@+id/action_navigation_chats_to_navaigation_add_chat"
+            app:destination="@id/navaigation_add_chat" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_contacts"
         android:name="com.example.groupproject_g3.contact.fragments.ContactFragment"
@@ -42,5 +46,14 @@
         <action
             android:id="@+id/action_addContactFragment_to_navigation_contacts"
             app:destination="@id/navigation_contacts" />
+    </fragment>
+    <fragment
+        android:id="@+id/navaigation_add_chat"
+        android:name="com.example.groupproject_g3.chat.fragments.AddChatFragment"
+        android:label="fragment_add_chat"
+        tools:layout="@layout/fragment_add_chat" >
+        <action
+            android:id="@+id/action_addChatFragment_to_navigation_chats"
+            app:destination="@id/navigation_chats" />
     </fragment>
 </navigation>

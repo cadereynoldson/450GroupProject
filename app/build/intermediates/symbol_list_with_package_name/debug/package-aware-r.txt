@@ -1449,6 +1449,7 @@ drawable googleg_standard_color_18
 drawable ic_action_add
 drawable ic_calendar_black_24dp
 drawable ic_chat_black_24dp
+drawable ic_chat_blue_300dp
 drawable ic_chat_notification
 drawable ic_clear_black_24dp
 drawable ic_contact_blueish_300dp
@@ -1547,6 +1548,7 @@ id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
 id action0
+id action_addChatFragment_to_navigation_chats
 id action_addContactFragment_to_navigation_contacts
 id action_bar
 id action_bar_activity_content
@@ -1564,6 +1566,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_navigation_chats_to_navaigation_add_chat
 id action_navigation_contacts_to_addContactFragment
 id action_registerFragment_to_signInFragment
 id action_search
@@ -1573,6 +1576,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_chat_root
 id add_contact_root
 id adjust_height
 id adjust_width
@@ -1589,6 +1593,7 @@ id bottom
 id bottom_nav_menu
 id boxInsetLayout
 id buttonPanel
+id button_add_chat
 id button_add_contact
 id button_contact_add
 id button_register
@@ -1675,6 +1680,7 @@ id ifRoom
 id image
 id imageView
 id imageView4
+id image_chat_bubble
 id image_days_forecast
 id image_weather_forecast
 id image_weather_hour_forecast
@@ -1732,6 +1738,7 @@ id multiply
 id nav_controller_view_tag
 id nav_host_fragment
 id nav_host_fragment_container
+id navaigation_add_chat
 id navigation_add_contact
 id navigation_chats
 id navigation_contacts
@@ -1971,6 +1978,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_add_chat
 layout fragment_add_contact
 layout fragment_contact_item
 layout fragment_page_chat
@@ -2081,6 +2089,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string action_add_chat
 string action_add_contact
 string action_remove_contact
 string app_name

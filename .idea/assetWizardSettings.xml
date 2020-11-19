@@ -329,7 +329,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/wb_sunny/baseline_wb_sunny_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/chat/baseline_chat_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -339,8 +339,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="f3ff41" />
-                            <entry key="outputName" value="ic_weather_yellow_24" />
+                            <entry key="color" value="004aee" />
+                            <entry key="outputName" value="ic_chat_blue_300dp" />
                             <entry key="sourceFile" value="C:\Users\tphip\AndroidStudioProjects\450GroupProject" />
                           </map>
                         </option>
