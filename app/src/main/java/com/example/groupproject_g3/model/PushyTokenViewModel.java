@@ -14,6 +14,8 @@ import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.example.groupproject_g3.R;
+import com.example.groupproject_g3.io.RequestQueueSingleton;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -23,8 +25,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-import com.example.groupproject_g3.R;
-import com.example.groupproject_g3.io.RequestQueueSingleton;
 import me.pushy.sdk.Pushy;
 
 public class PushyTokenViewModel extends AndroidViewModel{
