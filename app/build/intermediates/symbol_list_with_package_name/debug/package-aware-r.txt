@@ -1661,6 +1661,7 @@ id filled
 id filter_chip
 id fitToContents
 id fixed
+id forecast_info
 id forever
 id fragment_container_view_tag
 id frameLayout
@@ -1844,6 +1845,8 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id text_date
+id text_day_temperature
+id text_day_weather
 id text_direction
 id text_direction_data
 id text_email
@@ -1874,7 +1877,6 @@ id text_name
 id text_no_contacts
 id text_pressure
 id text_pressure_data
-id text_preview
 id text_rain
 id text_rain_data
 id text_register_email
@@ -1888,7 +1890,6 @@ id text_search_by
 id text_signin_email
 id text_signin_password
 id text_username
-id text_weather
 id text_weather_date
 id text_weather_description
 id text_weather_temperature
@@ -2172,6 +2173,11 @@ string key_contacts_first_name
 string key_contacts_last_name
 string key_contacts_list
 string key_contacts_username
+string key_weather_current_temp
+string key_weather_current_weather
+string key_weather_current_weather_main
+string key_weather_date_time
+string key_weather_forecast_list
 string menu_about_app
 string menu_dashboard
 string menu_more

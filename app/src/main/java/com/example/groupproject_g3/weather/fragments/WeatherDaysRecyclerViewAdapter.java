@@ -49,10 +49,10 @@ public class WeatherDaysRecyclerViewAdapter extends RecyclerView.Adapter<Weather
         }
 
         public void setWeatherDays(final WeatherDayItem dayItem) {
-            binding.buttonFullInfo.setOnClickListener(view -> {
-                Navigation.findNavController(mView).navigate(
-                        WeatherFragmentDirections.actionNavigationWeatherToNavigationWeatherForecast());
-            });
+//            binding.buttonFullInfo.setOnClickListener(view -> {
+//                Navigation.findNavController(mView).navigate(
+//                        .actionNavigationWeatherToNavigationWeatherForecast());
+//            });
         }
     }
 }
