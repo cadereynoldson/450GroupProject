@@ -8,6 +8,7 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.example.groupproject_g3.R;
 import com.google.android.material.chip.Chip;
@@ -26,6 +27,9 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
   public final FragmentWeatherCurrentBinding containerWeatherForecast;
 
   @NonNull
+  public final RecyclerView forecastInfo;
+
+  @NonNull
   public final ProgressBar progressBar;
 
   @NonNull
@@ -34,10 +38,12 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
   private FragmentPageWeatherBinding(@NonNull RelativeLayout rootView,
       @NonNull Chip chipWeatherLocation,
       @NonNull FragmentWeatherCurrentBinding containerWeatherForecast,
-      @NonNull ProgressBar progressBar, @NonNull RelativeLayout weatherRoot) {
+      @NonNull RecyclerView forecastInfo, @NonNull ProgressBar progressBar,
+      @NonNull RelativeLayout weatherRoot) {
     this.rootView = rootView;
     this.chipWeatherLocation = chipWeatherLocation;
     this.containerWeatherForecast = containerWeatherForecast;
+    this.forecastInfo = forecastInfo;
     this.progressBar = progressBar;
     this.weatherRoot = weatherRoot;
   }
@@ -82,6 +88,12 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
       }
       FragmentWeatherCurrentBinding binding_containerWeatherForecast = FragmentWeatherCurrentBinding.bind(containerWeatherForecast);
 
+      id = R.id.forecast_info;
+      RecyclerView forecastInfo = rootView.findViewById(id);
+      if (forecastInfo == null) {
+        break missingId;
+      }
+
       id = R.id.progressBar;
       ProgressBar progressBar = rootView.findViewById(id);
       if (progressBar == null) {
@@ -91,7 +103,7 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
       RelativeLayout weatherRoot = (RelativeLayout) rootView;
 
       return new FragmentPageWeatherBinding((RelativeLayout) rootView, chipWeatherLocation,
-          binding_containerWeatherForecast, progressBar, weatherRoot);
+          binding_containerWeatherForecast, forecastInfo, progressBar, weatherRoot);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

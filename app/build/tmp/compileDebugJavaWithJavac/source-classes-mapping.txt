@@ -16,12 +16,17 @@ com/example/groupproject_g3/weather/fragments/WeatherFragmentDirections.java
  com.example.groupproject_g3.weather.fragments.WeatherFragmentDirections
 com/example/groupproject_g3/databinding/FragmentSignInBinding.java
  com.example.groupproject_g3.databinding.FragmentSignInBinding
+com/example/groupproject_g3/weather/fragments/WeatherBasicInformation.java
+ com.example.groupproject_g3.weather.fragments.WeatherBasicInformation
 com/example/groupproject_g3/weather/fragments/WeatherForecastFragmentDirections.java
  com.example.groupproject_g3.weather.fragments.WeatherForecastFragmentDirections
 com/example/groupproject_g3/authorization/fragments/RegisterFragment.java
  com.example.groupproject_g3.authorization.fragments.RegisterFragment
 com/example/groupproject_g3/databinding/FragmentPageProfileBinding.java
  com.example.groupproject_g3.databinding.FragmentPageProfileBinding
+com/example/groupproject_g3/weather/fragments/WeatherCurrentViewModel.java
+ com.example.groupproject_g3.weather.fragments.WeatherCurrentViewModel
+ com.example.groupproject_g3.weather.fragments.WeatherCurrentViewModel$1
 com/example/groupproject_g3/chat/fragments/AddChatFragment.java
  com.example.groupproject_g3.chat.fragments.AddChatFragment
 com/example/groupproject_g3/databinding/FragmentWeatherHourItemBinding.java
@@ -68,9 +73,6 @@ com/example/groupproject_g3/model/PushyTokenViewModel.java
  com.example.groupproject_g3.model.PushyTokenViewModel$1
  com.example.groupproject_g3.model.PushyTokenViewModel$2
  com.example.groupproject_g3.model.PushyTokenViewModel$RegisterForPushNotificationsAsync
-com/example/groupproject_g3/weather/fragments/WeatherDaysRecyclerViewAdapter.java
- com.example.groupproject_g3.weather.fragments.WeatherDaysRecyclerViewAdapter
- com.example.groupproject_g3.weather.fragments.WeatherDaysRecyclerViewAdapter$WeatherViewHolder
 com/example/groupproject_g3/databinding/SpinnerItemBinding.java
  com.example.groupproject_g3.databinding.SpinnerItemBinding
 com/example/groupproject_g3/chat/fragments/ChatFragment.java
@@ -83,6 +85,9 @@ com/example/groupproject_g3/chat/fragments/ChatRecyclerViewAdapter.java
 com/example/groupproject_g3/chat/fragments/ChatSendViewModel.java
  com.example.groupproject_g3.chat.fragments.ChatSendViewModel
  com.example.groupproject_g3.chat.fragments.ChatSendViewModel$1
+com/example/groupproject_g3/weather/fragments/WeatherForecastViewModel.java
+ com.example.groupproject_g3.weather.fragments.WeatherForecastViewModel
+ com.example.groupproject_g3.weather.fragments.WeatherForecastViewModel$1
 com/example/groupproject_g3/contact/fragments/AddContactFragmentDirections.java
  com.example.groupproject_g3.contact.fragments.AddContactFragmentDirections
 com/example/groupproject_g3/databinding/FragmentPageWeatherForecastBinding.java
@@ -120,6 +125,9 @@ com/example/groupproject_g3/io/RequestQueueSingleton.java
  com.example.groupproject_g3.io.RequestQueueSingleton$1
 com/example/groupproject_g3/profile/fragments/ProfileFragment.java
  com.example.groupproject_g3.profile.fragments.ProfileFragment
+com/example/groupproject_g3/weather/fragments/WeatherForecastRecyclerViewAdapter.java
+ com.example.groupproject_g3.weather.fragments.WeatherForecastRecyclerViewAdapter
+ com.example.groupproject_g3.weather.fragments.WeatherForecastRecyclerViewAdapter$ForecastInfoViewHolder
 com/example/groupproject_g3/activities/AuthorizationActivity.java
  com.example.groupproject_g3.activities.AuthorizationActivity
 com/example/groupproject_g3/weather/fragments/WeatherDayItem.java

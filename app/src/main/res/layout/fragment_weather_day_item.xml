@@ -13,8 +13,8 @@
         android:id="@+id/layout_inner"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toTopOf="@+id/text_weather"
-        app:layout_constraintTop_toTopOf="@+id/text_weather">
+        app:layout_constraintBottom_toTopOf="@+id/text_day_weather"
+        app:layout_constraintTop_toTopOf="@+id/text_day_weather">
 
         <TextView
             android:id="@+id/text_date"
@@ -32,7 +32,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/text_weather"
+            android:id="@+id/text_day_weather"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -46,17 +46,18 @@
             app:layout_constraintTop_toBottomOf="@+id/text_date" />
 
         <TextView
-            android:id="@+id/text_preview"
+            android:id="@+id/text_day_temperature"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:paddingBottom="8dp"
             android:textAppearance="?attr/textAppearanceListItem"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="67dp" />
+            app:layout_constraintTop_toBottomOf="@+id/text_day_weather" />
 
         <Button
             android:id="@+id/button_full_info"
@@ -67,8 +68,7 @@
             android:text="@string/weather_action_link"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_preview"
+            app:layout_constraintTop_toBottomOf="@+id/text_day_temperature"
             tools:visibility="visible" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
