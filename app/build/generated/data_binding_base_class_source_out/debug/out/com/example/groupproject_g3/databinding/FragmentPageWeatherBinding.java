@@ -37,7 +37,7 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
   public final Chip chipWeatherLocation;
 
   @NonNull
-  public final LayoutWeatherForecastBinding containerWeatherForecast;
+  public final ItemWeatherForecastBinding containerWeatherForecast;
 
   @NonNull
   public final ProgressBar progressBar;
@@ -49,7 +49,7 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
       @NonNull RecyclerView RecycleViewDays, @NonNull RecyclerView RecycleViewHours,
       @NonNull CardView cardWeather24hours, @NonNull CardView cardWeatherDays,
       @NonNull Chip chipWeatherLocation,
-      @NonNull LayoutWeatherForecastBinding containerWeatherForecast,
+      @NonNull ItemWeatherForecastBinding containerWeatherForecast,
       @NonNull ProgressBar progressBar, @NonNull RelativeLayout weatherRoot) {
     this.rootView = rootView;
     this.RecycleViewDays = RecycleViewDays;
@@ -124,7 +124,7 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
       if (containerWeatherForecast == null) {
         break missingId;
       }
-      LayoutWeatherForecastBinding binding_containerWeatherForecast = LayoutWeatherForecastBinding.bind(containerWeatherForecast);
+      ItemWeatherForecastBinding binding_containerWeatherForecast = ItemWeatherForecastBinding.bind(containerWeatherForecast);
 
       id = R.id.progressBar;
       ProgressBar progressBar = rootView.findViewById(id);

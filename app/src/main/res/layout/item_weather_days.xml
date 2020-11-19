@@ -47,7 +47,7 @@
                 app:srcCompat="@drawable/ic_weather_yellow_24" />
 
             <TextView
-                android:id="@+id/text_days_tempurature"
+                android:id="@+id/text_days_min"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/image_days_forecast"
@@ -57,10 +57,10 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/text_days_outside"
+                android:id="@+id/text_days_max"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/text_days_tempurature"
+                android:layout_below="@id/text_days_min"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="2dp"
                 android:text="20°"

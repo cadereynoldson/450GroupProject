@@ -10,8 +10,12 @@ com/example/groupproject_g3/databinding/ActivityAuthorizationBinding.java
  com.example.groupproject_g3.databinding.ActivityAuthorizationBinding
 com/example/groupproject_g3/home/fragments/HomeFragment.java
  com.example.groupproject_g3.home.fragments.HomeFragment
+com/example/groupproject_g3/weather/fragments/WeatherFragmentDirections.java
+ com.example.groupproject_g3.weather.fragments.WeatherFragmentDirections
 com/example/groupproject_g3/databinding/FragmentSignInBinding.java
  com.example.groupproject_g3.databinding.FragmentSignInBinding
+com/example/groupproject_g3/weather/fragments/WeatherForecastFragmentDirections.java
+ com.example.groupproject_g3.weather.fragments.WeatherForecastFragmentDirections
 com/example/groupproject_g3/authorization/fragments/RegisterFragment.java
  com.example.groupproject_g3.authorization.fragments.RegisterFragment
 com/example/groupproject_g3/databinding/FragmentPageProfileBinding.java
@@ -66,6 +70,10 @@ com/example/groupproject_g3/databinding/SpinnerItemBinding.java
  com.example.groupproject_g3.databinding.SpinnerItemBinding
 com/example/groupproject_g3/chat/fragments/ChatFragment.java
  com.example.groupproject_g3.chat.fragments.ChatFragment
+com/example/groupproject_g3/weather/fragments/WeatherDaysItem.java
+ com.example.groupproject_g3.weather.fragments.WeatherDaysItem
+com/example/groupproject_g3/weather/fragments/WeatherSearchFragmentDirections.java
+ com.example.groupproject_g3.weather.fragments.WeatherSearchFragmentDirections
 com/example/groupproject_g3/weather/fragments/WeatherRecyclerViewAdapter.java
  com.example.groupproject_g3.weather.fragments.WeatherRecyclerViewAdapter
  com.example.groupproject_g3.weather.fragments.WeatherRecyclerViewAdapter$WeatherViewHolder
@@ -95,6 +103,8 @@ com/example/groupproject_g3/chat/fragments/AddChatFragmentDirections.java
  com.example.groupproject_g3.chat.fragments.AddChatFragmentDirections
 com/example/groupproject_g3/model/NewMessageCountViewModel.java
  com.example.groupproject_g3.model.NewMessageCountViewModel
+com/example/groupproject_g3/databinding/ItemWeatherForecastBinding.java
+ com.example.groupproject_g3.databinding.ItemWeatherForecastBinding
 com/example/groupproject_g3/databinding/FragmentWeatherForecastBinding.java
  com.example.groupproject_g3.databinding.FragmentWeatherForecastBinding
 com/example/groupproject_g3/utils/PasswordValidator.java
@@ -112,8 +122,6 @@ com/example/groupproject_g3/io/RequestQueueSingleton.java
  com.example.groupproject_g3.io.RequestQueueSingleton$1
 com/example/groupproject_g3/profile/fragments/ProfileFragment.java
  com.example.groupproject_g3.profile.fragments.ProfileFragment
-com/example/groupproject_g3/databinding/LayoutWeatherForecastBinding.java
- com.example.groupproject_g3.databinding.LayoutWeatherForecastBinding
 com/example/groupproject_g3/activities/AuthorizationActivity.java
  com.example.groupproject_g3.activities.AuthorizationActivity
 com/example/groupproject_g3/contact/fragments/ContactFragmentDirections.java
