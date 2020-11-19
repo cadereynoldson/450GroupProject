@@ -77,6 +77,27 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="navigation_add_chats">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_addChatFragment_to_navigation_chats">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="navigation_add_contact">
                     <value>
                       <LayoutPositions>
@@ -106,6 +127,15 @@
                             <option name="x" value="297" />
                             <option name="y" value="332" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_navigation_chats_to_addChatFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>

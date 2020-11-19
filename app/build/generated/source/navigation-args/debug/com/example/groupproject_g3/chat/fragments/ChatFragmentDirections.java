@@ -10,7 +10,7 @@ public class ChatFragmentDirections {
   }
 
   @NonNull
-  public static NavDirections actionNavigationChatsToNavaigationAddChat() {
-    return new ActionOnlyNavDirections(R.id.action_navigation_chats_to_navaigation_add_chat);
+  public static NavDirections actionNavigationChatsToAddChatFragment() {
+    return new ActionOnlyNavDirections(R.id.action_navigation_chats_to_addChatFragment);
   }
 }
