@@ -12,10 +12,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        app:cardBackgroundColor="#9000BCD4"
         app:cardCornerRadius="20dp">
 
         <SearchView
+            android:id="@+id/search_weather"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:defaultQueryHint="@string/weather_search" />

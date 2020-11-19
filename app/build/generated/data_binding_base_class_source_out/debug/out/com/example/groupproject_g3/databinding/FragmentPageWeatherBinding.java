@@ -8,8 +8,6 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.example.groupproject_g3.R;
 import com.google.android.material.chip.Chip;
@@ -22,22 +20,10 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
-  public final RecyclerView RecycleViewDays;
-
-  @NonNull
-  public final RecyclerView RecycleViewHours;
-
-  @NonNull
-  public final CardView cardWeather24hours;
-
-  @NonNull
-  public final CardView cardWeatherDays;
-
-  @NonNull
   public final Chip chipWeatherLocation;
 
   @NonNull
-  public final LayoutWeatherForecastBinding containerWeatherForecast;
+  public final FragmentWeatherCurrentBinding containerWeatherForecast;
 
   @NonNull
   public final ProgressBar progressBar;
@@ -46,16 +32,10 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
   public final RelativeLayout weatherRoot;
 
   private FragmentPageWeatherBinding(@NonNull RelativeLayout rootView,
-      @NonNull RecyclerView RecycleViewDays, @NonNull RecyclerView RecycleViewHours,
-      @NonNull CardView cardWeather24hours, @NonNull CardView cardWeatherDays,
       @NonNull Chip chipWeatherLocation,
-      @NonNull LayoutWeatherForecastBinding containerWeatherForecast,
+      @NonNull FragmentWeatherCurrentBinding containerWeatherForecast,
       @NonNull ProgressBar progressBar, @NonNull RelativeLayout weatherRoot) {
     this.rootView = rootView;
-    this.RecycleViewDays = RecycleViewDays;
-    this.RecycleViewHours = RecycleViewHours;
-    this.cardWeather24hours = cardWeather24hours;
-    this.cardWeatherDays = cardWeatherDays;
     this.chipWeatherLocation = chipWeatherLocation;
     this.containerWeatherForecast = containerWeatherForecast;
     this.progressBar = progressBar;
@@ -89,30 +69,6 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.RecycleView_days;
-      RecyclerView RecycleViewDays = rootView.findViewById(id);
-      if (RecycleViewDays == null) {
-        break missingId;
-      }
-
-      id = R.id.RecycleView_hours;
-      RecyclerView RecycleViewHours = rootView.findViewById(id);
-      if (RecycleViewHours == null) {
-        break missingId;
-      }
-
-      id = R.id.card_weather_24hours;
-      CardView cardWeather24hours = rootView.findViewById(id);
-      if (cardWeather24hours == null) {
-        break missingId;
-      }
-
-      id = R.id.card_weather_days;
-      CardView cardWeatherDays = rootView.findViewById(id);
-      if (cardWeatherDays == null) {
-        break missingId;
-      }
-
       id = R.id.chip_weather_location;
       Chip chipWeatherLocation = rootView.findViewById(id);
       if (chipWeatherLocation == null) {
@@ -124,7 +80,7 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
       if (containerWeatherForecast == null) {
         break missingId;
       }
-      LayoutWeatherForecastBinding binding_containerWeatherForecast = LayoutWeatherForecastBinding.bind(containerWeatherForecast);
+      FragmentWeatherCurrentBinding binding_containerWeatherForecast = FragmentWeatherCurrentBinding.bind(containerWeatherForecast);
 
       id = R.id.progressBar;
       ProgressBar progressBar = rootView.findViewById(id);
@@ -134,8 +90,7 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
 
       RelativeLayout weatherRoot = (RelativeLayout) rootView;
 
-      return new FragmentPageWeatherBinding((RelativeLayout) rootView, RecycleViewDays,
-          RecycleViewHours, cardWeather24hours, cardWeatherDays, chipWeatherLocation,
+      return new FragmentPageWeatherBinding((RelativeLayout) rootView, chipWeatherLocation,
           binding_containerWeatherForecast, progressBar, weatherRoot);
     }
     String missingId = rootView.getResources().getResourceName(id);

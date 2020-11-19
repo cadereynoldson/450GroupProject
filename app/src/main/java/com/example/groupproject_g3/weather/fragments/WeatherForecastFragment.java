@@ -19,6 +19,6 @@ public class WeatherForecastFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_weather_forecast, container, false);
+        return inflater.inflate(R.layout.fragment_page_weather_forecast, container, false);
     }
 }
