@@ -1,3 +1,6 @@
+/**
+ * Handles the RecyclerView of the chat rooms
+ */
 package com.example.groupproject_g3.chat.fragments;
 
 import android.content.res.Resources;
@@ -20,8 +23,13 @@ import java.util.List;
 
 public class ChatRecyclerViewAdapter extends RecyclerView.Adapter<ChatRecyclerViewAdapter.MessageViewHolder> {
 
+    /** object containing messages within chat */
     private final List<com.example.groupproject_g3.chat.fragments.ChatMessage> mMessages;
+
+    /** string associated with the email of associated user */
     private final String mEmail;
+
+    /** An instance of the Recycler View Adapter. */
     public ChatRecyclerViewAdapter(List<com.example.groupproject_g3.chat.fragments.ChatMessage> messages, String email) {
         this.mMessages = messages;
         mEmail = email;

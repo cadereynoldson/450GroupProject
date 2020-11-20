@@ -1,3 +1,6 @@
+/**
+ * Add Chat Fragment.
+ */
 package com.example.groupproject_g3.chat.fragments;
 
 import android.os.Bundle;
@@ -20,6 +23,7 @@ import com.example.groupproject_g3.databinding.FragmentAddContactBinding;
  */
 public class AddChatFragment extends Fragment {
 
+    /** Binding for the fragment. Allows for direct reference of fragment components. */
     private FragmentAddChatBinding binding;
 
     @Override

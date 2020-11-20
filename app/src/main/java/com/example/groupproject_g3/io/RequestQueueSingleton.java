@@ -57,7 +57,7 @@ public class RequestQueueSingleton {
      * Getter for the instance.
      *
      * @param context context.
-     * @return instnace.
+     * @return instance.
      */
     public static synchronized RequestQueueSingleton getInstance(Context context) {
         if (instance == null) {

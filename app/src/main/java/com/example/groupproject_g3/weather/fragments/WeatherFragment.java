@@ -25,14 +25,19 @@ import com.example.groupproject_g3.model.UserInfoViewModel;
  */
 public class WeatherFragment extends Fragment {
 
+    /** Latitude data to be used. */
     private double lat = 47.2529;
 
+    /** Longitude data to be used. */
     private double lon = -122.4443;
 
+    /** Binding object to be used with other fragments in Weather. */
     private FragmentPageWeatherBinding binding;
 
+    /** A current model of the view model */
     private WeatherCurrentViewModel currentModel;
 
+    /** A forecast model associated with future weather */
     private WeatherForecastViewModel forecastModel;
 
     @Override

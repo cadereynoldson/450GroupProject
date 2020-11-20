@@ -1,3 +1,6 @@
+/**
+ * Contains the push receiver, an extension of the broadcast receiver.
+ */
 package com.example.groupproject_g3.services;
 
 import android.app.ActivityManager;

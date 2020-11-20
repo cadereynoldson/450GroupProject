@@ -1,3 +1,6 @@
+/**
+ * View model of the weather forecast within Android.
+ */
 package com.example.groupproject_g3.weather.fragments;
 
 import android.app.Application;
@@ -31,14 +34,24 @@ import java.util.function.IntFunction;
 
 public class WeatherForecastViewModel extends AndroidViewModel {
 
+    /** Contains basic weather information to be represented */
     private MutableLiveData<List<WeatherBasicInformation>> information;
 
+    /**
+     * A model of the weather forecast
+     * @param application - the application retrieving the data.
+     */
     public WeatherForecastViewModel(@NonNull Application application) {
         super(application);
         information = new MutableLiveData<>();
         information.setValue(new ArrayList<WeatherBasicInformation>());
     }
 
+    /**
+     * Adds an observer to add to the Forecast list
+     * @param owner - the user data
+     * @param observer - the observer
+     */
     public void addForecastListObserver(@NonNull LifecycleOwner owner,
                                         @NonNull Observer<? super List<WeatherBasicInformation>> observer) {
         information.observe(owner, observer);
@@ -77,6 +90,10 @@ public class WeatherForecastViewModel extends AndroidViewModel {
 
     }
 
+    /**
+     * Handles the data display after the successful retrieval of data.
+     * @param result - the data to be displayed within the application.
+     */
     private void handleResult(final JSONObject result) {
         IntFunction<String> getString =
                 getApplication().getResources()::getString;

@@ -1,3 +1,6 @@
+/**
+ * A view model of the current weather to be displayed.
+ */
 package com.example.groupproject_g3.weather.fragments;
 
 import android.app.Application;
@@ -29,16 +32,27 @@ import java.util.function.IntFunction;
 
 public class WeatherCurrentViewModel extends AndroidViewModel {
 
+    /** contains the basic weather data to be displayed, started off with placeholder data */
     private static final WeatherBasicInformation currentPlaceholder = new WeatherBasicInformation("06/02/1998", "7:36", "60F", "Clear");
 
+    /** Data containing mutable data for weather */
     private MutableLiveData<WeatherBasicInformation> information;
 
+    /**
+     * A view model of the current weather to be displayed.
+     * @param application - the application displaying the data.
+     */
     public WeatherCurrentViewModel(@NonNull Application application) {
         super(application);
         information = new MutableLiveData<>();
         information.setValue(currentPlaceholder);
     }
 
+    /**
+     * An observer to add the current weather data as needed.
+     * @param owner - the user data.
+     * @param observer - the observer.
+     */
     public void addCurrentWeatherObserver(@NonNull LifecycleOwner owner,
                                           @NonNull Observer<WeatherBasicInformation> observer) {
         information.observe(owner, observer);
@@ -46,9 +60,9 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
 
     /**
      * Gets the current weather data given a JWT, latitude, and longitude.
-     * @param authVal
-     * @param latitude
-     * @param longitude
+     * @param authVal - value to authorize data retrieval.
+     * @param latitude - latitude data.
+     * @param longitude - longitude data.
      */
     public void connectGet(String authVal, double latitude, double longitude) {
         String url = "https://cloud-chat-450.herokuapp.com/weather/current/latLon/?lat=" + latitude + "&long=" + longitude;
@@ -77,6 +91,11 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
 
     }
 
+    /**
+     * Handles the representation of data within the application after successfully retrieving the
+     * data.
+     * @param result - the data to be processed.
+     */
     private void handleResult(final JSONObject result) {
         IntFunction<String> getString =
                 getApplication().getResources()::getString;
@@ -105,6 +124,10 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
         information.setValue(information.getValue());
     }
 
+    /**
+     * Handles any error during the connection process.
+     * @param error
+     */
     private void handleError(final VolleyError error) {
         //TODO: Add better error detection
         Log.e("CONNECTION ERROR", error.getLocalizedMessage());

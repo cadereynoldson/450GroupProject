@@ -1,3 +1,7 @@
+/**
+ * Encapsulate chat message details.
+ */
+
 package com.example.groupproject_g3.chat.fragments;
 
 import androidx.annotation.Nullable;
@@ -7,9 +11,7 @@ import org.json.JSONObject;
 
 import java.io.Serializable;
 
-/**
- * Encapsulate chat message details.
- */
+
 public final class ChatMessage implements Serializable {
 
     private final int mMessageId;

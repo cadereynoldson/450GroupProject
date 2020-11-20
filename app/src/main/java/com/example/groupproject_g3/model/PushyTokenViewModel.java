@@ -1,3 +1,6 @@
+/**
+ * Token of the Pushy model.
+ */
 package com.example.groupproject_g3.model;
 
 import android.app.Application;
@@ -29,7 +32,10 @@ import me.pushy.sdk.Pushy;
 
 public class PushyTokenViewModel extends AndroidViewModel{
 
+    /** The associated pushy token. */
     private final MutableLiveData<String> mPushyToken;
+
+    /** Response data for the token. */
     private final MutableLiveData<JSONObject> mResponse;
 
     public PushyTokenViewModel(@NonNull Application application) {

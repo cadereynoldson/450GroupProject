@@ -1,3 +1,7 @@
+/**
+ * A hourly weather fragment.
+ */
+
 package com.example.groupproject_g3.weather.fragments;
 
 import android.os.Bundle;

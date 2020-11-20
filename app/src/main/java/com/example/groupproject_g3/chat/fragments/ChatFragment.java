@@ -1,3 +1,7 @@
+/**
+ * A chat fragment.
+ */
+
 package com.example.groupproject_g3.chat.fragments;
 
 import android.os.Bundle;

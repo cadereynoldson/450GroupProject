@@ -1,3 +1,7 @@
+/**
+ * View model for sending text via chat
+ */
+
 package com.example.groupproject_g3.chat.fragments;
 
 import android.app.Application;
@@ -27,19 +31,35 @@ import com.example.groupproject_g3.io.RequestQueueSingleton;
 
 public class ChatSendViewModel extends AndroidViewModel {
 
+    /** Contains live data for data between application and server*/
     private final MutableLiveData<JSONObject> mResponse;
 
+    /**
+     * Creates instance of chat view model during sending process
+     * @param application - contains application data
+     */
     public ChatSendViewModel(@NonNull Application application) {
         super(application);
         mResponse = new MutableLiveData<>();
         mResponse.setValue(new JSONObject());
     }
 
+    /**
+     * Observes if application needs to add response
+     * @param owner - user data
+     * @param observer - observer
+     */
     public void addResponseObserver(@NonNull LifecycleOwner owner,
                                     @NonNull Observer<? super JSONObject> observer) {
         mResponse.observe(owner, observer);
     }
 
+    /**
+     * Sends message over to server
+     * @param chatId - the chatid of the chat
+     * @param jwt - string object to be carried over
+     * @param message - the message being sent
+     */
     public void sendMessage(final int chatId, final String jwt, final String message) {
         String url = getApplication().getResources().getString(R.string.base_url) +
                 "messages";
@@ -78,7 +98,10 @@ public class ChatSendViewModel extends AndroidViewModel {
     }
 
 
-
+    /**
+     * Handles any error during the send message process.
+     * @param error
+     */
     private void handleError(final VolleyError error) {
         if (Objects.isNull(error.networkResponse)) {
             Log.e("NETWORK ERROR", error.getMessage());

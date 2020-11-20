@@ -1,3 +1,6 @@
+/**
+ * View model of the chat
+ */
 package com.example.groupproject_g3.chat.fragments;
 
 import android.app.Application;
@@ -212,6 +215,10 @@ public class ChatViewModel extends AndroidViewModel {
         }
     }
 
+    /**
+     * Handles errors during chat processing between client and network
+     * @param error
+     */
     private void handleError(final VolleyError error) {
         if (Objects.isNull(error.networkResponse)) {
             Log.e("NETWORK ERROR", error.getMessage());

@@ -1,3 +1,6 @@
+/**
+ * A fragment that displays the day's weather.
+ */
 package com.example.groupproject_g3.weather.fragments;
 
 import android.os.Bundle;
