@@ -124,10 +124,6 @@
         "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_weather_hour_item.xml.flat",
-        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_weather_hour_item.xml"
-    },
-    {
         "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_profile_blue_24dp.xml.flat",
         "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_profile_blue_24dp.xml"
     },

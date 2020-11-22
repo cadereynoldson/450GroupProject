@@ -101,26 +101,32 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
                 getApplication().getResources()::getString;
         try {
             Log.i("Current Weather Result: ", result.toString());
+
             //fetch date, temperature, weather, and time.
             long dateTime = ((long) result.getInt(getString.apply(R.string.key_weather_date_time))) * 1000l;
+
             //Fetch weather array and get main value from the response.
             JSONArray weatherArr = result.getJSONArray(getString.apply(R.string.key_weather_current_weather));
             String currentWeather = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_main));
+
             //Fetch main array and get the temperature value from it.
             JSONObject tempData = result.getJSONObject(getString.apply(R.string.key_weather_current_weather_main));
             Double currentTemp = tempData.getDouble(getString.apply(R.string.key_weather_current_temp));
+
             Date date = new Date(dateTime);
             Calendar calendar = Calendar.getInstance();
             calendar.setTime(date);
+
             String dateDisplay = calendar.get(Calendar.MONTH) + "/" + calendar.get(Calendar.DAY_OF_MONTH) + "/" + calendar.get(Calendar.YEAR);
+
             String time = new SimpleDateFormat("HH:mm").format(date);
+
             WeatherBasicInformation info = new WeatherBasicInformation(dateDisplay, time, currentTemp.toString(), currentWeather);
             information.setValue(info);
         } catch (JSONException e) {
             e.printStackTrace();
             Log.e("Error in fetching weather data", e.getMessage());
         }
-
         information.setValue(information.getValue());
     }
 
