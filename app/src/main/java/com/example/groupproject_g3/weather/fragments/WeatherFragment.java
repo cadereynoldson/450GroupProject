@@ -62,10 +62,10 @@ public class WeatherFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         currentModel.addCurrentWeatherObserver(getViewLifecycleOwner(), currentInfo -> {
-            binding.containerWeatherForecast.textWeatherDate.setText(currentInfo.getDate());
-            binding.containerWeatherForecast.textWeatherTemperature.setText(currentInfo.getTemperature() + "°F"); //TODO: Update for celsius
-            binding.containerWeatherForecast.textWeatherDescription.setText(currentInfo.getWeather());
-            binding.containerWeatherForecast.textWeatherTime.setText(currentInfo.getTime());
+            binding.containerWeatherForecast.textCurrentDate.setText(currentInfo.getDate());
+            binding.containerWeatherForecast.textCurrentTemperature.setText(currentInfo.getTemperature() + "°F"); //TODO: Update for celsius
+            binding.containerWeatherForecast.textCurrentDescription.setText(currentInfo.getWeather());
+            binding.containerWeatherForecast.textCurrentTime.setText(currentInfo.getTime());
         });
         forecastModel.addForecastListObserver(getViewLifecycleOwner(), information -> {
             if (!information.isEmpty()){

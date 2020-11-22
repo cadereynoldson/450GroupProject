@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="#9000BCD4"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="false"
+                android:layout_marginTop="4dp"
+                android:text="Mon"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/text_days_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_days"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="6dp"
+                android:text="12/31"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/image_days_forecast"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_below="@id/text_days_date"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/ic_weather_yellow_24" />
+
+            <TextView
+                android:id="@+id/text_days_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_days_forecast"
+                android:layout_centerHorizontal="true"
+                android:text="25°"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/text_days_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_days_min"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="2dp"
+                android:text="20°"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
