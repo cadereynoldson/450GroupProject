@@ -7,6 +7,9 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.auth0.android.jwt.JWT;
+
+
 public class UserInfoViewModel extends ViewModel {
 
     /**My email instance field.*/
@@ -20,13 +23,13 @@ public class UserInfoViewModel extends ViewModel {
 
     /**
      * Constuctor.
-     * @param email
-     * @param jwt
+     * @param jwt jwt.
      */
-    private UserInfoViewModel(String email, String jwt, int userId) {
-        mEmail = email;
+    private UserInfoViewModel(String jwt) {
+        JWT token = new JWT(jwt);
+        mEmail = token.getClaim("email").toString();
         mJwt = jwt;
-        mUserId = userId;
+        mUserId = token.getClaim("memberid").asInt();
     }
 
     /**
@@ -60,7 +63,7 @@ public class UserInfoViewModel extends ViewModel {
         private final String email;
 
         /**jwt instance field*/
-        private final String jwt;
+        private final String Jwt;
 
         /** The id of the user to generate a user info view model for. */
         private final int userId;
@@ -68,13 +71,13 @@ public class UserInfoViewModel extends ViewModel {
         /**
          * Constructor.
          *
-         * @param email email.
          * @param jwt jwt.
          */
-        public UserInfoViewModelFactory(String email, String jwt, int userId) {
-            this.email = email;
-            this.jwt = jwt;
-            this.userId = userId;
+        public UserInfoViewModelFactory(String jwt) {
+            JWT token = new JWT(jwt);
+            this.email = token.getClaim("email").asString();
+            this.Jwt = jwt;
+            this.userId = token.getClaim("memberid").asInt();
         }
 
         @NonNull
@@ -82,7 +85,7 @@ public class UserInfoViewModel extends ViewModel {
         public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
 
             if (modelClass == UserInfoViewModel.class) {
-                return (T) new UserInfoViewModel(email, jwt, userId);
+                return (T) new UserInfoViewModel(Jwt);
             }
             throw new IllegalArgumentException(
                     "Argument must be: " + UserInfoViewModel.class);
