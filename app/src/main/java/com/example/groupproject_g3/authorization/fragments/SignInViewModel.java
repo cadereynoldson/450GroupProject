@@ -97,6 +97,7 @@ public class SignInViewModel extends AndroidViewModel {
      * @param error error.
      */
     private void handleError(final VolleyError error) {
+        Log.wtf("IN ERROR", error.getMessage());
         if (Objects.isNull(error.networkResponse)) {
             try {
                 mResponse.setValue(new JSONObject("{" +

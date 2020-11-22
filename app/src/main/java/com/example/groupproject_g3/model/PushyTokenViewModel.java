@@ -116,7 +116,7 @@ public class PushyTokenViewModel extends AndroidViewModel{
         }
 
         String url = getApplication().getResources().getString(R.string.base_url) +
-                "auth";
+                "/auth";
 
         JSONObject body = new JSONObject();
         try {
@@ -175,7 +175,7 @@ public class PushyTokenViewModel extends AndroidViewModel{
 
     public void deleteTokenFromWebservice(final String jwt) {
         String url = getApplication().getResources().getString(R.string.base_url) +
-                "auth";
+                "/auth";
         Request request = new JsonObjectRequest(
                 Request.Method.DELETE,
                 url,
