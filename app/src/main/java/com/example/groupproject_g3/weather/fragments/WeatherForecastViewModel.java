@@ -87,7 +87,6 @@ public class WeatherForecastViewModel extends AndroidViewModel {
         //Instantiate the RequestQueue and add the request to the queue
         Volley.newRequestQueue(getApplication().getApplicationContext())
                 .add(request);
-
     }
 
     /**
@@ -104,20 +103,28 @@ public class WeatherForecastViewModel extends AndroidViewModel {
                 for (int i = 0; i < data.length(); i++) {
                     JSONObject info = data.getJSONObject(i);
                     Log.i("Forecast Weather Result ", info.toString());
+
                     //fetch date, temperature, weather, and time.
                     long dateTime = ((long) info.getInt(getString.apply(R.string.key_weather_date_time))) * 1000l;
+
                     //Fetch weather array and get main value from the response.
                     JSONArray weatherArr = info.getJSONArray(getString.apply(R.string.key_weather_current_weather));
                     String currentWeather = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_main));
+
                     //Fetch main array and get the temperature value from it.
                     JSONObject tempData = info.getJSONObject(getString.apply(R.string.key_weather_current_weather_main));
                     Double currentTemp = tempData.getDouble(getString.apply(R.string.key_weather_current_temp));
+
                     Date date = new Date(dateTime);
                     Calendar calendar = Calendar.getInstance();
                     calendar.setTime(date);
+
                     String dateDisplay = calendar.get(Calendar.MONTH) + "/" + calendar.get(Calendar.DAY_OF_MONTH) + "/" + calendar.get(Calendar.YEAR);
+
                     String time = new SimpleDateFormat("HH:mm").format(date);
+
                     WeatherBasicInformation forecastInfo = new WeatherBasicInformation(dateDisplay, time, currentTemp.toString(), currentWeather);
+
                     if (!information.getValue().contains(forecastInfo)) {
                         information.getValue().add(forecastInfo);
                     }

@@ -33,18 +33,27 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
   public final ProgressBar progressBar;
 
   @NonNull
+  public final RecyclerView weatherDays;
+
+  @NonNull
+  public final RecyclerView weatherHours;
+
+  @NonNull
   public final RelativeLayout weatherRoot;
 
   private FragmentPageWeatherBinding(@NonNull RelativeLayout rootView,
       @NonNull Chip chipWeatherLocation,
       @NonNull FragmentWeatherCurrentBinding containerWeatherForecast,
       @NonNull RecyclerView forecastInfo, @NonNull ProgressBar progressBar,
+      @NonNull RecyclerView weatherDays, @NonNull RecyclerView weatherHours,
       @NonNull RelativeLayout weatherRoot) {
     this.rootView = rootView;
     this.chipWeatherLocation = chipWeatherLocation;
     this.containerWeatherForecast = containerWeatherForecast;
     this.forecastInfo = forecastInfo;
     this.progressBar = progressBar;
+    this.weatherDays = weatherDays;
+    this.weatherHours = weatherHours;
     this.weatherRoot = weatherRoot;
   }
 
@@ -100,10 +109,23 @@ public final class FragmentPageWeatherBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.weather_days;
+      RecyclerView weatherDays = rootView.findViewById(id);
+      if (weatherDays == null) {
+        break missingId;
+      }
+
+      id = R.id.weather_hours;
+      RecyclerView weatherHours = rootView.findViewById(id);
+      if (weatherHours == null) {
+        break missingId;
+      }
+
       RelativeLayout weatherRoot = (RelativeLayout) rootView;
 
       return new FragmentPageWeatherBinding((RelativeLayout) rootView, chipWeatherLocation,
-          binding_containerWeatherForecast, forecastInfo, progressBar, weatherRoot);
+          binding_containerWeatherForecast, forecastInfo, progressBar, weatherDays, weatherHours,
+          weatherRoot);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

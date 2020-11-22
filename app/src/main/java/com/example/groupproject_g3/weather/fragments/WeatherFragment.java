@@ -74,5 +74,6 @@ public class WeatherFragment extends Fragment {
                 binding.progressBar.setVisibility(View.GONE);
             }
         });
+
     }
 }

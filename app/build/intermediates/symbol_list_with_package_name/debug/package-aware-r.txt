@@ -1935,6 +1935,8 @@ id useLogo
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
+id weather_days
+id weather_hours
 id weather_root
 id wide
 id withText
@@ -2036,7 +2038,6 @@ layout fragment_sign_in
 layout fragment_weather_current
 layout fragment_weather_day_item
 layout fragment_weather_days_item
-layout fragment_weather_hour_item
 layout fragment_weather_hours_item
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions

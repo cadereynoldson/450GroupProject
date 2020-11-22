@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.groupproject_g3.R;
 import com.example.groupproject_g3.databinding.FragmentWeatherDayItemBinding;
+import com.example.groupproject_g3.databinding.FragmentWeatherHoursItemBinding;
 
 import java.util.List;
 
