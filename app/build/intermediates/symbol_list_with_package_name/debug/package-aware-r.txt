@@ -1574,11 +1574,12 @@ id action_navigation_weather_search_to_navigation_weather
 id action_navigation_weather_search_to_navigation_weather_forecast
 id action_navigation_weather_to_navigation_weather_forecast
 id action_navigation_weather_to_navigation_weather_search
-id action_registerFragment_to_signInFragment
+id action_registerFragment_to_fragment_verification
 id action_search
 id action_signInFragment_to_mainActivity
 id action_signInFragment_to_registerFragment
 id action_text
+id action_verificationFragment_to_signInFragment
 id actions
 id activity_chooser_view_content
 id add
@@ -1608,6 +1609,8 @@ id button_register
 id button_send
 id button_signin
 id button_signin_register
+id button_verification_return
+id button_verification_sendagain
 id cancel_action
 id cancel_button
 id card_root
@@ -1687,6 +1690,7 @@ id icon_only
 id ifRoom
 id image
 id imageView
+id imageView2
 id imageView4
 id image_chat_bubble
 id image_current_icon
@@ -1909,6 +1913,8 @@ id text_search_by
 id text_signin_email
 id text_signin_password
 id text_username
+id text_verification_confirm
+id text_verification_sendagain
 id text_weather
 id text_zipcode
 id text_zipcode_data
@@ -1932,6 +1938,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id verificationFragment
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
@@ -2035,6 +2042,7 @@ layout fragment_page_weather_forecast
 layout fragment_page_weather_search
 layout fragment_register
 layout fragment_sign_in
+layout fragment_verification
 layout fragment_weather_current
 layout fragment_weather_day_item
 layout fragment_weather_days_item
@@ -2152,6 +2160,8 @@ string auth_sign_in
 string auth_username
 string base_url
 string bottom_sheet_behavior
+string button_verification_retry
+string button_verification_return
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -2246,6 +2256,8 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
+string text_verification_checkEmail
+string text_verification_retry
 string title_activity_main
 string title_chats
 string title_contacts

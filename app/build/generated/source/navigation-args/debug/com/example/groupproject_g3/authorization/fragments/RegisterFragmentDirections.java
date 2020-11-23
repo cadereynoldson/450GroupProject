@@ -16,18 +16,19 @@ public class RegisterFragmentDirections {
   }
 
   @NonNull
-  public static ActionRegisterFragmentToSignInFragment actionRegisterFragmentToSignInFragment() {
-    return new ActionRegisterFragmentToSignInFragment();
+  public static ActionRegisterFragmentToFragmentVerification actionRegisterFragmentToFragmentVerification(
+      ) {
+    return new ActionRegisterFragmentToFragmentVerification();
   }
 
-  public static class ActionRegisterFragmentToSignInFragment implements NavDirections {
+  public static class ActionRegisterFragmentToFragmentVerification implements NavDirections {
     private final HashMap arguments = new HashMap();
 
-    private ActionRegisterFragmentToSignInFragment() {
+    private ActionRegisterFragmentToFragmentVerification() {
     }
 
     @NonNull
-    public ActionRegisterFragmentToSignInFragment setEmail(@NonNull String email) {
+    public ActionRegisterFragmentToFragmentVerification setEmail(@NonNull String email) {
       if (email == null) {
         throw new IllegalArgumentException("Argument \"email\" is marked as non-null but was passed a null value.");
       }
@@ -36,7 +37,7 @@ public class RegisterFragmentDirections {
     }
 
     @NonNull
-    public ActionRegisterFragmentToSignInFragment setPassword(@NonNull String password) {
+    public ActionRegisterFragmentToFragmentVerification setPassword(@NonNull String password) {
       if (password == null) {
         throw new IllegalArgumentException("Argument \"password\" is marked as non-null but was passed a null value.");
       }
@@ -66,7 +67,7 @@ public class RegisterFragmentDirections {
 
     @Override
     public int getActionId() {
-      return R.id.action_registerFragment_to_signInFragment;
+      return R.id.action_registerFragment_to_fragment_verification;
     }
 
     @SuppressWarnings("unchecked")
@@ -89,7 +90,7 @@ public class RegisterFragmentDirections {
       if (object == null || getClass() != object.getClass()) {
           return false;
       }
-      ActionRegisterFragmentToSignInFragment that = (ActionRegisterFragmentToSignInFragment) object;
+      ActionRegisterFragmentToFragmentVerification that = (ActionRegisterFragmentToFragmentVerification) object;
       if (arguments.containsKey("email") != that.arguments.containsKey("email")) {
         return false;
       }
@@ -119,7 +120,7 @@ public class RegisterFragmentDirections {
 
     @Override
     public String toString() {
-      return "ActionRegisterFragmentToSignInFragment(actionId=" + getActionId() + "){"
+      return "ActionRegisterFragmentToFragmentVerification(actionId=" + getActionId() + "){"
           + "email=" + getEmail()
           + ", password=" + getPassword()
           + "}";
