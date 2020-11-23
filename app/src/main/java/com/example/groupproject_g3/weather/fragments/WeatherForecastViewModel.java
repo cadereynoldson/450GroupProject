@@ -134,7 +134,6 @@ public class WeatherForecastViewModel extends AndroidViewModel {
             e.printStackTrace();
             Log.e("Error in fetching weather data", e.getMessage());
         }
-
         information.setValue(information.getValue());
     }
 

@@ -8,85 +8,84 @@
     android:background="@drawable/weather_background">
     tools:context=".weather.fragments.WeatherFragment">
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
-
-        <RelativeLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip_weather_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="5dp"
-                android:text="Tacoma, Washington"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:chipSurfaceColor="#A403A9F4"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <include
-                android:id="@+id/container_weather_forecast"
-                layout="@layout/fragment_weather_current"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/chip_weather_location"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp" />
-
-            <ProgressBar
-                android:id="@+id/progressBar"
-                style="?android:attr/progressBarStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/weather_hours"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/container_weather_forecast"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:orientation="horizontal"
-                android:scrollbars="horizontal"
-                app:layoutManager="LinearLayoutManager"
-                tools:listitem="@layout/fragment_weather_hours_item" />
+                android:layout_height="wrap_content">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/weather_days"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/weather_hours"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:orientation="horizontal"
-                android:scrollbars="horizontal"
-                app:layoutManager="LinearLayoutManager"
-                tools:listitem="@layout/fragment_weather_days_item" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_weather_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Tacoma, Washington"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:chipSurfaceColor="#A403A9F4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/forecast_info"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/weather_days"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                app:layoutManager="LinearLayoutManager"
-                tools:listitem="@layout/fragment_weather_day_item" />
+                <include
+                    android:id="@+id/container_weather_forecast"
+                    layout="@layout/fragment_weather_current"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/chip_weather_location"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp" />
 
-        </RelativeLayout>
-    </androidx.core.widget.NestedScrollView>
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/forecast_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/container_weather_forecast"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="LinearLayoutManager"
+                    tools:listitem="@layout/fragment_weather_day_item" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/weather_hours"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/forecast_info"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="horizontal"
+                    android:scrollbars="horizontal"
+                    app:layoutManager="LinearLayoutManager"
+                    tools:listitem="@layout/fragment_weather_hours_item" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/weather_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/weather_hours"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="horizontal"
+                    android:scrollbars="horizontal"
+                    app:layoutManager="LinearLayoutManager"
+                    tools:listitem="@layout/fragment_weather_days_item" />
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
 </RelativeLayout>

@@ -40,6 +40,8 @@ public class WeatherFragment extends Fragment {
     /** A forecast model associated with future weather */
     private WeatherForecastViewModel forecastModel;
 
+    private WeatherDaysViewModel daysModel;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +51,8 @@ public class WeatherFragment extends Fragment {
         currentModel.connectGet(model.getJwt(), lat, lon); //TODO: Update hardcoded lat and long.
         forecastModel = new ViewModelProvider(getActivity()).get(WeatherForecastViewModel.class);
         forecastModel.connectGet(model.getJwt(), lat, lon);
+        daysModel = new ViewModelProvider(getActivity()).get(WeatherDaysViewModel.class);
+        daysModel.connectGet(model.getJwt(), lat, lon);
     }
 
     @Override
@@ -71,6 +75,12 @@ public class WeatherFragment extends Fragment {
             if (!information.isEmpty()){
                 binding.forecastInfo.setAdapter(new WeatherForecastRecyclerViewAdapter(information));
                 Log.e("SET ADAPTER", "Hello!");
+                binding.progressBar.setVisibility(View.GONE);
+            }
+        });
+        daysModel.addDaysListObserver(getViewLifecycleOwner(), information -> {
+            if(!information.isEmpty()) {
+                binding.weatherDays.setAdapter(new WeatherDaysRecyclerViewAdapter(information));
                 binding.progressBar.setVisibility(View.GONE);
             }
         });

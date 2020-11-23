@@ -32,12 +32,12 @@
         "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\activity_authorization.xml"
     },
     {
-        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\menu_drawer_menu.xml.flat",
         "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\menu\\drawer_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_message_send.xml.flat",
