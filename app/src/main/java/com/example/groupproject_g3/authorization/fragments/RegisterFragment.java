@@ -175,9 +175,9 @@ public class RegisterFragment extends Fragment {
     /**
      * Once register is successful, navigate to login using email and password.
      */
-    private void navigateToLogin() {
-        RegisterFragmentDirections.ActionRegisterFragmentToSignInFragment directions =
-                RegisterFragmentDirections.actionRegisterFragmentToSignInFragment();
+    private void navigateToVerification() {
+        RegisterFragmentDirections.ActionRegisterFragmentToFragmentVerification directions =
+                RegisterFragmentDirections.actionRegisterFragmentToFragmentVerification();
 
         directions.setEmail(binding.textRegisterEmail.getText().toString());
         directions.setPassword(binding.textRegisterPassword.getText().toString());
@@ -202,7 +202,7 @@ public class RegisterFragment extends Fragment {
                     Log.e("JSON Parse Error", e.getMessage());
                 }
             } else {
-                navigateToLogin();
+                navigateToVerification();
             }
         } else {
             Log.d("JSON Response", "No Response");

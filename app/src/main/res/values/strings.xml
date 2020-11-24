@@ -12,6 +12,7 @@
     <string name="title_profile">Profile</string>
 
 
+
     <string name="auth_register">Register</string>
     <string name="auth_email">Email</string>
     <string name="auth_password">Password</string>
@@ -37,6 +38,11 @@
         <item>Email</item>
         <item>Username</item>
     </string-array>
+
+    <string name="text_verification_checkEmail">Please check email and follow link to verify, then click Return to SignIN.</string>
+    <string name="text_verification_retry">If you do not see an email, click Send Again.</string>
+    <string name="button_verification_retry">Send Again</string>
+    <string name="button_verification_return">Return to SignIn</string>
 
     <string name="action_add_chat">Add Chat</string>
 

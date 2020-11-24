@@ -6,6 +6,24 @@
     app:startDestination="@id/signInFragment">
 
     <fragment
+        android:id="@+id/verificationFragment"
+        android:name="com.example.groupproject_g3.authorization.fragments.VerificationFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_verification">
+        <argument
+            android:name="email"
+            app:argType="string"
+            android:defaultValue="default" />
+        <argument
+            android:name="password"
+            app:argType="string"
+            android:defaultValue="default" />
+        <action
+            android:id="@+id/action_verificationFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+
+    <fragment
         android:id="@+id/signInFragment"
         android:name="com.example.groupproject_g3.authorization.fragments.SignInFragment"
         android:label="fragment_sign_in"
@@ -46,7 +64,7 @@
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
-            android:id="@+id/action_registerFragment_to_signInFragment"
-            app:destination="@id/signInFragment" />
+            android:id="@+id/action_registerFragment_to_fragment_verification"
+            app:destination="@id/verificationFragment" />
     </fragment>
 </navigation>
