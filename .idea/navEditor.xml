@@ -103,8 +103,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="358" />
-                            <option name="y" value="-41" />
+                            <option name="x" value="312" />
+                            <option name="y" value="-38" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -124,18 +124,9 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="569" />
-                            <option name="y" value="-45" />
+                            <option name="x" value="743" />
+                            <option name="y" value="-61" />
                           </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_addContactFragment_to_navigation_contacts">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -145,9 +136,18 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="326" />
-                            <option name="y" value="353" />
+                            <option name="x" value="320" />
+                            <option name="y" value="332" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_navigation_chats_to_addChatFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -157,18 +157,9 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="542" />
-                            <option name="y" value="334" />
+                            <option name="x" value="566" />
+                            <option name="y" value="333" />
                           </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_navigation_contacts_to_addContactFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -202,8 +193,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="188" />
-                            <option name="y" value="-25" />
+                            <option name="x" value="137" />
+                            <option name="y" value="-43" />
                           </Point>
                         </option>
                         <option name="myPositions">

@@ -1549,7 +1549,6 @@ id accessibility_custom_action_8
 id accessibility_custom_action_9
 id action0
 id action_addChatFragment_to_navigation_chats
-id action_addContactFragment_to_navigation_contacts
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1567,7 +1566,6 @@ id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id action_navigation_chats_to_addChatFragment
-id action_navigation_contacts_to_addContactFragment
 id action_navigation_weather_forecast_to_navigation_weather
 id action_navigation_weather_forecast_to_navigation_weather_search
 id action_navigation_weather_search_to_navigation_weather
@@ -1603,7 +1601,6 @@ id boxInsetLayout
 id buttonPanel
 id button_add_chat
 id button_add_contact
-id button_contact_add
 id button_full_info
 id button_register
 id button_send
@@ -1631,6 +1628,8 @@ id clip_vertical
 id cloudChatLogo
 id collapseActionView
 id confirm_button
+id contacts_main_viewpager
+id contacts_tabs
 id container
 id container_weather_forecast
 id content
@@ -2032,9 +2031,11 @@ layout design_text_input_start_icon
 layout fragment_add_chat
 layout fragment_add_contact
 layout fragment_contact_item
+layout fragment_contact_main
+layout fragment_contact_pending
 layout fragment_page_chat
 layout fragment_page_chat_message
-layout fragment_page_contact
+layout fragment_page_contact_list
 layout fragment_page_home
 layout fragment_page_profile
 layout fragment_page_weather
@@ -2203,6 +2204,7 @@ string key_contacts_email
 string key_contacts_first_name
 string key_contacts_last_name
 string key_contacts_list
+string key_contacts_memberId
 string key_contacts_username
 string key_weather_current_temp
 string key_weather_current_weather
@@ -2256,6 +2258,9 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
+string tab_add_contact
+string tab_all_contacts
+string tab_pending_contacts
 string text_verification_checkEmail
 string text_verification_retry
 string title_activity_main

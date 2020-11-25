@@ -27,11 +27,14 @@ public class ContactItem {
     /** The last name of the contact. */
     private final String mLastName;
 
-    public ContactItem(String firstName, String lastName, String username, String email) {
+    private final int mUserId;
+
+    public ContactItem(String firstName, String lastName, String username, String email, int userId) {
         mFirstName = firstName;
         mLastName = lastName;
         mUserName = username;
         mEmail = email;
+        mUserId = userId;
     }
 
     public String getUserName() {
@@ -50,8 +53,12 @@ public class ContactItem {
         return mLastName;
     }
 
+    public int getUserId() {
+        return mUserId;
+    }
+
     public String toString() {
-        return "Username=" + mUserName + ", Email=" + mEmail + ", FirstName=" + mFirstName + ", LastName=" + mLastName;
+        return "Username=" + mUserName + ", Email=" + mEmail + ", FirstName=" + mFirstName + ", LastName=" + mLastName + ", UserId=" + mUserId;
     }
 
     @Override
@@ -59,8 +66,7 @@ public class ContactItem {
         if (!(o instanceof ContactItem))
             return false;
         else
-            return ((ContactItem) o).mEmail.equals(mEmail) && ((ContactItem) o).mUserName.equals(mUserName)
-                    && ((ContactItem) o).mFirstName.equals(mFirstName) && ((ContactItem) o).mLastName.equals(mLastName);
+            return ((ContactItem) o).getUserId() == mUserId;
     }
 
 }

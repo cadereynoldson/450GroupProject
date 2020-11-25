@@ -88,33 +88,11 @@ public class MainActivity extends AppCompatActivity {
         MainActivityArgs args = MainActivityArgs.fromBundle(getIntent().getExtras());
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        //take note that we are not using the constructor explicitly, the no-arg
-        //constructor is called implicitly
         new ViewModelProvider(
                 this,
                 new UserInfoViewModel.UserInfoViewModelFactory(args.getJwt()))
                 .get(UserInfoViewModel.class);
         buildMenu();
-
-        BottomNavigationView navView = findViewById(R.id.bottom_nav_menu);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_chats)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navView, navController);
-
-        navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
-            if (destination.getId() == R.id.navigation_chats) {
-                //When the user navigates to the chats page, reset the new message count.
-                //This will need some extra logic for your project as it should have
-                //multiple chat rooms.
-                mNewMessageModel.reset();
-            }
-        });
         mNewMessageModel.addMessageCountObserver(this, count -> {
             BadgeDrawable badge = binding.bottomNavMenu.getOrCreateBadge(R.id.navigation_chats);
             badge.setMaxCharacterCount(2);
@@ -147,6 +125,14 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+        navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
+            if (destination.getId() == R.id.navigation_chats) {
+                //When the user navigates to the chats page, reset the new message count.
+                //This will need some extra logic for your project as it should have
+                //multiple chat rooms.
+                mNewMessageModel.reset();
+            }
+        });
     }
 
     @Override
