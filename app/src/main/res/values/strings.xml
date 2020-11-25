@@ -12,7 +12,6 @@
     <string name="title_profile">Profile</string>
 
 
-
     <string name="auth_register">Register</string>
     <string name="auth_email">Email</string>
     <string name="auth_password">Password</string>
@@ -33,6 +32,9 @@
     <string name="contact_no_contacts">You have no contacts!</string>
     <string name="contact_search_by">Search By</string>
     <string name="action_remove_contact">Remove Contact</string>
+    <string name="tab_all_contacts">My Contacts</string>
+    <string name="tab_pending_contacts">Pending</string>
+    <string name="tab_add_contact">Add Contact</string>
 
     <string-array name="contact_search_by_options">
         <item>Email</item>

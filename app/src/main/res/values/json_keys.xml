@@ -5,10 +5,12 @@
     <string name="key_contacts_last_name">lastname</string>
     <string name="key_contacts_username">username</string>
     <string name="key_contacts_email">email</string>
+    <string name="key_contacts_memberId">memberid</string>
 
     <string name="key_weather_date_time">dt</string>
     <string name="key_weather_current_temp">temp</string>
     <string name="key_weather_current_weather">weather</string>
     <string name="key_weather_current_weather_main">main</string>
     <string name="key_weather_forecast_list">list</string>
+
 </resources>

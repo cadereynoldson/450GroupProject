@@ -19,7 +19,7 @@ import com.example.groupproject_g3.databinding.FragmentAddContactBinding;
  * A simple {@link Fragment} subclass.
  * create an instance of this fragment.
  */
-public class AddContactFragment extends Fragment {
+public class ContactAddFragment extends Fragment {
 
     private FragmentAddContactBinding binding;
 

@@ -32,7 +32,7 @@ import java.util.function.IntFunction;
  *
  * Performs retrieval of and addition to the contact database from the application.
  */
-public class ContactsViewModel extends AndroidViewModel {
+public class ContactListViewModel extends AndroidViewModel {
 
     private MutableLiveData<List<ContactItem>> mContacts;
 
@@ -42,7 +42,7 @@ public class ContactsViewModel extends AndroidViewModel {
      *
      * @param application
      */
-    public ContactsViewModel(@NonNull Application application) {
+    public ContactListViewModel(@NonNull Application application) {
         super(application);
         mContacts = new MutableLiveData<>();
         mContacts.setValue(new ArrayList<ContactItem>());
@@ -75,7 +75,8 @@ public class ContactsViewModel extends AndroidViewModel {
                         jsonContactInfo.getString(getString.apply(R.string.key_contacts_first_name)),
                         jsonContactInfo.getString(getString.apply(R.string.key_contacts_last_name)),
                         jsonContactInfo.getString(getString.apply(R.string.key_contacts_username)),
-                        jsonContactInfo.getString(getString.apply(R.string.key_contacts_email)));
+                        jsonContactInfo.getString(getString.apply(R.string.key_contacts_email)),
+                        jsonContactInfo.getInt(getString.apply(R.string.key_contacts_memberId)));
                     Log.i("Parsed Contact", post.toString());
                     if (!mContacts.getValue().contains(post)) {
                          mContacts.getValue().add(post);
