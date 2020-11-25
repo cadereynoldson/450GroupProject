@@ -29,7 +29,7 @@
         tools:layout="@layout/fragment_page_chat" >
         <action
             android:id="@+id/action_navigation_chats_to_addChatFragment"
-            app:destination="@id/addChatFragment" />
+            app:destination="@id/navigation_chats_add" />
     </fragment>
     <fragment
         android:id="@+id/navigation_contacts"
@@ -79,7 +79,7 @@
             app:destination="@id/navigation_weather" />
     </fragment>
     <fragment
-        android:id="@+id/addChatFragment"
+        android:id="@+id/navigation_chats_add"
         android:name="com.example.groupproject_g3.chat.fragments.AddChatFragment"
         android:label="fragment_add_chat"
         tools:layout="@layout/fragment_add_chat" >

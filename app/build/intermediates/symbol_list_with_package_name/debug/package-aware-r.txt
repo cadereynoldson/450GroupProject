@@ -1691,8 +1691,8 @@ id ifRoom
 id image
 id imageView
 id imageView2
+id imageView3
 id imageView4
-id image_chat_bubble
 id image_current_icon
 id image_days_forecast
 id image_forecast_icon

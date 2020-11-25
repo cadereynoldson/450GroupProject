@@ -173,6 +173,8 @@ com/example/groupproject_g3/databinding/FragmentRegisterBinding.java
  com.example.groupproject_g3.databinding.FragmentRegisterBinding
 com/example/groupproject_g3/weather/fragments/WeatherForecastFragment.java
  com.example.groupproject_g3.weather.fragments.WeatherForecastFragment
+com/example/groupproject_g3/chat/fragments/AddChatViewModel.java
+ com.example.groupproject_g3.chat.fragments.AddChatViewModel
 com/example/groupproject_g3/chat/fragments/ChatFragmentDirections.java
  com.example.groupproject_g3.chat.fragments.ChatFragmentDirections
 com/example/groupproject_g3/authorization/fragments/RegisterViewModel.java

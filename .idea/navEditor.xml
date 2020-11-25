@@ -103,8 +103,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="358" />
-                            <option name="y" value="-41" />
+                            <option name="x" value="566" />
+                            <option name="y" value="899" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -145,9 +145,18 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="326" />
-                            <option name="y" value="353" />
+                            <option name="x" value="24" />
+                            <option name="y" value="903" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_navigation_chats_to_addChatFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
