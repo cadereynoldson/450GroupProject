@@ -47,5 +47,14 @@
         android:id="@+id/navigation_weather"
         android:name="com.example.groupproject_g3.weather.fragments.WeatherMainFragment"
         android:label="@string/title_weather"
-        tools:layout="@layout/fragment_page_weather_main" />
+        tools:layout="@layout/fragment_page_weather_main" >
+        <action
+            android:id="@+id/action_navigation_weather_to_weatherForecastFragment"
+            app:destination="@id/navigation_weather_forecast" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_weather_forecast"
+        android:name="com.example.groupproject_g3.weather.fragments.WeatherForecastFragment"
+        android:label="fragment_page_weather_forecast"
+        tools:layout="@layout/fragment_page_weather_forecast" />
 </navigation>
