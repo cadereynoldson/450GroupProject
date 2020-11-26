@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-nb\\values-nb.xml",
+            "outputFile": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-nb\\values-nb.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Cade\\.gradle\\caches\\transforms-2\\files-2.1\\ebd81c74ff2c2c00c8180f2178f3e54c\\appcompat-1.2.0\\res\\values-nb\\values-nb.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,208,303,417,503,603,716,793,868,959,1052,1146,1240,1340,1433,1528,1626,1717,1808,1886,1989,2087,2183,2287,2386,2487,2640,2737",
-                        "endColumns": "102,94,113,85,99,112,76,74,90,92,93,93,99,92,94,97,90,90,77,102,97,95,103,98,100,152,96,79",
-                        "endOffsets": "203,298,412,498,598,711,788,863,954,1047,1141,1235,1335,1428,1523,1621,1712,1803,1881,1984,2082,2178,2282,2381,2482,2635,2732,2812"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,49",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,208,303,417,503,603,716,793,868,959,1052,1146,1240,1340,1433,1528,1626,1717,1808,1886,1989,2087,2183,2287,2386,2487,2640,5659",
-                        "endColumns": "102,94,113,85,99,112,76,74,90,92,93,93,99,92,94,97,90,90,77,102,97,95,103,98,100,152,96,79",
-                        "endOffsets": "203,298,412,498,598,711,788,863,954,1047,1141,1235,1335,1428,1523,1621,1712,1803,1881,1984,2082,2178,2282,2381,2482,2635,2732,5734"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Cade\\.gradle\\caches\\transforms-2\\files-2.1\\b268d9c6dc5720661e89a1f9cc6d4d1e\\jetified-play-services-base-17.1.0\\res\\values-nb\\values.xml",
+                    "source": "C:\\Users\\tranm\\.gradle\\caches\\transforms-2\\files-2.1\\b268d9c6dc5720661e89a1f9cc6d4d1e\\jetified-play-services-base-17.1.0\\res\\values-nb\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Cade\\.gradle\\caches\\transforms-2\\files-2.1\\f0da72ac6f8039f7f3c470e6199697d5\\core-1.3.0\\res\\values-nb\\values-nb.xml",
+                    "source": "C:\\Users\\tranm\\.gradle\\caches\\transforms-2\\files-2.1\\f0da72ac6f8039f7f3c470e6199697d5\\core-1.3.0\\res\\values-nb\\values-nb.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -55,7 +38,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Cade\\.gradle\\caches\\transforms-2\\files-2.1\\fb46e671d42f0e6cd80fa50198d6a0c8\\navigation-ui-2.3.1\\res\\values-nb\\values-nb.xml",
+                    "source": "C:\\Users\\tranm\\.gradle\\caches\\transforms-2\\files-2.1\\ebd81c74ff2c2c00c8180f2178f3e54c\\appcompat-1.2.0\\res\\values-nb\\values-nb.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,208,303,417,503,603,716,793,868,959,1052,1146,1240,1340,1433,1528,1626,1717,1808,1886,1989,2087,2183,2287,2386,2487,2640,2737",
+                        "endColumns": "102,94,113,85,99,112,76,74,90,92,93,93,99,92,94,97,90,90,77,102,97,95,103,98,100,152,96,79",
+                        "endOffsets": "203,298,412,498,598,711,788,863,954,1047,1141,1235,1335,1428,1523,1621,1712,1803,1881,1984,2082,2178,2282,2381,2482,2635,2732,2812"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,49",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,208,303,417,503,603,716,793,868,959,1052,1146,1240,1340,1433,1528,1626,1717,1808,1886,1989,2087,2183,2287,2386,2487,2640,5659",
+                        "endColumns": "102,94,113,85,99,112,76,74,90,92,93,93,99,92,94,97,90,90,77,102,97,95,103,98,100,152,96,79",
+                        "endOffsets": "203,298,412,498,598,711,788,863,954,1047,1141,1235,1335,1428,1523,1621,1712,1803,1881,1984,2082,2178,2282,2381,2482,2635,2732,5734"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\tranm\\.gradle\\caches\\transforms-2\\files-2.1\\fb46e671d42f0e6cd80fa50198d6a0c8\\navigation-ui-2.3.1\\res\\values-nb\\values-nb.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -72,7 +72,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Cade\\.gradle\\caches\\transforms-2\\files-2.1\\ea18bce066cb430771e598a995f322b4\\jetified-play-services-basement-17.1.1\\res\\values-nb\\values.xml",
+                    "source": "C:\\Users\\tranm\\.gradle\\caches\\transforms-2\\files-2.1\\ea18bce066cb430771e598a995f322b4\\jetified-play-services-basement-17.1.1\\res\\values-nb\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
