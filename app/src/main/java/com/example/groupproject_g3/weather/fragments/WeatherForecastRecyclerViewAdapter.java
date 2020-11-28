@@ -78,6 +78,12 @@ public class WeatherForecastRecyclerViewAdapter extends RecyclerView.Adapter<Wea
             binding.textDate.setText(info.getDate());
             binding.textDayTemperature.setText(info.getTemperature() + "°F");
             binding.textDayWeather.setText(info.getWeather());
+
+            binding.buttonFullInfo.setOnClickListener(view -> {
+                Navigation.findNavController(mView).navigate(
+                        WeatherMainFragmentDirections
+                                .actionNavigationWeatherToWeatherForecastFragment());
+            });
         }
     }
 }

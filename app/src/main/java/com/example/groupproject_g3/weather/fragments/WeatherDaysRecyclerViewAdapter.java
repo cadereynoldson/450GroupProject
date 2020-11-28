@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.groupproject_g3.R;
@@ -56,6 +57,12 @@ public class WeatherDaysRecyclerViewAdapter extends RecyclerView.Adapter<Weather
             Log.e("Creating info", info.toString());
             binding.textDaysDate.setText(info.getDate());
             binding.textDaysMin.setText(info.getTemperature() + "°");
+            binding.textDays.setText(info.getDay());
+            binding.getRoot().setOnClickListener(view -> {
+                Navigation.findNavController(mView).navigate(
+                        WeatherMainFragmentDirections
+                                .actionNavigationWeatherToWeatherForecastFragment());
+            });
         }
     }
 }

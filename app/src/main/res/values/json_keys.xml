@@ -13,4 +13,14 @@
     <string name="key_weather_current_weather_main">main</string>
     <string name="key_weather_forecast_list">list</string>
 
+    <string name="key_weather_current_feels_like">feels_like</string>
+    <string name="key_weather_current_temp_min">temp_min</string>
+    <string name="key_weather_current_temp_max">temp_max</string>
+    <string name="key_weather_current_pressure">pressure</string>
+    <string name="key_weather_current_humidity">humidity</string>
+    <string name="key_weather_current_name">name</string>
+    <string name="key_weather_current_sys">sys</string>
+    <string name="key_weather_current_country">country</string>
+    
+    <string name="key_weather_onecall_hourly">hourly</string>
 </resources>
