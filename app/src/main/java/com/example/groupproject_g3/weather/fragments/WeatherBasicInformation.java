@@ -19,10 +19,6 @@ public class WeatherBasicInformation {
 
     private String day;
 
-    private String location;
-
-    private String country;
-
     /**
      * Instance of the required Weather information.
      * @param theDate
@@ -31,14 +27,12 @@ public class WeatherBasicInformation {
      * @param theWeather
      */
     public WeatherBasicInformation(String theDate, String theTime, String theTemperature,
-                                   String theWeather, String theDay, String theLocation, String theCountry) {
+                                   String theWeather, String theDay) {
         date = theDate;
         time = theTime;
         temperature = theTemperature;
         weather = theWeather;
         day = theDay;
-        location = theLocation;
-        country = theCountry;
     }
 
     /**
@@ -77,13 +71,6 @@ public class WeatherBasicInformation {
         return day;
     }
 
-    public String getlocation() {
-        return location;
-    }
-
-    public String getCountry() {
-        return country;
-    }
 
     /**
      * A string representation of the date, time, temperature, and weather.

@@ -2198,9 +2198,12 @@ string key_contacts_last_name
 string key_contacts_list
 string key_contacts_memberId
 string key_contacts_username
+string key_weather_current_country
 string key_weather_current_feels_like
 string key_weather_current_humidity
+string key_weather_current_name
 string key_weather_current_pressure
+string key_weather_current_sys
 string key_weather_current_temp
 string key_weather_current_temp_max
 string key_weather_current_temp_min
