@@ -17,6 +17,12 @@ public class WeatherBasicInformation {
     /** The current weather (rainy, cloudy, sunny, etc.) at the current time. */
     private String weather;
 
+    private String day;
+
+    private String location;
+
+    private String country;
+
     /**
      * Instance of the required Weather information.
      * @param theDate
@@ -24,11 +30,15 @@ public class WeatherBasicInformation {
      * @param theTemperature
      * @param theWeather
      */
-    public WeatherBasicInformation(String theDate, String theTime, String theTemperature, String theWeather) {
+    public WeatherBasicInformation(String theDate, String theTime, String theTemperature,
+                                   String theWeather, String theDay, String theLocation, String theCountry) {
         date = theDate;
         time = theTime;
         temperature = theTemperature;
         weather = theWeather;
+        day = theDay;
+        location = theLocation;
+        country = theCountry;
     }
 
     /**
@@ -63,12 +73,24 @@ public class WeatherBasicInformation {
         return time;
     }
 
+    public String getDay() {
+        return day;
+    }
+
+    public String getlocation() {
+        return location;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
     /**
      * A string representation of the date, time, temperature, and weather.
      * @return
      */
     public String toString() {
-        return date + " " + time + " " + temperature + " " + weather;
+        return date + " " + time + " " + temperature + " " + weather + " " + day;
     }
 
     @Override

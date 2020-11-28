@@ -33,7 +33,9 @@ import java.util.function.IntFunction;
 public class WeatherCurrentViewModel extends AndroidViewModel {
 
     /** contains the basic weather data to be displayed, started off with placeholder data */
-    private static final WeatherBasicInformation currentPlaceholder = new WeatherBasicInformation("06/02/1998", "7:36", "60F", "Clear");
+    private static final WeatherBasicInformation currentPlaceholder = new WeatherBasicInformation(
+            "06/02/1998", "7:36", "60F",
+            "Clear", "Mon", "Tacoma", "WA");
 
     /** Data containing mutable data for weather */
     private MutableLiveData<WeatherBasicInformation> information;
@@ -111,7 +113,11 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
 
             //Fetch main array and get the temperature value from it.
             JSONObject tempData = result.getJSONObject(getString.apply(R.string.key_weather_current_weather_main));
-            Double currentTemp = tempData.getDouble(getString.apply(R.string.key_weather_current_temp));
+            Integer currentTemp = tempData.getInt(getString.apply(R.string.key_weather_current_temp));
+
+            JSONObject tempLocation = result.getJSONObject(getString.apply(R.string.key_weather_current_sys));
+            String currentCountry = tempLocation.getString(getString.apply(R.string.key_weather_current_country));
+            String currentLocation = result.getString(getString.apply(R.string.key_weather_current_name));
 
             Date date = new Date(dateTime);
             Calendar calendar = Calendar.getInstance();
@@ -121,7 +127,10 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
 
             String time = new SimpleDateFormat("HH:mm").format(date);
 
-            WeatherBasicInformation info = new WeatherBasicInformation(dateDisplay, time, currentTemp.toString(), currentWeather);
+            String day = new SimpleDateFormat("EE").format(date);
+
+            WeatherBasicInformation info = new WeatherBasicInformation(dateDisplay, time, currentTemp.toString(),
+                    currentWeather, day, currentLocation, currentCountry);
             information.setValue(info);
         } catch (JSONException e) {
             e.printStackTrace();

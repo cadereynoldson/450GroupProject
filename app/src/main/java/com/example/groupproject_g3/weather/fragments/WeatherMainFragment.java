@@ -37,6 +37,8 @@ public class WeatherMainFragment extends Fragment {
 
     private WeatherDaysViewModel daysModel;
 
+    private WeatherHoursViewModel hoursModel;
+
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ViewModelProvider provider = new ViewModelProvider(getActivity());
@@ -65,13 +67,13 @@ public class WeatherMainFragment extends Fragment {
             binding.containerWeatherForecast.textCurrentDescription.setText(currentInfo.getWeather());
         });
 
-        forecastModel.addForecastListObserver(getViewLifecycleOwner(), information -> {
-            if(!information.isEmpty()) {
-                binding.forecastInfo.setAdapter(new WeatherForecastRecyclerViewAdapter(information));
-                Log.e("SET ADAPTER", "Hello!");
-                binding.progressBar.setVisibility(View.GONE);
-            }
-        });
+//        forecastModel.addForecastListObserver(getViewLifecycleOwner(), information -> {
+//            if(!information.isEmpty()) {
+//                binding.forecastInfo.setAdapter(new WeatherForecastRecyclerViewAdapter(information));
+//                Log.e("SET ADAPTER", "Hello!");
+//                binding.progressBar.setVisibility(View.GONE);
+//            }
+//        });
 
         daysModel.addDaysListObserver(getViewLifecycleOwner(), information -> {
             if(!information.isEmpty()) {
@@ -79,5 +81,13 @@ public class WeatherMainFragment extends Fragment {
                 binding.progressBar.setVisibility(View.GONE);
             }
         });
+
+//        hoursModel.addHoursWeatherObserver(getViewLifecycleOwner(), information -> {
+//            if(!information.isEmpty()) {
+//                binding.weatherHours.setAdapter(new WeatherHoursRecyclerViewAdapter(information));
+//                binding.progressBar.setVisibility(View.GONE);
+//            }
+//        });
+
     }
 }

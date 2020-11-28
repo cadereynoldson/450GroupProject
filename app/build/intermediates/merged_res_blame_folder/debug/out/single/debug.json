@@ -32,12 +32,12 @@
         "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\activity_authorization.xml"
     },
     {
-        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\menu_drawer_menu.xml.flat",
-        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\menu\\drawer_menu.xml"
-    },
-    {
         "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\menu_drawer_menu.xml.flat",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\menu\\drawer_menu.xml"
     },
     {
         "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_message_send.xml.flat",
@@ -162,6 +162,10 @@
     {
         "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_page_weather_forecast.xml.flat",
+        "source": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_weather_forecast.xml"
     },
     {
         "merged": "C:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_contact_pending.xml.flat",
