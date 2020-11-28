@@ -108,10 +108,6 @@ public class WeatherDaysViewModel extends AndroidViewModel {
                     JSONObject tempData = info.getJSONObject(getString.apply(R.string.key_weather_current_weather_main));
                     Double currentTemp = tempData.getDouble(getString.apply(R.string.key_weather_current_temp));
 
-                    JSONObject tempLocation = result.getJSONObject(getString.apply(R.string.key_weather_current_sys));
-                    String currentCountry = tempLocation.getString(getString.apply(R.string.key_weather_current_country));
-                    String currentLocation = result.getString(getString.apply(R.string.key_weather_current_name));
-
                     Date date = new Date(dateTime);
                     Calendar calendar = Calendar.getInstance();
                     calendar.setTime(date);
@@ -123,7 +119,7 @@ public class WeatherDaysViewModel extends AndroidViewModel {
                     String day = new SimpleDateFormat("EE").format(date);
 
                     WeatherBasicInformation DaysInfo = new WeatherBasicInformation(dateDisplay, time, currentTemp.toString(),
-                            currentWeather, day, currentLocation, currentCountry);
+                            currentWeather, day);
 
                     if (!information.getValue().contains(DaysInfo)) {
                         information.getValue().add(DaysInfo);

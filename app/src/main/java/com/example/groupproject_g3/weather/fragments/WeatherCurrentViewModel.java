@@ -35,7 +35,7 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
     /** contains the basic weather data to be displayed, started off with placeholder data */
     private static final WeatherBasicInformation currentPlaceholder = new WeatherBasicInformation(
             "06/02/1998", "7:36", "60F",
-            "Clear", "Mon", "Tacoma", "WA");
+            "Clear", "Mon");
 
     /** Data containing mutable data for weather */
     private MutableLiveData<WeatherBasicInformation> information;
@@ -115,10 +115,6 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
             JSONObject tempData = result.getJSONObject(getString.apply(R.string.key_weather_current_weather_main));
             Integer currentTemp = tempData.getInt(getString.apply(R.string.key_weather_current_temp));
 
-            JSONObject tempLocation = result.getJSONObject(getString.apply(R.string.key_weather_current_sys));
-            String currentCountry = tempLocation.getString(getString.apply(R.string.key_weather_current_country));
-            String currentLocation = result.getString(getString.apply(R.string.key_weather_current_name));
-
             Date date = new Date(dateTime);
             Calendar calendar = Calendar.getInstance();
             calendar.setTime(date);
@@ -130,7 +126,7 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
             String day = new SimpleDateFormat("EE").format(date);
 
             WeatherBasicInformation info = new WeatherBasicInformation(dateDisplay, time, currentTemp.toString(),
-                    currentWeather, day, currentLocation, currentCountry);
+                    currentWeather, day);
             information.setValue(info);
         } catch (JSONException e) {
             e.printStackTrace();
