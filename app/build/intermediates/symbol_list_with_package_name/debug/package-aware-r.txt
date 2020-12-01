@@ -1581,7 +1581,6 @@ id action_verificationFragment_to_signInFragment
 id actions
 id activity_chooser_view_content
 id add
-id addChatFragment
 id add_chat_root
 id add_contact_root
 id adjust_height
@@ -1752,6 +1751,7 @@ id nav_host_fragment
 id nav_host_fragment_container
 id navigation_add_contact
 id navigation_chats
+id navigation_chats_add
 id navigation_contacts
 id navigation_header_container
 id navigation_home
