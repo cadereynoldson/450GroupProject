@@ -98,46 +98,13 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="navigation_add_contact">
+                  <entry key="addChatFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="569" />
-                            <option name="y" value="-45" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="navigation_chats">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="24" />
-                            <option name="y" value="903" />
-                          </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_navigation_chats_to_addChatFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="navigation_chats_add">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
+                            <option name="x" value="312" />
+                            <option name="y" value="-38" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -152,13 +119,46 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="navigation_add_contact">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="743" />
+                            <option name="y" value="-61" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="navigation_chats">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="320" />
+                            <option name="y" value="332" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_navigation_chats_to_addChatFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="navigation_contacts">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="542" />
-                            <option name="y" value="334" />
+                            <option name="x" value="566" />
+                            <option name="y" value="333" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -193,18 +193,13 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="188" />
-                            <option name="y" value="-25" />
+                            <option name="x" value="69" />
+                            <option name="y" value="313" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_navigation_weather_to_navigation_weather_forecast">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_navigation_weather_to_navigation_weather_search">
+                            <entry key="action_navigation_weather_to_weatherForecastFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -219,49 +214,9 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-79" />
-                            <option name="y" value="-24" />
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
                           </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_navigation_weather_forecast_to_navigation_weather">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_navigation_weather_forecast_to_navigation_weather_search">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="navigation_weather_search">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="61" />
-                            <option name="y" value="329" />
-                          </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_navigation_weather_search_to_navigation_weather">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_navigation_weather_search_to_navigation_weather_forecast">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
                         </option>
                       </LayoutPositions>
                     </value>

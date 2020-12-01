@@ -123,7 +123,10 @@ public class WeatherForecastViewModel extends AndroidViewModel {
 
                     String time = new SimpleDateFormat("HH:mm").format(date);
 
-                    WeatherBasicInformation forecastInfo = new WeatherBasicInformation(dateDisplay, time, currentTemp.toString(), currentWeather);
+                    String day = new SimpleDateFormat("EE").format(date);
+
+                    WeatherBasicInformation forecastInfo = new WeatherBasicInformation(dateDisplay, time, currentTemp.toString(),
+                            currentWeather, day);
 
                     if (!information.getValue().contains(forecastInfo)) {
                         information.getValue().add(forecastInfo);
@@ -134,7 +137,6 @@ public class WeatherForecastViewModel extends AndroidViewModel {
             e.printStackTrace();
             Log.e("Error in fetching weather data", e.getMessage());
         }
-
         information.setValue(information.getValue());
     }
 

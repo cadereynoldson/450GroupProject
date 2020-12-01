@@ -1,5 +1,6 @@
 package com.example.groupproject_g3.weather.fragments;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,12 +18,8 @@ public class WeatherHoursRecyclerViewAdapter extends RecyclerView.Adapter<Weathe
     /** list containing the weather information. */
     private final List<WeatherBasicInformation> weatherInfo;
 
-    /**
-     * The view adapter for the recycler weather forecast, adapting based on imported info.
-     * @param info - the data to be used.
-     */
-    public WeatherHoursRecyclerViewAdapter(List<WeatherBasicInformation> info) {
-        weatherInfo = info;
+    public WeatherHoursRecyclerViewAdapter(List<WeatherBasicInformation> weatherInfo) {
+        this.weatherInfo = weatherInfo;
     }
 
     @NonNull
@@ -37,32 +34,27 @@ public class WeatherHoursRecyclerViewAdapter extends RecyclerView.Adapter<Weathe
     }
 
     @Override
-    public int getItemCount() { return weatherInfo.size(); }
+    public int getItemCount() {
+        return weatherInfo.size();
+    }
 
     public class HoursInfoViewHolder extends RecyclerView.ViewHolder {
 
-        /** The view of the hours. */
         public final View mView;
-
         public FragmentWeatherHoursItemBinding binding;
-
-        /** Basic Weather information to be used. */
-        public WeatherBasicInformation info;
+        private WeatherBasicInformation info;
 
         public HoursInfoViewHolder(@NonNull View itemView) {
             super(itemView);
             mView = itemView;
-            binding = FragmentWeatherHoursItemBinding.bind(mView);
+            binding = FragmentWeatherHoursItemBinding.bind(itemView);
         }
 
-        /**
-         * Sets the hours info once retrieved.
-         * @param info - the retreived information on weather hours.
-         */
         public void setHoursInfo(final WeatherBasicInformation info) {
             this.info = info;
+            Log.e("Creating info", info.toString());
             binding.textHours.setText(info.getTime());
-            binding.textHoursTemp.setText(info.getTemperature());
+            binding.textHoursTemp.setText(info.getTemperature() + "°");
         }
     }
 }
