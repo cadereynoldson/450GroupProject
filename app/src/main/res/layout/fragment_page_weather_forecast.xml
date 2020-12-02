@@ -7,332 +7,337 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".weather.fragments.WeatherForecastFragment">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_weather_forecast"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        app:cardBackgroundColor="#9000BCD4"
-        app:cardCornerRadius="15dp">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_weather_forecast"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#9000BCD4"
+            app:cardCornerRadius="15dp">
 
-            <TextView
-                android:id="@+id/text_forecast_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:text="Seattle, Washington"
-                android:textColor="#FFFFFF"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/text_forecast_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_forecast_location"
-                android:layout_centerHorizontal="true"
-                android:text="Mon Nov 16, 2020"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                <TextView
+                    android:id="@+id/text_forecast_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Seattle, Washington"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/text_forecast_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_forecast_date"
-                android:layout_centerHorizontal="true"
-                android:text="0:00"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                <TextView
+                    android:id="@+id/text_forecast_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_forecast_location"
+                    android:layout_centerHorizontal="true"
+                    android:text="Mon Nov 16, 2020"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp" />
 
-            <ImageView
-                android:id="@+id/image_forecast_icon"
-                android:layout_width="129dp"
-                android:layout_height="108dp"
-                android:layout_below="@id/text_forecast_time"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/ic_weather_yellow_24" />
+                <TextView
+                    android:id="@+id/text_forecast_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_forecast_date"
+                    android:layout_centerHorizontal="true"
+                    android:text="0:00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/text_forecast_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/image_forecast_icon"
-                android:layout_centerHorizontal="true"
-                android:text="Sunny"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                <ImageView
+                    android:id="@+id/image_forecast_icon"
+                    android:layout_width="129dp"
+                    android:layout_height="108dp"
+                    android:layout_below="@id/text_forecast_time"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_weather_yellow_24" />
 
-            <TextView
-                android:id="@+id/text_forecast_tempInfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_forecast_description"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="16dp"
-                android:text="Temperature"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold|italic" />
+                <TextView
+                    android:id="@+id/text_forecast_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_forecast_icon"
+                    android:layout_centerHorizontal="true"
+                    android:text="Sunny"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/text_feelslike"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_forecast_tempInfo"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="8dp"
-                android:text="Feels Like"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_forecast_tempInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_forecast_description"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Temperature"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
 
-            <TextView
-                android:id="@+id/text_feelslike_data"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@id/text_feelslike"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="16dp"
-                android:text="25°F"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_feelslike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_forecast_tempInfo"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Feels Like"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text_minimum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_feelslike"
-                android:layout_marginLeft="36dp"
-                android:text="Minimum"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_feelslike_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/text_feelslike"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:text="25°F"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text_minimum_data"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@id/text_minimum"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="16dp"
-                android:text="25°F"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_minimum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_feelslike"
+                    android:layout_marginLeft="36dp"
+                    android:text="Minimum"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text_maximum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_minimum"
-                android:layout_marginLeft="36dp"
-                android:text="Maximum"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_minimum_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/text_minimum"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:text="25°F"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text_maximum_data"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@id/text_maximum"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="16dp"
-                android:text="25°F"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_maximum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_minimum"
+                    android:layout_marginLeft="36dp"
+                    android:text="Maximum"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text_forecast_pressureInfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_maximum"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="16dp"
-                android:text="Atmospheric Pressure"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold|italic" />
+                <TextView
+                    android:id="@+id/text_maximum_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/text_maximum"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:text="25°F"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text_rain"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_forecast_pressureInfo"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="8dp"
-                android:text="Chance of Rain"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_forecast_pressureInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_maximum"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Atmospheric Pressure"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
 
-            <TextView
-                android:id="@+id/text_rain_data"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@id/text_rain"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="16dp"
-                android:text="100%"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_rain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_forecast_pressureInfo"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Chance of Rain"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text_pressure"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_rain"
-                android:layout_marginLeft="36dp"
-                android:text="Pressure"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_rain_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/text_rain"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:text="100%"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text_pressure_data"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@id/text_pressure"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="16dp"
-                android:text="1007 hPa"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_pressure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_rain"
+                    android:layout_marginLeft="36dp"
+                    android:text="Pressure"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text_humidity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_pressure"
-                android:layout_marginLeft="36dp"
-                android:text="Humidity"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_pressure_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/text_pressure"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:text="1007 hPa"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text_humidity_data"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@id/text_humidity"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="16dp"
-                android:text="93%"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_pressure"
+                    android:layout_marginLeft="36dp"
+                    android:text="Humidity"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text_forecast_windInfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_humidity"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="16dp"
-                android:text="Wind"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold|italic" />
+                <TextView
+                    android:id="@+id/text_humidity_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/text_humidity"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:text="93%"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text_direction"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_forecast_windInfo"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="8dp"
-                android:text="Direction"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_forecast_windInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_humidity"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Wind"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
 
-            <TextView
-                android:id="@+id/text_direction_data"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@id/text_direction"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="16dp"
-                android:text="Northwest"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_direction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_forecast_windInfo"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Direction"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text_forecast_otherInfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_direction"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="16dp"
-                android:text="Additional Information"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold|italic" />
+                <TextView
+                    android:id="@+id/text_direction_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/text_direction"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:text="Northwest"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text_latitude"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_forecast_otherInfo"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="8dp"
-                android:text="Latitude"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_forecast_otherInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_direction"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Additional Information"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
 
-            <TextView
-                android:id="@+id/text_latitude_data"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@id/text_latitude"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="16dp"
-                android:text="47.6 N"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_latitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_forecast_otherInfo"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Latitude"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text_longitude"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_latitude"
-                android:layout_marginLeft="36dp"
-                android:text="Longitude"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_latitude_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/text_latitude"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:text="47.6 N"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text_longitude_data"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@id/text_longitude"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="16dp"
-                android:text="122.33 W"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_longitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_latitude"
+                    android:layout_marginLeft="36dp"
+                    android:text="Longitude"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text_zipcode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_longitude"
-                android:layout_marginLeft="36dp"
-                android:text="Zip Code"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_longitude_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/text_longitude"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:text="122.33 W"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text_zipcode_data"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@id/text_zipcode"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="16dp"
-                android:text="98101"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/text_zipcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_longitude"
+                    android:layout_marginLeft="36dp"
+                    android:text="Zip Code"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/text_zipcode_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/text_zipcode"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:text="98101"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
 </RelativeLayout>
