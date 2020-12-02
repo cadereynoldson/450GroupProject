@@ -1,7 +1,7 @@
-#Sat Nov 28 02:37:33 PST 2020
-base.0=C\:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+#Tue Dec 01 20:19:02 PST 2020
+base.0=C\:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Users\\tranm\\Documents\\450GroupProject\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+base.1=C\:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex

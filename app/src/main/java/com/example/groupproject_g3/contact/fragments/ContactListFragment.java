@@ -34,7 +34,7 @@ public class ContactListFragment extends Fragment {
         super.onCreate(savedInstanceState);
         ViewModelProvider provider = new ViewModelProvider(getActivity());
         UserInfoViewModel model = provider.get(UserInfoViewModel.class);
-        mModel = new ViewModelProvider(getActivity()).get(ContactListViewModel.class);
+        mModel = provider.get(ContactListViewModel.class);
         mModel.connectGet(model.getJwt(), model.getUserId());
     }
 
