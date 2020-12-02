@@ -90,7 +90,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.groupproject_g3.activities.MainActivity" >
+        <activity
+            android:name="com.example.groupproject_g3.activities.MainActivity"
+            android:windowSoftInputMode="adjustPan" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

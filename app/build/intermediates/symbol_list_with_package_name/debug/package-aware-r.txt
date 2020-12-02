@@ -1419,6 +1419,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable card_edge_10dp_corner
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1452,9 +1453,11 @@ drawable ic_calendar_black_24dp
 drawable ic_chat_black_24dp
 drawable ic_chat_blue_300dp
 drawable ic_chat_notification
+drawable ic_check_accept_request_40dp
 drawable ic_clear_black_24dp
 drawable ic_contact_blueish_300dp
 drawable ic_contacts_black_24x24dp
+drawable ic_deny_request_40dp
 drawable ic_edit_black_24dp
 drawable ic_home_black_24x24dp
 drawable ic_keyboard_arrow_left_black_24dp
@@ -1568,7 +1571,6 @@ id action_mode_close_button
 id action_navigation_chats_to_addChatFragment
 id action_navigation_weather_to_weatherForecastFragment
 id action_registerFragment_to_fragment_verification
-id action_search
 id action_signInFragment_to_mainActivity
 id action_signInFragment_to_registerFragment
 id action_text
@@ -1579,6 +1581,7 @@ id add
 id addChatFragment
 id add_chat_root
 id add_contact_root
+id added_me_card
 id adjust_height
 id adjust_width
 id alertTitle
@@ -1587,6 +1590,7 @@ id always
 id async
 id auth_nav
 id auto
+id awaiting_approval_card
 id barrier
 id beginning
 id blocking
@@ -1594,8 +1598,10 @@ id bottom
 id bottom_nav_menu
 id boxInsetLayout
 id buttonPanel
+id button_accept_contact_request
 id button_add_chat
 id button_add_contact
+id button_cancel_contact_request
 id button_full_info
 id button_register
 id button_send
@@ -1623,7 +1629,9 @@ id clip_vertical
 id cloudChatLogo
 id collapseActionView
 id confirm_button
+id contacts_awaiting_approval_layout
 id contacts_main_viewpager
+id contacts_pending_accept_layout
 id contacts_tabs
 id container
 id container_weather_forecast
@@ -1779,6 +1787,8 @@ id progress_circular
 id progress_horizontal
 id radio
 id recycler_messages
+id recycler_pending_contacts
+id recycler_waiting_approval
 id registerFragment
 id right
 id right_icon
@@ -1849,6 +1859,9 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id text_added_me_approval
+id text_added_me_name
+id text_added_me_username
 id text_current_date
 id text_current_description
 id text_current_temperature
@@ -1889,7 +1902,9 @@ id text_message
 id text_minimum
 id text_minimum_data
 id text_name
+id text_no_contact_requests
 id text_no_contacts
+id text_no_sent_requests
 id text_pressure
 id text_pressure_data
 id text_rain
@@ -1902,6 +1917,9 @@ id text_register_password2
 id text_register_username
 id text_search
 id text_search_by
+id text_sent_req_name
+id text_sent_req_username
+id text_sent_requests_approval
 id text_signin_email
 id text_signin_password
 id text_username
@@ -2023,9 +2041,11 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_add_chat
 layout fragment_add_contact
+layout fragment_contact_added_me_item
 layout fragment_contact_item
 layout fragment_contact_main
 layout fragment_contact_pending
+layout fragment_contact_sent_request_item
 layout fragment_page_chat
 layout fragment_page_chat_message
 layout fragment_page_contact_list
@@ -2101,7 +2121,6 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu bottom_nav
-menu contacts_menu
 menu drawer_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -2183,6 +2202,10 @@ string contact_name
 string contact_no_contacts
 string contact_search_by
 string contact_username
+string contacts_pending_added_me
+string contacts_pending_approval
+string contacts_pending_no_requests
+string contacts_pending_no_sent_requests
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
