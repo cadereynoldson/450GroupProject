@@ -35,7 +35,10 @@
     <string name="tab_all_contacts">My Contacts</string>
     <string name="tab_pending_contacts">Pending</string>
     <string name="tab_add_contact">Add Contact</string>
-
+    <string name="contacts_pending_added_me">Added Me</string>
+    <string name="contacts_pending_approval">Sent Requests (Awaiting Approval)</string>
+    <string name="contacts_pending_no_requests">You have no contact requests!</string>
+    <string name="contacts_pending_no_sent_requests">You have no sent requests awaiting approval!</string>
     <string-array name="contact_search_by_options">
         <item>Email</item>
         <item>Username</item>

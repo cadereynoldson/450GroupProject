@@ -4,7 +4,6 @@ import android.app.Application;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
@@ -36,7 +35,7 @@ public class ContactListViewModel extends AndroidViewModel {
 
     private MutableLiveData<List<ContactItem>> mContacts;
 
-    private static final String connectionUrl = "https://cloud-chat-450.herokuapp.com/contacts/";
+    private static final String getContactsURL = "https://cloud-chat-450.herokuapp.com/contacts/";
 
     /**
      *
@@ -94,7 +93,7 @@ public class ContactListViewModel extends AndroidViewModel {
 
     public void connectGet(String authVal, int userId) {
         Request request = new JsonObjectRequest(Request.Method.GET,
-                connectionUrl + userId,
+                getContactsURL + userId,
                 null, //no body for get request.
                 this::handleResult,
                 this::handleError) {

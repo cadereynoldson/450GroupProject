@@ -209,6 +209,8 @@ ADDED from C:\Users\Cade\AndroidStudioProjects\450GroupProject\app\src\main\Andr
 		ADDED from C:\Users\Cade\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:72:27-74
 activity#com.example.groupproject_g3.activities.MainActivity
 ADDED from C:\Users\Cade\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:76:9-82:20
+	android:windowSoftInputMode
+		ADDED from C:\Users\Cade\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:76:59-98
 	android:name
 		ADDED from C:\Users\Cade\AndroidStudioProjects\450GroupProject\app\src\main\AndroidManifest.xml:76:19-58
 uses-sdk

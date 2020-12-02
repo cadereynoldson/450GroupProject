@@ -40,6 +40,10 @@
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\navigation\\main_nav.xml"
     },
     {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_card_edge_10dp_corner.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\card_edge_10dp_corner.xml"
+    },
+    {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
@@ -54,10 +58,6 @@
     {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_message_send_black.png.flat",
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable-hdpi\\ic_message_send_black.png"
-    },
-    {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\menu_contacts_menu.xml.flat",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\menu\\contacts_menu.xml"
     },
     {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_weather_current.xml.flat",
@@ -82,6 +82,10 @@
     {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_message_send.png.flat",
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable-hdpi\\ic_message_send.png"
+    },
+    {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_check_accept_request_40dp.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_check_accept_request_40dp.xml"
     },
     {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
@@ -196,6 +200,10 @@
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable-mdpi\\ic_message_send.png"
     },
     {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_contact_added_me_item.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_contact_added_me_item.xml"
+    },
+    {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_chat_black_24dp.xml.flat",
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_chat_black_24dp.xml"
     },
@@ -248,12 +256,20 @@
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_weather.xml"
     },
     {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_contact_sent_request_item.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_contact_sent_request_item.xml"
+    },
+    {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_deny_request_40dp.xml.flat",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\drawable\\ic_deny_request_40dp.xml"
     },
     {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_weather_yellow_24.xml.flat",
