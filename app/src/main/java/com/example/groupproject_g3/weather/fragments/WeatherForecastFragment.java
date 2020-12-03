@@ -26,4 +26,27 @@ public class WeatherForecastFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_page_weather_forecast, container, false);
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        WeatherForecastFragmentArgs args = WeatherForecastFragmentArgs.fromBundle(getArguments());
+        FragmentPageWeatherForecastBinding binding = FragmentPageWeatherForecastBinding.bind(getView());
+        binding.textForecastDate.setText(args.getInformation().getmDay() + " " + args.getInformation().getmDate());
+        binding.textMinimumData.setText(args.getInformation().getmTempMin() + "°F");
+        binding.textMaximumData.setText(args.getInformation().getmTempMax() + "°F");
+        binding.textForecastDescription.setText(args.getInformation().getmWeather());
+        binding.textForecastTime.setText(args.getInformation().getmTime());
+        binding.textFeelslikeData.setText(args.getInformation().getmFeelsLike() + "°F");
+        binding.textPressureData.setText(args.getInformation().getmPressure() + " hPa");
+        binding.textHumidityData.setText(args.getInformation().getmHumidity() + "%");
+        binding.textForecastLocation.setText(args.getInformation().getmLocation() + ", " + args.getInformation().getmCountry());
+        binding.textRainData.setText(args.getInformation().getmPop());
+        binding.textLatitudeData.setText(args.getInformation().getmLat());
+        binding.textLongitudeData.setText(args.getInformation().getmLon());
+        binding.textSunriseData.setText(args.getInformation().getmSunrise());
+        binding.textSunsetData.setText(args.getInformation().getmSunset());
+        binding.textSpeedData.setText(args.getInformation().getmSpeed());
+        binding.textDirectionData.setText(args.getInformation().getmDirection());
+    }
 }

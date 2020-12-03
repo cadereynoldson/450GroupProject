@@ -56,5 +56,9 @@
         android:id="@+id/navigation_weather_forecast"
         android:name="com.example.groupproject_g3.weather.fragments.WeatherForecastFragment"
         android:label="@string/title_weather_forecast"
-        tools:layout="@layout/fragment_page_weather_forecast" />
+        tools:layout="@layout/fragment_page_weather_forecast" >
+        <argument
+            android:name="Information"
+            app:argType="com.example.groupproject_g3.weather.fragments.WeatherInformation" />
+    </fragment>
 </navigation>
