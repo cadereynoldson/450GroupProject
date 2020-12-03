@@ -26,6 +26,7 @@ import com.example.groupproject_g3.model.UserInfoViewModel;
 import com.example.groupproject_g3.services.PushReceiver;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -106,8 +107,6 @@ public class MainActivity extends AppCompatActivity {
                 badge.setVisible(false);
             }
         });
-
-
     }
 
     /**
@@ -141,4 +140,5 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
 }

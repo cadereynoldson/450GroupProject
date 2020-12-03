@@ -51,22 +51,10 @@
                 android:layout_centerInParent="true" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/forecast_info"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/container_weather_forecast"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:orientation="horizontal"
-                app:layoutManager="LinearLayoutManager"
-                tools:listitem="@layout/fragment_weather_day_item" />
-
-            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/weather_hours"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/forecast_info"
+                android:layout_below="@id/container_weather_forecast"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
