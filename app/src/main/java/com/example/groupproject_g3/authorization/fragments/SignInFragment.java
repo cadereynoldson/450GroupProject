@@ -239,7 +239,8 @@ public class SignInFragment extends Fragment {
             // created on the web service.
             if(!jwt.isExpired(0)) {
                 String email = jwt.getClaim("email").asString();
-                navigateToSuccess(email, token, mUserViewModel.getUserId());
+                int userId = jwt.getClaim("memberid").asInt();
+                navigateToSuccess(email, token, userId);
                 return;
             }
         }

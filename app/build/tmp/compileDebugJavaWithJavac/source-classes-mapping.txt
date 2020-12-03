@@ -44,8 +44,8 @@ com/example/groupproject_g3/weather/fragments/WeatherMainFragmentDirections.java
  com.example.groupproject_g3.weather.fragments.WeatherMainFragmentDirections
  com.example.groupproject_g3.weather.fragments.WeatherMainFragmentDirections$1
  com.example.groupproject_g3.weather.fragments.WeatherMainFragmentDirections$ActionNavigationWeatherToWeatherForecastFragment
-com/example/groupproject_g3/authorization/fragments/SignInFragment.java
- com.example.groupproject_g3.authorization.fragments.SignInFragment
+com/example/groupproject_g3/chat/fragments/ChatMessage.java
+ com.example.groupproject_g3.chat.fragments.ChatMessage
 com/example/groupproject_g3/contact/fragments/ContactPendingFragment.java
  com.example.groupproject_g3.contact.fragments.ContactPendingFragment
 com/example/groupproject_g3/authorization/fragments/SignInFragmentArgs.java
@@ -206,5 +206,5 @@ com/example/groupproject_g3/authorization/fragments/SignInFragmentDirections.jav
  com.example.groupproject_g3.authorization.fragments.SignInFragmentDirections$ActionSignInFragmentToMainActivity
 com/example/groupproject_g3/databinding/ActivityMainBinding.java
  com.example.groupproject_g3.databinding.ActivityMainBinding
-com/example/groupproject_g3/chat/fragments/ChatMessage.java
- com.example.groupproject_g3.chat.fragments.ChatMessage
+com/example/groupproject_g3/authorization/fragments/SignInFragment.java
+ com.example.groupproject_g3.authorization.fragments.SignInFragment
