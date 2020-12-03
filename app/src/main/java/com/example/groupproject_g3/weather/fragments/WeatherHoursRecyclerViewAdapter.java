@@ -10,16 +10,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.groupproject_g3.R;
 import com.example.groupproject_g3.databinding.FragmentWeatherHoursItemBinding;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class WeatherHoursRecyclerViewAdapter extends RecyclerView.Adapter<WeatherHoursRecyclerViewAdapter.HoursInfoViewHolder> {
 
     /** list containing the weather information. */
-    private final List<WeatherBasicInformation> weatherInfo;
+    private final List<WeatherInformation> weatherInfo;
 
-    public WeatherHoursRecyclerViewAdapter(List<WeatherBasicInformation> weatherInfo) {
-        this.weatherInfo = weatherInfo;
+    public WeatherHoursRecyclerViewAdapter(List<WeatherInformation> info) {
+        weatherInfo = info;
     }
 
     @NonNull
@@ -42,7 +43,7 @@ public class WeatherHoursRecyclerViewAdapter extends RecyclerView.Adapter<Weathe
 
         public final View mView;
         public FragmentWeatherHoursItemBinding binding;
-        private WeatherBasicInformation info;
+        private WeatherInformation info;
 
         public HoursInfoViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -50,11 +51,12 @@ public class WeatherHoursRecyclerViewAdapter extends RecyclerView.Adapter<Weathe
             binding = FragmentWeatherHoursItemBinding.bind(itemView);
         }
 
-        public void setHoursInfo(final WeatherBasicInformation info) {
+        public void setHoursInfo(final WeatherInformation info) {
             this.info = info;
             Log.e("Creating info", info.toString());
-            binding.textHours.setText(info.getTime());
-            binding.textHoursTemp.setText(info.getTemperature() + "°");
+            binding.textHours.setText(info.getmTime());
+            binding.textHoursTemp.setText(info.getmTemperature() + "°");
+            Picasso.get().load(info.getmIcon()).into(binding.imageHoursForecast);
         }
     }
 }

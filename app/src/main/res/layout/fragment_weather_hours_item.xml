@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="60dp"
-    android:layout_height="110dp"
+    android:layout_width="55dp"
+    android:layout_height="115dp"
     android:layout_margin="5dp"
     android:elevation="0dp"
     app:cardBackgroundColor="#9000BCD4"
@@ -21,12 +21,12 @@
                 android:id="@+id/text_hours"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="4dp"
-                android:text="10:00"
+                android:text="23"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="24sp" />
 
             <ImageView
                 android:id="@+id/image_hours_forecast"
@@ -43,10 +43,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/image_hours_forecast"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp"
-                android:text="25°"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="5dp"
+                android:text="35°"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="24sp" />
         </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

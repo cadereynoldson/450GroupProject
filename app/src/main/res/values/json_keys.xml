@@ -11,6 +11,8 @@
     <string name="key_weather_current_temp">temp</string>
     <string name="key_weather_current_weather">weather</string>
     <string name="key_weather_current_weather_main">main</string>
+    <string name="key_weather_current_weather_description">description</string>
+    <string name="key_weather_current_weather_icon">icon</string>
     <string name="key_weather_forecast_list">list</string>
 
     <string name="key_weather_current_feels_like">feels_like</string>
@@ -18,9 +20,28 @@
     <string name="key_weather_current_temp_max">temp_max</string>
     <string name="key_weather_current_pressure">pressure</string>
     <string name="key_weather_current_humidity">humidity</string>
+
     <string name="key_weather_current_name">name</string>
     <string name="key_weather_current_sys">sys</string>
     <string name="key_weather_current_country">country</string>
+
+    <string name="key_weather_forecast_city">city</string>
+    <string name="key_weather_forecast_name">name</string>
+    <string name="key_weather_forecast_country">country</string>
     
-    <string name="key_weather_onecall_hourly">hourly</string>
+    <string name="key_weather_forecast_pop">pop</string>
+    <string name="key_weather_forecast_sunrise">sunrise</string>
+    <string name="key_weather_forecast_sunset">sunset</string>
+
+    <string name="key_weather_current_coord">coord</string>
+    <string name="key_weather_current_lon">lon</string>
+    <string name="key_weather_current_lat">lat</string>
+    
+    <string name="key_weather_current_wind">wind</string>
+    <string name="key_weather_current_speed">speed</string>
+    <string name="key_weather_current_deg">deg</string>
+    
+    <string name="key_weather_24hour_hourly">hourly</string>
+    <string name="key_weather_24hour_temp">temp</string>
+    <string name="key_weather_24hour_dt">dt</string>
 </resources>
