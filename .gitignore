@@ -1,2 +1,4 @@
 # Project exclude paths
 /.gradle/
+/app/build
+/local.properties
