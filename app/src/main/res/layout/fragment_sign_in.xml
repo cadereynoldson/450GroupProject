@@ -12,10 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:checked="true"
+        android:checked="false"
         android:text="@string/switch_sign_in"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button_signin"
+        app:layout_constraintStart_toStartOf="@+id/button_signin_register"
         app:layout_constraintTop_toBottomOf="@+id/button_signin"
         tools:text="@string/switch_sign_in" />
 
