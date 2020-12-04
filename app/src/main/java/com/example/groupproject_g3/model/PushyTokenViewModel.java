@@ -198,4 +198,6 @@ public class PushyTokenViewModel extends AndroidViewModel{
         RequestQueueSingleton.getInstance(getApplication().getApplicationContext())
                 .addToRequestQueue(request);
     }
+
+
 }
