@@ -4,6 +4,7 @@
 package com.example.groupproject_g3.weather.fragments;
 
 import android.app.Application;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -23,6 +24,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.InputStream;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -33,12 +36,11 @@ import java.util.function.IntFunction;
 public class WeatherCurrentViewModel extends AndroidViewModel {
 
     /** contains the basic weather data to be displayed, started off with placeholder data */
-    private static final WeatherBasicInformation currentPlaceholder = new WeatherBasicInformation(
-            "06/02/1998", "7:36", "60F",
-            "Clear", "Mon");
+    private static final WeatherInformation currentPlaceholder = new WeatherInformation.Builder(
+            "06/02/1998", "7:36").build();
 
     /** Data containing mutable data for weather */
-    private MutableLiveData<WeatherBasicInformation> information;
+    private MutableLiveData<WeatherInformation> information;
 
     /**
      * A view model of the current weather to be displayed.
@@ -56,7 +58,7 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
      * @param observer - the observer.
      */
     public void addCurrentWeatherObserver(@NonNull LifecycleOwner owner,
-                                          @NonNull Observer<WeatherBasicInformation> observer) {
+                                          @NonNull Observer<WeatherInformation> observer) {
         information.observe(owner, observer);
     }
 
@@ -102,18 +104,22 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
         IntFunction<String> getString =
                 getApplication().getResources()::getString;
         try {
-            Log.i("Current Weather Result: ", result.toString());
-
             //fetch date, temperature, weather, and time.
             long dateTime = ((long) result.getInt(getString.apply(R.string.key_weather_date_time))) * 1000l;
 
             //Fetch weather array and get main value from the response.
             JSONArray weatherArr = result.getJSONArray(getString.apply(R.string.key_weather_current_weather));
-            String currentWeather = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_main));
+            String currentWeather = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_description));
+            String icon = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_icon));
+            String urlIcon = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
 
             //Fetch main array and get the temperature value from it.
             JSONObject tempData = result.getJSONObject(getString.apply(R.string.key_weather_current_weather_main));
             Integer currentTemp = tempData.getInt(getString.apply(R.string.key_weather_current_temp));
+
+            JSONObject sysData = result.getJSONObject(getString.apply(R.string.key_weather_current_sys));
+            String currentCountry = sysData.getString(getString.apply(R.string.key_weather_current_country));
+            String currentLocation = result.getString(getString.apply(R.string.key_weather_current_name));
 
             Date date = new Date(dateTime);
             Calendar calendar = Calendar.getInstance();
@@ -123,10 +129,16 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
 
             String time = new SimpleDateFormat("HH:mm").format(date);
 
-            String day = new SimpleDateFormat("EE").format(date);
+            WeatherInformation info = new WeatherInformation.Builder(
+                    dateDisplay,
+                    currentTemp.toString())
+                    .addTime(time)
+                    .addWeather(currentWeather)
+                    .addLocation(currentLocation)
+                    .addCountry(currentCountry)
+                    .addIcon(urlIcon)
+                    .build();
 
-            WeatherBasicInformation info = new WeatherBasicInformation(dateDisplay, time, currentTemp.toString(),
-                    currentWeather, day);
             information.setValue(info);
         } catch (JSONException e) {
             e.printStackTrace();

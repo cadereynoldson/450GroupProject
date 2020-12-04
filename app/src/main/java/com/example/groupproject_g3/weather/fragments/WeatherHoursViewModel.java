@@ -32,7 +32,7 @@ import java.util.function.IntFunction;
 public class WeatherHoursViewModel extends AndroidViewModel {
 
     /** Contains basic weather information to be represented */
-    private MutableLiveData<List<WeatherBasicInformation>> information;
+    private MutableLiveData<List<WeatherInformation>> information;
 
     public WeatherHoursViewModel(@NonNull Application application) {
         super(application);
@@ -41,7 +41,7 @@ public class WeatherHoursViewModel extends AndroidViewModel {
     }
 
     public void addHoursWeatherObserver(@NonNull LifecycleOwner owner,
-                                        @NonNull Observer<? super List<WeatherBasicInformation>> observer) {
+                                        @NonNull Observer<? super List<WeatherInformation>> observer) {
         information.observe(owner, observer);
     }
 
@@ -82,22 +82,21 @@ public class WeatherHoursViewModel extends AndroidViewModel {
                 getApplication().getResources()::getString;
         try {
             Log.e("TESTING DISPLAY", result.toString()); //TODO REMOVE
-            if (result.has(getString.apply(R.string.key_weather_onecall_hourly))) {
-                JSONArray data = result.getJSONArray(getString.apply(R.string.key_weather_onecall_hourly));
+            if (result.has(getString.apply(R.string.key_weather_24hour_hourly))) {
+                JSONArray data = result.getJSONArray("hourly");
+
                 for (int i = 0; i < data.length(); i++) {
+                    Log.i("Hourly Weather Data ", data.toString());
+
                     JSONObject info = data.getJSONObject(i);
-                    Log.i("Forecast Weather Result ", info.toString());
+                    Log.i("Hourly Weather Result ", info.toString());
 
                     //fetch date, temperature, weather, and time.
                     long dateTime = ((long) info.getInt(getString.apply(R.string.key_weather_date_time))) * 1000l;
 
-                    //Fetch weather array and get main value from the response.
-                    JSONArray weatherArr = info.getJSONArray(getString.apply(R.string.key_weather_current_weather));
-                    String currentWeather = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_main));
+                    Integer currentTemp = info.getInt(getString.apply(R.string.key_weather_current_temp));
 
-                    //Fetch main array and get the temperature value from it.
-                    JSONObject tempData = info.getJSONObject(getString.apply(R.string.key_weather_current_weather_main));
-                    Double currentTemp = tempData.getDouble(getString.apply(R.string.key_weather_current_temp));
+                    Log.i("Hourly Weather temp ", currentTemp.toString());
 
                     Date date = new Date(dateTime);
                     Calendar calendar = Calendar.getInstance();
@@ -105,15 +104,18 @@ public class WeatherHoursViewModel extends AndroidViewModel {
 
                     String dateDisplay = calendar.get(Calendar.MONTH) + "/" + calendar.get(Calendar.DAY_OF_MONTH);
 
-                    String time = new SimpleDateFormat("HH:mm").format(date);
+                    String time = new SimpleDateFormat("HH").format(date);
+                    Log.i("Hourly Weather time", time);
 
-                    String day = new SimpleDateFormat("EE").format(date);
 
-                    WeatherBasicInformation DaysInfo = new WeatherBasicInformation(dateDisplay, time, currentTemp.toString(),
-                            currentWeather, day);
+                    WeatherInformation HoursInfo = new WeatherInformation.Builder(
+                            dateDisplay,
+                            currentTemp.toString())
+                            .addTime(time)
+                            .build();
 
-                    if (!information.getValue().contains(DaysInfo)) {
-                        information.getValue().add(DaysInfo);
+                    if (!information.getValue().contains(HoursInfo)) {
+                        information.getValue().add(HoursInfo);
                     }
                 }
             }

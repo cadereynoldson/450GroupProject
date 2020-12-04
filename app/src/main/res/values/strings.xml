@@ -67,4 +67,10 @@
     -->
     <string name="hello_world">Hello Square World!</string>
     <string name="image_logo">CloudChat</string>
+
+    <string name="switch_sign_in">Stay Signed in</string>
+    <string name="keys_shared_prefs">My Auth App Shared Prefs</string>
+    <string name="keys_prefs_jwt">Sharded Prefs JWT</string>
+    <string name="action_sign_out">Sign Out</string>
+
 </resources>

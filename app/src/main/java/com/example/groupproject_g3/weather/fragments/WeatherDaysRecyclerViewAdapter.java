@@ -11,15 +11,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.groupproject_g3.R;
 import com.example.groupproject_g3.databinding.FragmentWeatherDaysItemBinding;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class WeatherDaysRecyclerViewAdapter extends RecyclerView.Adapter<WeatherDaysRecyclerViewAdapter.DaysInfoViewHolder> {
 
     /** list containing the weather information. */
-    private final List<WeatherBasicInformation> weatherInfo;
+    private final List<WeatherInformation> weatherInfo;
 
-    public WeatherDaysRecyclerViewAdapter(List<WeatherBasicInformation> info) {
+    public WeatherDaysRecyclerViewAdapter(List<WeatherInformation> info) {
         weatherInfo = info;
     }
 
@@ -44,7 +45,7 @@ public class WeatherDaysRecyclerViewAdapter extends RecyclerView.Adapter<Weather
         /** The view of the forecast. */
         public final View mView;
         public FragmentWeatherDaysItemBinding binding;
-        private WeatherBasicInformation info;
+        private WeatherInformation info;
 
         public DaysInfoViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -52,17 +53,19 @@ public class WeatherDaysRecyclerViewAdapter extends RecyclerView.Adapter<Weather
             binding = FragmentWeatherDaysItemBinding.bind(itemView);
         }
 
-        public void setDaysInfo(final WeatherBasicInformation info) {
+        public void setDaysInfo(final WeatherInformation info) {
             this.info = info;
             Log.e("Creating info", info.toString());
-            binding.textDaysDate.setText(info.getDate());
-            binding.textDaysMin.setText(info.getTemperature() + "°");
-            binding.textDays.setText(info.getDay());
+            binding.textDaysDate.setText(info.getmDate());
+            binding.textDaysMin.setText(info.getmTempMin() + "°");
+            binding.textDaysMax.setText(info.getmTempMax() + "°");
+            binding.textDays.setText(info.getmDay());
             binding.getRoot().setOnClickListener(view -> {
                 Navigation.findNavController(mView).navigate(
                         WeatherMainFragmentDirections
-                                .actionNavigationWeatherToWeatherForecastFragment());
+                                .actionNavigationWeatherToWeatherForecastFragment(info));
             });
+            Picasso.get().load(info.getmIcon()).into(binding.imageDaysForecast);
         }
     }
 }

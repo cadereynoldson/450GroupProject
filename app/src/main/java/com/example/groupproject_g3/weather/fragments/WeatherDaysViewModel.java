@@ -32,7 +32,7 @@ import java.util.function.IntFunction;
 public class WeatherDaysViewModel extends AndroidViewModel {
 
     /** Contains basic weather information to be represented */
-    private MutableLiveData<List<WeatherBasicInformation>> information;
+    private MutableLiveData<List<WeatherInformation>> information;
 
     public WeatherDaysViewModel(@NonNull Application application) {
         super(application);
@@ -46,7 +46,7 @@ public class WeatherDaysViewModel extends AndroidViewModel {
      * @param observer - the observer
      */
     public void addDaysListObserver(@NonNull LifecycleOwner owner,
-                                    @NonNull Observer<? super List<WeatherBasicInformation>> observer) {
+                                    @NonNull Observer<? super List<WeatherInformation>> observer) {
         information.observe(owner, observer);
     }
 
@@ -90,23 +90,60 @@ public class WeatherDaysViewModel extends AndroidViewModel {
         IntFunction<String> getString =
                 getApplication().getResources()::getString;
         try {
-            Log.e("TESTING DISPLAY", result.toString()); //TODO REMOVE
+            // Fetch location
+            JSONObject cityData = result.getJSONObject(getString.apply(R.string.key_weather_forecast_city));
+            String location = cityData.getString(getString.apply(R.string.key_weather_forecast_name));
+            String country = cityData.getString(getString.apply(R.string.key_weather_forecast_country));
+
+            // Fetch longitude and latitude
+            JSONObject coordData = cityData.getJSONObject(getString.apply(R.string.key_weather_current_coord));
+            Double lat = coordData.getDouble(getString.apply(R.string.key_weather_current_lat));
+            Double lon = coordData.getDouble(getString.apply(R.string.key_weather_current_lon));
+
+            // Sunrise and Sunset
+            long sunriseData = ((long) cityData.getInt(getString.apply(R.string.key_weather_forecast_sunrise))) * 10001;
+            long sunsetData = ((long) cityData.getInt(getString.apply(R.string.key_weather_forecast_sunset))) * 10001;
+
+            Date sunriseDate = new Date(sunriseData);
+            Calendar calendar1 = Calendar.getInstance();
+            calendar1.setTime(sunriseDate);
+
+            String sunrise = new SimpleDateFormat("HH:mm").format(sunriseDate);
+
+            Date sunsetDate = new Date(sunsetData);
+            Calendar calendar2 = Calendar.getInstance();
+            calendar2.setTime(sunsetDate);
+
+            String sunset = new SimpleDateFormat("HH:mm").format(sunsetDate);
+
             if (result.has(getString.apply(R.string.key_weather_forecast_list))) {
                 JSONArray data = result.getJSONArray(getString.apply(R.string.key_weather_forecast_list));
                 for (int i = 0; i < data.length(); i++) {
                     JSONObject info = data.getJSONObject(i);
-                    Log.i("Forecast Weather Result ", info.toString());
 
                     //fetch date, temperature, weather, and time.
                     long dateTime = ((long) info.getInt(getString.apply(R.string.key_weather_date_time))) * 1000l;
 
                     //Fetch weather array and get main value from the response.
                     JSONArray weatherArr = info.getJSONArray(getString.apply(R.string.key_weather_current_weather));
-                    String currentWeather = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_main));
+                    String currentWeather = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_description));
 
                     //Fetch main array and get the temperature value from it.
                     JSONObject tempData = info.getJSONObject(getString.apply(R.string.key_weather_current_weather_main));
                     Double currentTemp = tempData.getDouble(getString.apply(R.string.key_weather_current_temp));
+                    Double minTemp = tempData.getDouble(getString.apply(R.string.key_weather_current_temp_min));
+                    Double maxTemp = tempData.getDouble(getString.apply(R.string.key_weather_current_temp_max));
+                    Integer pressure = tempData.getInt(getString.apply(R.string.key_weather_current_pressure));
+                    Integer humidity = tempData.getInt(getString.apply(R.string.key_weather_current_humidity));
+                    Double feelsLike = tempData.getDouble(getString.apply(R.string.key_weather_current_feels_like));
+
+                    // Fetch chances of rain
+                    Double rainChance = info.getDouble(getString.apply(R.string.key_weather_forecast_pop));
+
+                    // Fetch wind speed and wind direction
+                    JSONObject windData = info.getJSONObject(getString.apply(R.string.key_weather_current_wind));
+                    Double windSpeed = windData.getDouble(getString.apply(R.string.key_weather_current_speed));
+                    Double windDirection = windData.getDouble(getString.apply(R.string.key_weather_current_deg));
 
                     Date date = new Date(dateTime);
                     Calendar calendar = Calendar.getInstance();
@@ -118,8 +155,27 @@ public class WeatherDaysViewModel extends AndroidViewModel {
 
                     String day = new SimpleDateFormat("EE").format(date);
 
-                    WeatherBasicInformation DaysInfo = new WeatherBasicInformation(dateDisplay, time, currentTemp.toString(),
-                            currentWeather, day);
+                    WeatherInformation DaysInfo = new WeatherInformation.Builder(
+                            dateDisplay,
+                            currentTemp.toString())
+                            .addDay(day)
+                            .addTempMin(minTemp.toString())
+                            .addTempMax(maxTemp.toString())
+                            .addWeather(currentWeather)
+                            .addTime(time)
+                            .addFeelsLike(feelsLike.toString())
+                            .addPressure(pressure.toString())
+                            .addHumidity(humidity.toString())
+                            .addPrecipitation(rainChance.toString())
+                            .addLocation(location)
+                            .addCountry(country)
+                            .addLat(lat.toString())
+                            .addLon(lon.toString())
+                            .addSunrise(sunrise)
+                            .addSunset(sunset)
+                            .addSpeed(windSpeed.toString())
+                            .addDirection(windDirection.toString())
+                            .build();
 
                     if (!information.getValue().contains(DaysInfo)) {
                         information.getValue().add(DaysInfo);

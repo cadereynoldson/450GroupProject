@@ -7,7 +7,10 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
@@ -22,10 +25,12 @@ import com.example.groupproject_g3.chat.fragments.ChatMessage;
 import com.example.groupproject_g3.chat.fragments.ChatViewModel;
 import com.example.groupproject_g3.databinding.ActivityMainBinding;
 import com.example.groupproject_g3.model.NewMessageCountViewModel;
+import com.example.groupproject_g3.model.PushyTokenViewModel;
 import com.example.groupproject_g3.model.UserInfoViewModel;
 import com.example.groupproject_g3.services.PushReceiver;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -106,8 +111,6 @@ public class MainActivity extends AppCompatActivity {
                 badge.setVisible(false);
             }
         });
-
-
     }
 
     /**
@@ -141,4 +144,38 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.drop_down, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_sign_out) {
+            signOut();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void signOut() {
+        SharedPreferences prefs =
+                getSharedPreferences(
+                        getString(R.string.keys_shared_prefs),
+                        Context.MODE_PRIVATE);
+        prefs.edit().remove(getString(R.string.keys_prefs_jwt)).apply();
+        //End the app completely
+        PushyTokenViewModel model = new ViewModelProvider(this)
+                .get(PushyTokenViewModel.class);
+        //when we hear back from the web service quit
+        model.addResponseObserver(this, result -> finishAndRemoveTask());
+        model.deleteTokenFromWebservice(
+                new ViewModelProvider(this)
+                        .get(UserInfoViewModel.class)
+                        .getJwt()
+        );    }
+
 }
