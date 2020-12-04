@@ -48,10 +48,6 @@
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_contact_main.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_weather.xml",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_weather.xml"
-    },
-    {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_verification.xml",
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_verification.xml"
     },
@@ -92,11 +88,11 @@
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_home.xml"
     },
     {
-        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_weather_search.xml",
-        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_weather_search.xml"
-    },
-    {
         "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_contact_added_me_item.xml",
         "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_contact_added_me_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page_weather_main.xml",
+        "source": "C:\\Users\\Cade\\AndroidStudioProjects\\450GroupProject\\app\\src\\main\\res\\layout\\fragment_page_weather_main.xml"
     }
 ]
