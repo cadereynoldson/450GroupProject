@@ -131,6 +131,6 @@ public class ContactSentRequestsViewModel extends AndroidViewModel {
     }
 
     private void handleDelete(JSONObject jsonObject) {
-        Log.e("Delete Successful.", "Success in deletion");
+        Log.i("Delete Successful.", "Success in deletion");
     }
 }

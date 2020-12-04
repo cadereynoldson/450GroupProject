@@ -35,11 +35,13 @@ public class ContactPendingFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ViewModelProvider provider = new ViewModelProvider(getActivity());
+        //Init view models
         userInfoViewModel = provider.get(UserInfoViewModel.class);
         addedMeViewModel = provider.get(ContactAddedMeViewModel.class);
         sentRequestsViewModel = provider.get(ContactSentRequestsViewModel.class);
+        //Fetch data.
         sentRequestsViewModel.connectGet(userInfoViewModel.getJwt(), userInfoViewModel.getUserId());
-        addedMeViewModel = provider.get(ContactAddedMeViewModel.class);
+        addedMeViewModel.connectGet(userInfoViewModel.getJwt(), userInfoViewModel.getUserId());
     }
 
     @Override
@@ -58,6 +60,13 @@ public class ContactPendingFragment extends Fragment {
                 binding.textNoSentRequests.setVisibility(View.GONE);
             } else {
                 binding.textNoSentRequests.setVisibility(View.VISIBLE);
+            }
+        });
+        addedMeViewModel.addContactsListObserver(getViewLifecycleOwner(), contactList -> {
+            if (!contactList.isEmpty()) {
+                binding.recyclerPendingContacts.setAdapter(new ContactAddedMeRecyclerViewAdapter(contactList, addedMeViewModel, userInfoViewModel));
+            } else {
+                binding.textNoContactRequests.setVisibility(View.VISIBLE);
             }
         });
     }

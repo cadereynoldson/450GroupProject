@@ -167,6 +167,7 @@ public class RegisterFragment extends Fragment {
                 binding.textRegisterFirstName.getText().toString(),
                 binding.textRegisterLastName.getText().toString(),
                 binding.textRegisterEmail.getText().toString(),
+                binding.textRegisterUsername.getText().toString(),
                 binding.textRegisterPassword.getText().toString());
         //This is an Asynchronous call. No statements after should rely on the
         //result of connect().
@@ -195,9 +196,11 @@ public class RegisterFragment extends Fragment {
         if (response.length() > 0) {
             if (response.has("code")) {
                 try {
-                    binding.textRegisterEmail.setError(
-                            "Error Authenticating: " +
-                                    response.getJSONObject("data").getString("message"));
+                    String data = response.getJSONObject("data").getString("message");
+                    if (data.toLowerCase().contains("email"))
+                        binding.textRegisterEmail.setError("Error Authenticating: " + data);
+                    else
+                        binding.textRegisterUsername.setError("Error Authenticating: " + data);
                 } catch (JSONException e) {
                     Log.e("JSON Parse Error", e.getMessage());
                 }
