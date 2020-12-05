@@ -12,7 +12,6 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="306dp"
         android:layout_height="91dp"
-        android:layout_marginTop="134dp"
         android:layout_marginBottom="195dp"
         android:background="@color/design_default_color_primary_dark"
         android:text="@string/action_add_chat"
@@ -20,21 +19,24 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="385dp"
-        android:layout_height="474dp"
-        android:layout_marginTop="122dp"
-        android:layout_marginBottom="420dp"
-        android:src="@drawable/logo_cloud_chat"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/text_add_chat"
+        android:layout_width="317dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="368dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:hint="@string/text_add_chat"
+        android:inputType="textPersonName"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_add_chat"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.489" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

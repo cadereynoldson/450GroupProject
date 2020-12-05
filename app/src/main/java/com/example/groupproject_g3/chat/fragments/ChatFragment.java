@@ -40,11 +40,9 @@ public class ChatFragment extends Fragment {
     private static final int HARD_CODED_CHAT_ID = 1;
 
     private FragmentPageChatBinding binding;
-    private ChatsPagerAdapter adapter;
     private ChatSendViewModel mSendModel;
-    private com.example.groupproject_g3.chat.fragments.ChatViewModel mChatModel;
+    private ChatViewModel mChatModel;
     private UserInfoViewModel mUserModel;
-    private ViewPager pager;
 
 
     public ChatFragment() {
@@ -57,7 +55,7 @@ public class ChatFragment extends Fragment {
         ViewModelProvider provider = new ViewModelProvider(getActivity());
 
         mUserModel = provider.get(UserInfoViewModel.class);
-        mChatModel = provider.get(com.example.groupproject_g3.chat.fragments.ChatViewModel.class);
+        mChatModel = provider.get(ChatViewModel.class);
         mChatModel.getFirstMessages(HARD_CODED_CHAT_ID, mUserModel.getJwt());
         mSendModel = provider.get(ChatSendViewModel.class);
     }
@@ -66,13 +64,7 @@ public class ChatFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentPageChatBinding.inflate(inflater, container, false);
-        adapter = new ChatFragment.ChatsPagerAdapter(getChildFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        pager = binding.getRoot().findViewById(R.id.chats_viewpager);
-        adapter.initFrags();
-        pager.setAdapter(adapter);
-        TabLayout tabs = binding.getRoot().findViewById(R.id.chats_tabs);
-        tabs.setupWithViewPager(pager);
-        return binding.getRoot();
+          return binding.getRoot();
     }
 
     @Override
@@ -122,41 +114,4 @@ public class ChatFragment extends Fragment {
                 binding.editMessage.setText(""));
     }
 
-    public class ChatsPagerAdapter extends FragmentPagerAdapter {
-
-        private Fragment[] fragments;
-
-        private String[] titles;
-
-        public ChatsPagerAdapter(@NonNull FragmentManager fm, int behavior) {
-            super(fm, behavior);
-        }
-
-        public void initFrags() {
-            IntFunction<String> getString = getResources()::getString;
-            fragments = new Fragment[2];
-            titles = new String[2];
-            fragments[0] = new ChatFragment();
-            fragments[1] = new AddChatFragment();
-            titles[0] = getString.apply(R.string.tab_show_chats);
-            titles[1] = getString.apply(R.string.tab_add_chat);
-        }
-
-        @NonNull
-        @Override
-        public Fragment getItem(int position) {
-            return fragments[position];
-        }
-
-        @Override
-        public int getCount() {
-            return fragments.length;
-        }
-
-        @Nullable
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return titles[position];
-        }
-    }
 }
