@@ -45,10 +45,10 @@
         <item>Username</item>
     </string-array>
 
-    <string name="text_verification_checkEmail">Please check email and follow link to verify, then click Return to SignIN.</string>
-    <string name="text_verification_retry">If you do not see an email, click Send Again.</string>
+    <string name="text_verification_checkEmail">Please check your email and follow the link to verify your account. Click "Return to Sign In" when completed.</string>
+    <string name="text_verification_retry">If you do not see an email, click "Send Again" to send another verification email.</string>
     <string name="button_verification_retry">Send Again</string>
-    <string name="button_verification_return">Return to SignIn</string>
+    <string name="button_verification_return">Return to Sign In</string>
 
     <string name="action_add_chat">Add Chat</string>
     <string name="tab_add_chat">Add Chat</string>
