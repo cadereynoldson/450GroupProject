@@ -26,16 +26,18 @@ public class ContactListFragment extends Fragment {
     /** Binding which allows for direct reference of the components of the class. */
     private FragmentPageContactListBinding binding;
 
-    /** The view model for the class. Stores and handles all data for contacts. */
+    /** The view model for the class. Stores and handles all data for displaying a list of contacts. */
     private ContactListViewModel mModel;
+
+    private UserInfoViewModel userInfoViewModel;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ViewModelProvider provider = new ViewModelProvider(getActivity());
-        UserInfoViewModel model = provider.get(UserInfoViewModel.class);
+        userInfoViewModel = provider.get(UserInfoViewModel.class);
         mModel = provider.get(ContactListViewModel.class);
-        mModel.connectGet(model.getJwt(), model.getUserId());
+        mModel.connectGet(userInfoViewModel.getJwt(), userInfoViewModel.getUserId());
     }
 
     @Override
@@ -50,7 +52,7 @@ public class ContactListFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         mModel.addContactsListObserver(getViewLifecycleOwner(), contactList -> {
             if (!contactList.isEmpty()) {
-                binding.recyclerMessages.setAdapter(new ContactRecyclerViewAdapter(contactList));
+                binding.recyclerMessages.setAdapter(new ContactRecyclerViewAdapter(mModel, userInfoViewModel, contactList));
                 binding.textNoContacts.setVisibility(View.GONE);
             }
         });
