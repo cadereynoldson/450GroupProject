@@ -1619,6 +1619,8 @@ id center
 id center_horizontal
 id center_vertical
 id chains
+id chats_tabs
+id chats_viewpager
 id checkbox
 id checked
 id chip
@@ -2306,9 +2308,11 @@ string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
 string switch_sign_in
+string tab_add_chat
 string tab_add_contact
 string tab_all_contacts
 string tab_pending_contacts
+string tab_show_chats
 string text_verification_checkEmail
 string text_verification_retry
 string title_activity_main

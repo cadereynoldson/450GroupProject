@@ -12,12 +12,23 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.groupproject_g3.R;
+import com.example.groupproject_g3.contact.fragments.ContactAddFragment;
+import com.example.groupproject_g3.contact.fragments.ContactListFragment;
+import com.example.groupproject_g3.contact.fragments.ContactMainFragment;
+import com.example.groupproject_g3.contact.fragments.ContactPendingFragment;
+import com.example.groupproject_g3.databinding.FragmentContactMainBinding;
 import com.example.groupproject_g3.databinding.FragmentPageChatBinding;
 import com.example.groupproject_g3.model.UserInfoViewModel;
+import com.google.android.material.tabs.TabLayout;
+
+import java.util.function.IntFunction;
 
 
 /**
@@ -28,9 +39,13 @@ public class ChatFragment extends Fragment {
     //The chat ID for "global" chat
     private static final int HARD_CODED_CHAT_ID = 1;
 
+    private FragmentPageChatBinding binding;
+    private ChatsPagerAdapter adapter;
     private ChatSendViewModel mSendModel;
     private com.example.groupproject_g3.chat.fragments.ChatViewModel mChatModel;
     private UserInfoViewModel mUserModel;
+    private ViewPager pager;
+
 
     public ChatFragment() {
         // Required empty public constructor
@@ -40,6 +55,7 @@ public class ChatFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ViewModelProvider provider = new ViewModelProvider(getActivity());
+
         mUserModel = provider.get(UserInfoViewModel.class);
         mChatModel = provider.get(com.example.groupproject_g3.chat.fragments.ChatViewModel.class);
         mChatModel.getFirstMessages(HARD_CODED_CHAT_ID, mUserModel.getJwt());
@@ -49,15 +65,21 @@ public class ChatFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_page_chat, container, false);
+        binding = FragmentPageChatBinding.inflate(inflater, container, false);
+        adapter = new ChatFragment.ChatsPagerAdapter(getChildFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        pager = binding.getRoot().findViewById(R.id.chats_viewpager);
+        adapter.initFrags();
+        pager.setAdapter(adapter);
+        TabLayout tabs = binding.getRoot().findViewById(R.id.chats_tabs);
+        tabs.setupWithViewPager(pager);
+        return binding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        FragmentPageChatBinding binding = FragmentPageChatBinding.bind(getView());
+        binding = FragmentPageChatBinding.bind(getView());
 
         //SetRefreshing shows the internal Swiper view progress bar. Show this until messages load
         binding.swipeContainer.setRefreshing(true);
@@ -98,5 +120,43 @@ public class ChatFragment extends Fragment {
 //when we get the response back from the server, clear the edittext
         mSendModel.addResponseObserver(getViewLifecycleOwner(), response ->
                 binding.editMessage.setText(""));
+    }
+
+    public class ChatsPagerAdapter extends FragmentPagerAdapter {
+
+        private Fragment[] fragments;
+
+        private String[] titles;
+
+        public ChatsPagerAdapter(@NonNull FragmentManager fm, int behavior) {
+            super(fm, behavior);
+        }
+
+        public void initFrags() {
+            IntFunction<String> getString = getResources()::getString;
+            fragments = new Fragment[2];
+            titles = new String[2];
+            fragments[0] = new ChatFragment();
+            fragments[1] = new AddChatFragment();
+            titles[0] = getString.apply(R.string.tab_show_chats);
+            titles[1] = getString.apply(R.string.tab_add_chat);
+        }
+
+        @NonNull
+        @Override
+        public Fragment getItem(int position) {
+            return fragments[position];
+        }
+
+        @Override
+        public int getCount() {
+            return fragments.length;
+        }
+
+        @Nullable
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return titles[position];
+        }
     }
 }

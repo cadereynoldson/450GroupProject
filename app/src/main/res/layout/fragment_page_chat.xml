@@ -7,6 +7,21 @@
     android:layout_height="match_parent"
     tools:context=".chat.fragments.ChatFragment">
 
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/chats_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/chats_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.viewpager.widget.ViewPager>
+
     <EditText
         android:id="@+id/edit_message"
         android:layout_width="0dp"
@@ -55,8 +70,8 @@
             android:layout_marginEnd="8dp"
             android:orientation="vertical"
             app:layoutManager="LinearLayoutManager"
-            tools:context="edu.uw.tcss450.uiandnavigationlab.ui.blog.BlogListFragment"
             tools:listitem="@layout/fragment_page_chat"/>
+
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

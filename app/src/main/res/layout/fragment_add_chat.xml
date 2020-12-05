@@ -25,14 +25,16 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="578dp"
-        android:layout_height="704dp"
+        android:layout_width="385dp"
+        android:layout_height="474dp"
         android:layout_marginTop="122dp"
         android:layout_marginBottom="420dp"
         android:src="@drawable/logo_cloud_chat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.489" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

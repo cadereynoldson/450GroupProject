@@ -44,8 +44,8 @@ com/example/groupproject_g3/weather/fragments/WeatherMainFragmentDirections.java
  com.example.groupproject_g3.weather.fragments.WeatherMainFragmentDirections
  com.example.groupproject_g3.weather.fragments.WeatherMainFragmentDirections$1
  com.example.groupproject_g3.weather.fragments.WeatherMainFragmentDirections$ActionNavigationWeatherToWeatherForecastFragment
-com/example/groupproject_g3/chat/fragments/ChatMessage.java
- com.example.groupproject_g3.chat.fragments.ChatMessage
+com/example/groupproject_g3/authorization/fragments/SignInFragment.java
+ com.example.groupproject_g3.authorization.fragments.SignInFragment
 com/example/groupproject_g3/contact/fragments/ContactPendingFragment.java
  com.example.groupproject_g3.contact.fragments.ContactPendingFragment
 com/example/groupproject_g3/authorization/fragments/SignInFragmentArgs.java
@@ -57,10 +57,10 @@ com/example/groupproject_g3/authorization/fragments/VerificationViewModel.java
 com/example/groupproject_g3/contact/fragments/ContactAddedMeRecyclerViewAdapter.java
  com.example.groupproject_g3.contact.fragments.ContactAddedMeRecyclerViewAdapter
  com.example.groupproject_g3.contact.fragments.ContactAddedMeRecyclerViewAdapter$ContactAddedMeViewHolder
-com/example/groupproject_g3/databinding/FragmentWeatherHoursItemBinding.java
- com.example.groupproject_g3.databinding.FragmentWeatherHoursItemBinding
 com/example/groupproject_g3/databinding/FragmentPageChatBinding.java
  com.example.groupproject_g3.databinding.FragmentPageChatBinding
+com/example/groupproject_g3/databinding/FragmentWeatherHoursItemBinding.java
+ com.example.groupproject_g3.databinding.FragmentWeatherHoursItemBinding
 com/example/groupproject_g3/contact/fragments/ContactRecyclerViewAdapter.java
  com.example.groupproject_g3.contact.fragments.ContactRecyclerViewAdapter
  com.example.groupproject_g3.contact.fragments.ContactRecyclerViewAdapter$ContactViewHolder
@@ -97,6 +97,7 @@ com/example/groupproject_g3/contact/fragments/ContactAddedMeViewModel.java
  com.example.groupproject_g3.contact.fragments.ContactAddedMeViewModel$1
 com/example/groupproject_g3/chat/fragments/ChatFragment.java
  com.example.groupproject_g3.chat.fragments.ChatFragment
+ com.example.groupproject_g3.chat.fragments.ChatFragment$ChatsPagerAdapter
 com/example/groupproject_g3/weather/fragments/WeatherDaysItem.java
  com.example.groupproject_g3.weather.fragments.WeatherDaysItem
 com/example/groupproject_g3/weather/fragments/WeatherHoursRecyclerViewAdapter.java
@@ -206,5 +207,5 @@ com/example/groupproject_g3/authorization/fragments/SignInFragmentDirections.jav
  com.example.groupproject_g3.authorization.fragments.SignInFragmentDirections$ActionSignInFragmentToMainActivity
 com/example/groupproject_g3/databinding/ActivityMainBinding.java
  com.example.groupproject_g3.databinding.ActivityMainBinding
-com/example/groupproject_g3/authorization/fragments/SignInFragment.java
- com.example.groupproject_g3.authorization.fragments.SignInFragment
+com/example/groupproject_g3/chat/fragments/ChatMessage.java
+ com.example.groupproject_g3.chat.fragments.ChatMessage

@@ -51,7 +51,8 @@
     <string name="button_verification_return">Return to SignIn</string>
 
     <string name="action_add_chat">Add Chat</string>
-
+    <string name="tab_add_chat">Add Chat</string>
+    <string name="tab_show_chats">Chats</string>
 
     <string name="menu_dashboard">Dashboard</string>
     <string name="menu_more">More</string>
