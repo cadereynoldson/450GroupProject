@@ -64,9 +64,9 @@ public class ContactSentRequestsRecyclerViewAdapter extends RecyclerView.Adapter
             binding.textSentReqName.setText(mContactItem.getUserName());
             binding.textSentReqUsername.setText(mContactItem.getFirstName() + " " + mContactItem.getLastName());
             binding.buttonCancelContactRequest.setOnClickListener(view -> {
+                deleteViewModel.connectDelete(userInfoViewModel.getJwt(), userInfoViewModel.getUserId(), contactItem.getUserId());
                 mContacts.remove(contactItem);
                 notifyItemRemoved(getLayoutPosition());
-                deleteViewModel.connectDelete(userInfoViewModel.getJwt(), userInfoViewModel.getUserId(), contactItem.getUserId());
             });
         }
     }
