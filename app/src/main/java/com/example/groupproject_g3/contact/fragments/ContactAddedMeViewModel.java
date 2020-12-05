@@ -141,7 +141,7 @@ public class ContactAddedMeViewModel extends AndroidViewModel {
     public void acceptRequest(String authVal, int thisUserId, int userIdTwo) {
         String url = acceptContactURL + "?memberIdOne=" + thisUserId + "&memberIdTwo=" + userIdTwo;
         lastAcceptMemberId = userIdTwo;
-        Request request = new JsonObjectRequest(Request.Method.DELETE,
+        Request request = new JsonObjectRequest(Request.Method.PUT,
                 url,
                 null,
                 this::handleAccept,
@@ -167,6 +167,7 @@ public class ContactAddedMeViewModel extends AndroidViewModel {
     }
 
     private void handleAcceptError(VolleyError volleyError) {
+        volleyError.printStackTrace();
     }
 
     private void handleDeleteError(VolleyError volleyError) {

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.groupproject_g3.R;
 import com.example.groupproject_g3.databinding.FragmentContactItemBinding;
+import com.example.groupproject_g3.model.UserInfoViewModel;
 
 import java.util.List;
 
@@ -16,7 +17,13 @@ public class ContactRecyclerViewAdapter extends RecyclerView.Adapter<ContactRecy
 
     private final List<ContactItem> mContacts;
 
-    public ContactRecyclerViewAdapter(List<ContactItem> contacts) {
+    private final ContactListViewModel listViewModel;
+
+    private final UserInfoViewModel userInfoViewModel;
+
+    public ContactRecyclerViewAdapter(ContactListViewModel listViewModel, UserInfoViewModel userInfoViewModel, List<ContactItem> contacts) {
+        this.listViewModel =  listViewModel;
+        this.userInfoViewModel = userInfoViewModel;
         mContacts = contacts;
     }
 
@@ -52,9 +59,15 @@ public class ContactRecyclerViewAdapter extends RecyclerView.Adapter<ContactRecy
 
         public void setContact(final ContactItem contactItem) {
             mContactItem = contactItem;
+            binding.titleContactsUsername.setText(mContactItem.getUserName());
             binding.textUsername.setText(mContactItem.getUserName());
             binding.textEmail.setText(mContactItem.getEmail());
             binding.textName.setText(mContactItem.getFirstName() + " " + mContactItem.getLastName());
+            binding.buttonDeleteContact.setOnClickListener(view -> {
+                listViewModel.connectDelete(userInfoViewModel.getJwt(), userInfoViewModel.getUserId(), contactItem.getUserId());
+                mContacts.remove(contactItem);
+                notifyItemRemoved(getLayoutPosition());
+            });
         }
     }
 }
