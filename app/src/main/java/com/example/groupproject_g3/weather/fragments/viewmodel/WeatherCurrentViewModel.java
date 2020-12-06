@@ -1,7 +1,7 @@
 /**
  * A view model of the current weather to be displayed.
  */
-package com.example.groupproject_g3.weather.fragments;
+package com.example.groupproject_g3.weather.fragments.viewmodel;
 
 import android.app.Application;
 import android.graphics.drawable.Drawable;
@@ -19,6 +19,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.groupproject_g3.R;
+import com.example.groupproject_g3.weather.fragments.WeatherInformation;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -111,8 +112,8 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
             JSONArray weatherArr = result.getJSONArray(getString.apply(R.string.key_weather_current_weather));
             String currentWeather = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_description));
             String icon = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_icon));
-            String urlIcon = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
-
+            String urlIcon = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
+            Log.i("Icon: ", urlIcon);
             //Fetch main array and get the temperature value from it.
             JSONObject tempData = result.getJSONObject(getString.apply(R.string.key_weather_current_weather_main));
             Integer currentTemp = tempData.getInt(getString.apply(R.string.key_weather_current_temp));

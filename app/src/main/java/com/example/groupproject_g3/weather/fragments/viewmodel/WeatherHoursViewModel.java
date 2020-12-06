@@ -1,4 +1,4 @@
-package com.example.groupproject_g3.weather.fragments;
+package com.example.groupproject_g3.weather.fragments.viewmodel;
 
 import android.app.Application;
 import android.util.Log;
@@ -15,6 +15,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.groupproject_g3.R;
+import com.example.groupproject_g3.weather.fragments.WeatherInformation;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -81,22 +82,22 @@ public class WeatherHoursViewModel extends AndroidViewModel {
         IntFunction<String> getString =
                 getApplication().getResources()::getString;
         try {
-            Log.e("TESTING DISPLAY", result.toString()); //TODO REMOVE
             if (result.has(getString.apply(R.string.key_weather_24hour_hourly))) {
                 JSONArray data = result.getJSONArray("hourly");
 
                 for (int i = 0; i < data.length(); i++) {
-                    Log.i("Hourly Weather Data ", data.toString());
 
                     JSONObject info = data.getJSONObject(i);
-                    Log.i("Hourly Weather Result ", info.toString());
 
                     //fetch date, temperature, weather, and time.
                     long dateTime = ((long) info.getInt(getString.apply(R.string.key_weather_date_time))) * 1000l;
 
-                    Integer currentTemp = info.getInt(getString.apply(R.string.key_weather_current_temp));
+                    JSONArray weatherArr = info.getJSONArray(getString.apply(R.string.key_weather_current_weather));
+                    String icon = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_icon));
+                    String urlIcon = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
+                    Log.i("Icon: ", urlIcon);
 
-                    Log.i("Hourly Weather temp ", currentTemp.toString());
+                    Integer currentTemp = info.getInt(getString.apply(R.string.key_weather_current_temp));
 
                     Date date = new Date(dateTime);
                     Calendar calendar = Calendar.getInstance();
@@ -105,13 +106,12 @@ public class WeatherHoursViewModel extends AndroidViewModel {
                     String dateDisplay = calendar.get(Calendar.MONTH) + "/" + calendar.get(Calendar.DAY_OF_MONTH);
 
                     String time = new SimpleDateFormat("HH").format(date);
-                    Log.i("Hourly Weather time", time);
-
 
                     WeatherInformation HoursInfo = new WeatherInformation.Builder(
                             dateDisplay,
                             currentTemp.toString())
                             .addTime(time)
+                            .addIcon(urlIcon)
                             .build();
 
                     if (!information.getValue().contains(HoursInfo)) {

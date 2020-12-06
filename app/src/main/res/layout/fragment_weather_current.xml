@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_centerInParent="false"
@@ -8,13 +9,15 @@
     android:layout_centerVertical="false">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_current"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="230dp"
         android:layout_centerVertical="false"
-        app:cardBackgroundColor="#9000BCD4"
-        app:cardCornerRadius="15dp">
+        app:cardBackgroundColor="#6303A9F4"
+        app:cardCornerRadius="0dp">
 
         <RelativeLayout
+            android:id="@+id/layout_current"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -25,12 +28,13 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="120dp"
                 android:fontFamily="sans-serif-thin"
-                android:text="46.13°F"
+                android:text="46°F"
                 android:textColor="#FFFFFF"
-                android:textSize="80sp" />
+                android:textSize="80sp"
+                tools:visibility="gone" />
 
             <androidx.cardview.widget.CardView
-                android:layout_width="230dp"
+                android:layout_width="220dp"
                 android:layout_height="120dp"
                 app:cardBackgroundColor="#00FFFFFF"
                 app:cardCornerRadius="15dp"
@@ -45,11 +49,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginStart="16dp"
                         android:layout_marginTop="24dp"
                         android:text="10/16/2020"
                         android:textColor="#FFFFFF"
-                        android:textSize="30sp" />
+                        android:textSize="30sp"
+                        tools:visibility="gone" />
 
                     <TextView
                         android:id="@+id/text_current_time"
@@ -62,18 +66,19 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Display4"
                         android:textColor="#FFFFFF"
                         android:textSize="38sp"
-                        android:textStyle="italic" />
+                        android:textStyle="italic"
+                        tools:visibility="invisible" />
                 </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="160dp"
+                android:layout_width="170dp"
                 android:layout_height="130dp"
                 android:layout_alignParentEnd="true"
                 app:cardBackgroundColor="#00FFFFFF"
                 app:cardCornerRadius="15dp"
-                app:cardElevation="0dp" >
+                app:cardElevation="0dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -81,11 +86,12 @@
 
                     <ImageView
                         android:id="@+id/image_current_icon"
-                        android:layout_width="85dp"
-                        android:layout_height="84dp"
+                        android:layout_width="91dp"
+                        android:layout_height="88dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
-                        app:srcCompat="@drawable/ic_weather_yellow_24" />
+                        app:srcCompat="@drawable/ic_weather_yellow_24"
+                        tools:visibility="invisible" />
 
                     <TextView
                         android:id="@+id/text_current_description"
@@ -96,7 +102,8 @@
                         android:gravity="center"
                         android:text="Sunny"
                         android:textColor="#FFFFFF"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        tools:visibility="invisible" />
                 </RelativeLayout>
 
             </androidx.cardview.widget.CardView>

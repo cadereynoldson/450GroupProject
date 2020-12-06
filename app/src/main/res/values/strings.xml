@@ -10,6 +10,8 @@
     <string name="title_contacts">Contacts</string>
     <string name="title_weather">Weather</string>
     <string name="title_weather_forecast">Weather Forecast</string>
+    <string name="title_weather_search">Weather Search</string>
+    <string name="title_weather_map">Weather Map</string>
     <string name="title_profile">Profile</string>
 
 
@@ -59,7 +61,6 @@
     <string name="menu_saved">Saved</string>
 
     <string name="weather_search">Search for Location</string>
-    <string name="weather_action_link">More Info</string>
 
     <!--
     This string is used for square devices and overridden by hello_world in
@@ -72,5 +73,11 @@
     <string name="keys_shared_prefs">My Auth App Shared Prefs</string>
     <string name="keys_prefs_jwt">Sharded Prefs JWT</string>
     <string name="action_sign_out">Sign Out</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
 
 </resources>
