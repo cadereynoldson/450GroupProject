@@ -119,7 +119,6 @@ public class PushReceiver extends BroadcastReceiver {
             i.putExtras(intent.getExtras());
 
             context.sendBroadcast(i);
-
         } else {
             //app is in the background so create and post a notification
             Log.d("PUSHY", "Message received in background: " + message.getMessage());
