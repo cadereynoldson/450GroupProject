@@ -41,6 +41,7 @@ public class PushReceiver extends BroadcastReceiver {
         //So perform logic/routing based on the "type"
         //feel free to change the key or type of values.
         String typeOfMessage = intent.getStringExtra("type");
+        Log.e("Pushy Testing", "Im here!");
         ChatMessage message = null;
         int chatId = -1;
         try{

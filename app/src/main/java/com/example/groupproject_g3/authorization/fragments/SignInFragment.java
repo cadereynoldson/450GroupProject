@@ -41,9 +41,11 @@ public class SignInFragment extends Fragment {
     /** View Model for the fragment. */
     private SignInViewModel mSignInModel;
 
+    /** Push view model for handling storage of the pushy token. */
     private PushyTokenViewModel mPushyTokenViewModel;
-    private UserInfoViewModel mUserViewModel;
 
+    /** User info view model. */
+    private UserInfoViewModel mUserViewModel;
 
     /** An Email validator that checks for the length, white spaces, and special char '@'. */
     private PasswordValidator mEmailValidator = checkPwdLength(2)
@@ -147,7 +149,6 @@ public class SignInFragment extends Fragment {
      * @param jwt the JSON Web Token supplied by the server
      */
     private void navigateToSuccess(final String email, final String jwt, final int userId) {
-
         if (binding.switchSignin.isChecked()) {
             SharedPreferences prefs =
                     getActivity().getSharedPreferences(
@@ -156,8 +157,6 @@ public class SignInFragment extends Fragment {
             //Store the credentials in SharedPrefs
             prefs.edit().putString(getString(R.string.keys_prefs_jwt), jwt).apply();
         }
-
-
         Navigation.findNavController(getView())
                 .navigate(SignInFragmentDirections
                         .actionSignInFragmentToMainActivity(email, jwt, userId));
