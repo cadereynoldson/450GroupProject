@@ -137,7 +137,9 @@ public class MainActivity extends AppCompatActivity {
                 this,
                 new UserInfoViewModel.UserInfoViewModelFactory(args.getJwt()))
                 .get(UserInfoViewModel.class);
+
         buildMenu();
+
         mNewMessageModel.addMessageCountObserver(this, count -> {
             BadgeDrawable badge = binding.bottomNavMenu.getOrCreateBadge(R.id.navigation_chats);
             badge.setMaxCharacterCount(2);
@@ -226,6 +228,6 @@ public class MainActivity extends AppCompatActivity {
                 new ViewModelProvider(this)
                         .get(UserInfoViewModel.class)
                         .getJwt()
-        );    }
-
+        );
+    }
 }

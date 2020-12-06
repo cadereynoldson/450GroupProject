@@ -1,4 +1,4 @@
-package com.example.groupproject_g3.weather.fragments;
+package com.example.groupproject_g3.weather.fragments.viewmodel;
 
 import android.app.Application;
 import android.util.Log;
@@ -15,6 +15,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.groupproject_g3.R;
+import com.example.groupproject_g3.weather.fragments.WeatherInformation;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -100,22 +101,6 @@ public class WeatherDaysViewModel extends AndroidViewModel {
             Double lat = coordData.getDouble(getString.apply(R.string.key_weather_current_lat));
             Double lon = coordData.getDouble(getString.apply(R.string.key_weather_current_lon));
 
-            // Sunrise and Sunset
-            long sunriseData = ((long) cityData.getInt(getString.apply(R.string.key_weather_forecast_sunrise))) * 10001;
-            long sunsetData = ((long) cityData.getInt(getString.apply(R.string.key_weather_forecast_sunset))) * 10001;
-
-            Date sunriseDate = new Date(sunriseData);
-            Calendar calendar1 = Calendar.getInstance();
-            calendar1.setTime(sunriseDate);
-
-            String sunrise = new SimpleDateFormat("HH:mm").format(sunriseDate);
-
-            Date sunsetDate = new Date(sunsetData);
-            Calendar calendar2 = Calendar.getInstance();
-            calendar2.setTime(sunsetDate);
-
-            String sunset = new SimpleDateFormat("HH:mm").format(sunsetDate);
-
             if (result.has(getString.apply(R.string.key_weather_forecast_list))) {
                 JSONArray data = result.getJSONArray(getString.apply(R.string.key_weather_forecast_list));
                 for (int i = 0; i < data.length(); i++) {
@@ -127,6 +112,9 @@ public class WeatherDaysViewModel extends AndroidViewModel {
                     //Fetch weather array and get main value from the response.
                     JSONArray weatherArr = info.getJSONArray(getString.apply(R.string.key_weather_current_weather));
                     String currentWeather = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_description));
+                    String icon = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_icon));
+                    String urlIcon = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
+                    Log.i("Icon: ", urlIcon);
 
                     //Fetch main array and get the temperature value from it.
                     JSONObject tempData = info.getJSONObject(getString.apply(R.string.key_weather_current_weather_main));
@@ -171,10 +159,9 @@ public class WeatherDaysViewModel extends AndroidViewModel {
                             .addCountry(country)
                             .addLat(lat.toString())
                             .addLon(lon.toString())
-                            .addSunrise(sunrise)
-                            .addSunset(sunset)
                             .addSpeed(windSpeed.toString())
                             .addDirection(windDirection.toString())
+                            .addIcon(urlIcon)
                             .build();
 
                     if (!information.getValue().contains(DaysInfo)) {

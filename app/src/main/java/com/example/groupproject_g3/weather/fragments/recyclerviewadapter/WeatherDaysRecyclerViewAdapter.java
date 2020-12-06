@@ -1,5 +1,6 @@
-package com.example.groupproject_g3.weather.fragments;
+package com.example.groupproject_g3.weather.fragments.recyclerviewadapter;
 
+import android.content.res.Resources;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.groupproject_g3.R;
 import com.example.groupproject_g3.databinding.FragmentWeatherDaysItemBinding;
+import com.example.groupproject_g3.weather.fragments.WeatherBackground;
+import com.example.groupproject_g3.weather.fragments.WeatherInformation;
+import com.example.groupproject_g3.weather.fragments.WeatherMainFragmentDirections;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -60,11 +64,13 @@ public class WeatherDaysRecyclerViewAdapter extends RecyclerView.Adapter<Weather
             binding.textDaysMin.setText(info.getmTempMin() + "°");
             binding.textDaysMax.setText(info.getmTempMax() + "°");
             binding.textDays.setText(info.getmDay());
-            binding.getRoot().setOnClickListener(view -> {
+            binding.textDaysTime.setText(info.getmTime());
+            binding.weatherCard.setOnClickListener(view -> {
                 Navigation.findNavController(mView).navigate(
                         WeatherMainFragmentDirections
                                 .actionNavigationWeatherToWeatherForecastFragment(info));
             });
+
             Picasso.get().load(info.getmIcon()).into(binding.imageDaysForecast);
         }
     }

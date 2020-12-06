@@ -5,20 +5,33 @@
     tools:showIn="navigation_view">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/app_bar_search"
-            android:icon="@drawable/ic_search_black_24dp"
-            android:title="Search"
-            app:actionViewClass="android.widget.SearchView" />
+            android:id="@+id/menu_home"
+            android:title="Home" />
         <item
-            android:id="@+id/menu_weather_dashboard"
-            android:title="@string/menu_dashboard" />
-        <item android:title="Saved" />
+            android:id="@+id/menu_weather"
+            android:title="Weather" />
+        <item
+            android:id="@+id/menu_chats"
+            android:title="Chats" />
+        <item
+            android:id="@+id/menu_contact"
+            android:title="Contact" />
+        <item
+            android:id="@+id/menu_profile"
+            android:title="Profile" />
+        <item
+            android:id="@+id/action_sign_out"
+            android:title="@string/action_sign_out" />
     </group>
+
     <item android:title="@string/menu_more">
         <menu>
-            <item
-                android:id="@+id/menu_aboutApp"
-                android:title="@string/menu_about_app" />
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/menu_aboutApp"
+                    android:title="@string/menu_about_app" />
+            </group>
         </menu>
     </item>
+
 </menu>
