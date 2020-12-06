@@ -24,19 +24,24 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.groupproject_g3.R;
 import com.example.groupproject_g3.chat.fragments.ChatMessage;
 import com.example.groupproject_g3.chat.fragments.ChatViewModel;
+import com.example.groupproject_g3.contact.fragments.ContactAddedMeViewModel;
+import com.example.groupproject_g3.contact.fragments.ContactListViewModel;
+import com.example.groupproject_g3.contact.fragments.ContactSentRequestsViewModel;
 import com.example.groupproject_g3.databinding.ActivityMainBinding;
+import com.example.groupproject_g3.model.ContactNotificationCountViewModel;
 import com.example.groupproject_g3.model.NewMessageCountViewModel;
 import com.example.groupproject_g3.model.PushyTokenViewModel;
 import com.example.groupproject_g3.model.UserInfoViewModel;
 import com.example.groupproject_g3.services.PushReceiver;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
     private MainPushMessageReceiver mPushMessageReceiver;
+    private ContactsPushReceiver mContactsPushReceiver;
     private NewMessageCountViewModel mNewMessageModel;
+    private ContactNotificationCountViewModel mContactsNotificationModel;
     private ActivityMainBinding binding;
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -47,13 +52,13 @@ public class MainActivity extends AppCompatActivity {
         private ChatViewModel mModel =
                 new ViewModelProvider(MainActivity.this)
                         .get(ChatViewModel.class);
+
         @Override
         public void onReceive(Context context, Intent intent) {
             NavController nc =
                     Navigation.findNavController(
                             MainActivity.this, R.id.nav_host_fragment);
             NavDestination nd = nc.getCurrentDestination();
-            Log.e("Push Reciever:", "Im here!");
             if (intent.hasExtra("chatMessage")) {
                 ChatMessage cm = (ChatMessage) intent.getSerializableExtra("chatMessage");
                 //If the user is not on the chat screen, update the
@@ -68,30 +73,58 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Notifies the contacts page to update itself.
+     */
+    private class ContactsPushReceiver extends BroadcastReceiver {
+        private ContactSentRequestsViewModel sentRequestsViewModel = new ViewModelProvider(MainActivity.this)
+                .get(ContactSentRequestsViewModel.class);
+        private ContactAddedMeViewModel addedMeViewModel = new ViewModelProvider(MainActivity.this)
+                .get(ContactAddedMeViewModel.class);
+        private ContactListViewModel listViewModel = new ViewModelProvider(MainActivity.this)
+                .get(ContactListViewModel.class);
+        private UserInfoViewModel userInfoViewModel = new ViewModelProvider(MainActivity.this)
+                .get(UserInfoViewModel.class);
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            NavController nc =
+                    Navigation.findNavController(
+                            MainActivity.this, R.id.nav_host_fragment);
+            NavDestination nd = nc.getCurrentDestination();
+            sentRequestsViewModel.connectGet(userInfoViewModel.getJwt(), userInfoViewModel.getUserId());
+            addedMeViewModel.connectGet(userInfoViewModel.getJwt(), userInfoViewModel.getUserId());
+            listViewModel.connectGet(userInfoViewModel.getJwt(), userInfoViewModel.getUserId());
+        }
+    }
+
     @Override
     public void onResume() {
         super.onResume();
-        if (mPushMessageReceiver == null) {
+        if (mPushMessageReceiver == null)
             mPushMessageReceiver = new MainPushMessageReceiver();
-        }
-        IntentFilter iFilter = new IntentFilter(PushReceiver.RECEIVED_NEW_MESSAGE);
-        registerReceiver(mPushMessageReceiver, iFilter);
+        if (mContactsPushReceiver == null)
+            mContactsPushReceiver = new ContactsPushReceiver();
+        IntentFilter messageFilter = new IntentFilter(PushReceiver.RECEIVED_NEW_MESSAGE);
+        IntentFilter contactsFilter = new IntentFilter(PushReceiver.CONTACTS_UPDATED);
+        registerReceiver(mPushMessageReceiver, messageFilter);
+        registerReceiver(mContactsPushReceiver, contactsFilter);
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        if (mPushMessageReceiver != null){
+        if (mPushMessageReceiver != null)
             unregisterReceiver(mPushMessageReceiver);
-        }
+        if (mContactsPushReceiver != null)
+            unregisterReceiver(mContactsPushReceiver);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         mNewMessageModel = new ViewModelProvider(this).get(NewMessageCountViewModel.class);
-
+        mContactsNotificationModel = new ViewModelProvider(this).get(ContactNotificationCountViewModel.class);
         MainActivityArgs args = MainActivityArgs.fromBundle(getIntent().getExtras());
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -109,6 +142,17 @@ public class MainActivity extends AppCompatActivity {
                 badge.setVisible(true);
             } else {
                 //user did some action to clear the new messages, remove the badge
+                badge.clearNumber();
+                badge.setVisible(false);
+            }
+        });
+        mContactsNotificationModel.addNotifictionCountObserver(this, count -> {
+            BadgeDrawable badge = binding.bottomNavMenu.getOrCreateBadge(R.id.navigation_contacts);
+            badge.setMaxCharacterCount(2);
+            if (count > 0) {
+                badge.setNumber(count);
+                badge.setVisible(true);
+            } else {
                 badge.clearNumber();
                 badge.setVisible(false);
             }
@@ -133,6 +177,8 @@ public class MainActivity extends AppCompatActivity {
         navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
             if (destination.getId() == R.id.navigation_chats) {
                 mNewMessageModel.reset();
+            } else if (destination.getId() == R.id.navigation_contacts) {
+                mContactsNotificationModel.reset();
             }
         });
     }

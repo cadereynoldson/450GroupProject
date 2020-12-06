@@ -77,6 +77,8 @@ public class ContactAddFragment extends Fragment {
         String search = binding.textSearch.getText().toString();
         if (search.isEmpty())
             binding.textSearch.setError("Please enter a value.");
+        else if (search.equals(userInfoViewModel.getEmail()))
+            binding.textSearch.setError("You cannot add yourself as a contact.");
         else if (temp.equals(getString.apply(R.string.key_contacts_email).toLowerCase()))
             addViewModel.addContactByEmail(userInfoViewModel.getJwt(), userInfoViewModel.getUserId(), search);
         else if (temp.equals(getString.apply(R.string.key_contacts_username).toLowerCase()))
