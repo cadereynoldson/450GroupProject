@@ -27,24 +27,77 @@ public class PushReceiver extends BroadcastReceiver {
 
     public static final String RECEIVED_NEW_MESSAGE = "new message from pushy";
 
+    public static final String CONTACTS_UPDATED = "contacts page update from push";
+
     private static final String CHANNEL_ID = "1";
 
     @Override
     public void onReceive(Context context, Intent intent) {
-
-        //the following variables are used to store the information sent from Pushy
-        //In the WS, you define what gets sent. You can change it there to suit your needs
-        //Then here on the Android side, decide what to do with the message you got
-
-        //for the lab, the WS is only sending chat messages so the type will always be msg
-        //for your project, the WS needs to send different types of push messages.
-        //So perform logic/routing based on the "type"
-        //feel free to change the key or type of values.
         String typeOfMessage = intent.getStringExtra("type");
-        Log.e("Pushy Testing", "Im here!");
-        ChatMessage message = null;
+        if (typeOfMessage.equals("contacts")) {
+            handleContactsNotification(context, intent);
+        } else if (typeOfMessage.equals("msg")) {
+            handleChatNotification(context, intent);
+        }
+    }
+
+    /**
+     * Handles an incoming contacts notification. Updates all contacts information.
+     * @param context the context of the message.
+     * @param intent the intent of the message.
+     */
+    private void handleContactsNotification(Context context, Intent intent) {
+        ActivityManager.RunningAppProcessInfo appProcessInfo = new ActivityManager.RunningAppProcessInfo();
+        ActivityManager.getMyMemoryState(appProcessInfo);
+
+        if (appProcessInfo.importance == IMPORTANCE_FOREGROUND || appProcessInfo.importance == IMPORTANCE_VISIBLE) {
+            //app is in the foreground so send the message to the active Activities
+            Log.d("PUSHY", "Contacts notification recieved in foreground: ");
+
+            //create an Intent to broadcast a message to other parts of the app.
+            Intent i = new Intent(CONTACTS_UPDATED);
+            i.putExtras(intent.getExtras());
+            context.sendBroadcast(i);
+        } else {
+            //app is in the background so create and post a notification
+            Log.d("PUSHY", "Contacts info updated in background");
+
+            Intent i = new Intent(context, AuthorizationActivity.class);
+            i.putExtras(intent.getExtras());
+
+            PendingIntent pendingIntent = PendingIntent.getActivity(context, 0,
+                    i, PendingIntent.FLAG_UPDATE_CURRENT);
+
+            //research more on notifications the how to display them
+            //https://developer.android.com/guide/topics/ui/notifiers/notifications
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
+                    .setAutoCancel(true)
+                    .setSmallIcon(R.drawable.ic_chat_notification)
+                    .setContentTitle("Contacts Notification")
+                    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                    .setContentIntent(pendingIntent);
+
+            // Automatically configure a ChatMessageNotification Channel for devices running Android O+
+            Pushy.setNotificationChannel(builder, context);
+
+            // Get an instance of the NotificationManager service
+            NotificationManager notificationManager =
+                    (NotificationManager) context.getSystemService(context.NOTIFICATION_SERVICE);
+
+            // Build the notification and display it
+            notificationManager.notify(1, builder.build());
+        }
+    }
+
+    /**
+     * Handles an incoming chat notification.
+     * @param context the context of the message.
+     * @param intent the intent of the message.
+     */
+    private void handleChatNotification(Context context, Intent intent) {
         int chatId = -1;
-        try{
+        ChatMessage message = null;
+        try {
             message = ChatMessage.createFromJsonString(intent.getStringExtra("message"));
             chatId = intent.getIntExtra("chatid", -1);
         } catch (JSONException e) {
@@ -97,6 +150,5 @@ public class PushReceiver extends BroadcastReceiver {
             // Build the notification and display it
             notificationManager.notify(1, builder.build());
         }
-
     }
 }
