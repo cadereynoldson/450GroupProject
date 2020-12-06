@@ -92,6 +92,11 @@ public class MainActivity extends AppCompatActivity {
                     Navigation.findNavController(
                             MainActivity.this, R.id.nav_host_fragment);
             NavDestination nd = nc.getCurrentDestination();
+            if (nd.getId() != R.id.navigation_contacts) {
+                if (!intent.getStringExtra("message").toLowerCase().contains("delete"))  {
+                    mContactsNotificationModel.increment();
+                }
+            }
             sentRequestsViewModel.connectGet(userInfoViewModel.getJwt(), userInfoViewModel.getUserId());
             addedMeViewModel.connectGet(userInfoViewModel.getJwt(), userInfoViewModel.getUserId());
             listViewModel.connectGet(userInfoViewModel.getJwt(), userInfoViewModel.getUserId());
