@@ -11,9 +11,8 @@
         android:id="@+id/added_me_card"
         android:layout_width="375dp"
         android:layout_height="250dp"
-        android:layout_marginTop="16dp"
-        android:background="#FFFFFF"
-        app:cardBackgroundColor="@color/black"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/off_white"
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -22,8 +21,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/text_added_me_approval"
@@ -41,40 +39,25 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-                android:id="@+id/contacts_pending_accept_layout"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginBottom="4dp"
-                android:background="@color/white"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_pending_contacts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                app:layoutManager="LinearLayoutManager"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_added_me_approval"
-                app:layout_constraintVertical_bias="1.0">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_pending_contacts"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:orientation="vertical"
-                    app:layoutManager="LinearLayoutManager"
-                    tools:listitem="@layout/fragment_contact_added_me_item" />
-
-            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                tools:listitem="@layout/fragment_contact_added_me_item" />
 
             <TextView
                 android:id="@+id/text_no_contact_requests"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/contacts_pending_no_requests"
-                app:layout_constraintBottom_toBottomOf="@+id/contacts_pending_accept_layout"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_added_me_approval" />
@@ -86,7 +69,7 @@
         android:layout_width="375dp"
         android:layout_height="250dp"
         android:layout_marginTop="20dp"
-        app:cardBackgroundColor="?attr/colorBackgroundFloating"
+        app:cardBackgroundColor="@color/off_white"
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -112,33 +95,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-                android:id="@+id/contacts_awaiting_approval_layout"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginBottom="4dp"
-                android:background="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_waiting_approval"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                app:layoutManager="LinearLayoutManager"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_sent_requests_approval"
-                app:layout_constraintVertical_bias="1.0">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_waiting_approval"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:orientation="vertical"
-                    app:layoutManager="LinearLayoutManager"
-                    tools:listitem="@layout/fragment_contact_sent_request_item" />
-
-            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                tools:listitem="@layout/fragment_contact_sent_request_item" />
 
             <TextView
                 android:id="@+id/text_no_sent_requests"

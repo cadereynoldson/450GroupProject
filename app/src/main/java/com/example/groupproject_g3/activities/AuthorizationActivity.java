@@ -26,6 +26,5 @@ public class AuthorizationActivity extends AppCompatActivity {
         //If it is not already running, start the Pushy listening service
         Pushy.listen(this);
         initiatePushyTokenRequest();
-
     }
 }

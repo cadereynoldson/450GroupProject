@@ -8,6 +8,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -28,14 +29,25 @@ import java.util.Map;
 import java.util.function.IntFunction;
 
 public class ContactAddedMeViewModel extends AndroidViewModel {
+
     private MutableLiveData<List<ContactItem>> mContacts;
 
     private static final String connectionUrl = "https://cloud-chat-450.herokuapp.com/contacts/requests/";
+
+    private static final String deleteContactsURL = "https://cloud-chat-450.herokuapp.com/contacts/delete/";
+
+    private static final String acceptContactURL = "https://cloud-chat-450.herokuapp.com/contacts/requests/confirm/";
+
+    private int lastDeleteMemberId;
+
+    private int lastAcceptMemberId;
 
     public ContactAddedMeViewModel(@NonNull Application application) {
         super(application);
         mContacts = new MutableLiveData<>();
         mContacts.setValue(new ArrayList<ContactItem>());
+        lastDeleteMemberId = -1;
+        lastAcceptMemberId = -1;
     }
 
     public void addContactsListObserver(@NonNull LifecycleOwner owner,
@@ -100,5 +112,69 @@ public class ContactAddedMeViewModel extends AndroidViewModel {
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         Volley.newRequestQueue(getApplication().getApplicationContext()).add(request);
+    }
+
+    public void connectDelete(String authVal, int thisUserId, int userIdTwo) {
+        String url = deleteContactsURL + "?memberIdOne=" + thisUserId + "&memberIdTwo=" + userIdTwo;
+        lastDeleteMemberId = userIdTwo;
+        Request request = new JsonObjectRequest(Request.Method.DELETE,
+                url,
+                null,
+                this::handleDelete,
+                this::handleDeleteError) {
+            @Override
+            public Map<String, String> getHeaders() {
+                Map<String, String> headers = new HashMap<>();
+                // add headers <key,value>
+                headers.put("Authorization", authVal);
+                return headers;
+            }
+        };
+        request.setRetryPolicy(new DefaultRetryPolicy(
+                10_000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        Volley.newRequestQueue(getApplication().getApplicationContext())
+                .add(request);
+    }
+
+    public void acceptRequest(String authVal, int thisUserId, int userIdTwo) {
+        String url = acceptContactURL + "?memberIdOne=" + thisUserId + "&memberIdTwo=" + userIdTwo;
+        lastAcceptMemberId = userIdTwo;
+        Request request = new JsonObjectRequest(Request.Method.PUT,
+                url,
+                null,
+                this::handleAccept,
+                this::handleAcceptError) {
+            @Override
+            public Map<String, String> getHeaders() {
+                Map<String, String> headers = new HashMap<>();
+                // add headers <key,value>
+                headers.put("Authorization", authVal);
+                return headers;
+            }
+        };
+        request.setRetryPolicy(new DefaultRetryPolicy(
+                10_000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        Volley.newRequestQueue(getApplication().getApplicationContext())
+                .add(request);
+    }
+
+    private void handleAccept(JSONObject jsonObject) {
+        Log.i("Contact Accepted", "Contact successfully accepted.");
+    }
+
+    private void handleAcceptError(VolleyError volleyError) {
+        volleyError.printStackTrace();
+    }
+
+    private void handleDeleteError(VolleyError volleyError) {
+        Log.e("Delete Error:", "Error in deletion.");
+    }
+
+    private void handleDelete(JSONObject jsonObject) {
+        Log.i("Delete Successful.", "Success in deletion");
     }
 }
