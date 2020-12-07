@@ -1,4 +1,4 @@
-package com.example.groupproject_g3.weather.fragments;
+package com.example.groupproject_g3.weather.fragments.recyclerviewadapter;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.groupproject_g3.R;
 import com.example.groupproject_g3.databinding.FragmentWeatherHoursItemBinding;
+import com.example.groupproject_g3.weather.fragments.WeatherInformation;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
