@@ -39,6 +39,7 @@ public class ContactListViewModel extends AndroidViewModel {
 
     private static final String deleteContactsURL = "https://cloud-chat-450.herokuapp.com/contacts/delete/";
 
+
     /**
      *
      * @param application

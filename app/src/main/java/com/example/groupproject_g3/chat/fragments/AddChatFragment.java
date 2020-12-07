@@ -41,9 +41,6 @@ public class AddChatFragment extends Fragment {
     /** View model which allows for the addition of new Chats. */
     private AddChatViewModel mAddView;
 
-    /** Field for Incrementing the current chat ID */
-    private int CURRENT_CHAT_ID = 1;
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,8 +72,7 @@ public class AddChatFragment extends Fragment {
         if (addName.isEmpty())
             binding.textAddChat.setError("Please enter a name.");
         else {
-            mAddView.addChat(mUserInfo.getJwt(), addName, CURRENT_CHAT_ID);
-            CURRENT_CHAT_ID++;
+            mAddView.addChat(mUserInfo.getJwt(), addName);
         }
     }
 

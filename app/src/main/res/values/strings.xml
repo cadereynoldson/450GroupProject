@@ -53,8 +53,13 @@
     <string name="action_add_chat">Add Chat</string>
     <string name="tab_add_chat">Add Chat</string>
     <string name="text_add_chat">Type desired chat name here</string>
-    <string name="tab_show_chats">Chats</string>
+    <string name="tab_show_chats">Chat</string>
     <string name="tab_show_chatlist">ChatList</string>
+    <string name="button_add_contact_to_chat">Add contact into chat</string>
+    <string name="text_chatID">#</string>
+    <string name="text_chatName">ChatName</string>
+    <string name="text_contacts_names">Contacts Names</string>
+    <string name="text_no_chats">You currently have no Chats</string>
 
 
     <string name="menu_dashboard">Dashboard</string>

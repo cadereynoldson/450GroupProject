@@ -44,4 +44,8 @@
     <string name="key_weather_24hour_hourly">hourly</string>
     <string name="key_weather_24hour_temp">temp</string>
     <string name="key_weather_24hour_dt">dt</string>
+
+    <string name="key_chats_list">rows</string>
+    <string name="key_chats_name">name</string>
+    <string name="key_chats_ID">ID</string>
 </resources>

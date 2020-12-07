@@ -46,10 +46,9 @@ public class AddChatViewModel extends AndroidViewModel {
         mResponse.observe(owner, observer);
     }
 
-    public void addChat(final String authVal, final String chatName, final int chatId) {
+    public void addChat(final String authVal, final String chatName) {
         JSONObject body = new JSONObject();
         try {
-            body.put("chatId", chatId);
             body.put("name", chatName);
         } catch (JSONException e) {
             e.printStackTrace();

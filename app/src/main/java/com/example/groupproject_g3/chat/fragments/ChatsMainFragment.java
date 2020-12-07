@@ -67,14 +67,14 @@ public class ChatsMainFragment extends Fragment {
 
         public void initFrags() {
             IntFunction<String> getString = getResources()::getString;
-            fragments = new Fragment[2];
-            titles = new String[2];
+            fragments = new Fragment[3];
+            titles = new String[3];
             fragments[0] = new ChatFragment();
-            fragments[1] = new AddChatFragment();
-//            fragments[2] = new ChatListFragment();
+            fragments[1] = new ChatListFragment();
+            fragments[2] = new AddChatFragment();
             titles[0] = getString.apply(R.string.tab_show_chats);
-            titles[1] = getString.apply(R.string.tab_add_chat);
-//            titles[2] = getString.apply(R.string.tab_show_chatlist);
+            titles[1] = getString.apply(R.string.tab_show_chatlist);
+            titles[2] = getString.apply(R.string.tab_add_chat);
 
         }
 
