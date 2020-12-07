@@ -72,7 +72,7 @@ public class AddChatFragment extends Fragment {
         if (addName.isEmpty())
             binding.textAddChat.setError("Please enter a name.");
         else {
-            mAddView.addChat(mUserInfo.getJwt(), addName);
+            mAddView.addChat(mUserInfo.getJwt(), mUserInfo.getUserId(), addName);
         }
     }
 

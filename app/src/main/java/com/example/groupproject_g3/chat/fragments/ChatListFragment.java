@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.groupproject_g3.R;
+import com.example.groupproject_g3.contact.fragments.ContactRecyclerViewAdapter;
 import com.example.groupproject_g3.databinding.FragmentAddChatBinding;
 import com.example.groupproject_g3.databinding.FragmentChatListBinding;
 import com.example.groupproject_g3.model.UserInfoViewModel;
@@ -33,9 +34,9 @@ public class ChatListFragment extends Fragment {
     private UserInfoViewModel mUserInfo;
 
     /** View model which allows for the addition of new Chats. */
-    private AddChatViewModel mAddView;
-
     private ChatListViewModel mListView;
+
+    private ChatItemFragment mChatItem;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,7 +44,7 @@ public class ChatListFragment extends Fragment {
         ViewModelProvider provider = new ViewModelProvider(getActivity());
         mUserInfo = provider.get(UserInfoViewModel.class);
         mListView = provider.get(ChatListViewModel.class);
-
+        mListView.connectGet(mUserInfo.getJwt(), mUserInfo.getUserId());
     }
 
     @Override
@@ -56,18 +57,12 @@ public class ChatListFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        mListView.addChatListObserver(getViewLifecycleOwner(), chatList -> {
+            if (!chatList.isEmpty()) {
+                binding.recyclerChatlist.setAdapter(new ChatListRecyclerViewAdapter(mListView, chatList));
+                binding.textNoChats.setVisibility(View.GONE);
+            }
+        });
     }
 
-    /**
-     * Calls the add view model with the user input.
-     * @param view the view in which this is called by.
-     */
-    private void addContactToChat(View view) {
-
-    }
-
-    private void observeResponse(final JSONObject response) {
-
-    }
 }

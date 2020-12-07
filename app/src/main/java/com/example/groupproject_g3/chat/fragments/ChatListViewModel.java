@@ -8,8 +8,6 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModel;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -31,8 +29,7 @@ import java.util.function.IntFunction;
 
 public class ChatListViewModel extends AndroidViewModel {
 
-    private Map<Integer, MutableLiveData<List<ChatItem>>> mChats;
-    private ChatViewModel mChatView;
+    private MutableLiveData<List<ChatItemFragment>> mChats;
 
     private static final String chatsURL = "https://cloud-chat-450.herokuapp.com/chats/";
 
@@ -43,24 +40,13 @@ public class ChatListViewModel extends AndroidViewModel {
      */
     public ChatListViewModel(@NonNull Application application) {
         super(application);
-        mChats = new HashMap<>();
+        mChats = new MutableLiveData<>();
+        mChats.setValue(new ArrayList<ChatItemFragment>());
     }
 
-    public void addMessageObserver(int chatId,
-                                   @NonNull LifecycleOwner owner,
-                                   @NonNull Observer<? super List<ChatItem>> observer) {
-        getOrCreateMapEntry(chatId).observe(owner, observer);
-    }
-
-    public List<ChatItem> getChatListByChatId(final int chatId) {
-        return getOrCreateMapEntry(chatId).getValue();
-    }
-
-    private MutableLiveData<List<ChatItem>> getOrCreateMapEntry(final int chatId) {
-        if(!mChats.containsKey(chatId)) {
-            mChats.put(chatId, new MutableLiveData<>(new ArrayList<>()));
-        }
-        return mChats.get(chatId);
+    public void addChatListObserver(@NonNull LifecycleOwner owner,
+                                        @NonNull Observer<? super List<ChatItemFragment>> observer) {
+        mChats.observe(owner, observer);
     }
 
     private void handleError(final VolleyError error) {
@@ -70,44 +56,41 @@ public class ChatListViewModel extends AndroidViewModel {
         throw new IllegalStateException(error.getMessage());
     }
 
-    private void handleResult(final JSONObject response) {
-        List<ChatItem> list;
-        if (!response.has("chatId")) {
-            throw new IllegalStateException("Unexpected response in ChatViewModel: " + response);
-        }
+    private void handleResult(final JSONObject result) {
+        IntFunction<String> getString = //Converts an integer key to a string.
+                getApplication().getResources()::getString;
         try {
-            list = getChatListByChatId(response.getInt("chatId"));
-            JSONArray chats = response.getJSONArray("rows");
-            for(int i = 0; i < chats.length(); i++) {
-                JSONObject chat = chats.getJSONObject(i);
-                ChatItem cItem = new ChatItem(
-                        chat.getInt("chatID"),
-                        chat.getString("name")
-                );
-                if (!list.contains(cItem)) {
-                    // don't add a duplicate
-                    list.add(0, cItem);
-                } else {
-                    // this shouldn't happen but could with the asynchronous
-                    // nature of the application
-                    Log.wtf("Chat message already received",
-                            "Or duplicate id:" + cItem.getChatID());
-                }
+            JSONObject root = result;
+            Log.i("Result: ", result.toString());
+            if (root.has(getString.apply(R.string.key_chats_list))) {
+                JSONArray data =
+                        root.getJSONArray(getString.apply(R.string.key_chats_list));
+                for(int i = 0; i < data.length(); i++) {
+                    JSONObject jsonChatInfo = data.getJSONObject(i);
+                    ChatItemFragment post = new ChatItemFragment(
+                            jsonChatInfo.getInt("chatid"),
+                            jsonChatInfo.getString("name"));
 
+                            Log.i("Parsed chat room", post.toString());
+                    if (!mChats.getValue().contains(post)) {
+                        mChats.getValue().add(post);
+                    }
+                }
+            } else {
+                Log.e("ERROR!", "No chats array!");
             }
-            //inform observers of the change (setValue)
-            getOrCreateMapEntry(response.getInt("chatId")).setValue(list);
-        }catch (JSONException e) {
-            Log.e("JSON PARSE ERROR", "Found in handle Success ChatViewModel");
-            Log.e("JSON PARSE ERROR", "Error: " + e.getMessage());
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.e("ERROR!", e.getMessage());
         }
+        mChats.setValue(mChats.getValue());
     }
 
 
     public void connectGet(String authVal, int userId) {
         Request request = new JsonObjectRequest(Request.Method.GET,
                 chatsURL +
-                        userId,
+                userId,
                 null, //no body for get request.
                 this::handleResult,
                 this::handleError) {

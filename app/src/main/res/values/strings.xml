@@ -52,7 +52,7 @@
     <string name="button_verification_retry">Send Again</string>
     <string name="button_verification_return">Return to Sign In</string>
 
-    <string name="action_add_chat">Add Chat</string>
+    <string name="button_create_chat">Create Chat</string>
     <string name="tab_add_chat">Add Chat</string>
     <string name="text_add_chat">Type desired chat name here</string>
     <string name="tab_show_chats">Chat</string>

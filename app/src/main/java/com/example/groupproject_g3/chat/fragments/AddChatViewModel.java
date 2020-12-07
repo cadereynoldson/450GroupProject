@@ -27,6 +27,7 @@ public class AddChatViewModel extends AndroidViewModel {
 
     private final String chatsUrl = "https://cloud-chat-450.herokuapp.com/chats/";
     private MutableLiveData<JSONObject> mResponse;
+    private int mGeneratedChatID;
 
     public AddChatViewModel(@NonNull Application application) {
         super(application);
@@ -46,10 +47,11 @@ public class AddChatViewModel extends AndroidViewModel {
         mResponse.observe(owner, observer);
     }
 
-    public void addChat(final String authVal, final String chatName) {
+    public void addChat(final String authVal, final int userID, final String chatName) {
         JSONObject body = new JSONObject();
         try {
             body.put("name", chatName);
+            body.put("userID", userID);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -57,9 +59,56 @@ public class AddChatViewModel extends AndroidViewModel {
                 Request.Method.POST,
                 chatsUrl,
                 body,
+                this::handleSuccess,
+                this::handleError
+        ) {
+            @Override
+            public Map<String, String> getHeaders() {
+                Map<String, String> headers = new HashMap<>();
+                headers.put("Authorization", authVal);
+                return headers;
+            }
+        };
+        request.setRetryPolicy(new DefaultRetryPolicy(
+                10_000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        //Instantiate the RequestQueue and add the request to the queue
+        Volley.newRequestQueue(getApplication().getApplicationContext())
+                .add(request);
+
+    }
+
+    private void handleSuccess(JSONObject response) {
+        if (!response.has("chatId")) {
+            throw new IllegalStateException("Unexpected response in ChatViewModel: " + response);
+        }
+        try {
+            final int chatID = response.getInt("chatID");
+            final int userID = response.getInt("userID");
+            final String authVal = response.getString("authVal");
+            addCreatorToChat(authVal, userID, chatID);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void addCreatorToChat(final String authVal, final int userID, final int chatID) {
+        JSONObject body = new JSONObject();
+        try {
+            body.put("memberid", userID);
+            body.put("chatID", chatID);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        Request request = new JsonObjectRequest(
+                Request.Method.PUT,
+                chatsUrl +
+                        chatID,
+                body,
                 mResponse::setValue,
                 this::handleError
-
         ) {
             @Override
             public Map<String, String> getHeaders() {
@@ -76,6 +125,7 @@ public class AddChatViewModel extends AndroidViewModel {
         Volley.newRequestQueue(getApplication().getApplicationContext())
                 .add(request);
     }
+
 
 
     private void handleError(final VolleyError error) {

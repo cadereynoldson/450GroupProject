@@ -14,7 +14,7 @@
         android:layout_height="91dp"
         android:layout_marginBottom="195dp"
         android:background="@color/design_default_color_primary_dark"
-        android:text="@string/action_add_chat"
+        android:text="@string/button_create_chat"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
