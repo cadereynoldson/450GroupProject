@@ -17,6 +17,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.groupproject_g3.R;
 import com.example.groupproject_g3.databinding.FragmentAddContactBinding;
 import com.example.groupproject_g3.model.UserInfoViewModel;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -74,7 +75,7 @@ public class ContactAddFragment extends Fragment {
     private void addContact(View view) {
         String temp = selectedSearch.toLowerCase();
         IntFunction<String> getString = getResources()::getString;
-        String search = binding.textSearch.getText().toString();
+        String search = binding.textSearch.getText().toString().toLowerCase();
         if (search.isEmpty())
             binding.textSearch.setError("Please enter a value.");
         else if (search.equals(userInfoViewModel.getEmail()))
@@ -85,6 +86,10 @@ public class ContactAddFragment extends Fragment {
             addViewModel.addContactByUsername(userInfoViewModel.getJwt(), userInfoViewModel.getUserId(), search);
     }
 
+    /**
+     * Observers responses from the server.
+     * @param response the response JSON object.
+     */
     private void observeResponse(final JSONObject response) {
         if (response.length() > 0) {
             if (response.has("code")) {
@@ -93,7 +98,10 @@ public class ContactAddFragment extends Fragment {
                 } catch (JSONException e) {
                     Log.e("JSON Parse error.", e.getMessage());
                 }
-            } else {
+            } else if (response.has("success")){
+                Snackbar notification = Snackbar.make(binding.addContactRoot, R.string.contacts_added_contact, Snackbar.LENGTH_SHORT);
+                notification.setAnchorView(R.id.bottom_nav_menu);
+                notification.show();
                 Log.e("Added Contact", "Added Contact");
             }
         }

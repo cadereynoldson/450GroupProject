@@ -13,14 +13,26 @@ import com.example.groupproject_g3.model.UserInfoViewModel;
 
 import java.util.List;
 
+/**
+ * Recycler view adapter for the main contacts list.
+ */
 public class ContactRecyclerViewAdapter extends RecyclerView.Adapter<ContactRecyclerViewAdapter.ContactViewHolder> {
 
+    /** List of contacts to display. */
     private final List<ContactItem> mContacts;
 
+    /** View model for the list of contacts. */
     private final ContactListViewModel listViewModel;
 
+    /** View model for this user's information. */
     private final UserInfoViewModel userInfoViewModel;
 
+    /**
+     * Creates a new instance of this recycler view adapter.
+     * @param listViewModel Reference to the view model for the contacts list.
+     * @param userInfoViewModel Reference to the user info view model.
+     * @param contacts The contacts to display for this user.
+     */
     public ContactRecyclerViewAdapter(ContactListViewModel listViewModel, UserInfoViewModel userInfoViewModel, List<ContactItem> contacts) {
         this.listViewModel =  listViewModel;
         this.userInfoViewModel = userInfoViewModel;
@@ -43,6 +55,9 @@ public class ContactRecyclerViewAdapter extends RecyclerView.Adapter<ContactRecy
         return mContacts.size();
     }
 
+    /**
+     * View holder for displaying contacts.
+     */
     public class ContactViewHolder extends RecyclerView.ViewHolder {
 
         public final View mView;

@@ -33,16 +33,19 @@ import java.util.function.IntFunction;
  */
 public class ContactListViewModel extends AndroidViewModel {
 
+    /** Mutable live data of a list of this user's contacts. */
     private MutableLiveData<List<ContactItem>> mContacts;
 
+    /** URL for getting the contacts of this user. */
     private static final String getContactsURL = "https://cloud-chat-450.herokuapp.com/contacts/";
 
+    /** URL for deleting a contact of this user. */
     private static final String deleteContactsURL = "https://cloud-chat-450.herokuapp.com/contacts/delete/";
 
 
     /**
-     *
-     * @param application
+     * Creates a new instance of this view model.
+     * @param application the parent application.
      */
     public ContactListViewModel(@NonNull Application application) {
         super(application);
@@ -50,18 +53,29 @@ public class ContactListViewModel extends AndroidViewModel {
         mContacts.setValue(new ArrayList<ContactItem>());
     }
 
+    /**
+     * Adds an observer to the mutable live data.
+     * @param owner the owner of this lifecycle.
+     * @param observer the observer of the live data.
+     */
     public void addContactsListObserver(@NonNull LifecycleOwner owner,
                                         @NonNull Observer<? super List<ContactItem>> observer) {
         mContacts.observe(owner, observer);
     }
 
+    /**
+     * Handles a connection error.
+     * @param error the connection error object.
+     */
     private void handleError(final VolleyError error) {
-        //you should add much better error handling in a production release.
-        //i.e. YOUR PTOJECT
         Log.e("CONNECTION ERROR", error.getLocalizedMessage());
         throw new IllegalStateException(error.getMessage());
     }
 
+    /**
+     * Handles a result from a contacts list request.
+     * @param result the JSON object from the server.
+     */
     private void handleResult(final JSONObject result) {
         IntFunction<String> getString = //Converts an integer key to a string.
                 getApplication().getResources()::getString;
@@ -94,6 +108,11 @@ public class ContactListViewModel extends AndroidViewModel {
         mContacts.setValue(mContacts.getValue());
     }
 
+    /**
+     * Attempts to fetch the contacts of a user.
+     * @param authVal the JWT authorization value.
+     * @param userId the ID of the current user.
+     */
     public void connectGet(String authVal, int userId) {
         Request request = new JsonObjectRequest(Request.Method.GET,
                 getContactsURL + userId,
@@ -114,6 +133,12 @@ public class ContactListViewModel extends AndroidViewModel {
         Volley.newRequestQueue(getApplication().getApplicationContext()).add(request);
     }
 
+    /**
+     * Deletes a contact request between two users.
+     * @param authVal the JWT authorization value.
+     * @param userIdOne the id of the first user.
+     * @param userIdTwo the id of thes second user.
+     */
     public void connectDelete(String authVal, int userIdOne, int userIdTwo) {
         String url = deleteContactsURL + "?memberIdOne=" + userIdOne + "&memberIdTwo=" + userIdTwo;
         Request request = new JsonObjectRequest(Request.Method.DELETE,
@@ -137,10 +162,19 @@ public class ContactListViewModel extends AndroidViewModel {
                 .add(request);
     }
 
+    /**
+     * Handles the error of an deletion of a contact.
+     * @param volleyError object containing the info of the error.
+     */
     private void handleDeleteError(VolleyError volleyError) {
         Log.e("Delete Error:", "Error in deletion.");
+        volleyError.printStackTrace();
     }
 
+    /**
+     * Handles the deletion of a contact.
+     * @param jsonObject the final returned json object.
+     */
     private void handleDelete(JSONObject jsonObject) {
         Log.i("Delete Successful.", "Success in deletion");
     }

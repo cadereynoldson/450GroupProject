@@ -29,6 +29,7 @@ public class ContactListFragment extends Fragment {
     /** The view model for the class. Stores and handles all data for displaying a list of contacts. */
     private ContactListViewModel mModel;
 
+    /** View model containing this current user's information. */
     private UserInfoViewModel userInfoViewModel;
 
     @Override

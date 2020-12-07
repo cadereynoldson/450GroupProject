@@ -28,40 +28,56 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.IntFunction;
 
+/**
+ * View model for contacts who added the current use.
+ */
 public class ContactAddedMeViewModel extends AndroidViewModel {
 
+    /** Live mutable data of a list of users who added this user. */
     private MutableLiveData<List<ContactItem>> mContacts;
 
+    /** The url used for fetching users that added this user as a contact. */
     private static final String connectionUrl = "https://cloud-chat-450.herokuapp.com/contacts/requests/";
 
+    /** The url used for deleting contact requests. */
     private static final String deleteContactsURL = "https://cloud-chat-450.herokuapp.com/contacts/delete/";
 
+    /** The url used for accepting a contact request. */
     private static final String acceptContactURL = "https://cloud-chat-450.herokuapp.com/contacts/requests/confirm/";
 
-    private int lastDeleteMemberId;
-
-    private int lastAcceptMemberId;
-
+    /**
+     * Creates a new instance of the view model.
+     * @param application the parent application.
+     */
     public ContactAddedMeViewModel(@NonNull Application application) {
         super(application);
         mContacts = new MutableLiveData<>();
         mContacts.setValue(new ArrayList<ContactItem>());
-        lastDeleteMemberId = -1;
-        lastAcceptMemberId = -1;
     }
 
+    /**
+     * Creates a contacts list observer. Observes changes of a list.
+     * @param owner the owner of this lifecycle.
+     * @param observer the observer.
+     */
     public void addContactsListObserver(@NonNull LifecycleOwner owner,
                                         @NonNull Observer<? super List<ContactItem>> observer) {
         mContacts.observe(owner, observer);
     }
 
+    /**
+     * Logs that there has been an error in connecting to the server.
+     * @param error the connection error.
+     */
     private void handleError(final VolleyError error) {
-        //you should add much better error handling in a production release.
-        //i.e. YOUR PTOJECT
         Log.e("CONNECTION ERROR", error.getLocalizedMessage());
         throw new IllegalStateException(error.getMessage());
     }
 
+    /**
+     * Handles parsing the resulting contacts who have added this user.
+     * @param result the result to parse.
+     */
     private void handleResult(final JSONObject result) {
         IntFunction<String> getString = //Converts an integer key to a string.
                 getApplication().getResources()::getString;
@@ -94,6 +110,11 @@ public class ContactAddedMeViewModel extends AndroidViewModel {
         mContacts.setValue(mContacts.getValue());
     }
 
+    /**
+     * Connects to the server and fetches the contact requests of a given user.
+     * @param authVal the authorization value of the user.
+     * @param userId the id of the user.
+     */
     public void connectGet(String authVal, int userId) {
         Request request = new JsonObjectRequest(Request.Method.GET,
                 connectionUrl + userId,
@@ -114,9 +135,14 @@ public class ContactAddedMeViewModel extends AndroidViewModel {
         Volley.newRequestQueue(getApplication().getApplicationContext()).add(request);
     }
 
+    /**
+     * Deletes a contact request between this user and another user.
+     * @param authVal the JWT used for authorization.
+     * @param thisUserId the id of the user.
+     * @param userIdTwo the id of the other user.
+     */
     public void connectDelete(String authVal, int thisUserId, int userIdTwo) {
         String url = deleteContactsURL + "?memberIdOne=" + thisUserId + "&memberIdTwo=" + userIdTwo;
-        lastDeleteMemberId = userIdTwo;
         Request request = new JsonObjectRequest(Request.Method.DELETE,
                 url,
                 null,
@@ -138,9 +164,14 @@ public class ContactAddedMeViewModel extends AndroidViewModel {
                 .add(request);
     }
 
+    /**
+     * Accepts a contact request from another user.
+     * @param authVal the JWT used for authorization.
+     * @param thisUserId the user id of the current user.
+     * @param userIdTwo the user id of the second user.
+     */
     public void acceptRequest(String authVal, int thisUserId, int userIdTwo) {
         String url = acceptContactURL + "?memberIdOne=" + thisUserId + "&memberIdTwo=" + userIdTwo;
-        lastAcceptMemberId = userIdTwo;
         Request request = new JsonObjectRequest(Request.Method.PUT,
                 url,
                 null,
@@ -162,18 +193,36 @@ public class ContactAddedMeViewModel extends AndroidViewModel {
                 .add(request);
     }
 
+    /**
+     * Handles the acceptation of a contact request.
+     * @param jsonObject the final returned json object.
+     */
     private void handleAccept(JSONObject jsonObject) {
         Log.i("Contact Accepted", "Contact successfully accepted.");
     }
 
+    /**
+     * Handles the error of an acceptation of a contact request.
+     * @param volleyError object containing the info of the error.
+     */
     private void handleAcceptError(VolleyError volleyError) {
+        Log.e("Acception error", "ERROR!");
         volleyError.printStackTrace();
     }
 
+    /**
+     * Handles the error of an deletion of a contact request.
+     * @param volleyError object containing the info of the error.
+     */
     private void handleDeleteError(VolleyError volleyError) {
         Log.e("Delete Error:", "Error in deletion.");
+        volleyError.printStackTrace();
     }
 
+    /**
+     * Handles the deletion of a contact request.
+     * @param jsonObject the final returned json object.
+     */
     private void handleDelete(JSONObject jsonObject) {
         Log.i("Delete Successful.", "Success in deletion");
     }
