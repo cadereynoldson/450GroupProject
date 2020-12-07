@@ -17,12 +17,21 @@ import java.util.List;
 
 public class ContactSentRequestsRecyclerViewAdapter extends RecyclerView.Adapter<ContactSentRequestsRecyclerViewAdapter.SentRequestsViewHolder> {
 
+    /** View model for sent contact requests. */
     private final ContactSentRequestsViewModel deleteViewModel;
 
+    /** View model containing information of the user. */
     private final UserInfoViewModel userInfoViewModel;
 
+    /** A list of sent contact requests to display. */
     private final List<ContactItem> mContacts;
 
+    /**
+     * Creates a new instance this view adapter.
+     * @param contacts the contacts to display.
+     * @param deleteViewModel the model used for deleting pending contact requests.
+     * @param userInfoViewModel view model containing information of this user.
+     */
     public ContactSentRequestsRecyclerViewAdapter(List<ContactItem> contacts, ContactSentRequestsViewModel deleteViewModel, UserInfoViewModel userInfoViewModel) {
         mContacts = contacts;
         this.deleteViewModel = deleteViewModel;
@@ -45,6 +54,9 @@ public class ContactSentRequestsRecyclerViewAdapter extends RecyclerView.Adapter
         return mContacts.size();
     }
 
+    /**
+     * View holder for displaying a sent contact request.
+     */
     public class SentRequestsViewHolder extends RecyclerView.ViewHolder {
 
         public final View mView;

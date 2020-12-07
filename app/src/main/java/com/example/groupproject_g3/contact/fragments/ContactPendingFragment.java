@@ -18,17 +18,20 @@ import com.example.groupproject_g3.databinding.FragmentContactPendingBinding;
 import com.example.groupproject_g3.model.UserInfoViewModel;
 
 /**
- * A simple {@link Fragment} subclass.
- * create an instance of this fragment.
+ * Fragment for displaying pending contact information.
  */
 public class ContactPendingFragment extends Fragment {
 
+    /** Binding which allows for direct reference to components of this fragment. */
     private FragmentContactPendingBinding binding;
 
+    /** View model for contacts that added this user. */
     private ContactAddedMeViewModel addedMeViewModel;
 
+    /** View model for requests this user has sent. */
     private ContactSentRequestsViewModel sentRequestsViewModel;
 
+    /** View model containing this user's information. */
     private UserInfoViewModel userInfoViewModel;
 
     @Override

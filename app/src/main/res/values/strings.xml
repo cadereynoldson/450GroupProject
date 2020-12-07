@@ -40,6 +40,7 @@
     <string name="contacts_pending_approval">Sent Requests (Awaiting Approval)</string>
     <string name="contacts_pending_no_requests">You have no contact requests!</string>
     <string name="contacts_pending_no_sent_requests">You have no sent requests awaiting approval!</string>
+    <string name="contacts_added_contact">Successfully sent contact request!</string>
     <string-array name="contact_search_by_options">
         <item>Email</item>
         <item>Username</item>
@@ -60,6 +61,10 @@
 
     <string name="weather_search">Search for Location</string>
     <string name="weather_action_link">More Info</string>
+
+    <string name="profile_name">Name:</string>
+    <string name="profile_username">Username:</string>
+    <string name="profile_email">Email:</string>
 
     <!--
     This string is used for square devices and overridden by hello_world in
