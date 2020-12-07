@@ -15,10 +15,13 @@ import java.util.List;
 
 public class ContactAddedMeRecyclerViewAdapter extends RecyclerView.Adapter<ContactAddedMeRecyclerViewAdapter.ContactAddedMeViewHolder> {
 
+    /** Reference to the added me view model. */
     private final ContactAddedMeViewModel addedMeViewModel;
 
+    /** Reference to the user info view model. */
     private final UserInfoViewModel userInfoViewModel;
 
+    /** A list of contacts who added this user to display. */
     private final List<ContactItem> mContacts;
 
     /**
