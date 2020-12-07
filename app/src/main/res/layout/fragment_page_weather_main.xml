@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/weather_root"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/weather_background">
+    android:layout_height="match_parent">
     tools:context=".weather.fragments.WeatherFragment">
 
     <androidx.core.widget.NestedScrollView
@@ -26,12 +25,13 @@
                 android:layout_marginTop="5dp"
                 android:text="Tacoma, Washington"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 app:chipSurfaceColor="#A403A9F4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="invisible" />
 
             <include
                 android:id="@+id/container_weather_forecast"
@@ -41,7 +41,8 @@
                 android:layout_below="@id/chip_weather_location"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="-1dp"
-                android:layout_marginEnd="16dp" />
+                android:layout_marginEnd="16dp"
+                tools:visibility="invisible" />
 
             <ProgressBar
                 android:id="@+id/progressBar"
@@ -61,7 +62,8 @@
                 android:orientation="horizontal"
                 android:scrollbars="horizontal"
                 app:layoutManager="LinearLayoutManager"
-                tools:listitem="@layout/fragment_weather_hours_item" />
+                tools:listitem="@layout/fragment_weather_hours_item"
+                tools:visibility="invisible" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/weather_days"
@@ -74,7 +76,8 @@
                 android:orientation="horizontal"
                 android:scrollbars="horizontal"
                 app:layoutManager="LinearLayoutManager"
-                tools:listitem="@layout/fragment_weather_days_item" />
+                tools:listitem="@layout/fragment_weather_days_item"
+                tools:visibility="invisible" />
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 </RelativeLayout>

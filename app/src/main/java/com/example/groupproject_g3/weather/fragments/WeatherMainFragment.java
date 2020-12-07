@@ -1,20 +1,27 @@
 package com.example.groupproject_g3.weather.fragments;
 
+import android.annotation.SuppressLint;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.groupproject_g3.R;
 import com.example.groupproject_g3.databinding.FragmentPageWeatherMainBinding;
 import com.example.groupproject_g3.model.UserInfoViewModel;
+import com.example.groupproject_g3.weather.fragments.recyclerviewadapter.WeatherDaysRecyclerViewAdapter;
+import com.example.groupproject_g3.weather.fragments.recyclerviewadapter.WeatherHoursRecyclerViewAdapter;
+import com.example.groupproject_g3.weather.fragments.viewmodel.WeatherCurrentViewModel;
+import com.example.groupproject_g3.weather.fragments.viewmodel.WeatherDaysViewModel;
+import com.example.groupproject_g3.weather.fragments.viewmodel.WeatherHoursViewModel;
 import com.squareup.picasso.Picasso;
 
 /**
@@ -38,6 +45,8 @@ public class WeatherMainFragment extends Fragment {
     private WeatherDaysViewModel daysModel;
 
     private WeatherHoursViewModel hoursModel;
+
+    private WeatherBackground background;
 
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +76,7 @@ public class WeatherMainFragment extends Fragment {
             binding.containerWeatherForecast.textCurrentDescription.setText(currentInfo.getmWeather());
             binding.chipWeatherLocation.setText(currentInfo.getmLocation() + ", " + currentInfo.getmCountry());
             Picasso.get().load(currentInfo.getmIcon()).into(binding.containerWeatherForecast.imageCurrentIcon);
+            background = new WeatherBackground(view, currentInfo.getmWeather(), currentInfo.getmIcon(), getResources());
         });
 
         hoursModel.addHoursWeatherObserver(getViewLifecycleOwner(), hoursInfo -> {

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/weather_background"
     tools:context=".weather.fragments.WeatherForecastFragment">
 
     <androidx.cardview.widget.CardView
@@ -15,8 +14,9 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        app:cardBackgroundColor="#9000BCD4"
-        app:cardCornerRadius="15dp">
+        app:cardBackgroundColor="#7C03A9F4"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -31,6 +31,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
                     android:text="Seattle, Washington"
                     android:textColor="#FFFFFF"
                     android:textSize="30sp"
@@ -62,7 +63,6 @@
                     android:layout_height="108dp"
                     android:layout_below="@id/text_forecast_time"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="5dp"
                     android:src="@drawable/ic_weather_yellow_24" />
 
                 <TextView
@@ -71,7 +71,6 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/image_forecast_icon"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="5dp"
                     android:text="Sunny"
                     android:textColor="#FFFFFF"
                     android:textSize="24sp" />
@@ -105,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_feelslike"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="16dp"
+                    android:layout_marginRight="18dp"
                     android:text="25°F"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp" />
@@ -126,7 +125,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_minimum"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="16dp"
+                    android:layout_marginRight="18dp"
                     android:text="25°F"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp" />
@@ -147,7 +146,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_maximum"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="16dp"
+                    android:layout_marginRight="18dp"
                     android:text="25°F"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp" />
@@ -181,7 +180,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_rain"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="16dp"
+                    android:layout_marginRight="18dp"
                     android:text="100%"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp" />
@@ -202,7 +201,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_pressure"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="16dp"
+                    android:layout_marginRight="18dp"
                     android:text="1007 hPa"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp" />
@@ -223,7 +222,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_humidity"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="16dp"
+                    android:layout_marginRight="18dp"
                     android:text="93%"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp" />
@@ -256,7 +255,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_speed"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="16dp"
+                    android:layout_marginRight="18dp"
                     android:text="4.75"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp" />
@@ -278,7 +277,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_direction"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="16dp"
+                    android:layout_marginRight="18dp"
                     android:text="Northwest"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp" />
@@ -312,7 +311,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_latitude"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="16dp"
+                    android:layout_marginRight="18dp"
                     android:text="47.6 N"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp" />
@@ -323,6 +322,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/text_latitude"
                     android:layout_marginLeft="36dp"
+                    android:layout_marginBottom="15dp"
                     android:text="Longitude"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp" />
@@ -333,50 +333,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_longitude"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="16dp"
+                    android:layout_marginRight="18dp"
                     android:text="122.33 W"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/text_sunrise"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/text_longitude"
-                    android:layout_marginLeft="36dp"
-                    android:text="Sunrise"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/text_sunrise_data"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@id/text_sunrise"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="16dp"
-                    android:text="6:00"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/text_sunset"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/text_sunrise"
-                    android:layout_marginLeft="36dp"
-                    android:text="Sunset"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/text_sunset_data"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@id/text_sunset"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="16dp"
-                    android:text="18:00"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp" />
 
