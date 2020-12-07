@@ -51,12 +51,13 @@ public class ContactAddViewModel extends AndroidViewModel {
 
     /**
      * Response Observer. Observes the response from the webservice.
-     *
+     * Resets value in the response ONLY for this model (Avoid displaying notifications twice)
      * @param owner owner.
      * @param observer observer.
      */
     public void addResponseObserver(@NonNull LifecycleOwner owner,
                                     @NonNull Observer<? super JSONObject> observer) {
+        mResponse.setValue(new JSONObject());
         mResponse.observe(owner, observer);
     }
 
