@@ -1,8 +1,5 @@
 package com.example.groupproject_g3.weather.fragments;
 
-import android.annotation.SuppressLint;
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,11 +7,10 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
-import com.example.groupproject_g3.R;
 import com.example.groupproject_g3.databinding.FragmentPageWeatherMainBinding;
 import com.example.groupproject_g3.model.UserInfoViewModel;
 import com.example.groupproject_g3.weather.fragments.recyclerviewadapter.WeatherDaysRecyclerViewAdapter;
@@ -31,10 +27,10 @@ import com.squareup.picasso.Picasso;
 public class WeatherMainFragment extends Fragment {
 
     /** Latitude data to be used. */
-    private double lat = 47.2529;
+    private double lat = 37.5665;
 
     /** Longitude data to be used. */
-    private double lon = -122.4443;
+    private double lon = 126.9780;
 
     /** Binding object to be used with other fragments in Weather. */
     private FragmentPageWeatherMainBinding binding;
@@ -93,5 +89,10 @@ public class WeatherMainFragment extends Fragment {
             }
         });
 
+        binding.fab.setOnClickListener(info -> {
+            Navigation.findNavController(view).navigate(
+                    WeatherMainFragmentDirections
+                            .actionNavigationWeatherToLocationFragment());
+        });
     }
 }

@@ -38,7 +38,7 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
 
     /** contains the basic weather data to be displayed, started off with placeholder data */
     private static final WeatherInformation currentPlaceholder = new WeatherInformation.Builder(
-            "06/02/1998", "7:36").build();
+            "", "").build();
 
     /** Data containing mutable data for weather */
     private MutableLiveData<WeatherInformation> information;

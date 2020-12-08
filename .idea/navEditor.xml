@@ -119,18 +119,6 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="locationFragment2">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="-159" />
-                            <option name="y" value="-305" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
                   <entry key="navigation_add_contact">
                     <value>
                       <LayoutPositions>
@@ -188,6 +176,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="navigation_location">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-121" />
+                            <option name="y" value="-39" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="navigation_profile">
                     <value>
                       <LayoutPositions>
@@ -211,6 +211,11 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_navigation_weather_to_locationFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_navigation_weather_to_weatherForecastFragment">
                               <value>
                                 <LayoutPositions />
