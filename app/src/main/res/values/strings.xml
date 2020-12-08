@@ -59,6 +59,7 @@
     <string name="tab_show_chats">Chat</string>
     <string name="tab_show_chatlist">ChatList</string>
     <string name="button_add_contact_to_chat">Add contact into chat</string>
+    <string name="imagebutton_go_to_chat"></string>
     <string name="text_chatID">#</string>
     <string name="text_chatName">ChatName</string>
     <string name="text_contacts_names">Contacts Names</string>

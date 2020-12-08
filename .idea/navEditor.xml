@@ -98,25 +98,13 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="chatsMainFragment">
+                  <entry key="chatFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="315" />
-                            <option name="y" value="324" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="locationFragment2">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="-159" />
-                            <option name="y" value="-305" />
+                            <option name="x" value="-182" />
+                            <option name="y" value="-381" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -129,6 +117,18 @@
                           <Point>
                             <option name="x" value="556" />
                             <option name="y" value="-10" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="navigation_chats">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-225" />
+                            <option name="y" value="-25" />
                           </Point>
                         </option>
                       </LayoutPositions>

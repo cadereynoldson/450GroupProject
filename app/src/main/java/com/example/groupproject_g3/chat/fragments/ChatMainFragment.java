@@ -21,10 +21,10 @@ import java.util.function.IntFunction;
 /**
  * A simple {@link Fragment} subclass.
   */
-public class ChatsMainFragment extends Fragment {
+public class ChatMainFragment extends Fragment {
 
     private FragmentChatsMainBinding binding;
-    private ChatsMainFragment.ChatsPagerAdapter adapter;
+    private ChatMainFragment.ChatsPagerAdapter adapter;
     private ViewPager pager;
 
     @Override
@@ -38,7 +38,7 @@ public class ChatsMainFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         binding = FragmentChatsMainBinding.inflate(inflater, container, false);
-        adapter = new ChatsMainFragment.ChatsPagerAdapter(getChildFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        adapter = new ChatMainFragment.ChatsPagerAdapter(getChildFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         pager = binding.getRoot().findViewById(R.id.chats_main_viewpager);
         adapter.initFrags();
         pager.setAdapter(adapter);
@@ -48,12 +48,16 @@ public class ChatsMainFragment extends Fragment {
         return binding.getRoot();
     }
 
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
     }
 
+    public void setCurrentItem (int item, boolean smoothScroll) {
+        pager.setCurrentItem(item, smoothScroll);
+    }
 
     public class ChatsPagerAdapter extends FragmentPagerAdapter {
 
@@ -75,7 +79,6 @@ public class ChatsMainFragment extends Fragment {
             titles[0] = getString.apply(R.string.tab_show_chats);
             titles[1] = getString.apply(R.string.tab_show_chatlist);
             titles[2] = getString.apply(R.string.tab_add_chat);
-
         }
 
         @NonNull

@@ -6,21 +6,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.groupproject_g3.R;
-import com.example.groupproject_g3.contact.fragments.ContactRecyclerViewAdapter;
-import com.example.groupproject_g3.databinding.FragmentAddChatBinding;
 import com.example.groupproject_g3.databinding.FragmentChatListBinding;
 import com.example.groupproject_g3.model.UserInfoViewModel;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -36,7 +28,7 @@ public class ChatListFragment extends Fragment {
     /** View model which allows for the addition of new Chats. */
     private ChatListViewModel mListView;
 
-    private ChatItemFragment mChatItem;
+    private ChatItem mChatItem;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -59,7 +51,7 @@ public class ChatListFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         mListView.addChatListObserver(getViewLifecycleOwner(), chatList -> {
             if (!chatList.isEmpty()) {
-                binding.recyclerChatlist.setAdapter(new ChatListRecyclerViewAdapter(mListView, chatList));
+                binding.recyclerChatItem.setAdapter(new ChatListRecyclerViewAdapter(mListView, mUserInfo, chatList));
                 binding.textNoChats.setVisibility(View.GONE);
             }
         });

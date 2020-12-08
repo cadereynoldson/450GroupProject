@@ -15,20 +15,26 @@ import java.util.List;
 
 public class ChatListRecyclerViewAdapter extends RecyclerView.Adapter<ChatListRecyclerViewAdapter.ChatListViewHolder> {
 
-    private final List<ChatItemFragment> mChats;
+    private final List<ChatItem> mChats;
 
     private final ChatListViewModel mChatListViewModel;
 
+    private final UserInfoViewModel mUserInfo;
 
-    public ChatListRecyclerViewAdapter(ChatListViewModel listViewModel,  List<ChatItemFragment> chats) {
+    private final ChatMainFragment mChatMain;
+
+
+    public ChatListRecyclerViewAdapter(ChatListViewModel listViewModel, UserInfoViewModel userInfoViewModel,  List<ChatItem> chats) {
         this.mChatListViewModel =  listViewModel;
+        this.mUserInfo = userInfoViewModel;
+        this.mChatMain = new ChatMainFragment();
         mChats = chats;
     }
 
     @NonNull
     @Override
     public ChatListRecyclerViewAdapter.ChatListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ChatListRecyclerViewAdapter.ChatListViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_contact_item, parent, false));
+        return new ChatListRecyclerViewAdapter.ChatListViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_chat_item, parent, false));
     }
 
     @Override
@@ -47,7 +53,7 @@ public class ChatListRecyclerViewAdapter extends RecyclerView.Adapter<ChatListRe
 
         public FragmentChatItemBinding binding;
 
-        public ChatItemFragment mChatItem;
+        public ChatItem mChatItem;
 
         public ChatListViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -55,10 +61,10 @@ public class ChatListRecyclerViewAdapter extends RecyclerView.Adapter<ChatListRe
             binding = FragmentChatItemBinding.bind(mView);
         }
 
-        public void setChat(final ChatItemFragment chatItem) {
+        public void setChat(final ChatItem chatItem) {
             mChatItem = chatItem;
-            binding.textChatID.setText(mChatItem.getChatID());
-            binding.textChatID.setText(mChatItem.getChatName());
+            binding.textChatName.setText(mChatItem.getChatName());
         }
+
     }
 }

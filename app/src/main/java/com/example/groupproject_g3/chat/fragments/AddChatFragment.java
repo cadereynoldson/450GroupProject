@@ -16,16 +16,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.groupproject_g3.R;
-import com.example.groupproject_g3.contact.fragments.ContactAddViewModel;
 import com.example.groupproject_g3.databinding.FragmentAddChatBinding;
-import com.example.groupproject_g3.databinding.FragmentAddContactBinding;
 import com.example.groupproject_g3.model.UserInfoViewModel;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.function.IntFunction;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -41,12 +36,15 @@ public class AddChatFragment extends Fragment {
     /** View model which allows for the addition of new Chats. */
     private AddChatViewModel mAddView;
 
+    private ChatMainFragment mChatMain;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ViewModelProvider provider = new ViewModelProvider(getActivity());
         mUserInfo = provider.get(UserInfoViewModel.class);
         mAddView = provider.get(AddChatViewModel.class);
+        mChatMain = new ChatMainFragment();
 
     }
 
@@ -72,9 +70,15 @@ public class AddChatFragment extends Fragment {
         if (addName.isEmpty())
             binding.textAddChat.setError("Please enter a name.");
         else {
-            mAddView.addChat(mUserInfo.getJwt(), mUserInfo.getUserId(), addName);
+            mAddView.addChatAndCreator(mUserInfo.getJwt(), mUserInfo.getUserId(), addName);
+            binding.buttonAddChat.setOnClickListener(this::navigateToChat);
         }
     }
+
+    private void navigateToChat(View view) {
+        mChatMain.setCurrentItem(0,true);
+    }
+
 
     private void observeResponse(final JSONObject response) {
         if (response.length() > 0) {

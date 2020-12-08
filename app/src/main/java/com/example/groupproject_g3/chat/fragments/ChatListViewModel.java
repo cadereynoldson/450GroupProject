@@ -15,7 +15,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.groupproject_g3.R;
-import com.example.groupproject_g3.contact.fragments.ContactItem;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,10 +28,10 @@ import java.util.function.IntFunction;
 
 public class ChatListViewModel extends AndroidViewModel {
 
-    private MutableLiveData<List<ChatItemFragment>> mChats;
+    private MutableLiveData<List<ChatItem>> mChats;
 
     private static final String chatsURL = "https://cloud-chat-450.herokuapp.com/chats/";
-
+    private static final String memberURL = "https://cloud-chat-450.herokuapp.com/chats/chatmember/";
 
     /**
      *
@@ -41,19 +40,18 @@ public class ChatListViewModel extends AndroidViewModel {
     public ChatListViewModel(@NonNull Application application) {
         super(application);
         mChats = new MutableLiveData<>();
-        mChats.setValue(new ArrayList<ChatItemFragment>());
+        mChats.setValue(new ArrayList<ChatItem>());
     }
 
     public void addChatListObserver(@NonNull LifecycleOwner owner,
-                                        @NonNull Observer<? super List<ChatItemFragment>> observer) {
+                                        @NonNull Observer<? super List<ChatItem>> observer) {
         mChats.observe(owner, observer);
     }
 
     private void handleError(final VolleyError error) {
-        //you should add much better error handling in a production release.
-        //i.e. YOUR PTOJECT
         Log.e("CONNECTION ERROR", error.getLocalizedMessage());
         throw new IllegalStateException(error.getMessage());
+
     }
 
     private void handleResult(final JSONObject result) {
@@ -67,10 +65,9 @@ public class ChatListViewModel extends AndroidViewModel {
                         root.getJSONArray(getString.apply(R.string.key_chats_list));
                 for(int i = 0; i < data.length(); i++) {
                     JSONObject jsonChatInfo = data.getJSONObject(i);
-                    ChatItemFragment post = new ChatItemFragment(
+                    ChatItem post = new ChatItem(
                             jsonChatInfo.getInt("chatid"),
                             jsonChatInfo.getString("name"));
-
                             Log.i("Parsed chat room", post.toString());
                     if (!mChats.getValue().contains(post)) {
                         mChats.getValue().add(post);
@@ -89,7 +86,7 @@ public class ChatListViewModel extends AndroidViewModel {
 
     public void connectGet(String authVal, int userId) {
         Request request = new JsonObjectRequest(Request.Method.GET,
-                chatsURL +
+                memberURL +
                 userId,
                 null, //no body for get request.
                 this::handleResult,
