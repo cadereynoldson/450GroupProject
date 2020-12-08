@@ -51,6 +51,9 @@
         <action
             android:id="@+id/action_navigation_weather_to_weatherForecastFragment"
             app:destination="@id/navigation_weather_forecast" />
+        <action
+            android:id="@+id/action_navigation_weather_to_locationFragment"
+            app:destination="@id/navigation_location" />
     </fragment>
     <fragment
         android:id="@+id/navigation_weather_forecast"
@@ -61,4 +64,9 @@
             android:name="Information"
             app:argType="com.example.groupproject_g3.weather.fragments.WeatherInformation" />
     </fragment>
+    <fragment
+        android:id="@+id/navigation_location"
+        android:name="com.example.groupproject_g3.location.fragments.LocationFragment"
+        android:label="@string/title_weather_map"
+        tools:layout="@layout/fragment_page_location" />
 </navigation>
