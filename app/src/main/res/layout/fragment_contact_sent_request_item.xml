@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="2dp"
+    app:cardBackgroundColor="?attr/colorSurface"
     app:cardCornerRadius="10dp"
     app:cardElevation="5dp">
 
@@ -24,6 +25,7 @@
             android:paddingBottom="0dp"
             android:text="@string/contact_name"
             android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="?attr/colorOnSurface"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,6 +41,7 @@
             android:text="@string/contact_username"
             android:textAppearance="?attr/textAppearanceListItem"
             android:textStyle="normal"
+            android:textColor="?attr/colorOnSurface"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:background="#FFFFFF"
+            android:background="?attr/colorSurface"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/text_sent_req_username"
             app:layout_constraintTop_toTopOf="parent"
