@@ -26,31 +26,53 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.IntFunction;
 
+/**
+ * View model for contact requests this user has sent.
+ */
 public class ContactSentRequestsViewModel extends AndroidViewModel {
+
+    /** Mutable live data of a list of contacts requests this user has sent. */
     private MutableLiveData<List<ContactItem>> mContacts;
 
+    /** The url used for fetching users that this user has added as a contact. */
     private static final String connectionUrl = "https://cloud-chat-450.herokuapp.com/contacts/pending/";
 
+    /** The url used for deleting sent contact requests. */
     private static final String deleteContactsURL = "https://cloud-chat-450.herokuapp.com/contacts/delete/";
 
+    /**
+     * Creates a new instance of the view model.
+     * @param application the parent application.
+     */
     public ContactSentRequestsViewModel (@NonNull Application application) {
         super(application);
         mContacts = new MutableLiveData<>();
         mContacts.setValue(new ArrayList<ContactItem>());
     }
 
+    /**
+     * Creates a contacts list observer. Observes changes of a list.
+     * @param owner the owner of this lifecycle.
+     * @param observer the observer.
+     */
     public void addContactsListObserver(@NonNull LifecycleOwner owner,
                                         @NonNull Observer<? super List<ContactItem>> observer) {
         mContacts.observe(owner, observer);
     }
 
+    /**
+     * Logs that there has been an error in connecting to the server.
+     * @param error the connection error.
+     */
     private void handleError(final VolleyError error) {
-        //you should add much better error handling in a production release.
-        //i.e. YOUR PTOJECT
         Log.e("CONNECTION ERROR", error.getLocalizedMessage());
         throw new IllegalStateException(error.getMessage());
     }
 
+    /**
+     * Handles parsing the resulting contacts who have added this user.
+     * @param result the result to parse.
+     */
     private void handleResult(final JSONObject result) {
         IntFunction<String> getString = //Converts an integer key to a string.
                 getApplication().getResources()::getString;
@@ -83,6 +105,11 @@ public class ContactSentRequestsViewModel extends AndroidViewModel {
         mContacts.setValue(mContacts.getValue());
     }
 
+    /**
+     * Connects to the server and fetches the sent contact requests of a given user.
+     * @param authVal the authorization value of the user.
+     * @param userId the id of the user.
+     */
     public void connectGet(String authVal, int userId) {
         Request request = new JsonObjectRequest(Request.Method.GET,
                 connectionUrl + userId,
@@ -103,6 +130,12 @@ public class ContactSentRequestsViewModel extends AndroidViewModel {
         Volley.newRequestQueue(getApplication().getApplicationContext()).add(request);
     }
 
+    /**
+     * Deletes a contact request between this user and another user.
+     * @param authVal the JWT used for authorization.
+     * @param userIdOne the id of the user.
+     * @param userIdTwo the id of the other user.
+     */
     public void connectDelete(String authVal, int userIdOne, int userIdTwo) {
         String url = deleteContactsURL + "?memberIdOne=" + userIdOne + "&memberIdTwo=" + userIdTwo;
         Request request = new JsonObjectRequest(Request.Method.DELETE,
@@ -126,10 +159,19 @@ public class ContactSentRequestsViewModel extends AndroidViewModel {
                 .add(request);
     }
 
+    /**
+     * Handles the error of an deletion of a contact request.
+     * @param volleyError object containing the info of the error.
+     */
     private void handleDeleteError(VolleyError volleyError) {
         Log.e("Delete Error:", "Error in deletion.");
+        volleyError.printStackTrace();
     }
 
+    /**
+     * Handles the deletion of a contact request.
+     * @param jsonObject the final returned json object.
+     */
     private void handleDelete(JSONObject jsonObject) {
         Log.i("Delete Successful.", "Success in deletion");
     }

@@ -14,6 +14,8 @@ import com.android.volley.Request;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.groupproject_g3.R;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,12 +30,19 @@ import java.util.Objects;
  */
 public class ContactAddViewModel extends AndroidViewModel {
 
+    /** The URL for adding a contact by email. */
     private final String emailUrl = "https://cloud-chat-450.herokuapp.com/contacts/add_by_email";
 
+    /** The URL for adding a contact by username. */
     private final String usernameUrl = "https://cloud-chat-450.herokuapp.com/contacts/add_by_username";
 
+    /** The latest response from the webserver. */
     private MutableLiveData<JSONObject> mResponse;
 
+    /**
+     * Creates a new instance of this view model.
+     * @param application the parent view model.
+     */
     public ContactAddViewModel(@NonNull Application application) {
         super(application);
         mResponse = new MutableLiveData<>();
@@ -42,15 +51,22 @@ public class ContactAddViewModel extends AndroidViewModel {
 
     /**
      * Response Observer. Observes the response from the webservice.
-     *
+     * Resets value in the response ONLY for this model (Avoid displaying notifications twice)
      * @param owner owner.
      * @param observer observer.
      */
     public void addResponseObserver(@NonNull LifecycleOwner owner,
                                     @NonNull Observer<? super JSONObject> observer) {
+        mResponse.setValue(new JSONObject());
         mResponse.observe(owner, observer);
     }
 
+    /**
+     * Tries to add a contact by their email.
+     * @param authVal the JWT used for authorization
+     * @param userId the user id of the current user.
+     * @param email the email of the other user.
+     */
     public void addContactByEmail(String authVal, int userId, String email) {
         JSONObject body = new JSONObject();
         try {
@@ -63,7 +79,7 @@ public class ContactAddViewModel extends AndroidViewModel {
                 Request.Method.POST,
                 emailUrl,
                 body,
-                mResponse::setValue,
+                this::showSuccess,
                 this::handleError
 
         ) {
@@ -83,6 +99,12 @@ public class ContactAddViewModel extends AndroidViewModel {
                 .add(request);
     }
 
+    /**
+     * Attempts to add a contact by their username.
+     * @param authVal the JWT used of authorization/
+     * @param userId the user id of the current user.
+     * @param username the username of the other user.
+     */
     public void addContactByUsername(String authVal, int userId, String username) {
         JSONObject body = new JSONObject();
         try {
@@ -115,6 +137,24 @@ public class ContactAddViewModel extends AndroidViewModel {
                 .add(request);
     }
 
+    /**
+     * Places a successful json response in the live mutable data.
+     * @param jsonObject the response from the server.
+     */
+    private void showSuccess(JSONObject jsonObject) {
+        try {
+            JSONObject response = new JSONObject();
+            response.put("success", true);
+            mResponse.setValue(response);
+        } catch (JSONException e) {
+            Log.e("JSON PARSE", "JSON Parse Error in handleError");
+        }
+    }
+
+    /**
+     * Handles an error in the addition of a contact. Notifies the contact add fragment that there has been an error.
+     * @param error object containing the info of the error.
+     */
     private void handleError(final VolleyError error) {
         if (Objects.isNull(error.networkResponse)) {
             try {

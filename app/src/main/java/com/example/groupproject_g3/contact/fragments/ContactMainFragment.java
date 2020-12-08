@@ -26,10 +26,13 @@ import java.util.function.IntFunction;
  */
 public class ContactMainFragment extends Fragment {
 
+    /** Binding for direct reference of the components of this fragment. */
     private FragmentContactMainBinding binding;
 
+    /** The pager adapter for tab navigation. */
     private ContactsPagerAdapter adapter;
 
+    /** View pager for tab navigation */
     private ViewPager pager;
 
     @Override
@@ -56,6 +59,9 @@ public class ContactMainFragment extends Fragment {
 
     }
 
+    /**
+     * A pager adapter for navigation using tabs.
+     */
     public class ContactsPagerAdapter extends FragmentPagerAdapter {
 
         private Fragment[] fragments;
