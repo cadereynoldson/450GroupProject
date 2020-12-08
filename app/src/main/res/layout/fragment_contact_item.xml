@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
+    app:cardBackgroundColor="?attr/colorSurface"
     app:cardCornerRadius="10dp"
     app:cardElevation="5dp">
 
@@ -20,7 +21,7 @@
             android:id="@+id/title_contacts_username"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@color/blue_300"
+            android:background="?attr/colorPrimaryVariant"
             android:paddingLeft="4dp"
             android:paddingTop="0dp"
             android:paddingRight="8dp"
@@ -28,6 +29,7 @@
             android:text="@string/contact_username"
             android:textAlignment="center"
             android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="?attr/colorOnSecondary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -41,6 +43,7 @@
             android:paddingRight="8dp"
             android:text="@string/contact_name"
             android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="?attr/colorOnSurface"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -56,6 +59,7 @@
             android:paddingBottom="0dp"
             android:text="@string/contact_email"
             android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="?attr/colorOnSurface"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -72,6 +76,7 @@
             android:paddingBottom="3dp"
             android:text="@string/contact_username"
             android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="?attr/colorOnSurface"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -84,7 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="4dp"
-            android:background="#FFFFFF"
+            android:background="?attr/colorSurface"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_delete_contact_30dp" />

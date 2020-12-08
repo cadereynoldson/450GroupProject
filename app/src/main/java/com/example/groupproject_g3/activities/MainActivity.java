@@ -164,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
                 badge.setVisible(false);
             }
         });
+        this.setTheme(R.style.Theme_GroupProjectG3);
     }
 
     /**

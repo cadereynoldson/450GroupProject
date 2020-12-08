@@ -5,6 +5,7 @@
     android:id="@+id/add_contact_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
     android:textAlignment="gravity"
     tools:context=".contact.fragments.ContactAddFragment">
 
