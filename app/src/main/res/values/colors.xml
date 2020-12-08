@@ -10,6 +10,9 @@
     <color name="off_white">#F5F5F5</color>
     <color name="blue_500">#1BA5DF</color>
     <color name="blue_300">#5CCAFE</color>
+    <color name="grey_900">#212121</color>
+    <color name="grey_800">#424242</color>
+    <color name="grey_700">#616161</color>
     <color name="blue_300_transparent">#AA5CCAFE</color>
 
     <color name="primaryLightColor">#7953d2</color>
