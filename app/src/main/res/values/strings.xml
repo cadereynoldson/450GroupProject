@@ -86,4 +86,8 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="title_activity_maps">Map</string>
 
+    <string name="theme_light_mode">Light Mode</string>
+    <string name="theme_dark_mode">Dark Mode</string>
+    <string name="theme_options">Change Themes</string>
+
 </resources>

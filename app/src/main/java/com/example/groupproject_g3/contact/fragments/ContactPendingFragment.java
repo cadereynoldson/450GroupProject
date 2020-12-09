@@ -68,6 +68,7 @@ public class ContactPendingFragment extends Fragment {
         addedMeViewModel.addContactsListObserver(getViewLifecycleOwner(), contactList -> {
             if (!contactList.isEmpty()) {
                 binding.recyclerPendingContacts.setAdapter(new ContactAddedMeRecyclerViewAdapter(contactList, addedMeViewModel, userInfoViewModel));
+                binding.textNoContactRequests.setVisibility(View.GONE);
             } else {
                 binding.textNoContactRequests.setVisibility(View.VISIBLE);
             }
