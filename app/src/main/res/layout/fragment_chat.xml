@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".chat.fragments.ChatFragment">
 
+
     <EditText
         android:id="@+id/edit_message"
         android:layout_width="0dp"
@@ -55,8 +56,8 @@
             android:layout_marginEnd="8dp"
             android:orientation="vertical"
             app:layoutManager="LinearLayoutManager"
-            tools:context="edu.uw.tcss450.uiandnavigationlab.ui.blog.BlogListFragment"
-            tools:listitem="@layout/fragment_page_chat"/>
+            tools:listitem="@layout/fragment_chat"/>
+
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

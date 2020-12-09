@@ -43,4 +43,6 @@
     <string name="key_weather_24hour_current">current</string>
     <string name="key_weather_current_sunrise">sunrise</string>
     <string name="key_weather_current_sunset">sunset</string>
+
+    <string name= "key_chats_list">rows</string>
 </resources>
