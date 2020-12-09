@@ -59,7 +59,6 @@ public class WeatherDaysRecyclerViewAdapter extends RecyclerView.Adapter<Weather
 
         public void setDaysInfo(final WeatherInformation info) {
             this.info = info;
-            Log.e("Creating info", info.toString());
             binding.textDaysDate.setText(info.getmDate());
             binding.textDaysMin.setText(info.getmTempMin() + "°");
             binding.textDaysMax.setText(info.getmTempMax() + "°");
