@@ -5,15 +5,17 @@
     android:id="@+id/profile_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".profile.fragments.ProfileFragment" >
+    android:background="?android:attr/colorBackground"
+    tools:context=".profile.fragments.ProfileFragment">
 
     <TextView
         android:id="@+id/profile_name_prompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="50dp"
         android:text="@string/profile_name"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,51 +23,100 @@
         android:id="@+id/profile_name_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="16dp"
         android:text="@string/profile_name"
-        app:layout_constraintStart_toEndOf="@+id/profile_name_prompt"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_name_prompt" />
 
     <TextView
         android:id="@+id/profile_username_prompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
         android:text="@string/profile_username"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_name_prompt" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_name_display" />
 
     <TextView
         android:id="@+id/profile_username_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="132dp"
+        android:layout_marginTop="16dp"
         android:text="@string/auth_username"
-        app:layout_constraintBottom_toBottomOf="@+id/profile_username_prompt"
+        android:textColor="?attr/colorOnSurface"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/profile_username_prompt"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_username_prompt" />
 
     <TextView
         android:id="@+id/profile_email_prompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
         android:text="@string/profile_email"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_username_prompt" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_username_display" />
 
     <TextView
         android:id="@+id/profile_email_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:text="@string/auth_email"
+        android:textColor="?attr/colorOnSurface"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.097"
-        app:layout_constraintStart_toEndOf="@+id/profile_email_prompt"
-        app:layout_constraintTop_toBottomOf="@+id/profile_username_display" />
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_email_prompt" />
+
+    <TextView
+        android:id="@+id/profile_theme_options_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/theme_options"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_email_display" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:checkedButton="@id/theme_defualt_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/profile_theme_options_text"
+        app:layout_constraintStart_toStartOf="@+id/profile_theme_options_text"
+        app:layout_constraintTop_toBottomOf="@+id/profile_theme_options_text">
+
+        <RadioButton
+            android:id="@+id/theme_defualt_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/theme_light_mode"
+            android:textAlignment="center"
+            android:textColor="?attr/colorOnSurface" />
+
+        <RadioButton
+            android:id="@+id/theme_dark_mode_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="124dp"
+            android:text="@string/theme_dark_mode"
+            android:textAlignment="center"
+            android:textColor="?attr/colorOnSurface" />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

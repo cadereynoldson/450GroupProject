@@ -85,4 +85,8 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
 
+    <string name="theme_light_mode">Light Mode</string>
+    <string name="theme_dark_mode">Dark Mode</string>
+    <string name="theme_options">Change Themes</string>
+
 </resources>
