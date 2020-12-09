@@ -77,8 +77,7 @@
                         app:chipSurfaceColor="#A403A9F4"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:visibility="invisible" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <include
                         android:id="@+id/container_weather_forecast"
@@ -88,8 +87,7 @@
                         android:layout_below="@id/chip_weather_location"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="-1dp"
-                        android:layout_marginEnd="16dp"
-                        tools:visibility="invisible" />
+                        android:layout_marginEnd="16dp" />
 
                     <ProgressBar
                         android:id="@+id/progressBar"
@@ -109,8 +107,7 @@
                         android:orientation="horizontal"
                         android:scrollbars="horizontal"
                         app:layoutManager="LinearLayoutManager"
-                        tools:listitem="@layout/fragment_weather_hours_item"
-                        tools:visibility="invisible" />
+                        tools:listitem="@layout/fragment_weather_hours_item" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/weather_days"
@@ -123,8 +120,7 @@
                         android:orientation="horizontal"
                         android:scrollbars="horizontal"
                         app:layoutManager="LinearLayoutManager"
-                        tools:listitem="@layout/fragment_weather_days_item"
-                        tools:visibility="invisible" />
+                        tools:listitem="@layout/fragment_weather_days_item" />
                 </RelativeLayout>
             </androidx.core.widget.NestedScrollView>
         </RelativeLayout>

@@ -54,7 +54,6 @@ public class WeatherHoursRecyclerViewAdapter extends RecyclerView.Adapter<Weathe
 
         public void setHoursInfo(final WeatherInformation info) {
             this.info = info;
-            Log.e("Creating info", info.toString());
             binding.textHours.setText(info.getmTime());
             binding.textHoursTemp.setText(info.getmTemperature() + "°");
             Picasso.get().load(info.getmIcon()).into(binding.imageHoursForecast);

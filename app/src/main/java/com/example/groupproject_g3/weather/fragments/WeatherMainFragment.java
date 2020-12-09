@@ -27,10 +27,10 @@ import com.squareup.picasso.Picasso;
 public class WeatherMainFragment extends Fragment {
 
     /** Latitude data to be used. */
-    private double lat = 37.5665;
+    private double lat = 47.2529;
 
     /** Longitude data to be used. */
-    private double lon = 126.9780;
+    private double lon = -122.4443;
 
     /** Binding object to be used with other fragments in Weather. */
     private FragmentPageWeatherMainBinding binding;
@@ -92,7 +92,7 @@ public class WeatherMainFragment extends Fragment {
         binding.fab.setOnClickListener(info -> {
             Navigation.findNavController(view).navigate(
                     WeatherMainFragmentDirections
-                            .actionNavigationWeatherToLocationFragment());
+                            .actionNavigationWeatherToMapsActivity());
         });
     }
 }

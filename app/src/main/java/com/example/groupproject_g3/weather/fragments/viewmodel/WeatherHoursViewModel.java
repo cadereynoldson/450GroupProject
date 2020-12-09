@@ -90,7 +90,6 @@ public class WeatherHoursViewModel extends AndroidViewModel {
             Calendar rise = Calendar.getInstance();
             rise.setTime(riseDate);
             String sunrise = new SimpleDateFormat("HH:mm").format(riseDate);
-            Log.i("Sunrise: ", sunrise);
 
             long sunsetInfo = ((long) sunData.getInt(getString.apply(R.string.key_weather_current_sunset)))* 1000L;
 
@@ -98,7 +97,6 @@ public class WeatherHoursViewModel extends AndroidViewModel {
             Calendar set = Calendar.getInstance();
             set.setTime(setDate);
             String sunset = new SimpleDateFormat("HH:mm").format(setDate);
-            Log.i("Sunset: ", sunset);
 
 
             if (result.has(getString.apply(R.string.key_weather_24hour_hourly))) {

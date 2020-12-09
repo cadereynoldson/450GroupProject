@@ -85,8 +85,8 @@ public class WeatherBackground {
             } else {
                 drawable = ResourcesCompat.getDrawable(res, R.drawable.weather_light_rain_night, null);
             }
-        } else if (weather.contains("snow")) {
-            if (icon.contains("snow") || icon.contains("sleet") || icon.contains("Sleet")) {
+        } else if (weather.contains("snow") || weather.contains("sleet") || weather.contains("Sleet")) {
+            if (icon.contains("13d") || icon.contains("13n")) {
                 drawable = ResourcesCompat.getDrawable(res, R.drawable.weather_snow, null);
             }
         } else if (weather.contains("mist") || weather.contains("Haze")) {

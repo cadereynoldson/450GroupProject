@@ -36,6 +36,7 @@ dependencies {
 
     implementation 'androidx.viewpager:viewpager:1.0.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
     apply plugin: "androidx.navigation.safeargs"
     // Import the BoM for the Firebase platform
     implementation platform('com.google.firebase:firebase-bom:26.0.0')
