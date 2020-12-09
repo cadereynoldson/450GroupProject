@@ -23,13 +23,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class AddChatViewModel extends AndroidViewModel {
+public class ChatAddViewModel extends AndroidViewModel {
 
     private final String chatsURL = "https://cloud-chat-450.herokuapp.com/chats/";
     private MutableLiveData<JSONObject> mResponse;
+    public int mChatID;
 
 
-    public AddChatViewModel(@NonNull Application application) {
+    public ChatAddViewModel(@NonNull Application application) {
         super(application);
         mResponse = new MutableLiveData<>();
         mResponse.setValue(new JSONObject());
@@ -86,7 +87,7 @@ public class AddChatViewModel extends AndroidViewModel {
         try {
             response.put("success", true);
             mResponse.setValue(response);
-            final int chatID = response.getInt("chatID");
+            mChatID = response.getInt("chatID");
         } catch (JSONException e) {
             e.printStackTrace();
         }

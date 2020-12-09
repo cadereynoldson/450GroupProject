@@ -47,7 +47,7 @@
         android:id="@+id/navigation_chats"
         android:name="com.example.groupproject_g3.chat.fragments.ChatMainFragment"
         android:label="fragment_chats_main"
-        tools:layout="@layout/fragment_chats_main" >
+        tools:layout="@layout/fragment_chat_main" >
         <action
             android:id="@+id/action_navigation_chats_to_chatFragment"
             app:destination="@id/chatFragment" />
@@ -60,5 +60,26 @@
         <argument
             android:name="ChatID"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_chatFragment_to_navigation_chats"
+            app:destination="@id/navigation_chats" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatListFragment"
+        android:name="com.example.groupproject_g3.chat.fragments.ChatListFragment"
+        android:label="fragment_chat_list"
+        tools:layout="@layout/fragment_chat_list" >
+        <action
+            android:id="@+id/action_chatListFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addChatFragment"
+        android:name="com.example.groupproject_g3.chat.fragments.ChatAddFragment"
+        android:label="fragment_add_chat"
+        tools:layout="@layout/fragment_chat_add" >
+        <action
+            android:id="@+id/action_addChatFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
     </fragment>
 </navigation>

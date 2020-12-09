@@ -30,7 +30,6 @@ public class ChatListViewModel extends AndroidViewModel {
 
     private MutableLiveData<List<ChatItem>> mChats;
 
-    private static final String chatsURL = "https://cloud-chat-450.herokuapp.com/chats/";
     private static final String memberURL = "https://cloud-chat-450.herokuapp.com/chats/chatmember/";
 
     /**
@@ -84,7 +83,7 @@ public class ChatListViewModel extends AndroidViewModel {
     }
 
 
-    public void connectGet(String authVal, int userId) {
+    public void connectGet(final String authVal, final int userId) {
         Request request = new JsonObjectRequest(Request.Method.GET,
                 memberURL +
                 userId,
@@ -105,38 +104,8 @@ public class ChatListViewModel extends AndroidViewModel {
         Volley.newRequestQueue(getApplication().getApplicationContext()).add(request);
     }
 
-    public void connectDelete(String authVal, int chatId, String userEmail) {
-        String url = chatsURL +
-                "?chatId=" +
-                chatId +
-                "?email=" +
-                userEmail;
-        Request request = new JsonObjectRequest(Request.Method.DELETE,
-                url,
-                null,
-                this::handleDelete,
-                this::handleDeleteError) {
-            @Override
-            public Map<String, String> getHeaders() {
-                Map<String, String> headers = new HashMap<>();
-                // add headers <key,value>
-                headers.put("Authorization", authVal);
-                return headers;
-            }
-        };
-        request.setRetryPolicy(new DefaultRetryPolicy(
-                10_000,
-                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-        Volley.newRequestQueue(getApplication().getApplicationContext())
-                .add(request);
+    public List<ChatItem> getChats(){
+        return mChats.getValue();
     }
 
-    private void handleDeleteError(VolleyError volleyError) {
-        Log.e("Delete Error:", "Error in deletion.");
-    }
-
-    private void handleDelete(JSONObject jsonObject) {
-        Log.i("Delete Successful.", "Success in deletion");
-    }
 }

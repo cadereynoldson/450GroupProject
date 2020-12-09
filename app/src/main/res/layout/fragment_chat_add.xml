@@ -5,7 +5,7 @@
     android:id="@+id/add_chat_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".chat.fragments.AddChatFragment">
+    tools:context=".chat.fragments.ChatAddFragment">
 
     <Button
         android:id="@+id/button_add_chat"

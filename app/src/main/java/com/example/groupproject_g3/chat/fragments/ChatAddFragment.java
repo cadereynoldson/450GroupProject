@@ -9,15 +9,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.Navigation;
 
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.groupproject_g3.databinding.FragmentAddChatBinding;
+import com.example.groupproject_g3.R;
+import com.example.groupproject_g3.databinding.FragmentChatAddBinding;
 import com.example.groupproject_g3.model.UserInfoViewModel;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -25,16 +26,22 @@ import org.json.JSONObject;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AddChatFragment extends Fragment {
+public class ChatAddFragment extends Fragment {
 
-    /** Binding for the fragment. Allows for direct reference of fragment components. */
-    private FragmentAddChatBinding binding;
+    /**
+     * Binding for the fragment. Allows for direct reference of fragment components.
+     */
+    private FragmentChatAddBinding binding;
 
-    /** A direct reference to the user info view model. Easy access to JWT and user id. */
+    /**
+     * A direct reference to the user info view model. Easy access to JWT and user id.
+     */
     private UserInfoViewModel mUserInfo;
 
-    /** View model which allows for the addition of new Chats. */
-    private AddChatViewModel mAddView;
+    /**
+     * View model which allows for the addition of new Chats.
+     */
+    private ChatAddViewModel mChatAddModel;
 
     private ChatMainFragment mChatMain;
 
@@ -43,15 +50,14 @@ public class AddChatFragment extends Fragment {
         super.onCreate(savedInstanceState);
         ViewModelProvider provider = new ViewModelProvider(getActivity());
         mUserInfo = provider.get(UserInfoViewModel.class);
-        mAddView = provider.get(AddChatViewModel.class);
+        mChatAddModel = provider.get(ChatAddViewModel.class);
         mChatMain = new ChatMainFragment();
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentAddChatBinding.inflate(inflater, container, false);
+        binding = FragmentChatAddBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
@@ -59,24 +65,26 @@ public class AddChatFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         binding.buttonAddChat.setOnClickListener(this::addChat);
+        mChatAddModel.addResponseObserver(getViewLifecycleOwner(), this::observeResponse);
     }
 
     /**
      * Calls the add view model with the user input.
+     *
      * @param view the view in which this is called by.
      */
     private void addChat(View view) {
-        String addName = binding.textAddChat.getText().toString();
-        if (addName.isEmpty())
+        String name = binding.textAddChat.getText().toString();
+        if (name.isEmpty())
             binding.textAddChat.setError("Please enter a name.");
         else {
-            mAddView.addChatAndCreator(mUserInfo.getJwt(), mUserInfo.getUserId(), addName);
+            mChatAddModel.addChatAndCreator(mUserInfo.getJwt(), mUserInfo.getUserId(), name);
             binding.buttonAddChat.setOnClickListener(this::navigateToChat);
         }
     }
 
     private void navigateToChat(View view) {
-        mChatMain.setCurrentItem(0,true);
+        mChatMain.navigateToChat(mChatAddModel.mChatID, view);
     }
 
 
@@ -88,7 +96,10 @@ public class AddChatFragment extends Fragment {
                 } catch (JSONException e) {
                     Log.e("JSON Parse error.", e.getMessage());
                 }
-            } else {
+            } else if (response.has("success")) {
+                Snackbar notification = Snackbar.make(binding.addChatRoot, R.string.chat_added_success, Snackbar.LENGTH_SHORT);
+                notification.setAnchorView(R.id.bottom_nav_menu);
+                notification.show();
                 Log.e("Added Chat", "Added Chat");
             }
         }

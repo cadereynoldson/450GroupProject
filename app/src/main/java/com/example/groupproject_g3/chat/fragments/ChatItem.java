@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.groupproject_g3.databinding.FragmentAddChatBinding;
+import com.example.groupproject_g3.databinding.FragmentChatAddBinding;
 import com.example.groupproject_g3.databinding.FragmentChatItemBinding;
 import com.example.groupproject_g3.model.UserInfoViewModel;
 

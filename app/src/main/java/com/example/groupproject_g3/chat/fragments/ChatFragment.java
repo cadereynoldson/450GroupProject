@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.groupproject_g3.authorization.fragments.SignInFragmentArgs;
 import com.example.groupproject_g3.databinding.FragmentChatBinding;
 import com.example.groupproject_g3.model.UserInfoViewModel;
 
@@ -24,26 +25,23 @@ import com.example.groupproject_g3.model.UserInfoViewModel;
  */
 public class ChatFragment extends Fragment {
 
-    //The chat ID for "global" chat
-    private int CHAT_ID;
+
     private FragmentChatBinding binding;
     private ChatSendViewModel mSendModel;
     private ChatViewModel mChatModel;
     private UserInfoViewModel mUserModel;
+    private int CHAT_ID;
 
 
     public ChatFragment() {
         // Required empty public constructor
     }
 
-    public ChatFragment(int chatID){
-        CHAT_ID = chatID;
-    }
-
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ChatFragmentArgs args = ChatFragmentArgs.fromBundle(getArguments());
+        CHAT_ID = args.getChatID();
         ViewModelProvider provider = new ViewModelProvider(getActivity());
         mUserModel = provider.get(UserInfoViewModel.class);
         mChatModel = provider.get(ChatViewModel.class);

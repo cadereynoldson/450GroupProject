@@ -28,7 +28,7 @@ public class ChatListFragment extends Fragment {
     /** View model which allows for the addition of new Chats. */
     private ChatListViewModel mListView;
 
-    private ChatItem mChatItem;
+    private ChatViewModel mChatModel;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,6 +36,7 @@ public class ChatListFragment extends Fragment {
         ViewModelProvider provider = new ViewModelProvider(getActivity());
         mUserInfo = provider.get(UserInfoViewModel.class);
         mListView = provider.get(ChatListViewModel.class);
+        mChatModel = provider.get(ChatViewModel.class);
         mListView.connectGet(mUserInfo.getJwt(), mUserInfo.getUserId());
     }
 
@@ -51,7 +52,7 @@ public class ChatListFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         mListView.addChatListObserver(getViewLifecycleOwner(), chatList -> {
             if (!chatList.isEmpty()) {
-                binding.recyclerChatItem.setAdapter(new ChatListRecyclerViewAdapter(mListView, mUserInfo, chatList));
+                binding.recyclerChatItem.setAdapter(new ChatListRecyclerViewAdapter(mListView, mUserInfo, mChatModel, chatList));
                 binding.textNoChats.setVisibility(View.GONE);
             }
         });

@@ -5,9 +5,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.groupproject_g3.R;
+import com.example.groupproject_g3.authorization.fragments.RegisterFragmentDirections;
+import com.example.groupproject_g3.authorization.fragments.SignInFragmentArgs;
 import com.example.groupproject_g3.databinding.FragmentChatItemBinding;
 import com.example.groupproject_g3.model.UserInfoViewModel;
 
@@ -15,19 +18,18 @@ import java.util.List;
 
 public class ChatListRecyclerViewAdapter extends RecyclerView.Adapter<ChatListRecyclerViewAdapter.ChatListViewHolder> {
 
-    private final List<ChatItem> mChats;
-
-    private final ChatListViewModel mChatListViewModel;
-
-    private final UserInfoViewModel mUserInfo;
-
-    private final ChatMainFragment mChatMain;
+    private  final List<ChatItem> mChats;
+    private  final ChatListViewModel mChatListViewModel;
+    private  final UserInfoViewModel mUserInfoViewModel;
+    private  final ChatViewModel mChatModel;
+    private  final ChatMainFragment mChatMain;
 
 
-    public ChatListRecyclerViewAdapter(ChatListViewModel listViewModel, UserInfoViewModel userInfoViewModel,  List<ChatItem> chats) {
+    public ChatListRecyclerViewAdapter(ChatListViewModel listViewModel, UserInfoViewModel userInfoViewModel, ChatViewModel chatModel,  List<ChatItem> chats) {
         this.mChatListViewModel =  listViewModel;
-        this.mUserInfo = userInfoViewModel;
-        this.mChatMain = new ChatMainFragment();
+        this.mUserInfoViewModel = userInfoViewModel;
+        this.mChatModel = chatModel;
+        mChatMain = new ChatMainFragment();
         mChats = chats;
     }
 
@@ -64,6 +66,9 @@ public class ChatListRecyclerViewAdapter extends RecyclerView.Adapter<ChatListRe
         public void setChat(final ChatItem chatItem) {
             mChatItem = chatItem;
             binding.textChatName.setText(mChatItem.getChatName());
+            binding.imagebuttonGoToChat.setOnClickListener(View -> {
+                mChatMain.navigateToChat(mChatItem.getChatID(), mView);
+            });
         }
 
     }
