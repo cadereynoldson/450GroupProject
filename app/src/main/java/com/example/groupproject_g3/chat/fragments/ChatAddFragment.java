@@ -96,12 +96,8 @@ public class ChatAddFragment extends Fragment {
                 } catch (JSONException e) {
                     Log.e("JSON Parse error.", e.getMessage());
                 }
-            } else if (response.has("success")) {
-                Snackbar notification = Snackbar.make(binding.addChatRoot, R.string.chat_added_success, Snackbar.LENGTH_SHORT);
-                notification.setAnchorView(R.id.bottom_nav_menu);
-                notification.show();
+            } else
                 Log.e("Added Chat", "Added Chat");
-            }
         }
     }
 }

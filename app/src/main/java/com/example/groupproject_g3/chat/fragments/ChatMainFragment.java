@@ -59,8 +59,8 @@ public class ChatMainFragment extends Fragment {
     }
 
     public void navigateToChat(final int chatID, View view){
-        ChatMainFragmentDirections.ActionNavigationChatsToChatFragment directions =
-                ChatMainFragmentDirections.actionNavigationChatsToChatFragment(chatID);
+        ChatMainFragmentDirections.ActionChatMainFragmentToChatFragment directions =
+                ChatMainFragmentDirections.actionChatMainFragmentToChatFragment(chatID);
         directions.setChatID(chatID);
         Navigation.findNavController(view).navigate(directions);
     }
