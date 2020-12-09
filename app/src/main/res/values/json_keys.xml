@@ -30,8 +30,6 @@
     <string name="key_weather_forecast_country">country</string>
     
     <string name="key_weather_forecast_pop">pop</string>
-    <string name="key_weather_forecast_sunrise">sunrise</string>
-    <string name="key_weather_forecast_sunset">sunset</string>
 
     <string name="key_weather_current_coord">coord</string>
     <string name="key_weather_current_lon">lon</string>
@@ -42,6 +40,9 @@
     <string name="key_weather_current_deg">deg</string>
     
     <string name="key_weather_24hour_hourly">hourly</string>
-    <string name="key_weather_24hour_temp">temp</string>
-    <string name="key_weather_24hour_dt">dt</string>
+    <string name="key_weather_24hour_current">current</string>
+    <string name="key_weather_current_sunrise">sunrise</string>
+    <string name="key_weather_current_sunset">sunset</string>
+
+    <string name= "key_chats_list">rows</string>
 </resources>

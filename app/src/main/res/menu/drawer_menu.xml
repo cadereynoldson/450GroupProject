@@ -5,20 +5,13 @@
     tools:showIn="navigation_view">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/menu_home"
-            android:title="Home" />
+            android:id="@+id/app_bar_search"
+            android:icon="@drawable/ic_search_black_24dp"
+            android:title="Search"
+            app:actionViewClass="android.widget.SearchView" />
         <item
             android:id="@+id/menu_weather"
-            android:title="Weather" />
-        <item
-            android:id="@+id/menu_chats"
-            android:title="Chats" />
-        <item
-            android:id="@+id/menu_contact"
-            android:title="Contact" />
-        <item
-            android:id="@+id/menu_profile"
-            android:title="Profile" />
+            android:title="Dashboard" />
         <item
             android:id="@+id/action_sign_out"
             android:title="@string/action_sign_out" />

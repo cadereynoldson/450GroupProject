@@ -82,6 +82,23 @@ public class WeatherHoursViewModel extends AndroidViewModel {
         IntFunction<String> getString =
                 getApplication().getResources()::getString;
         try {
+
+            JSONObject sunData = result.getJSONObject(getString.apply(R.string.key_weather_24hour_current));
+            long sunriseInfo = ((long) sunData.getInt(getString.apply(R.string.key_weather_current_sunrise)))* 1000L;
+
+            Date riseDate = new Date(sunriseInfo);
+            Calendar rise = Calendar.getInstance();
+            rise.setTime(riseDate);
+            String sunrise = new SimpleDateFormat("HH:mm").format(riseDate);
+
+            long sunsetInfo = ((long) sunData.getInt(getString.apply(R.string.key_weather_current_sunset)))* 1000L;
+
+            Date setDate = new Date(sunsetInfo);
+            Calendar set = Calendar.getInstance();
+            set.setTime(setDate);
+            String sunset = new SimpleDateFormat("HH:mm").format(setDate);
+
+
             if (result.has(getString.apply(R.string.key_weather_24hour_hourly))) {
                 JSONArray data = result.getJSONArray("hourly");
 
@@ -95,7 +112,6 @@ public class WeatherHoursViewModel extends AndroidViewModel {
                     JSONArray weatherArr = info.getJSONArray(getString.apply(R.string.key_weather_current_weather));
                     String icon = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_icon));
                     String urlIcon = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
-                    Log.i("Icon: ", urlIcon);
 
                     Integer currentTemp = info.getInt(getString.apply(R.string.key_weather_current_temp));
 
@@ -112,6 +128,8 @@ public class WeatherHoursViewModel extends AndroidViewModel {
                             currentTemp.toString())
                             .addTime(time)
                             .addIcon(urlIcon)
+                            .addSunrise(sunrise)
+                            .addSunset(sunset)
                             .build();
 
                     if (!information.getValue().contains(HoursInfo)) {

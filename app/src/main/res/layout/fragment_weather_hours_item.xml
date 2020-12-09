@@ -2,11 +2,11 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="55dp"
-    android:layout_height="115dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:layout_margin="5dp"
     android:elevation="0dp"
-    app:cardBackgroundColor="#6303A9F4"
+    app:cardBackgroundColor="#8A03A9F4"
     app:cardCornerRadius="0dp"
     app:cardElevation="0dp">
 
@@ -36,9 +36,10 @@
                 android:layout_height="36dp"
                 android:layout_below="@id/text_hours"
                 android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                app:srcCompat="@drawable/ic_weather_yellow_24"
-                tools:visibility="invisible" />
+                android:layout_marginRight="5dp"
+                app:srcCompat="@drawable/ic_weather_yellow_24" />
 
             <TextView
                 android:id="@+id/text_hours_temp"
@@ -46,7 +47,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/image_hours_forecast"
                 android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="4dp"
+                android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
                 android:text="35°"
                 android:textColor="#FFFFFF"

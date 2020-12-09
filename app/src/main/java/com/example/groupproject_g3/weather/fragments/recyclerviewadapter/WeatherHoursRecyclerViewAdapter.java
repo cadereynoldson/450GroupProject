@@ -54,10 +54,18 @@ public class WeatherHoursRecyclerViewAdapter extends RecyclerView.Adapter<Weathe
 
         public void setHoursInfo(final WeatherInformation info) {
             this.info = info;
-            Log.e("Creating info", info.toString());
             binding.textHours.setText(info.getmTime());
             binding.textHoursTemp.setText(info.getmTemperature() + "°");
             Picasso.get().load(info.getmIcon()).into(binding.imageHoursForecast);
+            if (info.getmTime().matches(info.getmSunrise().substring(0, 2))) {
+                binding.textHours.setText(info.getmSunrise());
+                binding.textHoursTemp.setText("Sunrise");
+                Picasso.get().load(R.drawable.weather_sunrise).into(binding.imageHoursForecast);
+            } else if (info.getmTime().matches(info.getmSunset().substring(0, 2))) {
+                binding.textHours.setText(info.getmSunset());
+                binding.textHoursTemp.setText("Sunset");
+                Picasso.get().load(R.drawable.weather_sunset).into(binding.imageHoursForecast);
+            }
         }
     }
 }

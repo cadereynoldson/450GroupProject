@@ -42,6 +42,7 @@ public class ContactListViewModel extends AndroidViewModel {
     /** URL for deleting a contact of this user. */
     private static final String deleteContactsURL = "https://cloud-chat-450.herokuapp.com/contacts/delete/";
 
+
     /**
      * Creates a new instance of this view model.
      * @param application the parent application.

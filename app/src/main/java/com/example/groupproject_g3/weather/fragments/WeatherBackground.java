@@ -59,8 +59,51 @@ public class WeatherBackground {
             } else {
                 drawable = ResourcesCompat.getDrawable(res, R.drawable.weather_overcast_clouds_night, null);
             }
+        } else if (weather.contains("thunderstorm") || weather.matches("squalls")) {
+            if (icon.contains("11")) {
+                if (weather.contains("rain") || weather.contains("drizzle")) {
+                    drawable = ResourcesCompat.getDrawable(res, R.drawable.weather_thunderstorm_rain, null);
+                } else {
+                    drawable = ResourcesCompat.getDrawable(res, R.drawable.weather_thunderstorm, null);
+                }
+            }
+        } else if (weather.contains("drizzle")) {
+            if (icon.contains("09d")) {
+                drawable = ResourcesCompat.getDrawable(res, R.drawable.weather_drizzle_rain, null);
+            } else {
+                drawable = ResourcesCompat.getDrawable(res, R.drawable.weather_drizzle_rain_night, null);
+            }
+        } else if (weather.contains("rain")) {
+            if (icon.contains("10d")) {
+                drawable = ResourcesCompat.getDrawable(res, R.drawable.weather_light_rain, null);
+            } else if (weather.matches("freezing rain") || icon.contains("13")) {
+                drawable = ResourcesCompat.getDrawable(res, R.drawable.weather_freezing_rain, null);
+            } else if (weather.contains("shower")) {
+                if (icon.contains("09")) {
+                    drawable = ResourcesCompat.getDrawable(res, R.drawable.weather_shower_rain, null);
+                }
+            } else {
+                drawable = ResourcesCompat.getDrawable(res, R.drawable.weather_light_rain_night, null);
+            }
+        } else if (weather.contains("snow") || weather.contains("sleet") || weather.contains("Sleet")) {
+            if (icon.contains("13d") || icon.contains("13n")) {
+                drawable = ResourcesCompat.getDrawable(res, R.drawable.weather_snow, null);
+            }
+        } else if (weather.contains("mist") || weather.contains("Haze")) {
+            if (icon.contains("50d")) {
+                drawable = ResourcesCompat.getDrawable(res, R.drawable.weather_mist, null);
+            } else {
+                drawable = ResourcesCompat.getDrawable(res, R.drawable.weather_mist_night, null);
+            }
+        } else if (weather.contains("fog") || weather.contains("Smoke")) {
+            drawable = ResourcesCompat.getDrawable(res, R.drawable.weather_fog, null);
+        } else if (weather.contains("sand") || weather.contains("dust") || weather.contains("ash")) {
+            drawable = ResourcesCompat.getDrawable(res, R.drawable.weather_sand, null);
+        } else if (weather.matches("tornado")) {
+            drawable = ResourcesCompat.getDrawable(res, R.drawable.weather_tornado, null);
+        } else {
+            drawable = ResourcesCompat.getDrawable(res, R.drawable.weather_default, null);
         }
         view.setBackground(drawable);
     }
-
 }

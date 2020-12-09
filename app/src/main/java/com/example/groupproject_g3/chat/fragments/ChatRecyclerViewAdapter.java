@@ -15,7 +15,7 @@ import androidx.core.graphics.ColorUtils;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.groupproject_g3.R;
-import com.example.groupproject_g3.databinding.FragmentPageChatMessageBinding;
+import com.example.groupproject_g3.databinding.FragmentChatMessageBinding;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.shape.CornerFamily;
 
@@ -24,13 +24,13 @@ import java.util.List;
 public class ChatRecyclerViewAdapter extends RecyclerView.Adapter<ChatRecyclerViewAdapter.MessageViewHolder> {
 
     /** object containing messages within chat */
-    private final List<com.example.groupproject_g3.chat.fragments.ChatMessage> mMessages;
+    private final List<ChatMessage> mMessages;
 
     /** string associated with the email of associated user */
     private final String mEmail;
 
     /** An instance of the Recycler View Adapter. */
-    public ChatRecyclerViewAdapter(List<com.example.groupproject_g3.chat.fragments.ChatMessage> messages, String email) {
+    public ChatRecyclerViewAdapter(List<ChatMessage> messages, String email) {
         this.mMessages = messages;
         mEmail = email;
     }
@@ -41,7 +41,7 @@ public class ChatRecyclerViewAdapter extends RecyclerView.Adapter<ChatRecyclerVi
     public MessageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new MessageViewHolder(LayoutInflater
                 .from(parent.getContext())
-                .inflate(R.layout.fragment_page_chat_message, parent, false));
+                .inflate(R.layout.fragment_chat_message, parent, false));
     }
 
     @Override
@@ -56,12 +56,12 @@ public class ChatRecyclerViewAdapter extends RecyclerView.Adapter<ChatRecyclerVi
 
     class MessageViewHolder extends RecyclerView.ViewHolder {
         private final View mView;
-        private FragmentPageChatMessageBinding binding;
+        private FragmentChatMessageBinding binding;
 
         public MessageViewHolder(@NonNull View view) {
             super(view);
             mView = view;
-            binding = FragmentPageChatMessageBinding.bind(view);
+            binding = FragmentChatMessageBinding.bind(view);
         }
 
         void setMessage(final com.example.groupproject_g3.chat.fragments.ChatMessage message) {

@@ -114,7 +114,6 @@ public class WeatherDaysViewModel extends AndroidViewModel {
                     String currentWeather = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_description));
                     String icon = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_icon));
                     String urlIcon = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
-                    Log.i("Icon: ", urlIcon);
 
                     //Fetch main array and get the temperature value from it.
                     JSONObject tempData = info.getJSONObject(getString.apply(R.string.key_weather_current_weather_main));

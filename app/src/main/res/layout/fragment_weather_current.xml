@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="230dp"
         android:layout_centerVertical="false"
-        app:cardBackgroundColor="#6303A9F4"
+        app:cardBackgroundColor="#8A03A9F4"
         app:cardCornerRadius="0dp">
 
         <RelativeLayout
