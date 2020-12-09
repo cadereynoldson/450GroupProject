@@ -26,8 +26,6 @@ import java.util.Objects;
 public class ChatAddDeleteGetContactViewModel extends AndroidViewModel {
 
     private static final String URL = "https://cloud-chat-450.herokuapp.com/chats/";
-    private static final String ID_URL = "https://cloud-chat-450.herokuapp.com/chats/get_id/";
-    private int mMemberID = -1;
 
     /**
      * The latest response from the webserver.
@@ -52,54 +50,6 @@ public class ChatAddDeleteGetContactViewModel extends AndroidViewModel {
                                     @NonNull Observer<? super JSONObject> observer) {
         mResponse.setValue(new JSONObject());
         mResponse.observe(owner, observer);
-    }
-
-    public void getID(final String authVal, final String input) {
-        JSONObject body = new JSONObject();
-        try {
-            body.put("input", input);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        Request request = new JsonObjectRequest(
-                Request.Method.GET,
-                ID_URL,
-                body,
-                this::handleSuccess,
-                this::handleError
-        ) {
-            @Override
-            public Map<String, String> getHeaders() {
-                Map<String, String> headers = new HashMap<>();
-                headers.put("Authorization", authVal);
-                return headers;
-            }
-        };
-        request.setRetryPolicy(new DefaultRetryPolicy(
-                10_000,
-                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-        //Instantiate the RequestQueue and add the request to the queue
-        Volley.newRequestQueue(getApplication().getApplicationContext())
-                .add(request);
-    }
-
-
-    private void handleSuccess(JSONObject response) {
-        if (!response.has("memberid")) {
-            throw new IllegalStateException("Unexpected response in getID from ChatsAddDeleteGetContactViewModel: " + response);
-        } else {
-            try {
-                mMemberID = response.getInt("memberid");
-            } catch (JSONException e) {
-                e.printStackTrace();
-                Log.e("ERROR!", e.getMessage());
-            }
-        }
-    }
-
-    public int getmMemberID() {
-        return mMemberID;
     }
 
     public void connectGet(final String authVal, final int chatID) {
@@ -137,15 +87,14 @@ public class ChatAddDeleteGetContactViewModel extends AndroidViewModel {
     public void connectPut(final String authVal, final int userID, final int chatID) {
         JSONObject body = new JSONObject();
         try {
-            body.put("chatid", chatID);
-            body.put("memberid", userID);
+            body.put("chatId", chatID);
+            body.put("memberId", userID);
         } catch (JSONException e) {
             e.printStackTrace();
         }
         Request request = new JsonObjectRequest(
                 Request.Method.PUT,
-                URL +
-                        chatID,
+                URL,
                 body,
                 mResponse::setValue,
                 this::handleError
