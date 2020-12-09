@@ -11,6 +11,15 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_page_home" />
     <fragment
+        android:id="@+id/navigation_chats"
+        android:name="com.example.groupproject_g3.chat.fragments.ChatFragment"
+        android:label="@string/title_chats"
+        tools:layout="@layout/fragment_page_chat" >
+        <action
+            android:id="@+id/action_navigation_chats_to_addChatFragment"
+            app:destination="@id/addChatFragment" />
+    </fragment>
+    <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.groupproject_g3.profile.fragments.ProfileFragment"
         android:label="@string/title_profile"
@@ -20,6 +29,15 @@
         android:name="com.example.groupproject_g3.contact.fragments.ContactAddFragment"
         android:label="@string/action_add_contact"
         tools:layout="@layout/fragment_add_contact"/>
+    <fragment
+        android:id="@+id/addChatFragment"
+        android:name="com.example.groupproject_g3.chat.fragments.AddChatFragment"
+        android:label="fragment_add_chat"
+        tools:layout="@layout/fragment_add_chat" >
+        <action
+            android:id="@+id/action_addChatFragment_to_navigation_chats"
+            app:destination="@id/navigation_chats" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_contacts"
         android:name="com.example.groupproject_g3.contact.fragments.ContactMainFragment"
@@ -33,6 +51,9 @@
         <action
             android:id="@+id/action_navigation_weather_to_weatherForecastFragment"
             app:destination="@id/navigation_weather_forecast" />
+        <action
+            android:id="@+id/action_navigation_weather_to_mapsActivity"
+            app:destination="@id/mapsActivity" />
     </fragment>
     <fragment
         android:id="@+id/navigation_weather_forecast"
@@ -43,43 +64,9 @@
             android:name="Information"
             app:argType="com.example.groupproject_g3.weather.fragments.WeatherInformation" />
     </fragment>
-    <fragment
-        android:id="@+id/navigation_chats"
-        android:name="com.example.groupproject_g3.chat.fragments.ChatMainFragment"
-        android:label="fragment_chats_main"
-        tools:layout="@layout/fragment_chat_main" >
-        <action
-            android:id="@+id/action_navigation_chats_to_chatFragment"
-            app:destination="@id/chatFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/chatFragment"
-        android:name="com.example.groupproject_g3.chat.fragments.ChatFragment"
-        android:label="fragment_chat"
-        tools:layout="@layout/fragment_chat" >
-        <argument
-            android:name="ChatID"
-            app:argType="integer" />
-        <action
-            android:id="@+id/action_chatFragment_to_navigation_chats"
-            app:destination="@id/navigation_chats" />
-    </fragment>
-    <fragment
-        android:id="@+id/chatListFragment"
-        android:name="com.example.groupproject_g3.chat.fragments.ChatListFragment"
-        android:label="fragment_chat_list"
-        tools:layout="@layout/fragment_chat_list" >
-        <action
-            android:id="@+id/action_chatListFragment_to_chatFragment"
-            app:destination="@id/chatFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/addChatFragment"
-        android:name="com.example.groupproject_g3.chat.fragments.ChatAddFragment"
-        android:label="fragment_add_chat"
-        tools:layout="@layout/fragment_chat_add" >
-        <action
-            android:id="@+id/action_addChatFragment_to_chatFragment"
-            app:destination="@id/chatFragment" />
-    </fragment>
+    <activity
+        android:id="@+id/mapsActivity"
+        android:name="com.example.groupproject_g3.location.fragments.MapsActivity"
+        android:label="activity_maps"
+        tools:layout="@layout/activity_maps" />
 </navigation>

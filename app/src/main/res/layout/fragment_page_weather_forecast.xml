@@ -14,7 +14,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        app:cardBackgroundColor="#7C03A9F4"
+        app:cardBackgroundColor="#8A03A9F4"
         app:cardCornerRadius="0dp"
         app:cardElevation="0dp">
 
@@ -84,7 +84,7 @@
                     android:layout_marginTop="16dp"
                     android:text="Temperature"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp"
+                    android:textSize="22sp"
                     android:textStyle="bold|italic" />
 
                 <TextView
@@ -96,7 +96,7 @@
                     android:layout_marginTop="8dp"
                     android:text="Feels Like"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_feelslike_data"
@@ -104,10 +104,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_feelslike"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="18dp"
+                    android:layout_marginRight="20dp"
                     android:text="25°F"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_minimum"
@@ -117,7 +117,7 @@
                     android:layout_marginLeft="36dp"
                     android:text="Minimum"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_minimum_data"
@@ -125,10 +125,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_minimum"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="18dp"
+                    android:layout_marginRight="20dp"
                     android:text="25°F"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_maximum"
@@ -138,7 +138,7 @@
                     android:layout_marginLeft="36dp"
                     android:text="Maximum"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_maximum_data"
@@ -146,10 +146,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_maximum"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="18dp"
+                    android:layout_marginRight="20dp"
                     android:text="25°F"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_forecast_pressureInfo"
@@ -160,7 +160,7 @@
                     android:layout_marginTop="16dp"
                     android:text="Atmospheric Pressure"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp"
+                    android:textSize="22sp"
                     android:textStyle="bold|italic" />
 
                 <TextView
@@ -172,7 +172,7 @@
                     android:layout_marginTop="8dp"
                     android:text="Chance of Rain"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_rain_data"
@@ -180,10 +180,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_rain"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="18dp"
+                    android:layout_marginRight="20dp"
                     android:text="100%"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_pressure"
@@ -193,7 +193,7 @@
                     android:layout_marginLeft="36dp"
                     android:text="Pressure"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_pressure_data"
@@ -201,10 +201,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_pressure"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="18dp"
+                    android:layout_marginRight="20dp"
                     android:text="1007 hPa"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_humidity"
@@ -214,7 +214,7 @@
                     android:layout_marginLeft="36dp"
                     android:text="Humidity"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_humidity_data"
@@ -222,10 +222,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_humidity"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="18dp"
+                    android:layout_marginRight="20dp"
                     android:text="93%"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_forecast_windInfo"
@@ -236,7 +236,7 @@
                     android:layout_marginTop="16dp"
                     android:text="Wind"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp"
+                    android:textSize="22sp"
                     android:textStyle="bold|italic" />
 
                 <TextView
@@ -247,7 +247,7 @@
                     android:layout_marginLeft="36dp"
                     android:text="Speed"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_speed_data"
@@ -255,10 +255,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_speed"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="18dp"
+                    android:layout_marginRight="20dp"
                     android:text="4.75"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_direction"
@@ -269,7 +269,7 @@
                     android:layout_marginTop="8dp"
                     android:text="Direction"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_direction_data"
@@ -277,10 +277,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_direction"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="18dp"
+                    android:layout_marginRight="20dp"
                     android:text="Northwest"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_forecast_otherInfo"
@@ -291,7 +291,7 @@
                     android:layout_marginTop="16dp"
                     android:text="Additional Information"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp"
+                    android:textSize="22sp"
                     android:textStyle="bold|italic" />
 
                 <TextView
@@ -303,7 +303,7 @@
                     android:layout_marginTop="8dp"
                     android:text="Latitude"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_latitude_data"
@@ -311,10 +311,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_latitude"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="18dp"
+                    android:layout_marginRight="20dp"
                     android:text="47.6 N"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_longitude"
@@ -325,7 +325,7 @@
                     android:layout_marginBottom="15dp"
                     android:text="Longitude"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/text_longitude_data"
@@ -333,10 +333,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/text_longitude"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="18dp"
+                    android:layout_marginRight="20dp"
                     android:text="122.33 W"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
             </RelativeLayout>
         </ScrollView>

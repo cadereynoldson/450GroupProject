@@ -53,7 +53,5 @@ public class WeatherForecastFragment extends Fragment {
         binding.textSpeedData.setText(args.getInformation().getmSpeed());
         binding.textDirectionData.setText(args.getInformation().getmDirection());
         background = new WeatherBackground(view, args.getInformation().getmWeather(), args.getInformation().getmIcon(), getResources());
-//        binding.cardWeatherForecast.setBackgroundColor(R.color.secondaryLightColor);
-
     }
 }
