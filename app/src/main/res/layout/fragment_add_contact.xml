@@ -36,7 +36,7 @@
         android:id="@+id/text_search"
         android:layout_width="225dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="?attr/colorOnSurface"
         android:ems="10"
         android:hint="@string/auth_email"
@@ -45,7 +45,6 @@
         android:textColor="?attr/colorOnSurface"
         android:textColorHint="?attr/hintTextColor"
         app:layout_constraintEnd_toEndOf="@+id/spinner_search_by"
-        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="@+id/spinner_search_by"
         app:layout_constraintTop_toBottomOf="@+id/spinner_search_by" />
 
