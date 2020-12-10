@@ -39,7 +39,8 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
-                app:srcCompat="@drawable/ic_weather_yellow_24" />
+                app:srcCompat="@drawable/ic_weather_yellow_24"
+                tools:visibility="invisible" />
 
             <TextView
                 android:id="@+id/text_hours_temp"
