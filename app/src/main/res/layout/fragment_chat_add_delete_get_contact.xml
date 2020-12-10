@@ -5,6 +5,7 @@
     android:id="@+id/manage_chat_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
     tools:context=".chat.fragments.ChatAddDeleteGetContactFragment">
 
     <TextView
@@ -13,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:text="@string/chat_select_contact"
+        android:textColor="?attr/colorOnSurface"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -70,6 +72,7 @@
         android:layout_marginTop="76dp"
         android:text="@string/text_select_chat"
         android:textAlignment="center"
+        android:textColor="?attr/colorOnSurface"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

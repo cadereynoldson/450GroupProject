@@ -8,7 +8,7 @@ public class ChatItem {
     /**The chat name*/
     private final String mChatName;
 
-    public ChatItem(int theChatID, String theChatName){
+    public ChatItem(final int theChatID, final String theChatName){
         this.mChatID = theChatID;
         this.mChatName = theChatName;
        }

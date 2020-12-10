@@ -47,7 +47,7 @@ public class ChatAddFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentChatAddBinding.inflate(inflater, container, false);
         return binding.getRoot();
@@ -65,7 +65,7 @@ public class ChatAddFragment extends Fragment {
      *
      * @param view the view in which this is called by.
      */
-    private void addChat(View view) {
+    private void addChat(final View view) {
         String name = binding.textAddChat.getText().toString();
         if (name.isEmpty())
             binding.textAddChat.setError("Please enter a name.");
