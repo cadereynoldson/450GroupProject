@@ -22,9 +22,7 @@ public class LocationViewModel extends ViewModel {
     }
 
     public void setLocation(final Location location) {
-        if (mLocation.getValue() == null
-                || location.getLatitude() != mLocation.getValue().getLatitude()
-                || location.getLongitude() != mLocation.getValue().getLongitude()) {
+        if (!location.equals(mLocation.getValue())) {
             mLocation.setValue(location);
         }
     }

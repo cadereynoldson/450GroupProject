@@ -100,7 +100,7 @@ public class WeatherDaysViewModel extends AndroidViewModel {
             JSONObject coordData = cityData.getJSONObject(getString.apply(R.string.key_weather_current_coord));
             Double lat = coordData.getDouble(getString.apply(R.string.key_weather_current_lat));
             Double lon = coordData.getDouble(getString.apply(R.string.key_weather_current_lon));
-
+            information.getValue().clear();
             if (result.has(getString.apply(R.string.key_weather_forecast_list))) {
                 JSONArray data = result.getJSONArray(getString.apply(R.string.key_weather_forecast_list));
                 for (int i = 0; i < data.length(); i++) {
@@ -142,7 +142,7 @@ public class WeatherDaysViewModel extends AndroidViewModel {
 
                     String dateDisplay = calendar.get(Calendar.MONTH) + "/" + calendar.get(Calendar.DAY_OF_MONTH);
 
-                    String time = new SimpleDateFormat("HH:mm").format(date);
+                    String time = new SimpleDateFormat("hh:mm").format(date);
 
                     String day = new SimpleDateFormat("EE").format(date);
 
