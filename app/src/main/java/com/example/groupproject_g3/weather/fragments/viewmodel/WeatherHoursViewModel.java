@@ -48,9 +48,9 @@ public class WeatherHoursViewModel extends AndroidViewModel {
 
     /**
      * Gets the five day weather forecase given a JWT, latitude, and longitude.
-     * @param authVal
-     * @param latitude
-     * @param longitude
+     * @param authVal the authentic value
+     * @param latitude the latitude of the location
+     * @param longitude the longitude of the location
      */
     public void connectGet(String authVal, double latitude, double longitude) {
         String url = "https://cloud-chat-450.herokuapp.com/weather/24hour/latLon/?lat=" + latitude + "&long=" + longitude;
@@ -107,13 +107,15 @@ public class WeatherHoursViewModel extends AndroidViewModel {
                     JSONObject info = data.getJSONObject(i);
 
                     //fetch date, temperature, weather, and time.
-                    long dateTime = ((long) info.getInt(getString.apply(R.string.key_weather_date_time))) * 1000l;
+                    long dateTime = ((long) info.getInt(getString.apply(R.string.key_weather_date_time))) * 1000L;
 
                     JSONArray weatherArr = info.getJSONArray(getString.apply(R.string.key_weather_current_weather));
                     String icon = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_icon));
                     String urlIcon = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
 
                     Integer currentTemp = info.getInt(getString.apply(R.string.key_weather_current_temp));
+                    Integer value = currentTemp - 32;
+                    Integer celsius = value * 5/9;
 
                     Date date = new Date(dateTime);
                     Calendar calendar = Calendar.getInstance();
@@ -126,6 +128,7 @@ public class WeatherHoursViewModel extends AndroidViewModel {
                     WeatherInformation HoursInfo = new WeatherInformation.Builder(
                             dateDisplay,
                             currentTemp.toString())
+                            .addCelsius(celsius.toString())
                             .addTime(time)
                             .addIcon(urlIcon)
                             .addSunrise(sunrise)
@@ -145,7 +148,7 @@ public class WeatherHoursViewModel extends AndroidViewModel {
 
     /**
      * Handles any error during the connection process.
-     * @param error
+     * @param error handles the error
      */
     private void handleError(final VolleyError error) {
         //TODO: Add better error detection

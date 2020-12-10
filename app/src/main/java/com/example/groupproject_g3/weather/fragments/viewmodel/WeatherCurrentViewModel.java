@@ -1,6 +1,3 @@
-/**
- * A view model of the current weather to be displayed.
- */
 package com.example.groupproject_g3.weather.fragments.viewmodel;
 
 import android.app.Application;
@@ -106,7 +103,7 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
                 getApplication().getResources()::getString;
         try {
             //fetch date, temperature, weather, and time.
-            long dateTime = ((long) result.getInt(getString.apply(R.string.key_weather_date_time))) * 1000l;
+            long dateTime = ((long) result.getInt(getString.apply(R.string.key_weather_date_time))) * 1000L;
 
             //Fetch weather array and get main value from the response.
             JSONArray weatherArr = result.getJSONArray(getString.apply(R.string.key_weather_current_weather));
@@ -117,6 +114,9 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
             //Fetch main array and get the temperature value from it.
             JSONObject tempData = result.getJSONObject(getString.apply(R.string.key_weather_current_weather_main));
             Integer currentTemp = tempData.getInt(getString.apply(R.string.key_weather_current_temp));
+
+            Integer value = currentTemp - 32;
+            Integer celsius = value * 5/9;
 
             JSONObject sysData = result.getJSONObject(getString.apply(R.string.key_weather_current_sys));
             String currentCountry = sysData.getString(getString.apply(R.string.key_weather_current_country));
@@ -133,6 +133,7 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
             WeatherInformation info = new WeatherInformation.Builder(
                     dateDisplay,
                     currentTemp.toString())
+                    .addCelsius(celsius.toString())
                     .addTime(time)
                     .addWeather(currentWeather)
                     .addLocation(currentLocation)
@@ -150,7 +151,7 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
 
     /**
      * Handles any error during the connection process.
-     * @param error
+     * @param error handles the error
      */
     private void handleError(final VolleyError error) {
         //TODO: Add better error detection

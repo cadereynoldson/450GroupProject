@@ -35,6 +35,7 @@ import com.example.groupproject_g3.model.NewChatCountViewModel;
 import com.example.groupproject_g3.model.NewMessageCountViewModel;
 import com.example.groupproject_g3.model.PushyTokenViewModel;
 import com.example.groupproject_g3.model.UserInfoViewModel;
+import com.example.groupproject_g3.profile.fragments.ProfileFragment;
 import com.example.groupproject_g3.services.PushReceiver;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -217,7 +218,16 @@ public class MainActivity extends AppCompatActivity {
                 badge.setVisible(false);
             }
         });
-        this.setTheme(R.style.Theme_GroupProjectG3);
+        initTheme();
+    }
+
+    /**
+     * Fetches the last used theme the user used with the app.
+     */
+    private void initTheme() {
+        SharedPreferences sharedPreferences = getSharedPreferences(ProfileFragment.sharedPrefKey, Context.MODE_PRIVATE);
+        int lastTheme = sharedPreferences.getInt(ProfileFragment.savedThemeKey, R.style.Theme_GroupProjectG3);
+        this.setTheme(lastTheme);
     }
 
     /**

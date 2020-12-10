@@ -18,7 +18,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="?attr/colorOnSurface"
+        android:backgroundTint="?attr/colorOnSurface"/>
 
     <EditText
         android:id="@+id/text_register_last_name"
@@ -31,7 +33,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_register_first_name" />
+        app:layout_constraintTop_toBottomOf="@+id/text_register_first_name"
+        android:textColor="?attr/colorOnSurface"
+        android:backgroundTint="?attr/colorOnSurface"/>
 
     <EditText
         android:id="@+id/text_register_email"
@@ -44,7 +48,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_register_last_name" />
+        app:layout_constraintTop_toBottomOf="@+id/text_register_last_name"
+        android:textColor="?attr/colorOnSurface"
+        android:backgroundTint="?attr/colorOnSurface"/>
 
     <EditText
         android:id="@+id/text_register_username"
@@ -57,7 +63,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_register_email" />
+        app:layout_constraintTop_toBottomOf="@+id/text_register_email"
+        android:textColor="?attr/colorOnSurface"
+        android:backgroundTint="?attr/colorOnSurface"/>
 
     <EditText
         android:id="@+id/text_register_password"
@@ -70,7 +78,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_register_username" />
+        app:layout_constraintTop_toBottomOf="@+id/text_register_username"
+        android:textColor="?attr/colorOnSurface"
+        android:backgroundTint="?attr/colorOnSurface"/>
 
     <EditText
         android:id="@+id/text_register_password2"
@@ -83,7 +93,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_register_password" />
+        app:layout_constraintTop_toBottomOf="@+id/text_register_password"
+        android:textColor="?attr/colorOnSurface"
+        android:backgroundTint="?attr/colorOnSurface"/>
 
     <Button
         android:id="@+id/button_register"
