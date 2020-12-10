@@ -53,8 +53,28 @@
     <string name="button_verification_retry">Send Again</string>
     <string name="button_verification_return">Return to Sign In</string>
 
-    <string name="action_add_chat">Add Chat</string>
-
+    <string name="button_create_chat">Create Chat</string>
+    <string name="tab_add_chat">Add Chat</string>
+    <string name="tab_add_delete_contact">Contacts</string>
+    <string name="text_add_chat">Type desired chat name here</string>
+    <string name="tab_show_chats">Chat</string>
+    <string name="tab_show_chatlist">ChatList</string>
+    <string name="button_delete_contact_from_chat">Delete From Chat</string>
+    <string name="button_add_to_chat">Add to Chat</string>
+    <string name="imagebutton_go_to_chat"></string>
+    <string name="text_select_chat">Select Chat</string>
+    <string name="text_chatID">#</string>
+    <string name="text_chat_name">ChatName</string>
+    <string name="text_contacts_names">Contacts Names</string>
+    <string name="text_no_chats">You currently have no Chats</string>
+    <string name="chat_select_contact">Select Contact</string>
+    <string name="chat_manage_chat_title">Manage Chats</string>
+    <string name="chat_manip_error">Error in chat management!</string>
+    <string name="chat_manip_success">Successfully altered chat!</string>
+    <string-array name="chat_search_by_options">
+        <item>Email</item>
+        <item>Username</item>
+    </string-array>
 
     <string name="menu_dashboard">Dashboard</string>
     <string name="menu_more">More</string>

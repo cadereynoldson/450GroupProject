@@ -98,23 +98,26 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="addChatFragment">
+                  <entry key="chatFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="312" />
-                            <option name="y" value="-38" />
+                            <option name="x" value="303" />
+                            <option name="y" value="-15" />
                           </Point>
                         </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_addChatFragment_to_navigation_chats">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="chatMainFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="306" />
+                            <option name="y" value="315" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -139,27 +142,6 @@
                             <option name="x" value="556" />
                             <option name="y" value="-10" />
                           </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="navigation_chats">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="320" />
-                            <option name="y" value="332" />
-                          </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_navigation_chats_to_addChatFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
                         </option>
                       </LayoutPositions>
                     </value>

@@ -11,11 +11,13 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
+import androidx.navigation.Navigation;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.groupproject_g3.R;
 import com.example.groupproject_g3.io.RequestQueueSingleton;
 
@@ -38,11 +40,15 @@ public class ChatViewModel extends AndroidViewModel {
      * The value represents the List of (known) messages for that that room.
      */
     private Map<Integer, MutableLiveData<List<ChatMessage>>> mMessages;
+    private MutableLiveData<List<ChatItem>> mChats;
 
     public ChatViewModel(@NonNull Application application) {
         super(application);
         mMessages = new HashMap<>();
+        mChats = new MutableLiveData<>();
+        mChats.setValue(new ArrayList<ChatItem>());
     }
+
 
     /**
      * Register as an observer to listen to a specific chat room's list of messages.
@@ -72,7 +78,6 @@ public class ChatViewModel extends AndroidViewModel {
     }
 
 
-
     private MutableLiveData<List<ChatMessage>> getOrCreateMapEntry(final int chatId) {
         if(!mMessages.containsKey(chatId)) {
             mMessages.put(chatId, new MutableLiveData<>(new ArrayList<>()));
@@ -93,7 +98,8 @@ public class ChatViewModel extends AndroidViewModel {
      */
     public void getFirstMessages(final int chatId, final String jwt) {
         String url = getApplication().getResources().getString(R.string.base_url) +
-                "/messages/" + chatId;
+                "/messages/" +
+                chatId;
 
         Request request = new JsonObjectRequest(
                 Request.Method.GET,
