@@ -37,10 +37,13 @@ public class ProfileFragment extends Fragment {
     private UserInfoViewModel userInfoViewModel;
 
     /** Key of the shared preferences to reference when getting preferences. */
-    private final String sharedPrefKey = "MY_SHARED_PREF";
+    public static final String sharedPrefKey = "MY_SHARED_PREF";
 
     /** Key of the saved radio button index. */
-    private final String radioButtonKey = "SAVED_RADIO_BUTTON_INDEX";
+    public static final String radioButtonKey = "SAVED_RADIO_BUTTON_INDEX";
+
+    /** Key of the saved theme. */
+    public static final String savedThemeKey = "SAVED_THEME_KEY";
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,8 +59,6 @@ public class ProfileFragment extends Fragment {
         binding = FragmentPageProfileBinding.inflate(inflater, container, false);
         RadioButton selectedButton = (RadioButton) binding.radioGroup.getChildAt(profileViewModel.getSelectedThemeIndex());
         selectedButton.setChecked(true);
-        Context context = getActivity();
-        SharedPreferences sharedPreferences = context.getSharedPreferences(sharedPrefKey, Context.MODE_PRIVATE);
         return binding.getRoot();
     }
 
@@ -70,13 +71,11 @@ public class ProfileFragment extends Fragment {
             binding.profileUsernameDisplay.setText(contactItem.getUserName());
         });
         binding.radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
-            RadioButton checkedChild = (RadioButton) getActivity().findViewById(checkedId);
+            RadioButton checkedChild = getActivity().findViewById(checkedId);
             if (checkedChild == binding.themeDefualtButton) {
-                updateTheme(R.style.Theme_GroupProjectG3);
-                profileViewModel.setSelectedThemeIndex(0);
+                updateTheme(R.style.Theme_GroupProjectG3, 0);
             } else if (checkedChild == binding.themeDarkModeButton) {
-                updateTheme(R.style.Theme_DarkTheme);
-                profileViewModel.setSelectedThemeIndex(1);
+                updateTheme(R.style.Theme_DarkTheme, 1);
             }
         });
     }
@@ -85,10 +84,10 @@ public class ProfileFragment extends Fragment {
      * Updates the theme given a theme id. Refreshes current theme as well.
      * @param themeId the ID of the theme. (R.styles.YourTheme)
      */
-    private void updateTheme(int themeId) {
+    private void updateTheme(int themeId, int selectedIndex) {
         getActivity().setTheme(themeId);
         FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
         transaction.detach(ProfileFragment.this).attach(ProfileFragment.this).commit();
-
+        profileViewModel.setSelectedTheme(themeId, selectedIndex);
     }
 }
