@@ -4,21 +4,18 @@
 package com.example.groupproject_g3.chat.fragments;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import com.example.groupproject_g3.R;
 import com.example.groupproject_g3.databinding.FragmentChatAddBinding;
 import com.example.groupproject_g3.model.UserInfoViewModel;
-import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,21 +25,16 @@ import org.json.JSONObject;
  */
 public class ChatAddFragment extends Fragment {
 
-    /**
-     * Binding for the fragment. Allows for direct reference of fragment components.
-     */
+    /**Binding for the fragment. Allows for direct reference of fragment components.*/
     private FragmentChatAddBinding binding;
 
-    /**
-     * A direct reference to the user info view model. Easy access to JWT and user id.
-     */
+    /**A direct reference to the user info view model. Easy access to JWT and user id.*/
     private UserInfoViewModel mUserInfo;
 
-    /**
-     * View model which allows for the addition of new Chats.
-     */
+    /**View model which allows for the addition of new Chats.*/
     private ChatAddViewModel mChatAddModel;
 
+    /**Instance of chat main fragment for directions access.*/
     private ChatMainFragment mChatMain;
 
     @Override
@@ -83,11 +75,21 @@ public class ChatAddFragment extends Fragment {
         }
     }
 
-    private void navigateToChat(View view) {
+    /**
+     * Navigate to chat.
+     *
+     * @param view the current view.
+     */
+    private void navigateToChat(final View view) {
         mChatMain.navigateToChat(mChatAddModel.mChatID, view);
     }
 
 
+    /**
+     * Observes resposne.
+     *
+     * @param response the response.
+     */
     private void observeResponse(final JSONObject response) {
         if (response.length() > 0) {
             if (response.has("code")) {

@@ -28,6 +28,7 @@ public class ChatListFragment extends Fragment {
     /** View model which allows for the addition of new Chats. */
     private ChatListViewModel mListView;
 
+    /**Instance of the chat view model*/
     private ChatViewModel mChatModel;
 
     @Override

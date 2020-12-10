@@ -54,7 +54,7 @@
     <fragment
         android:id="@+id/navigation_chats"
         android:name="com.example.groupproject_g3.chat.fragments.ChatMainFragment"
-        android:label="fragment_chat_main"
+        android:label="Chats"
         tools:layout="@layout/fragment_chat_main" >
         <action
             android:id="@+id/action_chatMainFragment_to_chatFragment"
@@ -63,7 +63,7 @@
     <fragment
         android:id="@+id/chatFragment"
         android:name="com.example.groupproject_g3.chat.fragments.ChatFragment"
-        android:label="fragment_chat"
+        android:label="Chat"
         tools:layout="@layout/fragment_chat" >
         <argument
             android:name="ChatID"

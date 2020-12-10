@@ -25,15 +25,19 @@ import java.util.Objects;
 
 public class ChatAddDeleteGetContactViewModel extends AndroidViewModel {
 
+    /**The landing URL*/
     private static final String URL = "https://cloud-chat-450.herokuapp.com/chats/";
 
-    /**
-     * The latest response from the webserver.
-     */
+    /**The latest response from the webserver.*/
     private MutableLiveData<JSONObject> mResponse;
 
 
-    public ChatAddDeleteGetContactViewModel(final @NonNull Application application) {
+    /**
+     * Constructor for view model.
+     *
+     * @param application
+     */
+    public ChatAddDeleteGetContactViewModel(@NonNull Application application) {
         super(application);
         mResponse = new MutableLiveData<>();
         mResponse.setValue(new JSONObject());
@@ -52,6 +56,12 @@ public class ChatAddDeleteGetContactViewModel extends AndroidViewModel {
         mResponse.observe(owner, observer);
     }
 
+    /**
+     * Get the list of current users within chat.
+     *
+     * @param authVal JWT for authentication.
+     * @param chatID the current chat ID.
+     */
     public void connectGet(final String authVal, final int chatID) {
         JSONObject body = new JSONObject();
         try {
@@ -84,6 +94,13 @@ public class ChatAddDeleteGetContactViewModel extends AndroidViewModel {
                 .add(request);
     }
 
+    /**
+     * Call to add users into chat.
+     *
+     * @param authVal JWT for authentication.
+     * @param userID the users ID for adding.
+     * @param chatID the chat ID.
+     */
     public void connectPut(final String authVal, final int userID, final int chatID) {
         JSONObject body = new JSONObject();
         try {
@@ -116,6 +133,13 @@ public class ChatAddDeleteGetContactViewModel extends AndroidViewModel {
                 .add(request);
     }
 
+    /**
+     * Call to delete user from chat.
+     *
+     * @param authVal JWT for authentication.
+     * @param chatId the current chat ID.
+     * @param userEmail the user's email to delete.
+     */
     public void connectDelete(final String authVal, final int chatId, final String userEmail) {
         String url = URL +
                 chatId +
@@ -145,6 +169,12 @@ public class ChatAddDeleteGetContactViewModel extends AndroidViewModel {
                 .add(request);
     }
 
+
+    /**
+     * Handling of the error response from the server.
+     *
+     * @param error the error.
+     */
     private void handleError(final VolleyError error) {
         if (Objects.isNull(error.networkResponse)) {
             try {
@@ -169,10 +199,20 @@ public class ChatAddDeleteGetContactViewModel extends AndroidViewModel {
     }
 
 
+    /**
+     * handle delete error
+     *
+     * @param volleyError the error.
+     */
     private void handleDeleteError(final VolleyError volleyError) {
         Log.e("Delete Error:", "Error in deletion.");
     }
 
+    /**
+     * Handles the actual delete
+     *
+     * @param jsonObject the response.
+     */
     private void handleDelete(final JSONObject jsonObject) {
         Log.i("Delete Successful.", "Success in deletion");
     }

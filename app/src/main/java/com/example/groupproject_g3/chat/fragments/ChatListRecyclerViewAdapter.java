@@ -5,12 +5,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.groupproject_g3.R;
-import com.example.groupproject_g3.authorization.fragments.RegisterFragmentDirections;
-import com.example.groupproject_g3.authorization.fragments.SignInFragmentArgs;
 import com.example.groupproject_g3.databinding.FragmentChatItemBinding;
 import com.example.groupproject_g3.model.UserInfoViewModel;
 
@@ -18,13 +15,30 @@ import java.util.List;
 
 public class ChatListRecyclerViewAdapter extends RecyclerView.Adapter<ChatListRecyclerViewAdapter.ChatListViewHolder> {
 
-    private  final List<ChatItem> mChats;
-    private  final ChatListViewModel mChatListViewModel;
-    private  final UserInfoViewModel mUserInfoViewModel;
-    private  final ChatViewModel mChatModel;
-    private  final ChatMainFragment mChatMain;
+    /**List of my Chats*/
+    private final List<ChatItem> mChats;
+
+    /**Instance of my chat list view model*/
+    private final ChatListViewModel mChatListViewModel;
+
+    /**Instance of my user info view model*/
+    private final UserInfoViewModel mUserInfoViewModel;
+
+    /**Instance of my chat view model*/
+    private final ChatViewModel mChatModel;
+
+    /**Instance of my chat main fragment for navigational assistance*/
+    private final ChatMainFragment mChatMain;
 
 
+    /**
+     * Constructor for Recycler view.
+     *
+     * @param listViewModel the list view model.
+     * @param userInfoViewModel the user info model.
+     * @param chatModel the chat model.
+     * @param chats the chats.
+     */
     public ChatListRecyclerViewAdapter(ChatListViewModel listViewModel, UserInfoViewModel userInfoViewModel, ChatViewModel chatModel,  List<ChatItem> chats) {
         this.mChatListViewModel =  listViewModel;
         this.mUserInfoViewModel = userInfoViewModel;
@@ -49,20 +63,36 @@ public class ChatListRecyclerViewAdapter extends RecyclerView.Adapter<ChatListRe
         return mChats.size();
     }
 
+    /**
+     * Inner class for list view holder implementation.
+     */
     public class ChatListViewHolder extends RecyclerView.ViewHolder {
 
-        public final View mView;
+        /**My view.*/
+        private final View mView;
 
-        public FragmentChatItemBinding binding;
+        /**Binding for fragment access.*/
+        private FragmentChatItemBinding binding;
 
-        public ChatItem mChatItem;
+        /**my chat item to load.*/
+        private ChatItem mChatItem;
 
+        /**
+         * Constructor.
+         *
+         * @param itemView the view.
+         */
         public ChatListViewHolder(@NonNull View itemView) {
             super(itemView);
             mView = itemView;
             binding = FragmentChatItemBinding.bind(mView);
         }
 
+        /**
+         * Sets the chat item within the list.
+         *
+         * @param chatItem the item.
+         */
         public void setChat(final ChatItem chatItem) {
             mChatItem = chatItem;
             binding.textChatName.setText(mChatItem.getChatName());

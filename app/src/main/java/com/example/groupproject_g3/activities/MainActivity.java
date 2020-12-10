@@ -224,6 +224,9 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     *  Method that allows for signing out of the application.
+     */
     private void signOut() {
         SharedPreferences prefs =
                 getSharedPreferences(

@@ -25,14 +25,25 @@ import com.example.groupproject_g3.model.UserInfoViewModel;
  */
 public class ChatFragment extends Fragment {
 
-
+    /**Binding for fragment reference*/
     private FragmentChatBinding binding;
+
+    /**My chat send view model*/
     private ChatSendViewModel mSendModel;
+
+    /**My chat view model*/
     private ChatViewModel mChatModel;
+
+    /**My user info view model*/
     private UserInfoViewModel mUserModel;
+
+    /**the current chat ID*/
     private int CHAT_ID;
 
 
+    /**
+     * Required empty constructor.
+     */
     public ChatFragment() {
         // Required empty public constructor
     }

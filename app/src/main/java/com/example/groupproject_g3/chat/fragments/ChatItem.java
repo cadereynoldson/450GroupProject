@@ -1,24 +1,11 @@
 package com.example.groupproject_g3.chat.fragments;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
-
-import com.example.groupproject_g3.databinding.FragmentChatAddBinding;
-import com.example.groupproject_g3.databinding.FragmentChatItemBinding;
-import com.example.groupproject_g3.model.UserInfoViewModel;
-
-import java.util.List;
-
 public class ChatItem {
 
+    /**The chat ID*/
     private final int mChatID;
+
+    /**The chat name*/
     private final String mChatName;
 
     public ChatItem(int theChatID, String theChatName){
@@ -26,13 +13,29 @@ public class ChatItem {
         this.mChatName = theChatName;
        }
 
+    /**
+     * Getter for chat ID
+     *
+     * @return mChatID the chat id.
+     */
     public int getChatID(){
         return mChatID;
     }
+
+    /**
+     * Getter for chat name.
+     *
+     * @return mChatName the chat name.
+     */
     public String getChatName(){
         return mChatName;
     }
 
+    /**
+     * Turns the answers into a parsed string.
+     *
+     * @return the string.
+     */
     public String toString(){
         return "ChatName = " + mChatName + ", ChatID = " + mChatID;
     }
