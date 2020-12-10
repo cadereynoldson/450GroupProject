@@ -23,7 +23,9 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.groupproject_g3.R;
+import com.example.groupproject_g3.chat.fragments.ChatListFragment;
 import com.example.groupproject_g3.chat.fragments.ChatListViewModel;
+import com.example.groupproject_g3.chat.fragments.ChatMainFragment;
 import com.example.groupproject_g3.chat.fragments.ChatMessage;
 import com.example.groupproject_g3.chat.fragments.ChatViewModel;
 import com.example.groupproject_g3.contact.fragments.ContactAddedMeViewModel;
@@ -101,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
                     mNewChatCountViewModel.increment();
                 }
             }
+
             chatListViewModel.connectGet(userInfoViewModel.getJwt(), userInfoViewModel.getUserId());
            }
     }
@@ -195,10 +198,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         mNewChatCountViewModel.addChatCountObserver(this, count -> {
-            BadgeDrawable badge = binding.bottomNavMenu.getOrCreateBadge(R.id.navigation_profile);
+            BadgeDrawable badge = binding.bottomNavMenu.getOrCreateBadge(R.id.navigation_chats);
             badge.setMaxCharacterCount(2);
             if (count > 0) {
-                //new messages! update and show the notification badge.
+                //new chsts! update and show the notification badge.
                 badge.setNumber(count);
                 badge.setVisible(true);
             } else {
