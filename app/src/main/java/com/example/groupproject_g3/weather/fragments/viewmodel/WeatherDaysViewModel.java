@@ -118,6 +118,10 @@ public class WeatherDaysViewModel extends AndroidViewModel {
                     //Fetch main array and get the temperature value from it.
                     JSONObject tempData = info.getJSONObject(getString.apply(R.string.key_weather_current_weather_main));
                     Double currentTemp = tempData.getDouble(getString.apply(R.string.key_weather_current_temp));
+
+                    Double value = currentTemp - 32;
+                    Double celsius = value * 5/9;
+
                     Double minTemp = tempData.getDouble(getString.apply(R.string.key_weather_current_temp_min));
                     Double maxTemp = tempData.getDouble(getString.apply(R.string.key_weather_current_temp_max));
                     Integer pressure = tempData.getInt(getString.apply(R.string.key_weather_current_pressure));
@@ -145,6 +149,7 @@ public class WeatherDaysViewModel extends AndroidViewModel {
                     WeatherInformation DaysInfo = new WeatherInformation.Builder(
                             dateDisplay,
                             currentTemp.toString())
+                            .addCelsius(celsius.toString())
                             .addDay(day)
                             .addTempMin(minTemp.toString())
                             .addTempMax(maxTemp.toString())

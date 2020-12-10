@@ -118,6 +118,9 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
             JSONObject tempData = result.getJSONObject(getString.apply(R.string.key_weather_current_weather_main));
             Integer currentTemp = tempData.getInt(getString.apply(R.string.key_weather_current_temp));
 
+            Integer value = currentTemp - 32;
+            Integer celsius = value * 5/9;
+
             JSONObject sysData = result.getJSONObject(getString.apply(R.string.key_weather_current_sys));
             String currentCountry = sysData.getString(getString.apply(R.string.key_weather_current_country));
             String currentLocation = result.getString(getString.apply(R.string.key_weather_current_name));
@@ -133,6 +136,7 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
             WeatherInformation info = new WeatherInformation.Builder(
                     dateDisplay,
                     currentTemp.toString())
+                    .addCelsius(celsius.toString())
                     .addTime(time)
                     .addWeather(currentWeather)
                     .addLocation(currentLocation)

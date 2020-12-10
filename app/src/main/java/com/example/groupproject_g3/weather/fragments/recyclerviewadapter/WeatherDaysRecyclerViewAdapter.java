@@ -14,6 +14,7 @@ import com.example.groupproject_g3.R;
 import com.example.groupproject_g3.databinding.FragmentWeatherDaysItemBinding;
 import com.example.groupproject_g3.weather.fragments.WeatherBackground;
 import com.example.groupproject_g3.weather.fragments.WeatherInformation;
+import com.example.groupproject_g3.weather.fragments.WeatherMainFragment;
 import com.example.groupproject_g3.weather.fragments.WeatherMainFragmentDirections;
 import com.squareup.picasso.Picasso;
 
@@ -50,6 +51,7 @@ public class WeatherDaysRecyclerViewAdapter extends RecyclerView.Adapter<Weather
         public final View mView;
         public FragmentWeatherDaysItemBinding binding;
         private WeatherInformation info;
+        private WeatherMainFragment main;
 
         public DaysInfoViewHolder(@NonNull View itemView) {
             super(itemView);

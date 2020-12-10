@@ -1,6 +1,8 @@
 package com.example.groupproject_g3.weather.fragments;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +46,10 @@ public class WeatherMainFragment extends Fragment {
 
     private WeatherBackground background;
 
+    private WeatherConverter converter;
+
+    Integer convertTemp;
+
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ViewModelProvider provider = new ViewModelProvider(getActivity());
@@ -73,6 +79,18 @@ public class WeatherMainFragment extends Fragment {
             binding.chipWeatherLocation.setText(currentInfo.getmLocation() + ", " + currentInfo.getmCountry());
             Picasso.get().load(currentInfo.getmIcon()).into(binding.containerWeatherForecast.imageCurrentIcon);
             background = new WeatherBackground(view, currentInfo.getmWeather(), currentInfo.getmIcon(), getResources());
+
+            binding.weatherC.setOnClickListener(v -> {
+                binding.containerWeatherForecast.textCurrentTemperature.setText(currentInfo.getmCelsius() + "°C");
+                binding.weatherC.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+                binding.weatherF.setTypeface(Typeface.DEFAULT);
+            });
+
+            binding.weatherF.setOnClickListener(v -> {
+                binding.containerWeatherForecast.textCurrentTemperature.setText(currentInfo.getmTemperature() + "°F");
+                binding.weatherF.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+                binding.weatherC.setTypeface(Typeface.DEFAULT);
+            });
         });
 
         hoursModel.addHoursWeatherObserver(getViewLifecycleOwner(), hoursInfo -> {

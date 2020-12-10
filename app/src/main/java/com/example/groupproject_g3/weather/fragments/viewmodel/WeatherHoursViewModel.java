@@ -114,6 +114,8 @@ public class WeatherHoursViewModel extends AndroidViewModel {
                     String urlIcon = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
 
                     Integer currentTemp = info.getInt(getString.apply(R.string.key_weather_current_temp));
+                    Integer value = currentTemp - 32;
+                    Integer celsius = value * 5/9;
 
                     Date date = new Date(dateTime);
                     Calendar calendar = Calendar.getInstance();
@@ -126,6 +128,7 @@ public class WeatherHoursViewModel extends AndroidViewModel {
                     WeatherInformation HoursInfo = new WeatherInformation.Builder(
                             dateDisplay,
                             currentTemp.toString())
+                            .addCelsius(celsius.toString())
                             .addTime(time)
                             .addIcon(urlIcon)
                             .addSunrise(sunrise)
