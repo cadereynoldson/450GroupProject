@@ -1,5 +1,6 @@
 package com.example.groupproject_g3.weather.fragments;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,6 +74,18 @@ public class WeatherMainFragment extends Fragment {
             binding.chipWeatherLocation.setText(currentInfo.getmLocation() + ", " + currentInfo.getmCountry());
             Picasso.get().load(currentInfo.getmIcon()).into(binding.containerWeatherForecast.imageCurrentIcon);
             background = new WeatherBackground(view, currentInfo.getmWeather(), currentInfo.getmIcon(), getResources());
+
+            binding.weatherC.setOnClickListener(v -> {
+                binding.containerWeatherForecast.textCurrentTemperature.setText(currentInfo.getmCelsius() + "°C");
+                binding.weatherC.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+                binding.weatherF.setTypeface(Typeface.DEFAULT);
+            });
+
+            binding.weatherF.setOnClickListener(v -> {
+                binding.containerWeatherForecast.textCurrentTemperature.setText(currentInfo.getmTemperature() + "°F");
+                binding.weatherF.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+                binding.weatherC.setTypeface(Typeface.DEFAULT);
+            });
         });
 
         hoursModel.addHoursWeatherObserver(getViewLifecycleOwner(), hoursInfo -> {
@@ -89,10 +102,8 @@ public class WeatherMainFragment extends Fragment {
             }
         });
 
-        binding.fab.setOnClickListener(info -> {
-            Navigation.findNavController(view).navigate(
-                    WeatherMainFragmentDirections
-                            .actionNavigationWeatherToMapsActivity());
-        });
+        binding.fab.setOnClickListener(info -> Navigation.findNavController(view).navigate(
+                WeatherMainFragmentDirections
+                        .actionNavigationWeatherToMapsActivity()));
     }
 }
