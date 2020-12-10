@@ -61,7 +61,7 @@ public class ProfileFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         profileViewModel.addProfileObserver(getViewLifecycleOwner(), contactItem -> {
-            binding.profileNameDisplay.setText(contactItem.getFirstName() + contactItem.getLastName());
+            binding.profileNameDisplay.setText(contactItem.getFirstName() + " " + contactItem.getLastName());
             binding.profileEmailDisplay.setText(contactItem.getEmail());
             binding.profileUsernameDisplay.setText(contactItem.getUserName());
         });

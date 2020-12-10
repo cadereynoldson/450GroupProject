@@ -12,11 +12,26 @@ import java.io.Serializable;
  */
 public final class ChatMessage implements Serializable {
 
+    /**the message id*/
     private final int mMessageId;
+
+    /**the message*/
     private final String mMessage;
+
+    /**the sender*/
     private final String mSender;
+
+    /**the time stamp*/
     private final String mTimeStamp;
 
+    /**
+     * Constructor.
+     *
+     * @param messageId the id.
+     * @param message the message.
+     * @param sender the sender.
+     * @param timeStamp the timestamp.
+     */
     public ChatMessage(int messageId, String message, String sender, String timeStamp) {
         mMessageId = messageId;
         mMessage = message;
@@ -39,18 +54,38 @@ public final class ChatMessage implements Serializable {
                 msg.getString("timestamp"));
     }
 
+    /**
+     * getter for message.
+     *
+     * @return mMessage.
+     */
     public String getMessage() {
         return mMessage;
     }
 
+    /**
+     * getter for sender.
+     *
+     * @return mSender.
+     */
     public String getSender() {
         return mSender;
     }
 
+    /**
+     * getter for timeStamp.
+     *
+     * @return mTimeStamp.
+     */
     public String getTimeStamp() {
         return mTimeStamp;
     }
 
+    /**
+     * getter for messageID.
+     *
+     * @return mMessageId.
+     */
     public int getMessageId() {
         return mMessageId;
     }

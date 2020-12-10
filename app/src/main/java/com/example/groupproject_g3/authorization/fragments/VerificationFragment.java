@@ -24,11 +24,21 @@ import org.json.JSONObject;
  */
 public class VerificationFragment extends Fragment {
 
-    FragmentVerificationBinding binding;
-    VerificationViewModel mVerifyViewModel;
+    /**Binding for access to fragment assets*/
+    private FragmentVerificationBinding binding;
+
+    /**View model for access to the webservice and housing information*/
+    private VerificationViewModel mVerifyViewModel;
+
+    /**Field for storing of user email argument*/
     private String mEmail;
+
+    /**Field for storing of password argument*/
     private String mPassword;
 
+    /**
+     * Required empty constructor
+     */
     public VerificationFragment(){
 
     }
@@ -47,6 +57,11 @@ public class VerificationFragment extends Fragment {
                 .get(VerificationViewModel.class);
     }
 
+    /**
+     * Call to send the email from our backend landing within the viewmodel.
+     *
+     * @param view the current view.
+     */
     private void sendEmail(View view) {
         mVerifyViewModel.connect(mEmail);
     }
