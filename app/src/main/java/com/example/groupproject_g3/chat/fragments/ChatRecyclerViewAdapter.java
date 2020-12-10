@@ -4,6 +4,7 @@
 package com.example.groupproject_g3.chat.fragments;
 
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -99,17 +100,17 @@ public class ChatRecyclerViewAdapter extends RecyclerView.Adapter<ChatRecyclerVi
                 ((FrameLayout.LayoutParams) card.getLayoutParams()).gravity =
                         Gravity.END;
 
-                card.setCardBackgroundColor(
-                        ColorUtils.setAlphaComponent(
-                                res.getColor(R.color.primaryLightColor, null),
-                                16));
-                binding.textMessage.setTextColor(
-                        res.getColor(R.color.secondaryTextColorFade, null));
-
-                card.setStrokeWidth(standard / 5);
-                card.setStrokeColor(ColorUtils.setAlphaComponent(
-                        res.getColor(R.color.primaryLightColor, null),
-                        200));
+//                card.setCardBackgroundColor(
+//                        ColorUtils.setAlphaComponent(
+//                                res.getColor(R.color., null),
+//                                16));
+//                binding.textMessage.setTextColor(
+//                        res.getColor(R.color.secondaryTextColorFade, null));
+//
+//                card.setStrokeWidth(standard / 5);
+//                card.setStrokeColor(ColorUtils.setAlphaComponent(
+//                        res.getColor(R.color.primaryLightColor, null),
+//                        200));
 
                 //Round the corners on the left side
                 card.setShapeAppearanceModel(
@@ -135,18 +136,19 @@ public class ChatRecyclerViewAdapter extends RecyclerView.Adapter<ChatRecyclerVi
                 ((FrameLayout.LayoutParams) card.getLayoutParams()).gravity =
                         Gravity.START;
 
-                card.setCardBackgroundColor(
-                        ColorUtils.setAlphaComponent(
-                                res.getColor(R.color.secondaryLightColor, null),
-                                16));
+//                card.setCardBackgroundColor(
+//                        ColorUtils.setAlphaComponent(
+//                                res.getColor(R.color.secondaryLightColor, null),
+//                                16));
+//
+//                card.setStrokeWidth(standard / 5);
+//                card.setStrokeColor(ColorUtils.setAlphaComponent(
+//                        res.getColor(R.color.secondaryLightColor, null),
+//                        200));
+//
+//                binding.textMessage.setTextColor(
+//                        res.getColor(R.color.secondaryTextColorFade, null));
 
-                card.setStrokeWidth(standard / 5);
-                card.setStrokeColor(ColorUtils.setAlphaComponent(
-                        res.getColor(R.color.secondaryLightColor, null),
-                        200));
-
-                binding.textMessage.setTextColor(
-                        res.getColor(R.color.secondaryTextColorFade, null));
 
                 //Round the corners on the right side
                 card.setShapeAppearanceModel(

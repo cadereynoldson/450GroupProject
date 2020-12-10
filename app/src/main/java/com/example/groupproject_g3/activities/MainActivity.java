@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
@@ -22,6 +23,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.groupproject_g3.R;
+import com.example.groupproject_g3.chat.fragments.ChatListViewModel;
 import com.example.groupproject_g3.chat.fragments.ChatMessage;
 import com.example.groupproject_g3.chat.fragments.ChatViewModel;
 import com.example.groupproject_g3.contact.fragments.ContactAddedMeViewModel;
@@ -29,6 +31,7 @@ import com.example.groupproject_g3.contact.fragments.ContactListViewModel;
 import com.example.groupproject_g3.contact.fragments.ContactSentRequestsViewModel;
 import com.example.groupproject_g3.databinding.ActivityMainBinding;
 import com.example.groupproject_g3.model.ContactNotificationCountViewModel;
+import com.example.groupproject_g3.model.NewChatCountViewModel;
 import com.example.groupproject_g3.model.NewMessageCountViewModel;
 import com.example.groupproject_g3.model.PushyTokenViewModel;
 import com.example.groupproject_g3.model.UserInfoViewModel;
@@ -40,6 +43,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     private MainPushMessageReceiver mPushMessageReceiver;
+    private MainPushChatReciever mPushChatReciever;
+    private NewChatCountViewModel mNewChatCountViewModel;
     private ContactsPushReceiver mContactsPushReceiver;
     private NewMessageCountViewModel mNewMessageModel;
     private ContactNotificationCountViewModel mContactsNotificationModel;
@@ -73,6 +78,33 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    /**
+     * Notifies the chat page to update itself.
+     */
+    private class MainPushChatReciever extends BroadcastReceiver {
+
+        private UserInfoViewModel userInfoViewModel = new ViewModelProvider(MainActivity.this)
+                .get(UserInfoViewModel.class);
+        private ChatListViewModel chatListViewModel = new ViewModelProvider(MainActivity.this)
+                .get(ChatListViewModel.class);
+
+
+        @Override
+        public void onReceive(final Context context, final Intent intent) {
+            NavController nc =
+                    Navigation.findNavController(
+                            MainActivity.this, R.id.nav_host_fragment);
+            NavDestination nd = nc.getCurrentDestination();
+            if (nd.getId() != R.id.navigation_chats) {
+                if (!intent.getStringExtra("message").toLowerCase().contains("delete"))  {
+                    mNewChatCountViewModel.increment();
+                }
+            }
+            chatListViewModel.connectGet(userInfoViewModel.getJwt(), userInfoViewModel.getUserId());
+           }
+    }
+
 
     /**
      * Notifies the contacts page to update itself.
@@ -111,10 +143,15 @@ public class MainActivity extends AppCompatActivity {
             mPushMessageReceiver = new MainPushMessageReceiver();
         if (mContactsPushReceiver == null)
             mContactsPushReceiver = new ContactsPushReceiver();
+        if(mPushChatReciever == null)
+            mPushChatReciever = new MainPushChatReciever();
+        IntentFilter chatFilter = new IntentFilter(PushReceiver.CHATS_UPDATED);
         IntentFilter messageFilter = new IntentFilter(PushReceiver.RECEIVED_NEW_MESSAGE);
         IntentFilter contactsFilter = new IntentFilter(PushReceiver.CONTACTS_UPDATED);
+        registerReceiver(mPushChatReciever, chatFilter);
         registerReceiver(mPushMessageReceiver, messageFilter);
         registerReceiver(mContactsPushReceiver, contactsFilter);
+
     }
 
     @Override
@@ -122,6 +159,8 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         if (mPushMessageReceiver != null)
             unregisterReceiver(mPushMessageReceiver);
+        if (mPushChatReciever != null)
+            unregisterReceiver(mPushChatReciever);
         if (mContactsPushReceiver != null)
             unregisterReceiver(mContactsPushReceiver);
     }
@@ -130,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mNewMessageModel = new ViewModelProvider(this).get(NewMessageCountViewModel.class);
+        mNewChatCountViewModel = new ViewModelProvider(this).get(NewChatCountViewModel.class);
         mContactsNotificationModel = new ViewModelProvider(this).get(ContactNotificationCountViewModel.class);
         MainActivityArgs args = MainActivityArgs.fromBundle(getIntent().getExtras());
         binding = ActivityMainBinding.inflate(getLayoutInflater());
@@ -150,6 +190,19 @@ public class MainActivity extends AppCompatActivity {
                 badge.setVisible(true);
             } else {
                 //user did some action to clear the new messages, remove the badge
+                badge.clearNumber();
+                badge.setVisible(false);
+            }
+        });
+        mNewChatCountViewModel.addChatCountObserver(this, count -> {
+            BadgeDrawable badge = binding.bottomNavMenu.getOrCreateBadge(R.id.navigation_profile);
+            badge.setMaxCharacterCount(2);
+            if (count > 0) {
+                //new messages! update and show the notification badge.
+                badge.setNumber(count);
+                badge.setVisible(true);
+            } else {
+                //user did some action to clear the new chat, remove the badge
                 badge.clearNumber();
                 badge.setVisible(false);
             }
