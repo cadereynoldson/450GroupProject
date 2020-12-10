@@ -137,8 +137,8 @@ public class ChatAddDeleteGetContactFragment extends Fragment {
             }
         }
         mAdapter = new ArrayAdapter<>(
-                getActivity().getApplicationContext(), android.R.layout.simple_spinner_item, spinnerArray);
-        mAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                getActivity().getApplicationContext(), R.layout.spinner_item, spinnerArray);
+        mAdapter.setDropDownViewResource(R.layout.spinner_item);
         binding.spinnerSelectChat.setAdapter(mAdapter);
     }
 
@@ -209,9 +209,9 @@ public class ChatAddDeleteGetContactFragment extends Fragment {
     private void observeResponse(final JSONObject response) {
         if (response.length() > 0) {
             if (response.has("code")) {
-                Snackbar notification = Snackbar.make(binding.manageChatRoot, R.string.chat_manip_error, Snackbar.LENGTH_SHORT);
-                notification.setAnchorView(R.id.bottom_nav_menu);
-                notification.show();
+//                Snackbar notification = Snackbar.make(binding.manageChatRoot, R.string.chat_manip_error, Snackbar.LENGTH_SHORT);
+//                notification.setAnchorView(R.id.bottom_nav_menu);
+//                notification.show();
             } else {
                 Snackbar notification = Snackbar.make(binding.manageChatRoot, R.string.chat_manip_success, Snackbar.LENGTH_SHORT);
                 notification.setAnchorView(R.id.bottom_nav_menu);
