@@ -3,6 +3,8 @@
  */
 package com.example.groupproject_g3.profile.fragments;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -54,6 +56,8 @@ public class ProfileFragment extends Fragment {
         binding = FragmentPageProfileBinding.inflate(inflater, container, false);
         RadioButton selectedButton = (RadioButton) binding.radioGroup.getChildAt(profileViewModel.getSelectedThemeIndex());
         selectedButton.setChecked(true);
+        Context context = getActivity();
+        SharedPreferences sharedPreferences = context.getSharedPreferences(sharedPrefKey, Context.MODE_PRIVATE);
         return binding.getRoot();
     }
 
@@ -85,5 +89,6 @@ public class ProfileFragment extends Fragment {
         getActivity().setTheme(themeId);
         FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
         transaction.detach(ProfileFragment.this).attach(ProfileFragment.this).commit();
+
     }
 }
