@@ -110,18 +110,6 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="mapsActivity">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="-123" />
-                            <option name="y" value="-25" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
                   <entry key="navigation_add_contact">
                     <value>
                       <LayoutPositions>
@@ -179,6 +167,27 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="navigation_location">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="87" />
+                            <option name="y" value="736" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_navigation_location_to_navigation_weather">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="navigation_profile">
                     <value>
                       <LayoutPositions>
@@ -196,13 +205,13 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="69" />
-                            <option name="y" value="313" />
+                            <option name="x" value="78" />
+                            <option name="y" value="318" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_navigation_weather_to_mapsActivity">
+                            <entry key="action_navigation_weather_to_locationFragment2">
                               <value>
                                 <LayoutPositions />
                               </value>

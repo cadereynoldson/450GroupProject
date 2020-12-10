@@ -26,6 +26,7 @@ public class WeatherInformation implements Serializable {
     private String mSpeed;
     private String mDirection;
     private String mIcon;
+    private long mTimeZone;
 
     public static class Builder {
         private String mDate;
@@ -48,6 +49,7 @@ public class WeatherInformation implements Serializable {
         private String mSpeed = "";
         private String mDirection = "";
         private String mIcon;
+        private long mTimeZone;
 
 
         public Builder(String theDate, String theTemperature) {
@@ -145,6 +147,11 @@ public class WeatherInformation implements Serializable {
             return this;
         }
 
+        public Builder addTimeZone(long timezone) {
+            mTimeZone = timezone;
+            return this;
+        }
+
         public WeatherInformation build() { return new WeatherInformation(this);}
     }
 
@@ -169,6 +176,7 @@ public class WeatherInformation implements Serializable {
         mSpeed = builder.mSpeed;
         mDirection = builder.mDirection;
         mIcon = builder.mIcon;
+        mTimeZone = builder.mTimeZone;
     }
 
     public String getmDate() {
@@ -246,7 +254,7 @@ public class WeatherInformation implements Serializable {
         if (!(o instanceof WeatherInformation))
             return false;
         else
-            return ((WeatherInformation) o).mDate.equals(mDate) && ((WeatherInformation) o).mTime.equals(mTime); //TODO: Update
+            return (((WeatherInformation) o).mDate.equals(mDate) && ((WeatherInformation) o).mTime.equals(mTime));
     }
 
 }

@@ -82,7 +82,7 @@ public class WeatherHoursViewModel extends AndroidViewModel {
         IntFunction<String> getString =
                 getApplication().getResources()::getString;
         try {
-
+            information.getValue().clear();
             JSONObject sunData = result.getJSONObject(getString.apply(R.string.key_weather_24hour_current));
             long sunriseInfo = ((long) sunData.getInt(getString.apply(R.string.key_weather_current_sunrise)))* 1000L;
 
@@ -121,7 +121,7 @@ public class WeatherHoursViewModel extends AndroidViewModel {
 
                     String dateDisplay = calendar.get(Calendar.MONTH) + "/" + calendar.get(Calendar.DAY_OF_MONTH);
 
-                    String time = new SimpleDateFormat("HH").format(date);
+                    String time = new SimpleDateFormat("hh").format(date);
 
                     WeatherInformation HoursInfo = new WeatherInformation.Builder(
                             dateDisplay,

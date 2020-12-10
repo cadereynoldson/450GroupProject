@@ -32,6 +32,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TimeZone;
 import java.util.function.IntFunction;
 
 public class WeatherCurrentViewModel extends AndroidViewModel {
@@ -107,7 +108,7 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
         try {
             //fetch date, temperature, weather, and time.
             long dateTime = ((long) result.getInt(getString.apply(R.string.key_weather_date_time))) * 1000l;
-
+            long timezoneOffset = result.getInt(getString.apply(R.string.key_weather_timezone));
             //Fetch weather array and get main value from the response.
             JSONArray weatherArr = result.getJSONArray(getString.apply(R.string.key_weather_current_weather));
             String currentWeather = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_description));
@@ -121,17 +122,11 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
             JSONObject sysData = result.getJSONObject(getString.apply(R.string.key_weather_current_sys));
             String currentCountry = sysData.getString(getString.apply(R.string.key_weather_current_country));
             String currentLocation = result.getString(getString.apply(R.string.key_weather_current_name));
-
-            Date date = new Date(dateTime);
-            Calendar calendar = Calendar.getInstance();
-            calendar.setTime(date);
-
-            String dateDisplay = calendar.get(Calendar.MONTH) + "/" + calendar.get(Calendar.DAY_OF_MONTH) + "/" + calendar.get(Calendar.YEAR);
-
-            String time = new SimpleDateFormat("HH:mm").format(date);
-
+            Date date = new Date(dateTime + timezoneOffset);
+            String dateStr = new SimpleDateFormat("EEE, MMM d, ''yy").format(date);
+            String time = new SimpleDateFormat("hh:mm").format(date);
             WeatherInformation info = new WeatherInformation.Builder(
-                    dateDisplay,
+                    dateStr,
                     currentTemp.toString())
                     .addTime(time)
                     .addWeather(currentWeather)
