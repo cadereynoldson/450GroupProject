@@ -67,8 +67,11 @@
     <string name="text_chat_name">ChatName</string>
     <string name="text_contacts_names">Contacts Names</string>
     <string name="text_no_chats">You currently have no Chats</string>
+    <string name="text_chat_Id">Chat ID: </string>
     <string name="chat_select_contact">Select Contact</string>
     <string name="chat_manage_chat_title">Manage Chats</string>
+    <string name="chat_timestamp">TimeStamp</string>
+    <string name="text_chat_display_contacts">List of Contacts in chat</string>
     <string name="chat_manip_error">Error in chat management!</string>
     <string name="chat_manip_success">Successfully altered chat!</string>
     <string-array name="chat_search_by_options">

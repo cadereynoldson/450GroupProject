@@ -30,6 +30,7 @@
         android:hint="@string/auth_password"
         android:inputType="textPassword"
         android:text="@string/auth_dummy_password"
+        android:textColor="?attr/colorOnSurface"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_signin_email" />
@@ -45,6 +46,7 @@
         android:hint="@string/auth_email"
         android:inputType="textEmailAddress"
         android:text="@string/auth_dummy_email"
+        android:textColor="?attr/colorOnSurface"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
