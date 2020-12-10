@@ -99,7 +99,8 @@
                     android:layout_below="@id/text_days_time"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="5dp"
-                    app:srcCompat="@drawable/ic_weather_yellow_24" />
+                    app:srcCompat="@drawable/ic_weather_yellow_24"
+                    tools:visibility="invisible" />
 
                 <TextView
                     android:id="@+id/text_days_min"
