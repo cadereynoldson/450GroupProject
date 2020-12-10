@@ -41,33 +41,47 @@ import java.util.function.IntFunction;
  */
 public class ChatAddDeleteGetContactFragment extends Fragment {
 
-    /**
-     * The selected search by value. Default is email.
-     */
+    /** The selected search by value. Default is email.*/
     private String selectedSearch = "Email";
 
+    /**Display for the contacts spinner if empty*/
     private final String noContactsString = "You have no contacts!";
 
+    /**Display for the chats spinner if empty*/
     private final String noChatsString = "You have no chats!";
 
+    /**Binding object for fragment reference*/
     private FragmentChatAddDeleteGetContactBinding binding;
+
+    /**Instance of user info view model*/
     private UserInfoViewModel mUserInfoModel;
+
+    /**Instance of chat add delete get contact view model view model*/
     private ChatAddDeleteGetContactViewModel mChatAddDelGetModel;
+
+    /**Instance of contact list view model*/
     private ContactListViewModel contactsViewModel;
+
+    /**Instance of chat list view model*/
     private ChatListViewModel mChatListModel;
+
+    /**List of the current chats*/
     private List<ChatItem> mChats;
+
+    /**My spinner adapter*/
     private ArrayAdapter<String> mAdapter;
+
+    /**List of current chat IDs*/
     private List<Integer> mChatIDs;
 
-    /** Chat items mapped based on their string representation in the spinner. */
+    /**Chat items mapped based on their string representation in the spinner.*/
     private HashMap<String, ChatItem> chatItems;
 
-    /** Contact items mapped based on their string representation in the spinner. */
+    /**Contact items mapped based on their string representation in the spinner.*/
     private HashMap<String, ContactItem> contactItems;
 
-    /** Adapter for displaying contacts in a spinner. */
+    /**Adapter for displaying contacts in a spinner.*/
     private ArrayAdapter<String> contactsAdapter;
-
 
 
     @Override
@@ -102,6 +116,12 @@ public class ChatAddDeleteGetContactFragment extends Fragment {
         });
     }
 
+
+    /**
+     * Create a spinner adapter from the list of the users current chat.
+     *
+     * @param items list of current chat items.
+     */
     private void createChatListSpinnerAdapter(List<ChatItem> items) {
         List<String> spinnerArray = new ArrayList<>();
         chatItems = new HashMap<>();
@@ -122,7 +142,13 @@ public class ChatAddDeleteGetContactFragment extends Fragment {
         binding.spinnerSelectChat.setAdapter(mAdapter);
     }
 
-    private void createContactListSpinnerAdapter(List<ContactItem> items) {
+
+    /**
+     * Creates a spinner adapter that loads users current contact list.
+     *
+     * @param items the list of contact items.
+     */
+    private void createContactListSpinnerAdapter(final List<ContactItem> items) {
         List<String> spinnerArray = new ArrayList<>();
         contactItems = new HashMap<>();
         if (items.isEmpty()) {
@@ -145,12 +171,16 @@ public class ChatAddDeleteGetContactFragment extends Fragment {
      * @param view the view in which this is called by.
      */
     private void addContact(final View view) {
-        String contactString =  binding.spinnerSelectContact.getSelectedItem().toString();
+        String contactString = binding.spinnerSelectContact.getSelectedItem().toString();
         String chatName = binding.spinnerSelectChat.getSelectedItem().toString();
         ChatItem chatItem = chatItems.get(chatName);
         ContactItem contactItem = contactItems.get(contactString);
-        Log.i("Add to chat", "Attempting to add " + contactItem.getUserName() + " to " + chatItem.getChatName());
-        mChatAddDelGetModel.connectPut(mUserInfoModel.getJwt(), contactItem.getUserId(), chatItem.getChatID());
+        if (contactItem != null && chatItem != null) {
+            Log.i("Add to chat", "Attempting to add " + contactItem.getUserName() + " to " + chatItem.getChatName());
+            mChatAddDelGetModel.connectPut(mUserInfoModel.getJwt(), contactItem.getUserId(), chatItem.getChatID());
+        } else {
+            binding.textSelectedContact.setError("Futile effort...added nobody complete.");
+        }
     }
 
     /**
@@ -159,23 +189,16 @@ public class ChatAddDeleteGetContactFragment extends Fragment {
      * @param view the view in which this is called by.
      */
     private void deleteContact(final View view) {
-        final String temp = selectedSearch.toLowerCase();
-        final IntFunction<String> getString = getResources()::getString;
-//        final String userEmail = binding.textSearch.getText().toString().toLowerCase();
-//        if (userEmail.isEmpty()) {
-//            binding.textSearch.setError("Please enter a value.");
-//        }
-//        final int chatID = mChatIDs.get((int) binding.spinnerSelectChat.getSelectedItemId());
-//        mChatAddDelGetModel.getID(mUserInfoModel.getJwt(), userEmail);
-//        final int contactID = mChatAddDelGetModel.getmMemberID();
-//        if (contactID == mUserInfoModel.getUserId()) {
-//            binding.textSearch.setError("It's not worth it...please stay strong!");
-//        } else if (contactID == -1) {
-//            binding.textSearch.setError("get_id failed!");
-//        } else if (!temp.equals(getString.apply(R.string.key_contacts_email).toLowerCase())) {
-//            binding.textSearch.setError("Please delete using email.");
-//        } else
-//            mChatAddDelGetModel.connectDelete(mUserInfoModel.getJwt(), chatID, userEmail);
+        String contactString = binding.spinnerSelectContact.getSelectedItem().toString();
+        String chatName = binding.spinnerSelectChat.getSelectedItem().toString();
+        ChatItem chatItem = chatItems.get(chatName);
+        ContactItem contactItem = contactItems.get(contactString);
+        if (contactItem != null && chatItem != null) {
+            Log.i("Delete from chat", "Attempting to delete " + contactItem.getUserName() + " from " + chatItem.getChatName());
+            mChatAddDelGetModel.connectDelete(mUserInfoModel.getJwt(), chatItem.getChatID(), contactItem.getEmail());
+        } else {
+            binding.textSelectedContact.setError("Cannot divide by Zero...please have contact present.");
+        }
     }
 
     /**

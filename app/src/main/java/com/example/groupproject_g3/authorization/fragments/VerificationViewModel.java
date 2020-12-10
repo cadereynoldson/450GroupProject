@@ -25,7 +25,10 @@ import java.util.Objects;
 
 public class VerificationViewModel extends AndroidViewModel {
 
+    /**URL that holds the backend*/
     private final static String URL = "https://cloud-chat-450.herokuapp.com/sendemail/";
+
+    /**Hold the current response*/
     private MutableLiveData<JSONObject> mResponse;
 
     /**
@@ -79,9 +82,15 @@ public class VerificationViewModel extends AndroidViewModel {
         }
     }
 
-    public void connect(String email) {
-        Request request = new JsonObjectRequest(Request.Method.GET,
-                 URL + email,
+    /**
+     * Connect to get method to send email and verify user exists.
+     * @param email
+     */
+    public void connect(final String email) {
+        Request request = new JsonObjectRequest(
+                Request.Method.GET,
+                 URL +
+                         email,
                 null, //no body for get request.
                 mResponse::setValue,
                 this::handleError);

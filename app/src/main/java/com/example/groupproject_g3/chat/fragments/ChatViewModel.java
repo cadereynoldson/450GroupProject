@@ -40,6 +40,8 @@ public class ChatViewModel extends AndroidViewModel {
      * The value represents the List of (known) messages for that that room.
      */
     private Map<Integer, MutableLiveData<List<ChatMessage>>> mMessages;
+
+    /**List of my Chats*/
     private MutableLiveData<List<ChatItem>> mChats;
 
     public ChatViewModel(@NonNull Application application) {
@@ -77,7 +79,12 @@ public class ChatViewModel extends AndroidViewModel {
         return getOrCreateMapEntry(chatId).getValue();
     }
 
-
+    /**
+     * Gets or creates the map entry from the current id.
+     *
+     * @param chatId the chat id.
+     * @return mMessages the message mapping.
+     */
     private MutableLiveData<List<ChatMessage>> getOrCreateMapEntry(final int chatId) {
         if(!mMessages.containsKey(chatId)) {
             mMessages.put(chatId, new MutableLiveData<>(new ArrayList<>()));
@@ -186,6 +193,11 @@ public class ChatViewModel extends AndroidViewModel {
         getOrCreateMapEntry(chatId).setValue(list);
     }
 
+    /**
+     * Handles successful response.
+     *
+     * @param response the response.
+     */
     private void handelSuccess(final JSONObject response) {
         List<ChatMessage> list;
         if (!response.has("chatId")) {
@@ -223,7 +235,7 @@ public class ChatViewModel extends AndroidViewModel {
 
     /**
      * Handles errors during chat processing between client and network
-     * @param error
+     * @param error the error.
      */
     private void handleError(final VolleyError error) {
         if (Objects.isNull(error.networkResponse)) {

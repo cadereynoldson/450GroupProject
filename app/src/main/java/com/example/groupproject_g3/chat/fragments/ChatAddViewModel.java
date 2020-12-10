@@ -25,11 +25,21 @@ import java.util.Objects;
 
 public class ChatAddViewModel extends AndroidViewModel {
 
+    /**The landing URL*/
     private final String chatsURL = "https://cloud-chat-450.herokuapp.com/chats/";
+
+    /**The current response*/
     private MutableLiveData<JSONObject> mResponse;
+
+    /**The current chat ID for adding*/
     public int mChatID;
 
 
+    /**
+     * Constructor.
+     *
+     * @param application the application.
+     */
     public ChatAddViewModel(@NonNull Application application) {
         super(application);
         mResponse = new MutableLiveData<>();
@@ -48,6 +58,14 @@ public class ChatAddViewModel extends AndroidViewModel {
         mResponse.observe(owner, observer);
     }
 
+    /**
+     * Calls the post method from the service to add the chat and adding the
+     * adding the creator into the chat.
+     *
+     * @param authVal JWT for authentication.
+     * @param userID the current users ID.
+     * @param chatName the chat name.
+     */
     public void addChatAndCreator(final String authVal, final int userID, final String chatName) {
         JSONObject body = new JSONObject();
         try {
@@ -80,7 +98,12 @@ public class ChatAddViewModel extends AndroidViewModel {
 
     }
 
-    private void handleSuccess(JSONObject response) {
+    /**
+     * Successful response handling. Stores the chat Id and sets the value.
+     *
+     * @param response the response.
+     */
+    private void handleSuccess(final JSONObject response) {
         if (!response.has("chatID")) {
             throw new IllegalStateException("Unexpected response in ChatViewModel: " + response);
         }
@@ -93,6 +116,11 @@ public class ChatAddViewModel extends AndroidViewModel {
         }
     }
 
+    /**
+     * Error handling from response.
+     *
+     * @param error the error.
+     */
     private void handleError(final VolleyError error) {
         if (Objects.isNull(error.networkResponse)) {
             try {

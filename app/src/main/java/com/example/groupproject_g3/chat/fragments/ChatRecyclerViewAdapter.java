@@ -54,17 +54,34 @@ public class ChatRecyclerViewAdapter extends RecyclerView.Adapter<ChatRecyclerVi
         return mMessages.size();
     }
 
-    class MessageViewHolder extends RecyclerView.ViewHolder {
+    /**
+     * Inner class for view holder.
+     */
+    public class MessageViewHolder extends RecyclerView.ViewHolder {
+
+        /**View on this*/
         private final View mView;
+
+        /**Binding for doubt your even reading this*/
         private FragmentChatMessageBinding binding;
 
+        /**
+         * Constructor.
+         *
+         * @param view the view.
+         */
         public MessageViewHolder(@NonNull View view) {
             super(view);
             mView = view;
             binding = FragmentChatMessageBinding.bind(view);
         }
 
-        void setMessage(final com.example.groupproject_g3.chat.fragments.ChatMessage message) {
+        /**
+         * Sets the current message with fancy colors.
+         *
+         * @param message the message.
+         */
+        public void setMessage(final com.example.groupproject_g3.chat.fragments.ChatMessage message) {
             final Resources res = mView.getContext().getResources();
             final MaterialCardView card = binding.cardRoot;
 

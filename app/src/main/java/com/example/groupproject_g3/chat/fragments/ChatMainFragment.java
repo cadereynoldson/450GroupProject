@@ -21,26 +21,39 @@ import java.util.function.IntFunction;
 
 /**
  * A simple {@link Fragment} subclass.
-  */
+ */
 public class ChatMainFragment extends Fragment {
 
+    /**
+     * Binding for fragment access.
+     */
     private FragmentChatMainBinding binding;
+
+    /**
+     * Pager adapter to load the tabs.
+     */
     private ChatMainFragment.ChatsPagerAdapter adapter;
+
+    /**
+     * Viewpager for tabs display
+     */
     private ViewPager pager;
 
 
-    public ChatMainFragment(){
-        // Required empty public constructor
+    /**
+     * Required empty constructor
+     */
+    public ChatMainFragment() {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-         }
+    }
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentChatMainBinding.inflate(inflater, container, false);
         pager = binding.getRoot().findViewById(R.id.chats_main_viewpager);
@@ -58,23 +71,43 @@ public class ChatMainFragment extends Fragment {
 
     }
 
-    public void navigateToChat(final int chatID, View view){
+    /**
+     * Navigation to the chat fragment upon button click.
+     *
+     * @param chatID the chat id.
+     * @param view the view.
+     */
+    public void navigateToChat(final int chatID, final View view) {
         ChatMainFragmentDirections.ActionChatMainFragmentToChatFragment directions =
                 ChatMainFragmentDirections.actionChatMainFragmentToChatFragment(chatID);
         directions.setChatID(chatID);
         Navigation.findNavController(view).navigate(directions);
     }
 
+    /**
+     * Inner calss for view pager adapter development.
+     */
     public class ChatsPagerAdapter extends FragmentPagerAdapter {
 
+        /**The fragment array.*/
         private Fragment[] fragments;
 
+        /**The title array.*/
         private String[] titles;
 
-        public ChatsPagerAdapter(@NonNull FragmentManager fm, int behavior) {
+        /**
+         * Constructor.
+         *
+         * @param fm fragment manager.
+         * @param behavior the behavior.
+         */
+        public ChatsPagerAdapter(@NonNull FragmentManager fm, final int behavior) {
             super(fm, behavior);
         }
 
+        /**
+         * Initialize the fragments.
+         */
         public void initFrags() {
             IntFunction<String> getString = getResources()::getString;
             fragments = new Fragment[3];
