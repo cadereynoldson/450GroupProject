@@ -1,6 +1,8 @@
 package com.example.groupproject_g3.profile.fragments;
 
 import android.app.Application;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -33,8 +35,20 @@ public class ProfileViewModel extends AndroidViewModel {
     /** The index of the selected theme. */
     private int selectedThemeIndex;
 
+    /** The id of the selected theme. */
+    private int selectedThemeId;
+
     /** The URL to use for fetching user information. */
     private static final String profileInfoURL = "https://cloud-chat-450.herokuapp.com/profile/";
+
+    /** Key of the shared preferences to reference when getting preferences. */
+    public static final String sharedPrefKey = "MY_SHARED_PREF";
+
+    /** Key of the saved radio button index. */
+    public static final String radioButtonKey = "SAVED_RADIO_BUTTON_INDEX";
+
+    /** Key of the saved theme. */
+    public static final String savedThemeKey = "SAVED_THEME_KEY";
 
     /**
      * Creates a new instance of the profile view model.
@@ -43,15 +57,9 @@ public class ProfileViewModel extends AndroidViewModel {
     public ProfileViewModel(@NonNull Application application) {
         super(application);
         myInfo = new MutableLiveData<>();
-        selectedThemeIndex = 0;
-    }
-
-    /**
-     * Changes the selected theme index.
-     * @param newIndex the new index of the selected theme.
-     */
-    public void setSelectedThemeIndex(int newIndex) {
-        selectedThemeIndex = newIndex;
+        SharedPreferences preferences = getApplication().getSharedPreferences(sharedPrefKey, Context.MODE_PRIVATE);
+        selectedThemeIndex = preferences.getInt(radioButtonKey, 0);
+        selectedThemeId = preferences.getInt(savedThemeKey, R.style.Theme_GroupProjectG3);
     }
 
     /**
@@ -60,6 +68,19 @@ public class ProfileViewModel extends AndroidViewModel {
      */
     public int getSelectedThemeIndex() {
         return selectedThemeIndex;
+    }
+
+    public void setSelectedTheme(int themeId, int themeIndex) {
+        SharedPreferences.Editor preferences = getApplication().getSharedPreferences(sharedPrefKey, Context.MODE_PRIVATE).edit();
+        preferences.putInt(radioButtonKey, themeIndex);
+        preferences.putInt(savedThemeKey, themeId);
+        if (preferences.commit()) {
+            Log.i("Saved theme information", "Successfully saved theme information: Index=" + themeIndex + ", ThemeID=" + themeId);
+        } else {
+            Log.e("ERROR", "Could not save theme information.");
+        }
+        selectedThemeIndex = themeIndex;
+        selectedThemeId = themeId;
     }
 
     /**
