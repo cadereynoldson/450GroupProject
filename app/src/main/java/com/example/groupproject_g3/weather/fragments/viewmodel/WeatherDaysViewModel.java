@@ -53,9 +53,9 @@ public class WeatherDaysViewModel extends AndroidViewModel {
 
     /**
      * Gets the five day weather forecase given a JWT, latitude, and longitude.
-     * @param authVal
-     * @param latitude
-     * @param longitude
+     * @param authVal the authentic value
+     * @param latitude the latitude of the location
+     * @param longitude the longitude of the location
      */
     public void connectGet(String authVal, double latitude, double longitude) {
         String url = "https://cloud-chat-450.herokuapp.com/weather/forecast/latLon/?lat=" + latitude + "&long=" + longitude;
@@ -107,7 +107,7 @@ public class WeatherDaysViewModel extends AndroidViewModel {
                     JSONObject info = data.getJSONObject(i);
 
                     //fetch date, temperature, weather, and time.
-                    long dateTime = ((long) info.getInt(getString.apply(R.string.key_weather_date_time))) * 1000l;
+                    long dateTime = ((long) info.getInt(getString.apply(R.string.key_weather_date_time))) * 1000L;
 
                     //Fetch weather array and get main value from the response.
                     JSONArray weatherArr = info.getJSONArray(getString.apply(R.string.key_weather_current_weather));
@@ -118,6 +118,10 @@ public class WeatherDaysViewModel extends AndroidViewModel {
                     //Fetch main array and get the temperature value from it.
                     JSONObject tempData = info.getJSONObject(getString.apply(R.string.key_weather_current_weather_main));
                     Double currentTemp = tempData.getDouble(getString.apply(R.string.key_weather_current_temp));
+
+                    Double value = currentTemp - 32;
+                    Double celsius = value * 5/9;
+
                     Double minTemp = tempData.getDouble(getString.apply(R.string.key_weather_current_temp_min));
                     Double maxTemp = tempData.getDouble(getString.apply(R.string.key_weather_current_temp_max));
                     Integer pressure = tempData.getInt(getString.apply(R.string.key_weather_current_pressure));
@@ -145,6 +149,7 @@ public class WeatherDaysViewModel extends AndroidViewModel {
                     WeatherInformation DaysInfo = new WeatherInformation.Builder(
                             dateDisplay,
                             currentTemp.toString())
+                            .addCelsius(celsius.toString())
                             .addDay(day)
                             .addTempMin(minTemp.toString())
                             .addTempMax(maxTemp.toString())

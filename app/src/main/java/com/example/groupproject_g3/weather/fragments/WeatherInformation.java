@@ -8,6 +8,7 @@ public class WeatherInformation implements Serializable {
 
     private String mDate;
     private String mTemperature;
+    private String mCelsius;
     private String mTime;
     private String mWeather;
     private String mDay;
@@ -30,6 +31,7 @@ public class WeatherInformation implements Serializable {
     public static class Builder {
         private String mDate;
         private String mTemperature;
+        private String mCelsius = "";
         private String mTime = "";
         private String mWeather = "";
         private String mDay = "";
@@ -53,6 +55,11 @@ public class WeatherInformation implements Serializable {
         public Builder(String theDate, String theTemperature) {
             mDate = theDate;
             mTemperature = theTemperature;
+        }
+
+        public Builder addCelsius(String theCelsius) {
+            mCelsius = theCelsius;
+            return this;
         }
 
         public Builder addTime(String theTime) {
@@ -151,6 +158,7 @@ public class WeatherInformation implements Serializable {
     private WeatherInformation(Builder builder) {
         mDate = builder.mDate;
         mTemperature = builder.mTemperature;
+        mCelsius = builder.mCelsius;
         mTime = builder.mTime;
         mWeather = builder.mWeather;
         mDay = builder.mDay;
@@ -177,6 +185,10 @@ public class WeatherInformation implements Serializable {
 
     public String getmTemperature() {
         return mTemperature;
+    }
+
+    public String getmCelsius() {
+        return mCelsius;
     }
 
     public String getmTime() {
