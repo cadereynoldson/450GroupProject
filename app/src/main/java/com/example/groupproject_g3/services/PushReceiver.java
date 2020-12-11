@@ -29,7 +29,7 @@ public class PushReceiver extends BroadcastReceiver {
 
     public static final String CONTACTS_UPDATED = "contacts page update from push";
 
-    public static final String CHATS_UPDATED = "chats page update from push";
+    public static final String CHAT_UPDATED = "chat page update from push";
 
     private static final String CHANNEL_ID = "1";
 
@@ -104,15 +104,15 @@ public class PushReceiver extends BroadcastReceiver {
 
         if (appProcessInfo.importance == IMPORTANCE_FOREGROUND || appProcessInfo.importance == IMPORTANCE_VISIBLE) {
             //app is in the foreground so send the message to the active Activities
-            Log.d("PUSHY", "Chats notification recieved in foreground: ");
+            Log.d("PUSHY", "Chat notification recieved in foreground: ");
 
             //create an Intent to broadcast a message to other parts of the app.
-            Intent i = new Intent(CHATS_UPDATED);
+            Intent i = new Intent(CHAT_UPDATED);
             i.putExtras(intent.getExtras());
             context.sendBroadcast(i);
         } else {
             //app is in the background so create and post a notification
-            Log.d("PUSHY", "Chats info updated in background");
+            Log.d("PUSHY", "Chat info updated in background");
 
             Intent i = new Intent(context, AuthorizationActivity.class);
             i.putExtras(intent.getExtras());
@@ -125,7 +125,7 @@ public class PushReceiver extends BroadcastReceiver {
             NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
                     .setAutoCancel(true)
                     .setSmallIcon(R.drawable.ic_chat_notification)
-                    .setContentTitle("Chats Notification")
+                    .setContentTitle("Chat Notification")
                     .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                     .setContentIntent(pendingIntent);
 

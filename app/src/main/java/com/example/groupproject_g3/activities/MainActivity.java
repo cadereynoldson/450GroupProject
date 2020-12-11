@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
             mContactsPushReceiver = new ContactsPushReceiver();
         if(mPushChatReciever == null)
             mPushChatReciever = new MainPushChatReciever();
-        IntentFilter chatFilter = new IntentFilter(PushReceiver.CHATS_UPDATED);
+        IntentFilter chatFilter = new IntentFilter(PushReceiver.CHAT_UPDATED);
         IntentFilter messageFilter = new IntentFilter(PushReceiver.RECEIVED_NEW_MESSAGE);
         IntentFilter contactsFilter = new IntentFilter(PushReceiver.CONTACTS_UPDATED);
         registerReceiver(mPushChatReciever, chatFilter);
