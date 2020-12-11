@@ -8,6 +8,7 @@ Mobile application programming group project.
 - JDK 8
 
 #### Highlights
+- Dark Mode
 
 #### Libraries and Dependencies
 - com.google.android.geo.API_KEY
