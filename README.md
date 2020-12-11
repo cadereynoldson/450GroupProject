@@ -1,23 +1,56 @@
-# 450GroupProject
+# 450 Project Group 3
 Mobile application programming group project.
 
-# Naming Conventions
-- Static and master variables: ALL_CAPS_WITH_UNDERSCORES
-- Fields: camelCase
-- Methods: camelCase
-- File Names (Java): StandardJava 
-- Code: Descriptive variables, camelCase, bracket on tops of blocks (K&R 1TBS) {
-  
-  }
-- XML Resources: Named components (not just button1, button2, button3) viewtype_location_description
-- View IDs: what_where_description
-- String Resources: where_description or all_description
+<p align="center"><img src="app/src/main/res/drawable/logo_cloud_chat.png" /></p>
 
-# Google Drive Link
-https://drive.google.com/drive/folders/1kjMYcrst8tk-WVSqlbfr45HJRd6EOhab?usp=sharing
+#### Requirements
+- Android Studio 4.1
+- Android SDK Platform-Tools 30.0.5
+- Google Play Services 49
+- JDK 8
 
-# Heroku
-https://dashboard.heroku.com/apps/cloud-chat-450
+#### Highlights
+- Dark Mode
 
-# Heroku Repository
-https://github.com/cadereynoldson/450GroupProjectWebServer
+#### Libraries and Dependencies
+- com.google.android.geo.API_KEY
+- com.google.android.gms:play-services-location:17.1.0
+- com.google.android.gms:play-services-maps:17.0.0
+- com.squareup.picasso:picasso:2.71828
+- com.auth0.android:jwtdecode:2.0.0
+- com.google.firebase:firebase-auth
+- com.android.volley:volley:1.1.1
+- me.pushy:sdk:1.0.54
+- androidx.legacy:legacy-support-v4:1.0.0
+- androidx.navigation.safeargs
+
+# Developed By
+Cade Reynoldson (cadereynoldson)
+
+Patrick Lauer (bluedestiny88)
+
+Tyler Phippen (TPhip92)
+
+Melinda Tran (mtran36)
+
+# Links
+#### Google Drive Scrum Meetings
+- https://drive.google.com/drive/folders/1kjMYcrst8tk-WVSqlbfr45HJRd6EOhab?usp=sharing
+
+#### Heroku Web Service
+- https://dashboard.heroku.com/apps/cloud-chat-450
+
+#### Web Server Repo
+- https://github.com/cadereynoldson/450GroupProjectWebServer
+
+#### Web Service Website
+- https://cloud-chat-450.herokuapp.com/doc/
+
+# API Keys Links
+- Use [OpenWeatherMap] API to implement Weather Page
+- Use [Google Maps] API to implement Map Page
+- Use [Pushy] API to implement Chats messaging Page
+
+[OpenWeatherMap]: https://openweathermap.org/
+[Google Maps]: https://developers.google.com/maps/documentation/android-sdk/get-api-key
+[Pushy]: https://pushy.me/

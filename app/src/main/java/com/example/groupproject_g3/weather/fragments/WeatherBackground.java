@@ -12,12 +12,28 @@ import com.example.groupproject_g3.R;
 
 public class WeatherBackground {
 
+    /** View View to be used. */
     private View mView;
+
+    /** String Weather Icon to be used. */
     private String mIcon;
+
+    /** String Weather Description to be used. */
     private String mWeather;
+
+    /** Resources folder Res to be used. */
     private Resources res;
+
+    /** Drawable folder Drawable object to be used. */
     private Drawable drawable;
 
+    /**
+     * Constructor that takes in view, description, icon, and res to be assigned and used.
+     * @param view The view fragment to be used.
+     * @param theWeather The weather description to be used.
+     * @param theIcon The weather icon to be used.
+     * @param theRes The Resources folder that contains the backgrounds.
+     */
     public WeatherBackground(View view, String theWeather, String theIcon, Resources theRes) {
         mView = view;
         mWeather = theWeather;
@@ -26,6 +42,14 @@ public class WeatherBackground {
         background(mView, mWeather, mIcon, res);
     }
 
+    /**
+     * Method will check if description match and website contains the icon,
+     * if all check pass, background will be set to a drawable.
+     * @param view The view fragment to be used.
+     * @param weather The weather description to be used.
+     * @param icon The weather icon to be used.
+     * @param res The Resources folder that contains the backgrounds.
+     */
     @SuppressLint("ResourceAsColor")
     public void background(@NonNull View view, String weather, String icon, Resources res) {
         if (weather.matches("clear sky")) {

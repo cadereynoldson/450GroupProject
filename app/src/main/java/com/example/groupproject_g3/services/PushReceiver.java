@@ -59,7 +59,7 @@ public class PushReceiver extends BroadcastReceiver {
             Log.d("PUSHY", "Contacts notification recieved in foreground: ");
 
             //create an Intent to broadcast a message to other parts of the app.
-            Intent i = new Intent(CHATS_UPDATED);
+            Intent i = new Intent(CONTACTS_UPDATED);
             i.putExtras(intent.getExtras());
             context.sendBroadcast(i);
         } else {
@@ -94,11 +94,11 @@ public class PushReceiver extends BroadcastReceiver {
     }
 
     /**
-     * Handles an incoming contacts notification. Updates all contacts information.
+     * Handles an incoming chats notification. Updates all chat information.
      * @param context the context of the message.
      * @param intent the intent of the message.
      */
-    private void handleChatsUpdateNotification(Context context, Intent intent) {
+    private void handleChatsUpdateNotification(final Context context, final Intent intent) {
         ActivityManager.RunningAppProcessInfo appProcessInfo = new ActivityManager.RunningAppProcessInfo();
         ActivityManager.getMyMemoryState(appProcessInfo);
 
@@ -107,7 +107,7 @@ public class PushReceiver extends BroadcastReceiver {
             Log.d("PUSHY", "Chats notification recieved in foreground: ");
 
             //create an Intent to broadcast a message to other parts of the app.
-            Intent i = new Intent(CONTACTS_UPDATED);
+            Intent i = new Intent(CHATS_UPDATED);
             i.putExtras(intent.getExtras());
             context.sendBroadcast(i);
         } else {
