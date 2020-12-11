@@ -35,19 +35,28 @@ public class WeatherHoursViewModel extends AndroidViewModel {
     /** Contains basic weather information to be represented */
     private MutableLiveData<List<WeatherInformation>> information;
 
+    /**
+     * A view model of the hours weather to be displayed.
+     * @param application - the application displaying the data.
+     */
     public WeatherHoursViewModel(@NonNull Application application) {
         super(application);
         information = new MutableLiveData<>();
         information.setValue(new ArrayList<>());
     }
 
+    /**
+     * Adds an observer to add to the hours list
+     * @param owner - the user data
+     * @param observer - the observer
+     */
     public void addHoursWeatherObserver(@NonNull LifecycleOwner owner,
                                         @NonNull Observer<? super List<WeatherInformation>> observer) {
         information.observe(owner, observer);
     }
 
     /**
-     * Gets the five day weather forecase given a JWT, latitude, and longitude.
+     * Gets the 24 hours weather forecast given a JWT, latitude, and longitude.
      * @param authVal the authentic value
      * @param latitude the latitude of the location
      * @param longitude the longitude of the location
@@ -78,6 +87,10 @@ public class WeatherHoursViewModel extends AndroidViewModel {
                 .add(request);
     }
 
+    /**
+     * Handles the data display after the successful retrieval of data.
+     * @param result - the data to be displayed within the application.
+     */
     private void handleResult(final JSONObject result) {
         IntFunction<String> getString =
                 getApplication().getResources()::getString;

@@ -24,6 +24,10 @@ public class WeatherDaysRecyclerViewAdapter extends RecyclerView.Adapter<Weather
     /** list containing the weather information. */
     private final List<WeatherInformation> weatherInfo;
 
+    /**
+     * Creates a new instance of the recycler view adapter for weather 5 Days.
+     * @param info The list of days weather information to display.
+     */
     public WeatherDaysRecyclerViewAdapter(List<WeatherInformation> info) {
         weatherInfo = info;
     }
@@ -51,12 +55,20 @@ public class WeatherDaysRecyclerViewAdapter extends RecyclerView.Adapter<Weather
         public FragmentWeatherDaysItemBinding binding;
         private WeatherInformation info;
 
+        /**
+         * Constructor for DaysInfoViewHolder.
+         * @param itemView The view of this fragment.
+         */
         public DaysInfoViewHolder(@NonNull View itemView) {
             super(itemView);
             mView = itemView;
             binding = FragmentWeatherDaysItemBinding.bind(itemView);
         }
 
+        /**
+         * Set component of this fragment with specific data.
+         * @param info The weather information to be used.
+         */
         public void setDaysInfo(final WeatherInformation info) {
             this.info = info;
             binding.textDaysDate.setText(info.getmDate());
@@ -64,11 +76,9 @@ public class WeatherDaysRecyclerViewAdapter extends RecyclerView.Adapter<Weather
             binding.textDaysMax.setText(info.getmTempMax() + "°");
             binding.textDays.setText(info.getmDay());
             binding.textDaysTime.setText(info.getmTime());
-            binding.weatherCard.setOnClickListener(view -> {
-                Navigation.findNavController(mView).navigate(
-                        WeatherMainFragmentDirections
-                                .actionNavigationWeatherToWeatherForecastFragment(info));
-            });
+            binding.weatherCard.setOnClickListener(view -> Navigation.findNavController(mView).navigate(
+                    WeatherMainFragmentDirections
+                            .actionNavigationWeatherToWeatherForecastFragment(info)));
 
             Picasso.get().load(info.getmIcon()).into(binding.imageDaysForecast);
         }
