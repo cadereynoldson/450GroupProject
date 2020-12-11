@@ -22,6 +22,7 @@ import com.squareup.picasso.Picasso;
  */
 public class WeatherForecastFragment extends Fragment {
 
+    /** Change background based off weather icon and description */
     private WeatherBackground background;
 
     @Override

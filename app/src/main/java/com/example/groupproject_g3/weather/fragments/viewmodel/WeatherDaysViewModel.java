@@ -35,6 +35,10 @@ public class WeatherDaysViewModel extends AndroidViewModel {
     /** Contains basic weather information to be represented */
     private MutableLiveData<List<WeatherInformation>> information;
 
+    /**
+     * A view model of the days weather to be displayed.
+     * @param application - the application displaying the data.
+     */
     public WeatherDaysViewModel(@NonNull Application application) {
         super(application);
         information = new MutableLiveData<>();
@@ -42,7 +46,7 @@ public class WeatherDaysViewModel extends AndroidViewModel {
     }
 
     /**
-     * Adds an observer to add to the Forecast list
+     * Adds an observer to add to the Days list
      * @param owner - the user data
      * @param observer - the observer
      */
@@ -52,7 +56,7 @@ public class WeatherDaysViewModel extends AndroidViewModel {
     }
 
     /**
-     * Gets the five day weather forecase given a JWT, latitude, and longitude.
+     * Gets the five day weather forecast given a JWT, latitude, and longitude.
      * @param authVal the authentic value
      * @param latitude the latitude of the location
      * @param longitude the longitude of the location
@@ -180,6 +184,10 @@ public class WeatherDaysViewModel extends AndroidViewModel {
         information.setValue(information.getValue());
     }
 
+    /**
+     * Handles any error during the connection process.
+     * @param error handles the error
+     */
     private void handleError(final VolleyError error) {
         //TODO: Add better error detection
         Log.e("CONNECTION ERROR", error.getLocalizedMessage());
