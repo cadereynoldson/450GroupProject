@@ -1,6 +1,8 @@
 # 450 Project Group 3
 Mobile application programming group project.
 
+<p align="center"><img src="app/src/main/res/drawable/logo_cloud_chat.png" /></p>
+
 #### Requirements
 - Android Studio 4.1
 - Android SDK Platform-Tools 30.0.5
