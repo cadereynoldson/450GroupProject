@@ -3,8 +3,11 @@ Mobile application programming group project.
 
 # Developed By
 Cade Reynoldson (cadereynoldson)
+
 Patrick Lauer (bluedestiny88)
+
 Tyler Phippen (TPhip92)
+
 Melinda Tran (mtran36)
 
 # Links
