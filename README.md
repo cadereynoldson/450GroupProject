@@ -22,7 +22,9 @@ Melinda Tran (mtran36)
 
 # API Keys Links
 - Use [OpenWeatherMap] API to implement Weather Page
-- Use [Pushy] API to implement chats messaging
+- Use [Google Maps] API to implement Map Page
+- Use [Pushy] API to implement Chats messaging Page
 
 [OpenWeatherMap]: https://openweathermap.org/
+[Google Maps]: https://developers.google.com/maps/documentation/android-sdk/get-api-key
 [Pushy]: https://pushy.me/
