@@ -19,3 +19,10 @@ Melinda Tran (mtran36)
 
 #### Web Server Repo
 - https://github.com/cadereynoldson/450GroupProjectWebServer
+
+# API Keys Links
+- Use [OpenWeatherMap] API to implement Weather Page
+- Use [Pushy] API to implement chats messaging
+
+[OpenWeatherMap]: https://openweathermap.org/
+[Pushy]: https://pushy.me/
