@@ -43,6 +43,9 @@ Melinda Tran (mtran36)
 #### Web Server Repo
 - https://github.com/cadereynoldson/450GroupProjectWebServer
 
+#### Web Service Website
+- https://cloud-chat-450.herokuapp.com/doc/
+
 # API Keys Links
 - Use [OpenWeatherMap] API to implement Weather Page
 - Use [Google Maps] API to implement Map Page
