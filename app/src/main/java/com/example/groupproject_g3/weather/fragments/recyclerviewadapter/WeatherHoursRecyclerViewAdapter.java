@@ -1,6 +1,5 @@
 package com.example.groupproject_g3.weather.fragments.recyclerviewadapter;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +19,10 @@ public class WeatherHoursRecyclerViewAdapter extends RecyclerView.Adapter<Weathe
     /** list containing the weather information. */
     private final List<WeatherInformation> weatherInfo;
 
+    /**
+     * Creates a new instance of the recycler view adapter for weather 24 hours.
+     * @param info The list of hours weather information to display.
+     */
     public WeatherHoursRecyclerViewAdapter(List<WeatherInformation> info) {
         weatherInfo = info;
     }
@@ -46,12 +49,20 @@ public class WeatherHoursRecyclerViewAdapter extends RecyclerView.Adapter<Weathe
         public FragmentWeatherHoursItemBinding binding;
         private WeatherInformation info;
 
+        /**
+         * Constructor for HoursInfoViewHolder.
+         * @param itemView The view of this fragment.
+         */
         public HoursInfoViewHolder(@NonNull View itemView) {
             super(itemView);
             mView = itemView;
             binding = FragmentWeatherHoursItemBinding.bind(itemView);
         }
 
+        /**
+         * Set component of this fragment with specific data.
+         * @param info The weather information to be used.
+         */
         public void setHoursInfo(final WeatherInformation info) {
             this.info = info;
             binding.textHours.setText(info.getmTime());

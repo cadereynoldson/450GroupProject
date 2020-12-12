@@ -75,8 +75,8 @@
     <fragment
         android:id="@+id/navigation_location"
         android:name="com.example.groupproject_g3.location.fragments.LocationFragment"
-        android:label="fragment_page_location"
-        tools:layout="@layout/fragment_page_location" >
+        android:label="@string/title_weather_map"
+        tools:layout="@layout/fragment_page_location">
         <action
             android:id="@+id/action_navigation_location_to_navigation_weather"
             app:destination="@id/navigation_weather" />

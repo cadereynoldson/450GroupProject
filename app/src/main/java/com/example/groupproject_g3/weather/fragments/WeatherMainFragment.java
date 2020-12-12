@@ -40,14 +40,19 @@ public class WeatherMainFragment extends Fragment {
     /** A current model of the view model */
     private WeatherCurrentViewModel currentModel;
 
+    /** A days model of the view model */
     private WeatherDaysViewModel daysModel;
 
+    /** A hours model of the view model */
     private WeatherHoursViewModel hoursModel;
 
+    /** A user info model of the view model */
     private UserInfoViewModel userInfoViewModel;
 
+    /** Change background based off weather icon and description */
     private WeatherBackground background;
 
+    @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ViewModelProvider provider = new ViewModelProvider(getActivity());
@@ -117,10 +122,8 @@ public class WeatherMainFragment extends Fragment {
             }
         });
 
-        binding.fab.setOnClickListener(info -> {
-            Navigation.findNavController(view).navigate(
-                    WeatherMainFragmentDirections.actionNavigationWeatherToLocationFragment2());
-        });
+        binding.fab.setOnClickListener(info -> Navigation.findNavController(view).navigate(
+                WeatherMainFragmentDirections.actionNavigationWeatherToLocationFragment2()));
 
         currentModel.connectGet(userInfoViewModel.getJwt(), lat, lon);
         hoursModel.connectGet(userInfoViewModel.getJwt(), lat, lon);
