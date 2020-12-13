@@ -104,7 +104,7 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
                 getApplication().getResources()::getString;
         try {
             //fetch date, temperature, weather, and time.
-            long dateTime = ((long) result.getInt(getString.apply(R.string.key_weather_date_time))) * 1000l;
+            long dateTime = result.getLong(getString.apply(R.string.key_weather_date_time)) * (long) 1000;
             long timezoneOffset = result.getInt(getString.apply(R.string.key_weather_timezone));
 
             //Fetch weather array and get main value from the response.
@@ -123,9 +123,10 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
             JSONObject sysData = result.getJSONObject(getString.apply(R.string.key_weather_current_sys));
             String currentCountry = sysData.getString(getString.apply(R.string.key_weather_current_country));
             String currentLocation = result.getString(getString.apply(R.string.key_weather_current_name));
+
             Date date = new Date(dateTime + timezoneOffset);
             String dateStr = new SimpleDateFormat("EEE, MMM d, yy").format(date);
-            String time = new SimpleDateFormat("hh:mm").format(date);
+            String time = new SimpleDateFormat("hh:mm aa").format(date);
 
             WeatherInformation info = new WeatherInformation.Builder(
                     dateStr,

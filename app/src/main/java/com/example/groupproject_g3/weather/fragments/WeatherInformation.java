@@ -72,6 +72,12 @@ public class WeatherInformation implements Serializable {
     /** Long Time Zone to be used. */
     private long mTimeZone;
 
+    private String mSunRiseTime;
+
+    private String mSunsetTime;
+
+    private String mCheckTime;
+
 
     public static class Builder {
 
@@ -140,6 +146,12 @@ public class WeatherInformation implements Serializable {
 
         /** Long Time Zone to be used. */
         private long mTimeZone;
+
+        private String mSunRiseTime = "";
+
+        private String mSunsetTime = "";
+
+        private String mCheckTime = "";
 
 
         /**
@@ -334,6 +346,33 @@ public class WeatherInformation implements Serializable {
         }
 
         /**
+         * Adder method for timezone.
+         * @param sunriseTime The timezone of the call.
+         */
+        public Builder addSunriseTime(String sunriseTime) {
+            mSunRiseTime = sunriseTime;
+            return this;
+        }
+
+        /**
+         * Adder method for timezone.
+         * @param sunsetTime The timezone of the call.
+         */
+        public Builder addSunsetTime(String sunsetTime) {
+            mSunsetTime = sunsetTime;
+            return this;
+        }
+
+        /**
+         * Adder method for timezone.
+         * @param checkTime The timezone of the call.
+         */
+        public Builder addCheckTime(String checkTime) {
+            mCheckTime = checkTime;
+            return this;
+        }
+
+        /**
          * The Weather Information Builder method.
          */
         public WeatherInformation build() { return new WeatherInformation(this);}
@@ -366,6 +405,9 @@ public class WeatherInformation implements Serializable {
         mDirection = builder.mDirection;
         mIcon = builder.mIcon;
         mTimeZone = builder.mTimeZone;
+        mSunRiseTime = builder.mSunRiseTime;
+        mSunsetTime = builder.mSunsetTime;
+        mCheckTime = builder.mCheckTime;
     }
 
     /**
@@ -509,6 +551,21 @@ public class WeatherInformation implements Serializable {
      * Getter method for timezone.
      */
     public long getmTimeZone() { return mTimeZone; }
+
+    /**
+     * Getter method for Sunrise time.
+     */
+    public String getmSunRiseTime() { return mSunRiseTime; }
+
+    /**
+     * Getter method for Sunset time.
+     */
+    public String getmSunsetTime() { return mSunsetTime; }
+
+    /**
+     * Getter method for Check time.
+     */
+    public String getmCheckTime() { return mCheckTime; }
 
     @Override
     public boolean equals(Object o) {

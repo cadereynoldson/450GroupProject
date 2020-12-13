@@ -29,10 +29,10 @@ import com.squareup.picasso.Picasso;
 public class WeatherMainFragment extends Fragment {
 
     /** Latitude data to be used. */
-    private float lat = 47.2529f;
+    private float lat;
 
     /** Longitude data to be used. */
-    private float lon = -122.4443f;
+    private float lon;
 
     /** Binding object to be used with other fragments in Weather. */
     private FragmentPageWeatherMainBinding binding;
@@ -85,6 +85,7 @@ public class WeatherMainFragment extends Fragment {
             lon = WeatherMainFragmentArgs.fromBundle(bundle).getLon();
             Log.i("Weather Info Updated", "Latitude=" + lat + " Longitude=" + lon);
         }
+
         currentModel.addCurrentWeatherObserver(getViewLifecycleOwner(), currentInfo -> {
             binding.containerWeatherForecast.textCurrentDate.setText(currentInfo.getmDate());
             binding.containerWeatherForecast.textCurrentTime.setText(currentInfo.getmTime());
