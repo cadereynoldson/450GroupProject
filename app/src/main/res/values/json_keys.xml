@@ -45,6 +45,7 @@
     <string name="key_weather_current_sunset">sunset</string>
 
     <string name="key_weather_timezone">timezone</string>
+    <string name="key_weather_timezone_offset">timezone_offset</string>
     <string name="key_weather_timezone_utc">UTC</string>
     <string name= "key_chats_list">rows</string>
 </resources>

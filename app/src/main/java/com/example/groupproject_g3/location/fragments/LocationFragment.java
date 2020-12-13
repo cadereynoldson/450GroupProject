@@ -57,9 +57,12 @@ public class LocationFragment extends Fragment implements GoogleMap.OnMapClickLi
      */
     public static final long FASTEST_UPDATE_INTERVAL_IN_MILLISECONDS =
             UPDATE_INTERVAL_IN_MILLISECONDS / 2;
+
     // A constant int for the permissions request code. Must be a 16 bit number
     private static final int MY_PERMISSIONS_LOCATIONS = 8414;
+
     private LocationRequest mLocationRequest;
+
     //Use a FusedLocationProviderClient to request the location
     private FusedLocationProviderClient mFusedLocationClient;
 
@@ -88,6 +91,7 @@ public class LocationFragment extends Fragment implements GoogleMap.OnMapClickLi
             //The user has already allowed the use of Locations. Get the current location.
             requestLocation();
         }
+
         createLocationRequest();
     }
 
@@ -134,6 +138,9 @@ public class LocationFragment extends Fragment implements GoogleMap.OnMapClickLi
         Log.e("MAP READY", "TEST");
         mMap = googleMap;
         mMap.getUiSettings().setZoomControlsEnabled(true);
+//        LatLng starting = new LatLng(47.252877, -122.444290);
+//        mMap.addMarker(new MarkerOptions().position(starting).title("Marker"));
+//        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(starting, mMap.getCameraPosition().zoom));
         mMap.setOnMapClickListener(this);
     }
 

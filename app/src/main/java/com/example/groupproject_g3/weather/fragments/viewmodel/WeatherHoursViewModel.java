@@ -96,20 +96,20 @@ public class WeatherHoursViewModel extends AndroidViewModel {
                 getApplication().getResources()::getString;
         try {
             information.getValue().clear();
+            long timezoneOffset = result.getInt(getString.apply(R.string.key_weather_timezone_offset));
+
             JSONObject sunData = result.getJSONObject(getString.apply(R.string.key_weather_24hour_current));
-            long sunriseInfo = ((long) sunData.getInt(getString.apply(R.string.key_weather_current_sunrise)))* 1000L;
+            long sunriseInfo = ((long) sunData.getInt(getString.apply(R.string.key_weather_current_sunrise)))* 1000l;
 
-            Date riseDate = new Date(sunriseInfo);
-            Calendar rise = Calendar.getInstance();
-            rise.setTime(riseDate);
-            String sunrise = new SimpleDateFormat("HH:mm").format(riseDate);
+            Date riseDate = new Date(sunriseInfo + timezoneOffset);
+            String sunrise = new SimpleDateFormat("hh:mm").format(riseDate);
+            String sunriseTime = new SimpleDateFormat("hh aa").format(riseDate);
 
-            long sunsetInfo = ((long) sunData.getInt(getString.apply(R.string.key_weather_current_sunset)))* 1000L;
+            long sunsetInfo = ((long) sunData.getInt(getString.apply(R.string.key_weather_current_sunset)))* 1000l;
 
-            Date setDate = new Date(sunsetInfo);
-            Calendar set = Calendar.getInstance();
-            set.setTime(setDate);
-            String sunset = new SimpleDateFormat("HH:mm").format(setDate);
+            Date setDate = new Date(sunsetInfo + timezoneOffset);
+            String sunset = new SimpleDateFormat("hh:mm").format(setDate);
+            String sunsetTime = new SimpleDateFormat("hh aa").format(setDate);
 
 
             if (result.has(getString.apply(R.string.key_weather_24hour_hourly))) {
@@ -120,7 +120,7 @@ public class WeatherHoursViewModel extends AndroidViewModel {
                     JSONObject info = data.getJSONObject(i);
 
                     //fetch date, temperature, weather, and time.
-                    long dateTime = ((long) info.getInt(getString.apply(R.string.key_weather_date_time))) * 1000L;
+                    long dateTime = ((long) info.getInt(getString.apply(R.string.key_weather_date_time))) * 1000l;
 
                     JSONArray weatherArr = info.getJSONArray(getString.apply(R.string.key_weather_current_weather));
                     String icon = weatherArr.getJSONObject(0).getString(getString.apply(R.string.key_weather_current_weather_icon));
@@ -131,12 +131,12 @@ public class WeatherHoursViewModel extends AndroidViewModel {
                     Integer celsius = value * 5/9;
 
                     Date date = new Date(dateTime);
-                    Calendar calendar = Calendar.getInstance();
-                    calendar.setTime(date);
-
-                    String dateDisplay = calendar.get(Calendar.MONTH) + "/" + calendar.get(Calendar.DAY_OF_MONTH);
-
+                    String dateDisplay = new SimpleDateFormat("MM d").format(date);
                     String time = new SimpleDateFormat("hh").format(date);
+                    String checkTime = new SimpleDateFormat("hh aa").format(date);
+
+                    long testing = dateTime + timezoneOffset;
+                    Log.e("Weather Hour Updated", "Sunrise=" +  sunriseTime + " Sunset=" + sunsetTime + " Time=" + checkTime);
 
                     WeatherInformation HoursInfo = new WeatherInformation.Builder(
                             dateDisplay,
@@ -146,6 +146,9 @@ public class WeatherHoursViewModel extends AndroidViewModel {
                             .addIcon(urlIcon)
                             .addSunrise(sunrise)
                             .addSunset(sunset)
+                            .addSunriseTime(sunriseTime)
+                            .addSunsetTime(sunsetTime)
+                            .addCheckTime(checkTime)
                             .build();
 
                     if (!information.getValue().contains(HoursInfo)) {

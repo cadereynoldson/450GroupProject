@@ -103,8 +103,14 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
         IntFunction<String> getString =
                 getApplication().getResources()::getString;
         try {
+
+            // Fetch longitude and latitude
+            JSONObject coordData = result.getJSONObject(getString.apply(R.string.key_weather_current_coord));
+            Double lat = coordData.getDouble(getString.apply(R.string.key_weather_current_lat));
+            Double lon = coordData.getDouble(getString.apply(R.string.key_weather_current_lon));
+
             //fetch date, temperature, weather, and time.
-            long dateTime = ((long) result.getInt(getString.apply(R.string.key_weather_date_time))) * 1000l;
+            long dateTime = result.getInt(getString.apply(R.string.key_weather_date_time));
             long timezoneOffset = result.getInt(getString.apply(R.string.key_weather_timezone));
 
             //Fetch weather array and get main value from the response.
@@ -123,9 +129,13 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
             JSONObject sysData = result.getJSONObject(getString.apply(R.string.key_weather_current_sys));
             String currentCountry = sysData.getString(getString.apply(R.string.key_weather_current_country));
             String currentLocation = result.getString(getString.apply(R.string.key_weather_current_name));
-            Date date = new Date(dateTime + timezoneOffset);
+
+            Date date = new Date((dateTime + timezoneOffset + 30000) * 1000l);
             String dateStr = new SimpleDateFormat("EEE, MMM d, yy").format(date);
-            String time = new SimpleDateFormat("hh:mm").format(date);
+            String time = new SimpleDateFormat("hh:mm aa").format(date);
+
+            long testing = dateTime + timezoneOffset + 30000;
+            Log.e("Weather Current Updated", "Date=" + testing);
 
             WeatherInformation info = new WeatherInformation.Builder(
                     dateStr,
@@ -133,6 +143,8 @@ public class WeatherCurrentViewModel extends AndroidViewModel {
                     .addCelsius(celsius.toString())
                     .addTime(time)
                     .addWeather(currentWeather)
+                    .addLat(lat.toString())
+                    .addLon(lon.toString())
                     .addLocation(currentLocation)
                     .addCountry(currentCountry)
                     .addIcon(urlIcon)
