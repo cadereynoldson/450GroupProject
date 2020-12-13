@@ -138,9 +138,9 @@ public class LocationFragment extends Fragment implements GoogleMap.OnMapClickLi
         Log.e("MAP READY", "TEST");
         mMap = googleMap;
         mMap.getUiSettings().setZoomControlsEnabled(true);
-        LatLng starting = new LatLng(47.252877, -122.444290);
-        mMap.addMarker(new MarkerOptions().position(starting).title("Marker"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(starting, mMap.getCameraPosition().zoom));
+//        LatLng starting = new LatLng(47.252877, -122.444290);
+//        mMap.addMarker(new MarkerOptions().position(starting).title("Marker"));
+//        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(starting, mMap.getCameraPosition().zoom));
         mMap.setOnMapClickListener(this);
     }
 

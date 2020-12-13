@@ -1,5 +1,6 @@
 package com.example.groupproject_g3.weather.fragments.recyclerviewadapter;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,15 +69,19 @@ public class WeatherHoursRecyclerViewAdapter extends RecyclerView.Adapter<Weathe
             binding.textHours.setText(info.getmTime());
             binding.textHoursTemp.setText(info.getmTemperature() + "°");
             Picasso.get().load(info.getmIcon()).into(binding.imageHoursForecast);
-            if (info.getmCheckTime().matches(info.getmSunRiseTime())) {
+            if (info.getmCheckTime().contains(info.getmSunRiseTime())) {
                 binding.textHours.setText(info.getmSunrise());
                 binding.textHoursTemp.setText("Sunrise");
                 Picasso.get().load(R.drawable.weather_sunrise).into(binding.imageHoursForecast);
-            } else if (info.getmCheckTime().matches(info.getmSunsetTime())) {
+            }
+            if (info.getmCheckTime().contains(info.getmSunsetTime())) {
                 binding.textHours.setText(info.getmSunset());
                 binding.textHoursTemp.setText("Sunset");
                 Picasso.get().load(R.drawable.weather_sunset).into(binding.imageHoursForecast);
             }
+//            Log.e("Weather Hour Updated", "Sunrise=" +  info.getmSunRiseTime() + " Sunset="
+//                    + info.getmSunsetTime() + " Time=" + info.getmCheckTime());
+
         }
     }
 }

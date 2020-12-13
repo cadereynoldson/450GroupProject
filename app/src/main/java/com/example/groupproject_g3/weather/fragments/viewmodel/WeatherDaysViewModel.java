@@ -106,6 +106,7 @@ public class WeatherDaysViewModel extends AndroidViewModel {
             Double lat = coordData.getDouble(getString.apply(R.string.key_weather_current_lat));
             Double lon = coordData.getDouble(getString.apply(R.string.key_weather_current_lon));
             information.getValue().clear();
+
             if (result.has(getString.apply(R.string.key_weather_forecast_list))) {
                 JSONArray data = result.getJSONArray(getString.apply(R.string.key_weather_forecast_list));
                 for (int i = 0; i < data.length(); i++) {

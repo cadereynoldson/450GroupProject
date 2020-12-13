@@ -106,11 +106,11 @@ public class WeatherMainFragment extends Fragment {
                 binding.weatherF.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
                 binding.weatherC.setTypeface(Typeface.DEFAULT);
             });
+
         });
 
         hoursModel.addHoursWeatherObserver(getViewLifecycleOwner(), hoursInfo -> {
             if(!hoursInfo.isEmpty()) {
-                Log.e("TEST WEATHER", "IM HERE!");
                 binding.weatherHours.setAdapter(new WeatherHoursRecyclerViewAdapter(hoursInfo));
                 binding.progressBar.setVisibility(View.GONE);
             }

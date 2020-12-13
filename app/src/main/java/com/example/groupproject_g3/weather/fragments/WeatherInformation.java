@@ -91,7 +91,7 @@ public class WeatherInformation implements Serializable {
         private String mCelsius = "";
 
         /** String Time to be used. */
-        private String mTime = "";
+        private String mTime;
 
         /** String Weather Description to be used. */
         private String mWeather = "";
@@ -130,10 +130,10 @@ public class WeatherInformation implements Serializable {
         private String mLon = "";
 
         /** String Sunrise to be used. */
-        private String mSunrise = "";
+        private String mSunrise;
 
         /** String Sunset to be used. */
-        private String mSunset = "";
+        private String mSunset;
 
         /** String Wind Speed to be used. */
         private String mSpeed = "";
@@ -147,11 +147,11 @@ public class WeatherInformation implements Serializable {
         /** Long Time Zone to be used. */
         private long mTimeZone;
 
-        private String mSunRiseTime = "";
+        private String mSunRiseTime;
 
-        private String mSunsetTime = "";
+        private String mSunsetTime;
 
-        private String mCheckTime = "";
+        private String mCheckTime;
 
 
         /**

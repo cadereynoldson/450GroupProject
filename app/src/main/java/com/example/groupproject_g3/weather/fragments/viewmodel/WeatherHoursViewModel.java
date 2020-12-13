@@ -130,10 +130,13 @@ public class WeatherHoursViewModel extends AndroidViewModel {
                     Integer value = currentTemp - 32;
                     Integer celsius = value * 5/9;
 
-                    Date date = new Date(dateTime + timezoneOffset);
+                    Date date = new Date(dateTime);
                     String dateDisplay = new SimpleDateFormat("MM d").format(date);
                     String time = new SimpleDateFormat("hh").format(date);
                     String checkTime = new SimpleDateFormat("hh aa").format(date);
+
+                    long testing = dateTime + timezoneOffset;
+                    Log.e("Weather Hour Updated", "Sunrise=" +  sunriseTime + " Sunset=" + sunsetTime + " Time=" + checkTime);
 
                     WeatherInformation HoursInfo = new WeatherInformation.Builder(
                             dateDisplay,
