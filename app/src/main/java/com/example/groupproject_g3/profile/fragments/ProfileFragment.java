@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.RadioButton;
 
 import com.example.groupproject_g3.R;
+import com.example.groupproject_g3.activities.MainActivity;
 import com.example.groupproject_g3.databinding.FragmentPageProfileBinding;
 import com.example.groupproject_g3.model.UserInfoViewModel;
 
