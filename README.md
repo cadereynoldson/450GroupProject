@@ -11,6 +11,9 @@ Mobile application programming group project.
 
 #### Highlights
 - Dark Mode
+- Real time Adding Contacts
+- Real time Chat
+- Live Data Weather
 
 #### Libraries and Dependencies
 - com.google.android.geo.API_KEY
@@ -23,6 +26,43 @@ Mobile application programming group project.
 - me.pushy:sdk:1.0.54
 - androidx.legacy:legacy-support-v4:1.0.0
 - androidx.navigation.safeargs
+
+#### Guest Users Credentials:
+Email: guest1@guest.com
+Username: guest1
+Password: Password1!
+
+Email: guest2@guest.com
+Username: guest2
+Password: Password1!
+
+#### Successful Implementations
+
+
+#### Incomplete Implementations
+Registration:
+- All Implemented
+
+Login:
+- All Implemented
+
+Contact Page:
+- 
+
+Chat Page:
+- No notifications upon adding chat
+- No image sending
+- No seeing when another person is typing
+
+Notifications Page: 
+- 
+
+Weather Page:
+- Cannot search for location by zip code
+- Cannot save a location for future use
+
+Home Landing Page:
+- Dynamic contents are not displayed
 
 # Developed By
 Cade Reynoldson (cadereynoldson)
