@@ -81,7 +81,6 @@ Password: Password1!
 - Can view Contacts request (sent to you / sent by you)
 - Can remove and decline sent request
 - Can view a list of connections
-<p align="center"><img src="app/src/main/res/drawable/CloudChat_Contacts.PNG" /></p>
 
 ###### Chat Page:
 - Can create a chat and delete a chat
@@ -89,7 +88,6 @@ Password: Password1!
 - Can delete an existing contact from chat
 - Send and recieve messages in chat
 - Add contact to an existing chat
-<p align="center"><img src="app/src/main/res/drawable/CloudChat_Chats.PNG" /></p>
 
 ###### Notifications:
 - All requirements were implemented
@@ -101,7 +99,6 @@ Password: Password1!
 - Weather will display current, 24 horus, and 5 days forecast
 - Background will change depending on weather descriptions
 - Celcius and Farenheit is avaible for temperature
-<p align="center"><img src="app/src/main/res/drawable/CloudChat_Weather.PNG" /></p>
 
 ###### Home Landing:
 - Group logo will be displayed
@@ -110,7 +107,6 @@ Password: Password1!
 - Profile page will contain name, username, and email
 - Dark mode and light mode will be avaiable 
 - Can automatically log back in when switch is on and user logged out
-<p align="center"><img src="app/src/main/res/drawable/CloudChat_Profile.png" width="400" height="790" /></p>
 
 #### Incomplete Implementations
 ###### Contact Page: 
