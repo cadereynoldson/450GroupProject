@@ -27,13 +27,20 @@ Mobile application programming group project.
 - androidx.legacy:legacy-support-v4:1.0.0
 - androidx.navigation.safeargs
 
+#### Support Contact
+Email: tphip92@gmail.com
+
 #### Guest Users Credentials:
-Email: guest1@guest.com//
-Username: guest1//
+Email: guest1@guest.com
+
+Username: guest1
+
 Password: Password1!
 
-Email: guest2@guest.com//
-Username: guest2//
+Email: guest2@guest.com
+
+Username: guest2
+
 Password: Password1!
 
 #### Successful Implementations
@@ -56,6 +63,7 @@ Chat Page:
 - No seeing when another person is typing
 
 Notifications Page: 
+
 - 
 
 Weather Page:
