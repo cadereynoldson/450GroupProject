@@ -115,6 +115,9 @@ Melinda Tran (mtran36)
 #### Google Drive Scrum Meetings
 - https://drive.google.com/drive/folders/1kjMYcrst8tk-WVSqlbfr45HJRd6EOhab?usp=sharing
 
+#### Group 3 Github Repo
+- https://github.com/cadereynoldson/450GroupProject
+
 #### Heroku Web Service
 - https://dashboard.heroku.com/apps/cloud-chat-450
 
