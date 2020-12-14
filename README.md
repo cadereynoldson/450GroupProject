@@ -81,6 +81,7 @@ Password: Password1!
 - Can view Contacts request (sent to you / sent by you)
 - Can remove and decline sent request
 - Can view a list of connections
+- When user A delete their contact request before user B accepts it, user B must transition from the contact page to a different page and return to it to see the changes.
 <p align="center"><img src="app/src/main/res/drawable-hdpi/cloudchat_contacts.png" /></p>
 
 ###### Chat Page:
@@ -89,6 +90,7 @@ Password: Password1!
 - Can delete an existing contact from chat
 - Send and recieve messages in chat
 - Add contact to an existing chat
+- When user creates a new chat, user must transition from the chat page to a different page and return to that page to see the new chat room.
 <p align="center"><img src="app/src/main/res/drawable-hdpi/cloudchat_chats.png" /></p>
 
 ###### Notifications:
