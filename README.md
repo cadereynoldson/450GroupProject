@@ -43,24 +43,14 @@ Password: Password1!
 
 
 #### Incomplete Implementations
-Registration:
-- All Implemented
-
-Login:
-- All Implemented
-
 Contact Page: 
-
-- 
+- No search on first or last name
+- No sending invitations via email to use app
 
 Chat Page:
 - No notifications upon adding chat
 - No image sending
 - No seeing when another person is typing
-
-Notifications Page: 
-
-- 
 
 Weather Page:
 - Cannot search for location by zip code
