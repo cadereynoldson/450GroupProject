@@ -110,8 +110,7 @@ Password: Password1!
 - Profile page will contain name, username, and email
 - Dark mode and light mode will be avaiable 
 - Can automatically log back in when switch is on and user logged out
-<p align="center"><img src="app/src/main/res/drawable/CloudChat_Profile.png" /></p>
-<img src="app/src/main/res/drawable/CloudChat_Profile.png" alt="alt text" width="500" height="500">
+<p align="center"><img src="app/src/main/res/drawable/CloudChat_Profile.png" width="500" height="500" /></p>
 
 #### Incomplete Implementations
 ###### Contact Page: 
