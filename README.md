@@ -31,12 +31,12 @@ Mobile application programming group project.
 Email: tphip92@gmail.com
 
 #### Guest Users Credentials:
-Email: guest1@guest.com__
-Username: guest1__
+Email: guest1@guest.com\
+Username: guest1\
 Password: Password1!
 
-Email: guest2@guest.com__
-Username: guest2__
+Email: guest2@guest.com\
+Username: guest2\
 Password: Password1!
 
 #### Successful Implementations
