@@ -65,7 +65,7 @@
                         android:text="22:00"
                         android:textAppearance="@style/TextAppearance.AppCompat.Display4"
                         android:textColor="#FFFFFF"
-                        android:textSize="38sp"
+                        android:textSize="30sp"
                         android:textStyle="italic"
                         tools:visibility="invisible" />
                 </RelativeLayout>

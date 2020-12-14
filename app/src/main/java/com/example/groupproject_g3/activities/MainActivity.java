@@ -170,6 +170,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initTheme();
         mNewMessageModel = new ViewModelProvider(this).get(NewMessageCountViewModel.class);
         mNewChatCountViewModel = new ViewModelProvider(this).get(NewChatCountViewModel.class);
         mContactsNotificationModel = new ViewModelProvider(this).get(ContactNotificationCountViewModel.class);
@@ -220,7 +221,6 @@ public class MainActivity extends AppCompatActivity {
                 badge.setVisible(false);
             }
         });
-        initTheme();
     }
 
     /**

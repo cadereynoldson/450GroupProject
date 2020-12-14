@@ -1,6 +1,7 @@
 package com.example.groupproject_g3.weather.fragments;
 
 import android.annotation.SuppressLint;
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -54,5 +55,31 @@ public class WeatherForecastFragment extends Fragment {
         binding.textSpeedData.setText(args.getInformation().getmSpeed());
         binding.textDirectionData.setText(args.getInformation().getmDirection());
         background = new WeatherBackground(view, args.getInformation().getmWeather(), args.getInformation().getmIcon(), getResources());
+
+        binding.weatherC.setOnClickListener(v -> {
+
+            Double valueMin = Double.valueOf(args.getInformation().getmTempMin()) - 32;
+            Double celsiusMin = valueMin * 5/9;
+
+            Double valueMax = Double.valueOf(args.getInformation().getmTempMax()) - 32;
+            Double celsiusMax = valueMax * 5/9;
+
+            Double valueFeels = Double.valueOf(args.getInformation().getmFeelsLike()) - 32;
+            Double celsiusFeels = valueFeels * 5/9;
+
+            binding.textMinimumData.setText(String.format("%.2f", celsiusMin) + "°C");
+            binding.textMaximumData.setText(String.format("%.2f", celsiusMax) + "°C");
+            binding.textFeelslikeData.setText(String.format("%.2f", celsiusFeels) + "°C");
+            binding.weatherC.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+            binding.weatherF.setTypeface(Typeface.DEFAULT);
+        });
+
+        binding.weatherF.setOnClickListener(v -> {
+            binding.textMinimumData.setText(args.getInformation().getmTempMin() + "°F");
+            binding.textMaximumData.setText(args.getInformation().getmTempMax() + "°F");
+            binding.textFeelslikeData.setText(args.getInformation().getmFeelsLike() + "°F");
+            binding.weatherF.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+            binding.weatherC.setTypeface(Typeface.DEFAULT);
+        });
     }
 }

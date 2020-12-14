@@ -99,12 +99,14 @@ public class WeatherDaysViewModel extends AndroidViewModel {
             JSONObject cityData = result.getJSONObject(getString.apply(R.string.key_weather_forecast_city));
             String location = cityData.getString(getString.apply(R.string.key_weather_forecast_name));
             String country = cityData.getString(getString.apply(R.string.key_weather_forecast_country));
+            long timezoneOffset = cityData.getInt(getString.apply(R.string.key_weather_timezone));
 
             // Fetch longitude and latitude
             JSONObject coordData = cityData.getJSONObject(getString.apply(R.string.key_weather_current_coord));
             Double lat = coordData.getDouble(getString.apply(R.string.key_weather_current_lat));
             Double lon = coordData.getDouble(getString.apply(R.string.key_weather_current_lon));
             information.getValue().clear();
+
             if (result.has(getString.apply(R.string.key_weather_forecast_list))) {
                 JSONArray data = result.getJSONArray(getString.apply(R.string.key_weather_forecast_list));
                 for (int i = 0; i < data.length(); i++) {
@@ -140,14 +142,9 @@ public class WeatherDaysViewModel extends AndroidViewModel {
                     Double windSpeed = windData.getDouble(getString.apply(R.string.key_weather_current_speed));
                     Double windDirection = windData.getDouble(getString.apply(R.string.key_weather_current_deg));
 
-                    Date date = new Date(dateTime);
-                    Calendar calendar = Calendar.getInstance();
-                    calendar.setTime(date);
-
-                    String dateDisplay = calendar.get(Calendar.MONTH) + "/" + calendar.get(Calendar.DAY_OF_MONTH);
-
+                    Date date = new Date(dateTime + timezoneOffset);
+                    String dateDisplay = new SimpleDateFormat("MM/d").format(date);
                     String time = new SimpleDateFormat("hh:mm").format(date);
-
                     String day = new SimpleDateFormat("EE").format(date);
 
                     WeatherInformation DaysInfo = new WeatherInformation.Builder(
