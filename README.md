@@ -75,7 +75,7 @@ Password: Password1!
 - Weather will display current, 24 horus, and 5 days forecast
 - Background will change depending on weather descriptions
 - Celcius and Farenheit is avaible for temperature
-<p align="center"><img src="app/src/main/res/drawable/CloudChat_Chats.PNG" /></p>
+<p align="center"><img src="app/src/main/res/drawable/CloudChat_Weather.PNG" /></p>
 
 ###### Home Landing:
 - Group logo will be displayed
