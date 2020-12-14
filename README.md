@@ -27,6 +27,31 @@ Mobile application programming group project.
 - androidx.legacy:legacy-support-v4:1.0.0
 - androidx.navigation.safeargs
 
+# Developed By
+Cade Reynoldson (cadereynoldson)
+
+Patrick Lauer (bluedestiny88)
+
+Tyler Phippen (TPhip92)
+
+Melinda Tran (mtran36)
+
+# Links
+#### Google Drive Scrum Meetings
+- https://drive.google.com/drive/folders/1kjMYcrst8tk-WVSqlbfr45HJRd6EOhab?usp=sharing
+
+#### Group 3 Github Repo
+- https://github.com/cadereynoldson/450GroupProject
+
+#### Heroku Web Service
+- https://dashboard.heroku.com/apps/cloud-chat-450
+
+#### Web Server Repo
+- https://github.com/cadereynoldson/450GroupProjectWebServer
+
+#### Web Service Website
+- https://cloud-chat-450.herokuapp.com/doc/
+
 #### Support Contact
 Email: tphip92@gmail.com
 
@@ -101,31 +126,6 @@ Password: Password1!
 
 ###### Home Landing Page:
 - Dynamic contents are not displayed
-
-# Developed By
-Cade Reynoldson (cadereynoldson)
-
-Patrick Lauer (bluedestiny88)
-
-Tyler Phippen (TPhip92)
-
-Melinda Tran (mtran36)
-
-# Links
-#### Google Drive Scrum Meetings
-- https://drive.google.com/drive/folders/1kjMYcrst8tk-WVSqlbfr45HJRd6EOhab?usp=sharing
-
-#### Group 3 Github Repo
-- https://github.com/cadereynoldson/450GroupProject
-
-#### Heroku Web Service
-- https://dashboard.heroku.com/apps/cloud-chat-450
-
-#### Web Server Repo
-- https://github.com/cadereynoldson/450GroupProjectWebServer
-
-#### Web Service Website
-- https://cloud-chat-450.herokuapp.com/doc/
 
 # API Keys Links
 - Use [OpenWeatherMap] API to implement Weather Page
