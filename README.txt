@@ -1,8 +1,6 @@
 # 450 Project Group 3
 Mobile application programming group project.
 
-<p align="center"><img src="app/src/main/res/drawable/logo_cloud_chat.png" /></p>
-
 #### Requirements
 - Android Studio 4.1
 - Android SDK Platform-Tools 30.0.5
@@ -14,18 +12,6 @@ Mobile application programming group project.
 - Real time Adding Contacts
 - Real time Chat
 - Live Data Weather
-
-#### Libraries and Dependencies
-- com.google.android.geo.API_KEY
-- com.google.android.gms:play-services-location:17.1.0
-- com.google.android.gms:play-services-maps:17.0.0
-- com.squareup.picasso:picasso:2.71828
-- com.auth0.android:jwtdecode:2.0.0
-- com.google.firebase:firebase-auth
-- com.android.volley:volley:1.1.1
-- me.pushy:sdk:1.0.54
-- androidx.legacy:legacy-support-v4:1.0.0
-- androidx.navigation.safeargs
 
 # Developed By
 Cade Reynoldson (cadereynoldson)
@@ -56,12 +42,12 @@ Melinda Tran (mtran36)
 Email: tphip92@gmail.com
 
 #### Guest Users Credentials:
-Email: guest1@guest.com\
-Username: guest1\
+Email: guest1@guest.com
+Username: guest1
 Password: Password1!
 
-Email: guest2@guest.com\
-Username: guest2\
+Email: guest2@guest.com
+Username: guest2
 Password: Password1!
 
 # Implementations
@@ -81,7 +67,7 @@ Password: Password1!
 - Can view Contacts request (sent to you / sent by you)
 - Can remove and decline sent request
 - Can view a list of connections
-<p align="center"><img src="app/src/main/res/drawable/CloudChat_Contacts.PNG" /></p>
+- When user A delete their contact request before user B accepts it, user B must transition from the contact page to a different page and return to it to see the changes.
 
 ###### Chat Page:
 - Can create a chat and delete a chat
@@ -89,7 +75,7 @@ Password: Password1!
 - Can delete an existing contact from chat
 - Send and recieve messages in chat
 - Add contact to an existing chat
-<p align="center"><img src="app/src/main/res/drawable/CloudChat_Chats.PNG" /></p>
+- When user creates a new chat, user must transition from the chat page to a different page and return to that page to see the new chat room.
 
 ###### Notifications:
 - All requirements were implemented
@@ -101,7 +87,6 @@ Password: Password1!
 - Weather will display current, 24 horus, and 5 days forecast
 - Background will change depending on weather descriptions
 - Celcius and Farenheit is avaible for temperature
-<p align="center"><img src="app/src/main/res/drawable/CloudChat_Weather.PNG" /></p>
 
 ###### Home Landing:
 - Group logo will be displayed
