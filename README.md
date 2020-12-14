@@ -89,7 +89,7 @@ Password: Password1!
 - Can delete an existing contact from chat
 - Send and recieve messages in chat
 - Add contact to an existing chat
-<p align="center"><img src="app/src/main/res/drawable-hdpi/cloudchat_chatss.png" /></p>
+<p align="center"><img src="app/src/main/res/drawable-hdpi/cloudchat_chats.png" /></p>
 
 ###### Notifications:
 - All requirements were implemented
@@ -110,7 +110,7 @@ Password: Password1!
 - Profile page will contain name, username, and email
 - Dark mode and light mode will be avaiable 
 - Can automatically log back in when switch is on and user logged out
-<p align="center"><img src="app/src/main/res/drawable-hdpi/cloudchat_profile.png" /></p>
+<p align="center"><img src="app/src/main/res/drawable-hdpi/cloudchat_profile.png" width="400" height="790"/></p>
 
 #### Incomplete Implementations
 ###### Contact Page: 
