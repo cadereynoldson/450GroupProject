@@ -64,6 +64,7 @@ Email: guest2@guest.com\
 Username: guest2\
 Password: Password1!
 
+# Implementations
 #### Successful Implementations
 ###### Registration:
 - All requirements were implemented
