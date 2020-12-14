@@ -103,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
                     mNewChatCountViewModel.increment();
                 }
             }
-
             chatListViewModel.connectGet(userInfoViewModel.getJwt(), userInfoViewModel.getUserId());
            }
     }
