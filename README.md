@@ -40,23 +40,63 @@ Username: guest2\
 Password: Password1!
 
 #### Successful Implementations
+###### Registration:
+- All requirements were implemented
+- Display verification process page upon successful registration
 
+###### Login:
+- All requirements were implemented
+- Display home landing page upon successful login
+- Can log out
+
+###### Contact Page:
+- Can view existing connections
+- Search and add contacts by email or username
+- Can view Contacts request (sent to you / sent by you)
+- Can remove and decline sent request
+- Can view a list of connections
+
+###### Chat Page:
+- Can create a chat and delete a chat
+- Can add an existing contact to chat
+- Can delete an existing contact from chat
+- Send and recieve messages in chat
+- Add contact to an existing chat
+
+###### Notifications:
+- All requirements were implemented
+- Notifications will be displayed when in app and in status par when not in app
+
+###### Weather Page:
+- Can display weather forcast at device location
+- Can choose a location by map
+- Weather will display current, 24 horus, and 5 days forecast
+- Background will change depending on weather descriptions
+- Celcius and Farenheit is avaible for temperature
+
+###### Home Landing:
+- Group logo will be displayed
+
+###### Additional:
+- Profile page will contain name, username, and email
+- Dark mode and light mode will be avaiable 
+- Can automatically log back in when switch is on and user logged out
 
 #### Incomplete Implementations
 ###### Contact Page: 
 - No search on first or last name
 - No sending invitations via email to use app
 
-Chat Page:
+###### Chat Page:
 - No notifications upon adding chat
 - No image sending
 - No seeing when another person is typing
 
-Weather Page:
+###### Weather Page:
 - Cannot search for location by zip code
 - Cannot save a location for future use
 
-Home Landing Page:
+###### Home Landing Page:
 - Dynamic contents are not displayed
 
 # Developed By
