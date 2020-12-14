@@ -28,12 +28,12 @@ Mobile application programming group project.
 - androidx.navigation.safeargs
 
 #### Guest Users Credentials:
-Email: guest1@guest.com
-Username: guest1
+Email: guest1@guest.com//
+Username: guest1//
 Password: Password1!
 
-Email: guest2@guest.com
-Username: guest2
+Email: guest2@guest.com//
+Username: guest2//
 Password: Password1!
 
 #### Successful Implementations
@@ -46,7 +46,8 @@ Registration:
 Login:
 - All Implemented
 
-Contact Page:
+Contact Page: 
+
 - 
 
 Chat Page:
